@@ -49,37 +49,58 @@ namespace QuickToolsScript
             DataCacher cache = new DataCacher();
             ScriptRunner runner = new ScriptRunner();
             ErrorHandeler error = new ErrorHandeler();
-
+            string target = $"{ShellLoop.CurrentPath}{Get.Slash()}{type}"; 
             switch (action)
             {
+
+
+                case "mkdir":
+                    runner.Run(() => { Make.Directory(target); });
+                    break;
                 case "touch":
                 case "create":
-                    runner.Run(() => { Make.File(type); });
+                case "echo":
+                    runner.Run(() => { Make.File(target); });
                     break;
                 case "rm":
                 case "remove":
                 case "delete":
-                    if (File.Exists(type))
+                    if (File.Exists(target))
                     {
-                        runner.Run(() => { File.Delete(type); }); 
+                        runner.Run(() => { File.Delete(target); }); 
                     }
-                    if (Directory.Exists(type))
+                    if (Directory.Exists(target))
                     {
-                        runner.Run(() => { Directory.Delete(type); });
+                        runner.Run(() => { Directory.Delete(target); });
                     }
                     break;
                 case "ls":
-                        runner.Run(() => { Get.Ls(type); });
+                case "list":
+                case "list-files":
+                    runner.Run(() => { Get.Ls(type); });
                     break;
                 case "ls-l":
-                        runner.Run(() => { Get.Ls(type,""); });
+                case "list-with-dates":
+                    runner.Run(() =>
+                    {
+                        if(type != "-l")
+                        {
+                            Get.Ls(type, "");
+                            return;
+                        }
+                        else
+                        {
+                            Get.Ls(ShellLoop.CurrentPath, "");
+                        }
+                   
+                    });
                     break;
                 case "cd":
                         runner.Run(() => {
                           //  Get.Cyan(ShellLoop.CurrentPath);
                            if(type != "..")
                             {
-                                if (Directory.Exists($"{ShellLoop.CurrentPath}{Get.Slash()}{type}"))
+                                if (Directory.Exists(target))
                                 {
                                     ShellLoop.CurrentPath += $"{Get.Slash()}{type}";
                                     return;
@@ -103,7 +124,7 @@ namespace QuickToolsScript
                     break;
                 case "cat":
                     runner.Run(() => {
-                       Get.WriteL(Reader.Read($"{ShellLoop.CurrentPath}{Get.Slash()}{type}"));
+                       Get.WriteL(Reader.Read(target));
                     });
                     break;  
                 default:
