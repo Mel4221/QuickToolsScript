@@ -22,16 +22,16 @@ namespace QuickToolsScript
         public void DisplayError(ErrorType type, string message)
         {
 
-            string error = $"####\n There Was an error with the given type of error: {type} {message} \n####";
+            string error = $"####\n There Was an error with the given type of error: '{type}' '{message}' \n####";
             Log.Event("ErrorHandeler", error);
-            Get.Wrong(error);
+            Get.Red(error);
         }
         public void DisplayError(ErrorType type, string[] givenCommand)
         {
 
-            string error = $"####\n There Was an error with the given type of error: {type} {IConvert.ArrayToText(givenCommand)} \n####";
+            string error = $"####\n There Was an error with the given type of error: '{type}' '{IConvert.ArrayToText(givenCommand)}' \n####";
             Log.Event("ErrorHandeler", error);
-            Get.Wrong(error);
+            Get.Red(error);
         }
     }
 }

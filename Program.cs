@@ -16,31 +16,24 @@ namespace QuickToolsScript
     {
         static int Main(string[] args)
         {
+      
+            Get.Title("QuickToolsScript");
             CodeParser parser;
             MainMenu menu;
-            /*
-            while (true)
-            {
-                string str = Get.Input().Text;
-                parser = new CodeParser(IConvert.TextToArray(str));
-                parser.Start(); 
-                Get.Wait("OKS");
-            }
-
-            */
-
-
-            args = IConvert.TextToArray("secure-encrypt file.txt 1234 same");
+          
             if(args.Length > 0)
             {
+
                 parser = new CodeParser(args);
                 parser.Start(); 
                 return 0;
             }
             else
             {
+
+
                 menu = new MainMenu(); 
-                menu.Start(); 
+                menu.Start();
                 return 0;
             }
            
