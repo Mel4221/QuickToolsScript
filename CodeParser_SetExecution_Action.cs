@@ -70,6 +70,13 @@ namespace QuickToolsScript
                 case "clear-logs":
                     runner.Run(() => { Log.ClearLogs(); });
                     break;
+                case "ls":
+                     runner.Run(() => { Get.Ls(ShellLoop.CurrentPath); });
+                   // Get.Ls(ShellLoop.CurrentPath);
+                    break;
+                case "ls-l":
+                    runner.Run(() => { Get.Ls(ShellLoop.CurrentPath,""); });
+                    break;
                 case "get-input":
                 case "input":
                     runner.Run(() => {

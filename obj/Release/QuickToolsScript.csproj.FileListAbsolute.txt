@@ -1,0 +1,11 @@
+C:\Users\William\Desktop\C#\QuickToolsScript\bin\Release\QuickToolsScript.exe.config
+C:\Users\William\Desktop\C#\QuickToolsScript\bin\Release\QuickToolsScript.exe
+C:\Users\William\Desktop\C#\QuickToolsScript\bin\Release\QuickToolsScript.pdb
+C:\Users\William\Desktop\C#\QuickToolsScript\bin\Release\QuickTools.dll
+C:\Users\William\Desktop\C#\QuickToolsScript\bin\Release\QuickTools.xml
+C:\Users\William\Desktop\C#\QuickToolsScript\obj\Release\QuickToolsScript.csproj.AssemblyReference.cache
+C:\Users\William\Desktop\C#\QuickToolsScript\obj\Release\QuickToolsScript.csproj.SuggestedBindingRedirects.cache
+C:\Users\William\Desktop\C#\QuickToolsScript\obj\Release\QuickToolsScript.csproj.CoreCompileInputs.cache
+C:\Users\William\Desktop\C#\QuickToolsScript\obj\Release\QuickToolsScript.csproj.CopyComplete
+C:\Users\William\Desktop\C#\QuickToolsScript\obj\Release\QuickToolsScript.exe
+C:\Users\William\Desktop\C#\QuickToolsScript\obj\Release\QuickToolsScript.pdb

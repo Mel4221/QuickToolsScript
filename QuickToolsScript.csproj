@@ -65,8 +65,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CodeParser.cs" />
+    <Compile Include="CodeParser_SetExcecution_Action_Parameters.cs" />
     <Compile Include="CodeParser_SetExecution_Action.cs" />
-    <Compile Include="CodeParser_Set_Excecution_Action_Type.cs" />
+    <Compile Include="CodeParser_SetExcecution_Action_Type.cs" />
     <Compile Include="DefaultSettings.cs" />
     <Compile Include="ErrorHandeler.cs" />
     <Compile Include="MainMenu.cs" />

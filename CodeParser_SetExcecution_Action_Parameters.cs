@@ -19,34 +19,20 @@ namespace QuickToolsScript
     public partial class CodeParser
     {
 
-        public void SetExecution(string action, string type)
+        public void SetExecution(string action, string type, string[] parameters)
         {
             DataCacher cache = new DataCacher();
             ScriptRunner runner = new ScriptRunner();
             ErrorHandeler error = new ErrorHandeler();
-
             switch (action)
             {
-                case "touch":
-                case "create":
-                    runner.Run(() => { Make.File(type); });
+                case "secure":
                     break;
-                case "rm":
-                case "remove":
-                case "delete":
-                    if (File.Exists(type))
-                    {
-                        runner.Run(() => { File.Delete(type); }); 
-                    }
-                    if (Directory.Exists(type))
-                    {
-                        runner.Run(() => { Directory.Delete(type); });
-                    }
-                    break; 
                 default:
                     error.DisplayError(ErrorHandeler.ErrorType.NotValidAction, this.Code);
                     break;
             }
         }
+
     }
 }

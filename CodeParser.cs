@@ -49,16 +49,12 @@ namespace QuickToolsScript
 
             return param; 
         }
-        public void SetExecution(string action, string type, string[] parameters )
-        {
-
-        }
-
+   
 
 
         private void Parse(CodeType codeType)
         {
-            string action, type, parameters;
+            string action, type;
 
             switch (codeType)
             {

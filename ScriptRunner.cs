@@ -8,8 +8,8 @@ namespace QuickToolsScript
 {
     public class ScriptRunner
     {
-        public Thread ScriptRunnerThread;
 
+        public Thread ScriptRunnerThread;
 
         public void Run(Action code,bool runInBackGround)
         {

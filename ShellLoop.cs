@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using QuickTools.QIO;
 using QuickTools.QNet;
 using QuickTools.QData;
@@ -14,34 +15,45 @@ namespace QuickToolsScript
 {
     public class ShellLoop
     {
-        public List<Thread> ShellBackGroundThreads; 
+        public static string CurrentPath;
+        private ShellInput shell;
+
         public void Start()
         {
-            CodeParser parser;
-            ShellInput shell = new ShellInput(System.Environment.UserName, System.Environment.MachineName);
-            shell.Notifications = DateTime.Now.ToString("H:m M:dd:yyyy");
-             
-            string input = null;
+             this.shell = new ShellInput(System.Environment.UserName, System.Environment.MachineName);
+             CodeParser parser;
 
-            Get.Loop(() => {
-                input = shell.StartInput();
+            string input;
+            input = null;
+            
+
+           
+           // Get.Wait(ShellLoop.CurrentPath);
+                 ShellLoop.CurrentPath = ShellLoop.CurrentPath != "" ? Directory.GetCurrentDirectory() : ShellLoop.CurrentPath;
+
+            while (true)
+            {
+                this.shell.Notifications = DateTime.Now.ToString("H:m M:dd:yyyy");
+                this.shell.CurrentPath = ShellLoop.CurrentPath;
+                input = this.shell.StartInput();
                 if (input == "exit")
                 {
                     Environment.Exit(0);
                     return;
-                } if (input == "back" || input == "go-back" || input =="go back")
+                }
+                if (input == "back" || input == "go-back" || input == "go back")
                 {
-                    Get.Break();
-                    return;
+                    break;
+                    
                 }
                 else
                 {
                     parser = new CodeParser(input);
                     parser.Start();
-                    return;
                 }
-            });
+            }
             new MainMenu().Start();
         }
+
     }
 }
