@@ -24,6 +24,7 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.using System;
+using System; 
 using System.IO;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,11 +47,21 @@ namespace QuickToolsScript
 
         public void SetExecution(string action, string type, string[] parameters)
         {
-            DataCacher cache = new DataCacher();
-            ScriptRunner runner = new ScriptRunner();
-            ErrorHandeler error = new ErrorHandeler();
+            this.cache = new DataCacher();
+            this.runner = new ScriptRunner();
+            this.error = new ErrorHandeler();
+            this.Target = $"{ShellLoop.CurrentPath}{Get.Slash()}{type}";
+
             switch (action)
             {
+                case "mv":
+                    if (true)
+                    {
+                        throw new Exception("Not Implemented yet");
+                    }
+                    break;
+                case "wget":
+                    break;
                 case "secure":
                     break;
                 default:

@@ -9,3 +9,7 @@ C:\Users\William\Desktop\C#\QuickToolsScript\obj\Debug\QuickToolsScript.csproj.C
 C:\Users\William\Desktop\C#\QuickToolsScript\obj\Debug\QuickToolsScript.csproj.CopyComplete
 C:\Users\William\Desktop\C#\QuickToolsScript\obj\Debug\QuickToolsScript.exe
 C:\Users\William\Desktop\C#\QuickToolsScript\obj\Debug\QuickToolsScript.pdb
+C:\Users\William\Desktop\C#\QuickToolsScript\bin\Debug\QuickToolsScript.exe.manifest
+C:\Users\William\Desktop\C#\QuickToolsScript\bin\Debug\QuickToolsScript.application
+C:\Users\William\Desktop\C#\QuickToolsScript\obj\Debug\QuickToolsScript.exe.manifest
+C:\Users\William\Desktop\C#\QuickToolsScript\obj\Debug\QuickToolsScript.application

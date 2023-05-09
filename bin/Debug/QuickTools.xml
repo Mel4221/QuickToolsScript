@@ -1095,6 +1095,26 @@
             <param name="dateFormat"></param>
             <returns></returns>
         </member>
+        <member name="M:QuickTools.QCore.Get.Print(System.Object,System.Object)">
+            <summary>
+            Gets a value printed with it's key 
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:QuickTools.QCore.Get.PrintSystemVars(System.Collections.IDictionary)">
+            <summary>
+            Prints the system variables given to it 
+            </summary>
+            <param name="variables"></param>
+        </member>
+        <member name="M:QuickTools.QCore.Get.PrintSystemVars(System.Collections.IDictionary,System.String)">
+            <summary>
+            Prints the system variables given to it and save them on a given file
+            </summary>
+            <param name="variables"></param>
+            <param name="fileToSaveThem"></param>
+        </member>
         <member name="M:QuickTools.QCore.Get.FilterOnlyChars(System.String)">
             <summary>
             Very Slow method that only allows chars  to be print
@@ -3000,6 +3020,13 @@
             </summary>
             <returns><c>true</c>, if big file was ised, <c>false</c> otherwise.</returns>
             <param name="file">File.</param>
+        </member>
+        <member name="M:QuickTools.QIO.Binary.Destroy(System.String)">
+            <summary>
+            Try to destroy the file but is not very effective
+            for security reason please use another option "/>
+            </summary>
+            <param name="file"></param>
         </member>
         <member name="M:QuickTools.QIO.Binary.CopyBuffer(System.Byte[],System.Int32,System.Int32)">
             <summary>

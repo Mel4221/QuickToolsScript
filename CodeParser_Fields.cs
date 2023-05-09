@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuickTools.QData;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,13 @@ namespace QuickToolsScript
 {
     public partial class CodeParser 
     {
+
+        private DataCacher cache;
+        private ScriptRunner runner;
+        private ErrorHandeler error;
+
+
+        public string Target; 
         /// <summary>
         /// Contains the Code array
         /// </summary>

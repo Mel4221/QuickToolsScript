@@ -87,7 +87,8 @@ namespace QuickToolsScript
             switch(this.Code.Length)
             {
                 case 0:
-                    new ErrorHandeler().DisplayError(ErrorHandeler.ErrorType.NotValidAction,this.Code);
+                    this.error = new ErrorHandeler();
+                    this.error.DisplayError(ErrorHandeler.ErrorType.NotValidAction,this.Code);
                     break; 
                 case 1:
                     this.Parse(CodeType.Action); 

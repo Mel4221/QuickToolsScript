@@ -37,6 +37,8 @@ using QuickTools.QConsole;
 using QuickTools.QSecurity;
 using QuickTools.QCore;
 using QuickTools.QSecurity.FalseIO;
+using System.IO;
+
 namespace QuickToolsScript
 {
     public partial class CodeParser
@@ -47,11 +49,18 @@ namespace QuickToolsScript
         /// <param name="action"></param>
         public void SetExecution(string action)
         {
-            DataCacher cache = new DataCacher();
-            ScriptRunner runner = new ScriptRunner();
-            ErrorHandeler error = new ErrorHandeler();
+        
+
+           // Get.Wait(Get.DataPath());
+            this.cache = new DataCacher();
+            this.runner = new ScriptRunner();
+            this.error = new ErrorHandeler();
+            this.Target = $"{ShellLoop.CurrentPath}";
             switch (action)
             {
+                case "reset-path":
+                    ShellLoop.CurrentPath = Directory.GetCurrentDirectory();
+                    break; 
                 case "console-clear":
                 case "clear":
                     runner.Run(() => { Get.Clear(); });
@@ -96,11 +105,11 @@ namespace QuickToolsScript
                     runner.Run(() => { Log.ClearLogs(); });
                     break;
                 case "ls":
-                     runner.Run(() => { Get.Ls(ShellLoop.CurrentPath); });
+                     runner.Run(() => { Get.Ls(this.Target); });
                    // Get.Ls(ShellLoop.CurrentPath);
                     break;
                 case "ls-l":
-                    runner.Run(() => { Get.Ls(ShellLoop.CurrentPath,""); });
+                    runner.Run(() => { Get.Ls(this.Target,""); });
                     break;
                 case "get-input":
                 case "input":

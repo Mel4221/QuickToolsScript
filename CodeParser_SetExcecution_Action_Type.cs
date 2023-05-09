@@ -36,43 +36,69 @@ using QuickTools.QCore;
 using QuickTools.QColors;
 using QuickTools.QConsole;
 using QuickTools.QSecurity;
-using QuickTools.QCore;
 using QuickTools.QSecurity.FalseIO;
 
 namespace QuickToolsScript
 {
     public partial class CodeParser
     {
+        public  void Print(object content,object type )
+        {
+            Get.Red();
+            Get.Write($"\n{content} ");
+            Get.Yellow();
+            Get.Write($"'{type}'\n");
+        }
 
+        /// <summary>
+        /// This method set the exectution delegate Action that will handle the excution of the program
+        /// </summary>
+        /// <param name="action"></param>
+        /// <param name="type"></param>
         public void SetExecution(string action, string type)
         {
-            DataCacher cache = new DataCacher();
-            ScriptRunner runner = new ScriptRunner();
-            ErrorHandeler error = new ErrorHandeler();
-            string target = $"{ShellLoop.CurrentPath}{Get.Slash()}{type}"; 
+              this.cache = new DataCacher();
+              this.runner = new ScriptRunner();
+              this.error = new ErrorHandeler();
+            this.Target = $"{ShellLoop.CurrentPath}{Get.Slash()}{type}"; 
             switch (action)
             {
 
 
                 case "mkdir":
-                    runner.Run(() => { Make.Directory(target); });
+                    runner.Run(() => { Make.Directory(this.Target); });
                     break;
                 case "touch":
                 case "create":
                 case "echo":
-                    runner.Run(() => { Make.File(target); });
+                    runner.Run(() => { Make.File(this.Target); });
                     break;
                 case "rm":
                 case "remove":
                 case "delete":
-                    if (File.Exists(target))
+                    runner.Run(() =>
                     {
-                        runner.Run(() => { File.Delete(target); }); 
-                    }
-                    if (Directory.Exists(target))
+                    if (File.Exists(this.Target))
                     {
-                        runner.Run(() => { Directory.Delete(target); });
-                    }
+
+                            //  Get.Yellow(this.Target);
+                            System.GC.Collect();
+                            System.GC.WaitForPendingFinalizers(); 
+                            File.Delete(this.Target); 
+                            return;
+                        }
+
+                        if (Directory.Exists(this.Target))
+                        {
+                            runner.Run(() => { Directory.Delete(this.Target); });
+
+                            return;
+                        }
+                        else
+                        {
+                            this.Print("File or Directory not found: ", type);
+                        }
+                    });
                     break;
                 case "ls":
                 case "list":
@@ -97,20 +123,21 @@ namespace QuickToolsScript
                     break;
                 case "cd":
                         runner.Run(() => {
-                          //  Get.Cyan(ShellLoop.CurrentPath);
-                           if(type != "..")
+                            //  Get.Cyan(ShellLoop.CurrentPath);
+                            if (type[0] == '~')
                             {
-                                if (Directory.Exists(target))
+                            }
+                           if(type != ".." && type != Get.Slash() && type != $"{Get.Slash()}{Get.Slash()}"&&
+                            type != $"{Get.Slash()}{Get.Slash()}{Get.Slash()}")
+                            {
+                                if (Directory.Exists(this.Target))
                                 {
                                     ShellLoop.CurrentPath += $"{Get.Slash()}{type}";
                                     return;
                                 }
                                 else
                                 {
-                                    Get.Red();
-                                    Get.Write($"\n Directory Not Found: ");
-                                    Get.Yellow();
-                                    Get.Write($"'{type}'\n");
+                                    this.Print("Directory Not Found:", type);
                                     return;
                                 }
                               
@@ -124,7 +151,7 @@ namespace QuickToolsScript
                     break;
                 case "cat":
                     runner.Run(() => {
-                       Get.WriteL(Reader.Read(target));
+                       Get.WriteL(Reader.Read(this.Target));
                     });
                     break;  
                 default:
