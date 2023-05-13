@@ -29,6 +29,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics; 
 using QuickTools.QIO;
 using QuickTools.QNet;
 using QuickTools.QData;
@@ -42,13 +43,7 @@ namespace QuickToolsScript
 {
     public partial class CodeParser
     {
-        public  void Print(object content,object type )
-        {
-            Get.Red();
-            Get.Write($"\n{content} ");
-            Get.Yellow();
-            Get.Write($"'{type}'\n");
-        }
+     
 
         /// <summary>
         /// This method set the exectution delegate Action that will handle the excution of the program
@@ -60,7 +55,9 @@ namespace QuickToolsScript
               this.cache = new DataCacher();
               this.runner = new ScriptRunner();
               this.error = new ErrorHandeler();
-            this.Target = $"{ShellLoop.CurrentPath}{Get.Slash()}{type}"; 
+              this.Target = Get.FixPath($"{ShellLoop.CurrentPath}{Get.Slash()}{type}");
+              //type = Get.FixPath(type);
+           // Get.Wait(this.Target);
             switch (action)
             {
 
@@ -96,7 +93,7 @@ namespace QuickToolsScript
                         }
                         else
                         {
-                            this.Print("File or Directory not found: ", type);
+                           Get.Print("File or Directory not found: ", type);
                         }
                     });
                     break;
@@ -137,7 +134,7 @@ namespace QuickToolsScript
                                 }
                                 else
                                 {
-                                    this.Print("Directory Not Found:", type);
+                                    Get.Print("Directory Not Found:", type);
                                     return;
                                 }
                               
@@ -149,11 +146,35 @@ namespace QuickToolsScript
 
                         });
                     break;
+                case "exe":
+                    runner.Run(() => {
+                        //Get.Wait(Get.IsWindow());
+                        if (Get.IsWindow())
+                        {
+                            Process.Start(new ProcessStartInfo("cmd", $"/c start {type}"));
+                        }
+                        if (!Get.IsWindow())
+                        {
+                            Process.Start("open", type);
+                        }
+                    });
+                    break;
                 case "cat":
                     runner.Run(() => {
-                       Get.WriteL(Reader.Read(this.Target));
+                        Get.WriteL(" ");
+                       Get.Write(Reader.Read(this.Target));
                     });
-                    break;  
+                    break;
+                case "size":
+                case "du":
+                    runner.Run(() => {
+                      string file =  Get.FileSize(this.Target);
+                        Get.Green();
+                        Get.Write($"\n{Get.FileNameFromPath(this.Target)}\t");
+                        Get.Yellow(); 
+                        Get.Write($"{file}\n");
+                    });
+                    break;
                 default:
                     error.DisplayError(ErrorHandeler.ErrorType.NotValidAction, this.Code);
                     break;
@@ -161,3 +182,21 @@ namespace QuickToolsScript
         }
     }
 }
+/*
+ 
+        public static void OpenBrowser(string url)
+        {
+            if (Get.IsWindow())
+            {
+                Process.Start(new ProcessStartInfo("cmd", $"/c start {url}"));
+                return;
+            }
+            else
+            {
+                Process.Start("open", url);
+
+            }
+        }
+ 
+ 
+ */

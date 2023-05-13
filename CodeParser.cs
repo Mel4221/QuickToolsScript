@@ -30,34 +30,19 @@ using QuickTools.QCore;
 using QuickTools.QColors;
 using QuickTools.QConsole;
 using QuickTools.QSecurity;
-using QuickTools.QCore;
 using QuickTools.QSecurity.FalseIO;
 using System;
 using System.Collections.Generic;
+
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics; 
 
 namespace QuickToolsScript
 {
     public partial class CodeParser
     {
-
-   
-
-
- 
-
-
-        private string[] GetParameters(string[] parameters)
-        {
-            string[] param = null;
-
-
-            return param; 
-        }
-   
-
 
         private void Parse(CodeType codeType)
         {
@@ -71,12 +56,28 @@ namespace QuickToolsScript
                     break;
                 case CodeType.ActionWithType:
                     action = this.Code[0];
-                    type = this.Code[1];
+                    type = Get.FixPath(this.Code[1]);
+                    switch (type)
+                    {
+                        case "obj":
+                        case "object":
+                        case "selected-value":
+                            type = ShellLoop.SelectedOject; 
+                            break;
+                    }
                     this.SetExecution(action, type); 
                     break;
                 case CodeType.Complete:
                     action = this.Code[0];
-                    type = this.Code[1];
+                    type = Get.FixPath(this.Code[1]);
+                    switch (type)
+                    {
+                        case "obj":
+                        case "object":
+                        case "selected-value":
+                            type = ShellLoop.SelectedOject;
+                            break;
+                    }
                     this.SetExecution(action, type,this.Code);
                     break; 
             }
@@ -102,6 +103,8 @@ namespace QuickToolsScript
             }
 
         }
+
+
 
         public CodeParser(string frofileOrCode)
         {

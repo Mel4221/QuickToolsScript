@@ -32,27 +32,30 @@ using System.Threading;
 
 namespace QuickToolsScript
 {
+
     public class ScriptRunner
     {
+        private static BackGroundJob Job = new BackGroundJob();
 
-        public Thread ScriptRunnerThread;
-
-        public void Run(Action code,bool runInBackGround)
+           public void Run(Action code,bool runInBackGround)
         {
             if (runInBackGround)
             {
+                BackGroundJob job = new BackGroundJob();
+                job.JobAction = code;
+                job.JobInfo = "Testing this new class";
                 try
                 {
-                    ScriptRunnerThread = new Thread(() => { code(); });
-                    ScriptRunnerThread.Start(); 
+                    Job.AddJob(job);
+                    Job.RunJobs();
                 }
                 catch (Exception error)
                 {
                     new ErrorHandeler().DisplayError(ErrorHandeler.ErrorType.ExeutionError, error.ToString());
                 }
                 return;
-            }
-            else
+            }if(!runInBackGround)
+             
             {
                 Run(code);
                 return;

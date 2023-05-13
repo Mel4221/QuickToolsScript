@@ -26,6 +26,7 @@
 // THE SOFTWARE.using System;
 using System; 
 using System.IO;
+using System.Diagnostics;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -37,27 +38,61 @@ using QuickTools.QCore;
 using QuickTools.QColors;
 using QuickTools.QConsole;
 using QuickTools.QSecurity;
-using QuickTools.QCore;
+using System.Threading;
 using QuickTools.QSecurity.FalseIO;
 
 namespace QuickToolsScript
 {
     public partial class CodeParser
     {
+        private string[] GetParameters(string[] parameters)
+        {
+            string[] param;
+            int current, goal;
+            goal = parameters.Length;
+            string cmds = ""; 
+            for (current = 2; current < goal; current++)
+            {
+                cmds += parameters[current]+" ";
+            }
+            param = IConvert.TextToArray(cmds);
+            return param;
+        }
 
         public void SetExecution(string action, string type, string[] parameters)
         {
             this.cache = new DataCacher();
             this.runner = new ScriptRunner();
             this.error = new ErrorHandeler();
-            this.Target = $"{ShellLoop.CurrentPath}{Get.Slash()}{type}";
-
+            this.Target = Get.FixPath($"{ShellLoop.CurrentPath}{Get.Slash()}{type}");
+            string[] param =  this.GetParameters(parameters);
+            //Print.List(param); 
             switch (action)
             {
                 case "mv":
-                    if (true)
+                    break;
+                case "create":
+                    if (type == "zero-file" && param.Length >= 2)
                     {
-                        throw new Exception("Not Implemented yet");
+                        if (Get.IsNumber(param[0]))
+                        {
+                            runner.Run(() => {
+                                Console.Title = Console.Title + "Working With A BackGround Job";
+                                int size = int.Parse(param[0]);
+                                Binary.CreateZeroFile(param[1],size,false);
+                                Console.Title =  " Task Completed";
+                                Thread.Sleep(5000);
+                                Console.Title = Program.Name;
+                            },true);
+                            return;
+                        }
+                        else
+                        {
+                            Get.Yellow($"The Right Way is: ");
+                            Get.Green($"create zero-file gbSize fileName");
+                            Get.Green("create zero-file 1 zeroFile.iso");
+                           
+                        }
                     }
                     break;
                 case "wget":

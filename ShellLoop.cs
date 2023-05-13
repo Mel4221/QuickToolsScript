@@ -42,26 +42,57 @@ namespace QuickToolsScript
     public class ShellLoop
     {
         public static string CurrentPath;
+        public static string SelectedOject;
         private ShellInput shell;
 
+        private MiniDB db;
+        public MiniDB GetHistory()
+        {
+            db = new MiniDB("QuickTools_Shell_History.xml", true);
+            db.Load();
+            return db; 
+        }
+        public void SaveHistory(string command)
+        {
+            db = new MiniDB("QuickTools_Shell_History.xml",true);
+            db.AllowRepeatedKeys = true;
+            db.Create();
+            db.Load();
+            db.AddKeyOnHot("command", command, DateTime.Now.ToLongDateString());
+            db.HotRefresh();
+        }
+
+
+        //public static Thread BackGroundJob;
+        ////                    Get.Title("QuickTools Shell");
+        //public static int Status; 
         public void Start()
         {
-             this.shell = new ShellInput(System.Environment.UserName, System.Environment.MachineName);
-             CodeParser parser;
+            this.shell = new ShellInput(System.Environment.UserName, System.Environment.MachineName);
+            CodeParser parser;
 
             string input;
             input = null;
-            
 
-           
-           // Get.Wait(ShellLoop.CurrentPath);
-                 ShellLoop.CurrentPath = ShellLoop.CurrentPath != "" ? Directory.GetCurrentDirectory() : ShellLoop.CurrentPath;
+            //BackGroundJob = new Thread(() => {
+            //    while (true)
+            //    {
+            //        Status++;
+            //        Get.Title($"QuickTools Shell  ActiveJob: {Status}");
+            //        Thread.Sleep(1000);
+            //    }
+            //});
+            //BackGroundJob.Start();
+            //Get.Wait(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles));// Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
+            // Get.Wait(ShellLoop.CurrentPath);
+            ShellLoop.CurrentPath = ShellLoop.CurrentPath != "" ? Directory.GetCurrentDirectory() : ShellLoop.CurrentPath;
 
             while (true)
             {
                 this.shell.Notifications = DateTime.Now.ToString("H:m M:dd:yyyy");
                 this.shell.CurrentPath = ShellLoop.CurrentPath;
                 input = this.shell.StartInput();
+                SaveHistory(input); 
                 if (input == "exit")
                 {
                     Environment.Exit(0);

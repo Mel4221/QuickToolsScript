@@ -55,7 +55,7 @@ namespace QuickToolsScript
             this.cache = new DataCacher();
             this.runner = new ScriptRunner();
             this.error = new ErrorHandeler();
-            this.Target = $"{ShellLoop.CurrentPath}";
+            this.Target = Get.FixPath($"{ShellLoop.CurrentPath}");
             switch (action)
             {
                 case "reset-path":
@@ -117,6 +117,73 @@ namespace QuickToolsScript
                         cache.Cach("EntryInput", Get.Input("Type Something: ").Text);
                     });
                     break;
+                case "select":
+                case "-S":
+                    runner.Run(() => {
+                        string[] files = new FilesMaper().GetFiles(this.Target);
+                        string[] folders = Directory.GetDirectories(this.Target);
+                        string[] both = new string[files.Length+folders.Length];
+                        if (files.Length > 0)
+                        {
+                            for (int current = 0; current < files.Length; current++)
+                            {
+                                both[current] = Get.FileNameFromPath(files[current]);
+                            }
+                        }
+                        int bothLength = both.Length - 1;  
+                        if(folders.Length > 0)
+                        {
+                            for (int current = 0; current < folders.Length; current++)
+                            {
+                                string path = folders[current];
+                                both[bothLength] = path.Substring(path.LastIndexOf(Get.Slash()) + 1);
+                                bothLength--;
+                            }
+                        }
+            
+                        Options option = new Options(both);
+                        Options.Label = this.Target;
+                        Options.SelectorL = "> "; 
+                        Options.SelectorR = ""; 
+                        int selection = option.Pick();
+                        ShellLoop.SelectedOject = $"{this.Target}{Get.Slash()}{both[selection]}";
+                        //Get.Yellow(this.Target);
+                        //Get.Wait(ShellLoop.SelectedOject);
+                    });
+                    break;
+                case "select?":
+                case "selected":
+                case "-S?":
+                    runner.Run(() => {
+                        Get.Blue();
+                        Get.WriteL(" ");
+                        Get.Write($"Object Selected: ");
+                        Get.Yellow();
+                        Get.Write($"{ShellLoop.SelectedOject}");
+                    });
+                    break;
+                case "clear-selected":
+                case "clear-S":
+                     runner.Run(() => {
+                         ShellLoop.SelectedOject = null;
+                    });
+                    break;
+                case "history":
+                    runner.Run(() => {
+                      
+                        MiniDB db =  new ShellLoop().GetHistory();
+                        Get.WriteL(" ");
+                        db.DataBase.ForEach((item) => {
+                            Get.Green();
+                            Get.Write($"No: {item.Id} ");
+                            Get.Yellow();
+                            Get.Write($"Command: {item.Value} ");
+                            Get.Blue();
+                            Get.Write($"Date: {item.Relation} ");
+                            Get.WriteL(" ");
+                        });
+                    });
+                    break; 
                 default:
                     error.DisplayError(ErrorHandeler.ErrorType.NotValidAction, this.Code);
                     break;

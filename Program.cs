@@ -39,15 +39,30 @@ namespace QuickToolsScript
 {
     internal class Program
     {
+
+        public const string Name = "QuickTools Shell"; 
         static int Main(string[] args)
         {
-      
+
+            //Get.Wait(FixPath("../box/secure/QuickTools.xml"));
+            //Get.Wait(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles));// Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
+            //while(true)Get.Box(Get.Input().Text);
+            //return 0; 
             Get.Title("QuickToolsScript");
             CodeParser parser;
             MainMenu menu;
-          
+            ShellLoop shellLoop;
+            args = new string[] { "shell"}; 
+            
             if(args.Length > 0)
             {
+                if (args[0] == "shell")
+                {
+                    shellLoop = new ShellLoop();
+                    Get.Title("QuickTools Shell");
+                    shellLoop.Start();
+                    return 0; 
+                }
 
                 parser = new CodeParser(args);
                 parser.Start(); 

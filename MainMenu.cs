@@ -51,6 +51,7 @@ namespace QuickToolsScript
             {
                 case 0:
                     shellLoop = new ShellLoop();
+                    Get.Title("QuickTools Shell");
                     shellLoop.Start();
                     break;
                 case 5:
