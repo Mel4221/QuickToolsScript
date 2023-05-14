@@ -1,0 +1,32 @@
+﻿Today 5/13/2023
+I was thinking that it will be a great idea to add a todo list to give a fallow up to what i'm thinking to work on 
+because i have a very bad habbyt of not documenting some of my code nor what i'm planning to work on  so tody will 
+be the first day that i will try to write what i want to do before i start coding 
+
+Issue 1: 
+	*selec multiple files by the critieria given , is such a normal feature in terminals and this shell must have it 
+	with given commands such as 
+									ls *.pdf
+									cat *.txt
+									size *.iso
+
+
+Issue 2:
+	c: refer to upper path or disk drive by getting the letter of it or just typing the required slash such as /inLinux 
+	or on window \ 
+	Solved Partialy
+
+
+	I decided to go by the seasiets one today which is the Issue 1 
+	since it will just required  to add some switch case that takes in consideration that if  "*"
+	is given multiple files if exsit has to be selected
+	lastly in some commands as the ls is even easier to just to add a condition to only print the ones that meet the craiteriea.
+
+			BONUS POINTS : I GOT INTO ADDING THHE -r paramter to rm || delete function 
+
+
+Issue 3: 
+	the select command has a funtionality of holding the reference of an object such as 
+	path for a file o the path for a folder but on the way that is implemented it does not work 
+	since is adding the Target with the reference of the path of the file and there has to be a better
+	way to fix that 

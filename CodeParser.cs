@@ -64,7 +64,10 @@ namespace QuickToolsScript
                         case "selected-value":
                             type = ShellLoop.SelectedOject; 
                             break;
+        
+                        
                     }
+                    
                     this.SetExecution(action, type); 
                     break;
                 case CodeType.Complete:
@@ -77,6 +80,7 @@ namespace QuickToolsScript
                         case "selected-value":
                             type = ShellLoop.SelectedOject;
                             break;
+                            
                     }
                     this.SetExecution(action, type,this.Code);
                     break; 

@@ -56,8 +56,9 @@ namespace QuickToolsScript
               this.runner = new ScriptRunner();
               this.error = new ErrorHandeler();
               this.Target = Get.FixPath($"{ShellLoop.CurrentPath}{Get.Slash()}{type}");
+              this.ClearTarget = Get.FixPath($"{ShellLoop.CurrentPath}");
               //type = Get.FixPath(type);
-           // Get.Wait(this.Target);
+              // Get.Wait(this.Target);
             switch (action)
             {
 
@@ -100,7 +101,18 @@ namespace QuickToolsScript
                 case "ls":
                 case "list":
                 case "list-files":
-                    runner.Run(() => { Get.Ls(type); });
+                    runner.Run(() => {
+                        if (type[0] == '*')
+                        {
+                            //Get.Wait($"{this.Target.Substring(0,this.Target.LastIndexOf("*"))} {type.Substring(1)}");
+                            Get.Ls(this.ClearTarget, type.Substring(1),true);
+                            return;
+                        }
+                        else
+                        {
+                            Get.Ls(type);
+                        }
+                    });
                     break;
                 case "ls-l":
                 case "list-with-dates":

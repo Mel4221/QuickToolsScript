@@ -14,8 +14,21 @@ namespace QuickToolsScript
         private ScriptRunner runner;
         private ErrorHandeler error;
 
+        /// <summary>
+        /// Containst the path plus the given folder or file given to the shellLoop
+        /// </summary>
+        public string Target;
 
-        public string Target; 
+        /// <summary>
+        /// Contains only the current path
+        /// </summary>
+        public string ClearTarget;
+
+        /// <summary>
+        /// will contains the relative path to acces to any file in the address 
+        /// to avoid displaying this ~/Desktop/../../../../../ ext...
+        /// </summary>
+        public string PrivatePath; 
         /// <summary>
         /// Contains the Code array
         /// </summary>

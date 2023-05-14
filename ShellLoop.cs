@@ -46,6 +46,10 @@ namespace QuickToolsScript
         private ShellInput shell;
 
         private MiniDB db;
+
+  
+ 
+
         public MiniDB GetHistory()
         {
             db = new MiniDB("QuickTools_Shell_History.xml", true);

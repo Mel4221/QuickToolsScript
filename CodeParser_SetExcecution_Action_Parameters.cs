@@ -65,8 +65,11 @@ namespace QuickToolsScript
             this.runner = new ScriptRunner();
             this.error = new ErrorHandeler();
             this.Target = Get.FixPath($"{ShellLoop.CurrentPath}{Get.Slash()}{type}");
+            this.ClearTarget = Get.FixPath($"{ShellLoop.CurrentPath}");
+
             string[] param =  this.GetParameters(parameters);
-            //Print.List(param); 
+            Get.Yellow("For Testing: ");
+            Print.List(param);
             switch (action)
             {
                 case "mv":
@@ -79,11 +82,11 @@ namespace QuickToolsScript
                             runner.Run(() => {
                                 Console.Title = Console.Title + "Working With A BackGround Job";
                                 int size = int.Parse(param[0]);
-                                Binary.CreateZeroFile(param[1],size,false);
-                                Console.Title =  " Task Completed";
+                                Binary.CreateZeroFile(param[1], size, false);
+                                Console.Title = " Task Completed";
                                 Thread.Sleep(5000);
                                 Console.Title = Program.Name;
-                            },true);
+                            }, true);
                             return;
                         }
                         else
@@ -91,10 +94,48 @@ namespace QuickToolsScript
                             Get.Yellow($"The Right Way is: ");
                             Get.Green($"create zero-file gbSize fileName");
                             Get.Green("create zero-file 1 zeroFile.iso");
-                           
+
                         }
                     }
                     break;
+                case "rm":
+                    if (type == "-r" && param.Length >= 1)
+                    {
+                        runner.Run(() => {
+                            //Get.Wait($"{this.ClearTarget}");
+                            FilesMaper maper = new FilesMaper(this.ClearTarget);
+                            maper.Map();
+                            List<string> folders = maper.Directories;
+                            List<string> files = maper.Files;
+                            for (int current = files.Count - 1; current > 0; current--)
+                            {
+                                Get.Yellow($"Deleting...: {files[current]}");
+                            }
+                            GC.Collect();
+                            for (int current = folders.Count - 1; current > 0; current--)
+                            {
+                                Get.Red($"Deleting...: {folders[current]}");
+                            }
+
+                        });
+                    }
+                    break;
+                case "cp":
+                    //Get.Wait($"T: {this.Target} CT: {this.ClearTarget}");
+                    runner.Run(() => {
+                        Get.Wait($"{this.Target}  {this.ClearTarget}");
+                    if (File.Exists(this.Target))
+                        {
+                            Binary.CopyBinaryFile(this.Target, param[0]);
+                            Get.Ok();
+                            return;
+                        }
+                        else
+                        {
+                            Get.Print("It looks like i did not find the file ", this.Target); 
+                        }
+                    });
+                    break; 
                 case "wget":
                     break;
                 case "secure":

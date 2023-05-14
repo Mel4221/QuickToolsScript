@@ -56,6 +56,7 @@ namespace QuickToolsScript
             this.runner = new ScriptRunner();
             this.error = new ErrorHandeler();
             this.Target = Get.FixPath($"{ShellLoop.CurrentPath}");
+
             switch (action)
             {
                 case "reset-path":
@@ -146,6 +147,8 @@ namespace QuickToolsScript
                         Options.SelectorL = "> "; 
                         Options.SelectorR = ""; 
                         int selection = option.Pick();
+                        string str = null;
+                        str = this.Target[this.Target.Length - 1].ToString() == Get.Slash() ? "" : Get.Slash(); 
                         ShellLoop.SelectedOject = $"{this.Target}{Get.Slash()}{both[selection]}";
                         //Get.Yellow(this.Target);
                         //Get.Wait(ShellLoop.SelectedOject);
@@ -183,7 +186,12 @@ namespace QuickToolsScript
                             Get.WriteL(" ");
                         });
                     });
-                    break; 
+                    break;
+                case "get-logs":
+                    runner.Run(() => {
+                        ShellLoop.CurrentPath = Get.DataPath("logs");
+                    });
+                    break;
                 default:
                     error.DisplayError(ErrorHandeler.ErrorType.NotValidAction, this.Code);
                     break;
