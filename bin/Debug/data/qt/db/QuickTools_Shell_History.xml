@@ -804,4 +804,25 @@
 <Key Value="[command:Sunday, May 14, 2023:1803]ls"/>
 <Key Value="[command:Sunday, May 14, 2023:1804]ls"/>
 <Key Value="[command:Sunday, May 14, 2023:1805]rm -r data"/>
+<Key Value="[command:Sunday, May 14, 2023:1806]ls"/>
+<Key Value="[command:Sunday, May 14, 2023:1807]ls data"/>
+<Key Value="[command:Sunday, May 14, 2023:1808]rm -r data"/>
+<Key Value="[command:Sunday, May 14, 2023:1809]rm -r dataclear"/>
+<Key Value="[command:Sunday, May 14, 2023:1810]rm -r data/"/>
+<Key Value="[command:Sunday, May 14, 2023:1811]cd data"/>
+<Key Value="[command:Sunday, May 14, 2023:1812]ls"/>
+<Key Value="[command:Sunday, May 14, 2023:1813]ls"/>
+<Key Value="[command:Sunday, May 14, 2023:1814]cd .."/>
+<Key Value="[command:Sunday, May 14, 2023:1815]ls"/>
+<Key Value="[command:Sunday, May 14, 2023:1816]ls data\"/>
+<Key Value="[command:Sunday, May 14, 2023:1817]exit"/>
+<Key Value="[command:Sunday, May 14, 2023:1818]ls"/>
+<Key Value="[command:Sunday, May 14, 2023:1819]ls data"/>
+<Key Value="[command:Sunday, May 14, 2023:1820]ls data\"/>
+<Key Value="[command:Sunday, May 14, 2023:1821]cd data"/>
+<Key Value="[command:Sunday, May 14, 2023:1822]exit"/>
+<Key Value="[command:Sunday, May 14, 2023:1823]ls data/"/>
+<Key Value="[command:Sunday, May 14, 2023:1824]ls data"/>
+<Key Value="[command:Sunday, May 14, 2023:1825]exit"/>
+<Key Value="[command:Sunday, May 14, 2023:1826]ls data/"/>
 </DATA>

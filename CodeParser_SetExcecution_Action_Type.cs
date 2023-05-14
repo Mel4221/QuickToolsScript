@@ -107,8 +107,11 @@ namespace QuickToolsScript
                 case "list":
                 case "list-files":
                     runner.Run(() => {
-                       // Get.Wait(type);
-                       if(type == "disk")
+                        Get.Yellow($"{this.Target}     ClearTarget: {this.ClearTarget} Type: {type}");
+                        Get.Blue(Path.GetDirectoryName(this.Target));
+
+                        // Get.Wait(type);
+                        if (type == "disk")
                         {
                             Print.List(Environment.GetLogicalDrives());
                             return;
@@ -126,12 +129,15 @@ namespace QuickToolsScript
                         }
                         else
                         {
+
                             Get.Ls(type);
                         }
                     });
                     break;
                 case "cd":
                         runner.Run(() => {
+
+                            //Get.Yellow($"{this.Target}     ClearTarget: {this.ClearTarget}");
                             // Print.List(Environment.GetLogicalDrives());
                             //   Get.Wait();
                             //  Get.Cyan(ShellLoop.CurrentPath);

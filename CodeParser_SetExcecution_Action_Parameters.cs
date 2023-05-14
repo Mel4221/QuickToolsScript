@@ -111,13 +111,13 @@ namespace QuickToolsScript
                             for (int current = files.Count - 1; current > 0; current--)
                             {
                                 Get.Yellow($"Deleting...: {files[current]}");
-                                File.Delete(files[current]); 
+                                //File.Delete(files[current]); 
                             }
                             GC.Collect();// to make sure that it release the path from the files 
                             for (int current = folders.Count - 1; current > 0; current--)
                             {
                                 Get.Red($"Deleting...: {folders[current]}");
-                                Directory.Delete(folders[current]);
+                                //Directory.Delete(folders[current]);
                             }
 
                         });
