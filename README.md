@@ -1,4 +1,7 @@
 # QuickToolsScript
+# Goal
+> The goal of this project is to create an interpreter for all the commands listed in the QuickTools library 
+
 QuickTools Execution Program 
 
 This Project is a terminal base execution system that runs the QuickTools Library and it provide's with the system to read the scripts and execute the funtions implemented in the Library for more information about the library visit: 
@@ -43,4 +46,5 @@ As you may see is very similar to the version from some terminas out there at le
  3. ls as list-files or list 
 
 
-
+# Current Status Of The Projet 
+> NOT COMPLETED YET 
