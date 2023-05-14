@@ -123,7 +123,8 @@ namespace QuickToolsScript
                 case "cp":
                     //Get.Wait($"T: {this.Target} CT: {this.ClearTarget}");
                     runner.Run(() => {
-                        Get.Wait($"{this.Target}  {this.ClearTarget}");
+                        Get.Wait($"Target: {this.Target}");
+                      //  Get.Wait($"{this.Target}  {this.ClearTarget}");
                     if (File.Exists(this.Target))
                         {
                             Binary.CopyBinaryFile(this.Target, param[0]);
@@ -135,7 +136,26 @@ namespace QuickToolsScript
                             Get.Print("It looks like i did not find the file ", this.Target); 
                         }
                     });
-                    break; 
+                    break;
+                case "ls":
+                case "list":
+                case "list-files":
+                    runner.Run(() => {
+                        if (param.Length != 1)
+                        {
+                            error.DisplayError(ErrorHandeler.ErrorType.NotValidParameter, this.Code);
+
+                            return;
+                        }
+                     
+                        if (type == "-l")
+                        {
+                            Get.Ls(param[0], "");
+                            return;
+                        }
+                        
+                    });
+                    break;
                 case "wget":
                     break;
                 case "secure":

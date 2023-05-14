@@ -43,13 +43,31 @@ namespace QuickToolsScript
     {
         public static string CurrentPath;
         public static string SelectedOject;
+        public static string[] Disks; 
         private ShellInput shell;
 
         private MiniDB db;
 
   
  
+        public bool ReferToDisk(string input)
+        {
+            bool refer = false;
+            if(ShellLoop.Disks == null)
+            {
+                ShellLoop.Disks = Environment.GetLogicalDrives(); 
+            }
+            foreach (string disk in ShellLoop.Disks)
+            {
+                if(disk == input)
+                {
+                    return true; 
+                }
+            }
 
+
+            return refer; 
+        }
         public MiniDB GetHistory()
         {
             db = new MiniDB("QuickTools_Shell_History.xml", true);
@@ -89,7 +107,8 @@ namespace QuickToolsScript
             //BackGroundJob.Start();
             //Get.Wait(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles));// Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
             // Get.Wait(ShellLoop.CurrentPath);
-            ShellLoop.CurrentPath = ShellLoop.CurrentPath != "" ? Directory.GetCurrentDirectory() : ShellLoop.CurrentPath;
+
+                ShellLoop.CurrentPath = ShellLoop.CurrentPath != "" ? Environment.GetFolderPath(Environment.SpecialFolder.Desktop): ShellLoop.CurrentPath;
 
             while (true)
             {

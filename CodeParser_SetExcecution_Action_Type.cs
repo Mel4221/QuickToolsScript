@@ -102,6 +102,17 @@ namespace QuickToolsScript
                 case "list":
                 case "list-files":
                     runner.Run(() => {
+                       // Get.Wait(type);
+                       if(type == "disk")
+                        {
+                            Print.List(Environment.GetLogicalDrives());
+                            return;
+                        }
+                        if(type == "-l")
+                        {
+                            Get.Ls(this.ClearTarget, "");
+                            return; 
+                        }
                         if (type[0] == '*')
                         {
                             //Get.Wait($"{this.Target.Substring(0,this.Target.LastIndexOf("*"))} {type.Substring(1)}");
@@ -114,29 +125,44 @@ namespace QuickToolsScript
                         }
                     });
                     break;
-                case "ls-l":
-                case "list-with-dates":
-                    runner.Run(() =>
-                    {
-                        if(type != "-l")
-                        {
-                            Get.Ls(type, "");
-                            return;
-                        }
-                        else
-                        {
-                            Get.Ls(ShellLoop.CurrentPath, "");
-                        }
-                   
-                    });
-                    break;
                 case "cd":
                         runner.Run(() => {
+                            // Print.List(Environment.GetLogicalDrives());
+                            //   Get.Wait();
                             //  Get.Cyan(ShellLoop.CurrentPath);
+                            //Get.Wait(type.ToUpper());
+                            Get.Wait(new ShellLoop().ReferToDisk(type.ToUpper()));
+                            if (new ShellLoop().ReferToDisk(type.ToUpper()))
+                            {
+                                ShellLoop.CurrentPath = type; 
+                                return;
+                            }
                             if (type[0] == '~')
                             {
+                                string p = type.Substring(type.IndexOf(Get.Slash()) + 1).ToLower();
+                                switch (p)
+                                {
+                                    case "desktop":
+                                        ShellLoop.CurrentPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                                        break;
+                                    case "documents":
+                                        ShellLoop.CurrentPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                                        break;
+                                    case "downloads":
+                                        string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                                        string str = $"{path.Substring(0, path.LastIndexOf(Get.Slash()))}{Get.Slash()}Downloads";
+                                        ShellLoop.CurrentPath = str;  
+                                        break;
+                                    case "mycomputer":
+                                        ShellLoop.CurrentPath = Environment.GetFolderPath(Environment.SpecialFolder.MyComputer);
+                                        break;
+
+                                }
+                                //Get.Wait($"{}");
+                                // Environment.SpecialFolder.MyComputer
+                                return;
                             }
-                           if(type != ".." && type != Get.Slash() && type != $"{Get.Slash()}{Get.Slash()}"&&
+                            if (type != ".." && type != Get.Slash() && type != $"{Get.Slash()}{Get.Slash()}"&&
                             type != $"{Get.Slash()}{Get.Slash()}{Get.Slash()}")
                             {
                                 if (Directory.Exists(this.Target))

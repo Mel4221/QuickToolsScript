@@ -109,9 +109,6 @@ namespace QuickToolsScript
                      runner.Run(() => { Get.Ls(this.Target); });
                    // Get.Ls(ShellLoop.CurrentPath);
                     break;
-                case "ls-l":
-                    runner.Run(() => { Get.Ls(this.Target,""); });
-                    break;
                 case "get-input":
                 case "input":
                     runner.Run(() => {

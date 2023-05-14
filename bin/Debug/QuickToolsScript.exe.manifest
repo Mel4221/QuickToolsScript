@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="QuickToolsScript.exe" size="92096">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="QuickToolsScript.exe" size="92608">
       <assemblyIdentity name="QuickToolsScript" version="5.2.1.1" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>G6L6BxIa2pi6AL7Pq8kpld14FAXjefGIA9iDFasSG+c=</dsig:DigestValue>
+        <dsig:DigestValue>PxKmkavIoiCiPVszlL5RpoC0p0eNBTk14fvPh/acWM4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -84,13 +84,13 @@
       <dsig:DigestValue>5IjU9miiUpZgPfs786pMwbN1q2TJ2TF/eDFOoQs8a2c=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="ToDoList.txt" size="1136">
+  <file name="ToDoList.txt" size="1377">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>HwSRgT6NW68uXirYlhqjb9qGwSJzsvzXcEYLsgaB7Fw=</dsig:DigestValue>
+      <dsig:DigestValue>5tP0KaL3iv7jva3We7wMibiUMTnEXrP0n8n8GJ+pMQA=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
