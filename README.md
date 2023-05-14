@@ -21,4 +21,25 @@ from the terminal but you could just hit shell in the menu as well
 ![image](https://github.com/Mel4221/QuickToolsScript/assets/87794877/8ca1fa3d-b028-4e9c-99ad-2de4a3169155)
 
 As you may see is very similar to the version from some terminas out there at least in looks
+ at the time it support a very limited amount of commands such as 
+ 1. cd
+ 2. cp
+ 3. mv
+ 4. ls
+ 5. ls-l
+ 6. ls *file extention
+ 7. rm or remove *don't required anythinng else it could literally remove a folder or a file  buf for the lovers of rm -r i added just in case 
+ 8. rm -r
+ 9. cat
+ 10. clear 
+ 11. touch
+ 12. echo *works but is not fullly supported yet  nor the magic of it
+ 13. du *thought it only prints the size of the file and it does it in auto as -h  Human
+ 14. mkdir
+ 
+ > Must of this methods conain another alias just to help a bit such as 
+ 1. rm as delete 
+ 2. touch as create
+ 3. ls as list-files or list 
+ 4. 
 
