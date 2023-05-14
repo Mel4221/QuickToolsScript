@@ -53,7 +53,7 @@ namespace QuickToolsScript
             string cmds = ""; 
             for (current = 2; current < goal; current++)
             {
-                cmds += parameters[current]+" ";
+                cmds +=  Get.FixPath(parameters[current])+" ";
             }
             param = IConvert.TextToArray(cmds);
             return param;
@@ -61,13 +61,14 @@ namespace QuickToolsScript
 
         public void SetExecution(string action, string type, string[] parameters)
         {
+            string fix = type[0] == '>' ? type.Substring(1) : Get.FixPath($"{ShellLoop.CurrentPath}{Get.Slash()}{type}");
             this.cache = new DataCacher();
             this.runner = new ScriptRunner();
             this.error = new ErrorHandeler();
-            this.Target = Get.FixPath($"{ShellLoop.CurrentPath}{Get.Slash()}{type}");
+            this.Target = Get.FixPath(fix);
             this.ClearTarget = Get.FixPath($"{ShellLoop.CurrentPath}");
 
-            string[] param =  this.GetParameters(parameters);
+            string[] param =   this.GetParameters(parameters);
             Get.Yellow("For Testing: ");
             Print.List(param);
             switch (action)
@@ -110,11 +111,13 @@ namespace QuickToolsScript
                             for (int current = files.Count - 1; current > 0; current--)
                             {
                                 Get.Yellow($"Deleting...: {files[current]}");
+                                File.Delete(files[current]); 
                             }
-                            GC.Collect();
+                            GC.Collect();// to make sure that it release the path from the files 
                             for (int current = folders.Count - 1; current > 0; current--)
                             {
                                 Get.Red($"Deleting...: {folders[current]}");
+                                Directory.Delete(folders[current]);
                             }
 
                         });
@@ -123,11 +126,15 @@ namespace QuickToolsScript
                 case "cp":
                     //Get.Wait($"T: {this.Target} CT: {this.ClearTarget}");
                     runner.Run(() => {
-                        Get.Wait($"Target: {this.Target}");
-                      //  Get.Wait($"{this.Target}  {this.ClearTarget}");
-                    if (File.Exists(this.Target))
+                        //Get.Wait($"Target: {this.Target}");
+                        //  Get.Wait($"{this.Target}  {this.ClearTarget}");
+
+                      //  Get.Wait($"Target: {this.Target} Param: {Helper.CheckForPath(param[0])}");
+
+                        if (File.Exists(this.Target))
                         {
-                            Binary.CopyBinaryFile(this.Target, param[0]);
+                            Get.Wait($"{this.Target} {Helper.CheckForPath(param[0])}");
+                            File.Copy(this.Target, Helper.CheckForPath(param[0]));
                             Get.Ok();
                             return;
                         }

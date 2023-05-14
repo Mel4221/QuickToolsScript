@@ -52,10 +52,13 @@ namespace QuickToolsScript
         /// <param name="type"></param>
         public void SetExecution(string action, string type)
         {
+
+              string fix = type[0] == '>' ? type.Substring(1) : Get.FixPath($"{ShellLoop.CurrentPath}{Get.Slash()}{type}");
+              //Get.Wait(fix);
               this.cache = new DataCacher();
               this.runner = new ScriptRunner();
               this.error = new ErrorHandeler();
-              this.Target = Get.FixPath($"{ShellLoop.CurrentPath}{Get.Slash()}{type}");
+              this.Target = Get.FixPath(fix); 
               this.ClearTarget = Get.FixPath($"{ShellLoop.CurrentPath}");
               //type = Get.FixPath(type);
               // Get.Wait(this.Target);
@@ -80,22 +83,24 @@ namespace QuickToolsScript
                     {
 
                             //  Get.Yellow(this.Target);
-                            System.GC.Collect();
-                            System.GC.WaitForPendingFinalizers(); 
+                             GC.Collect();
+                             GC.WaitForPendingFinalizers(); 
                             File.Delete(this.Target); 
                             return;
-                        }
+                    }
 
-                        if (Directory.Exists(this.Target))
-                        {
-                            runner.Run(() => { Directory.Delete(this.Target); });
+                    if (Directory.Exists(this.Target))
+                    {
+                            GC.Collect();
+                            GC.WaitForPendingFinalizers();
+                           Directory.Delete(this.Target);
 
-                            return;
-                        }
-                        else
-                        {
-                           Get.Print("File or Directory not found: ", type);
-                        }
+                        return;
+                    }
+                    else
+                    {
+                        Get.Print("File or Directory not found: ", type);
+                    }
                     });
                     break;
                 case "ls":
@@ -131,7 +136,7 @@ namespace QuickToolsScript
                             //   Get.Wait();
                             //  Get.Cyan(ShellLoop.CurrentPath);
                             //Get.Wait(type.ToUpper());
-                            Get.Wait(new ShellLoop().ReferToDisk(type.ToUpper()));
+                            //Get.Wait(new ShellLoop().ReferToDisk(type.ToUpper()));
                             if (new ShellLoop().ReferToDisk(type.ToUpper()))
                             {
                                 ShellLoop.CurrentPath = type; 
@@ -199,6 +204,7 @@ namespace QuickToolsScript
                     break;
                 case "cat":
                     runner.Run(() => {
+                        Get.Wait(this.Target);
                         Get.WriteL(" ");
                        Get.Write(Reader.Read(this.Target));
                     });
@@ -213,9 +219,42 @@ namespace QuickToolsScript
                         Get.Write($"{file}\n");
                     });
                     break;
+                case "select":
+                case "-S":
+                    runner.Run(() => { 
+                    //Get.Wait(type);
+                        if (type[0] == '*')
+                        {
+                            string[] files = new FilesMaper().GetFiles(this.ClearTarget);
+                            List<string> withExt = new List<string>();
+                            foreach(string file in files)
+                            {
+                                if (Get.FileExention(file) == Get.FileExention(type))
+                                {
+                                    withExt.Add(file);
+                                }
+                            }
+                            if(withExt != null || withExt.Count > 0)
+                            {
+                                files = IConvert.ToType<string>.ToArray(withExt); 
+                            }
+                            //Print.List(withExt);
+                            //Get.Wait();
+                            Options option = new Options(files);
+                            Options.Label = this.ClearTarget;
+                            Options.SelectorL = "> ";
+                            Options.SelectorR = "";
+                            int selection = option.Pick();
+                            ShellLoop.SelectedOject = $"{this.ClearTarget}{Get.Slash()}{Get.FileNameFromPath(files[selection])}";
+                            return;
+                        }  
+                      
+                    });
+                    break;
                 default:
                     error.DisplayError(ErrorHandeler.ErrorType.NotValidAction, this.Code);
                     break;
+                    
             }
         }
     }

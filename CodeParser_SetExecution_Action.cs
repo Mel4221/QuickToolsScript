@@ -159,7 +159,8 @@ namespace QuickToolsScript
                         Get.WriteL(" ");
                         Get.Write($"Object Selected: ");
                         Get.Yellow();
-                        Get.Write($"{ShellLoop.SelectedOject}");
+                        string str = ShellLoop.SelectedOject == "" || ShellLoop.SelectedOject  == null? "NONE" : ShellLoop.SelectedOject;
+                        Get.Write(str);
                     });
                     break;
                 case "clear-selected":

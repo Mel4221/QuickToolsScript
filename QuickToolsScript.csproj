@@ -81,6 +81,7 @@
     <Compile Include="CodeParser_SetExcecution_Action_Type.cs" />
     <Compile Include="DefaultSettings.cs" />
     <Compile Include="ErrorHandeler.cs" />
+    <Compile Include="Helper.cs" />
     <Compile Include="MainMenu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -49,7 +49,7 @@ namespace QuickToolsScript
         private MiniDB db;
 
   
- 
+          
         public bool ReferToDisk(string input)
         {
             bool refer = false;
@@ -107,8 +107,9 @@ namespace QuickToolsScript
             //BackGroundJob.Start();
             //Get.Wait(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles));// Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
             // Get.Wait(ShellLoop.CurrentPath);
+            ShellLoop.CurrentPath = ShellLoop.CurrentPath != "" ? Get.Path : ShellLoop.CurrentPath;
 
-                ShellLoop.CurrentPath = ShellLoop.CurrentPath != "" ? Environment.GetFolderPath(Environment.SpecialFolder.Desktop): ShellLoop.CurrentPath;
+            //  ShellLoop.CurrentPath = ShellLoop.CurrentPath != "" ? Environment.GetFolderPath(Environment.SpecialFolder.Desktop): ShellLoop.CurrentPath;
 
             while (true)
             {
