@@ -37,7 +37,7 @@ As you may see is very similar to the version from some terminas out there at le
  13. du *thought it only prints the size of the file and it does it in auto as -h  Human
  14. mkdir
  
- > Must of this methods conain another alias just to help a bit such as 
+ > Must of this methods have another alias just to help a bit such as 
  1. rm as delete 
  2. touch as create
  3. ls as list-files or list 
