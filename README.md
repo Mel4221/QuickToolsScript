@@ -16,3 +16,9 @@ As this is the Shell from a library all the shell does it either call the method
 
 It has a direct access to the shell by giving as an argument the word "shell" as an argument
 from the terminal but you could just hit shell in the menu as well 
+
+![image](https://github.com/Mel4221/QuickToolsScript/assets/87794877/2036162f-23a1-4f50-b671-e94cbd550ec4)
+![image](https://github.com/Mel4221/QuickToolsScript/assets/87794877/8ca1fa3d-b028-4e9c-99ad-2de4a3169155)
+
+As you may see is very similar to the version from some terminas out there at least in looks
+
