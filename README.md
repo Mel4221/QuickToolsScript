@@ -41,5 +41,6 @@ As you may see is very similar to the version from some terminas out there at le
  1. rm as delete 
  2. touch as create
  3. ls as list-files or list 
- 4. 
+
+
 
