@@ -88,8 +88,11 @@ namespace QuickToolsScript
         public MiniDB GetHistory()
         {
             db = new MiniDB("QuickTools_Shell_History.xml", true);
+
+            
             db.Load();
             return db; 
+
         }
         public void SaveHistory(string command)
         {
