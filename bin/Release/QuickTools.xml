@@ -1095,6 +1095,22 @@
             <param name="dateFormat"></param>
             <returns></returns>
         </member>
+        <member name="M:QuickTools.QCore.Get.MatchFileExtention(System.String,System.String)">
+            <summary>
+            trys to match the file type extention
+            </summary>
+            <param name="file"></param>
+            <param name="test"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QuickTools.QCore.Get.Ls(System.String,System.String,System.Boolean)">
+            <summary>
+            only prints the one that meet the type 
+            </summary>
+            <param name="path"></param>
+            <param name="printType"></param>
+            <param name="printOnlyType"></param>
+        </member>
         <member name="M:QuickTools.QCore.Get.Print(System.Object,System.Object)">
             <summary>
             Gets a value printed with it's key 
@@ -1265,12 +1281,40 @@
             <returns>The name from path.</returns>
             <param name="path">Path.</param>
         </member>
+        <member name="M:QuickTools.QCore.Get.FileExention(System.String)">
+            <summary>
+            Gets the file extention and returns it back
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
         <member name="M:QuickTools.QCore.Get.FolderFromPath(System.String)">
             <summary>
             Gets the path from the given file 
             </summary>
             <returns>The from path.</returns>
             <param name="path">Path.</param>
+        </member>
+        <member name="M:QuickTools.QCore.Get.RelativePath(System.String)">
+            <summary>
+            Gets the relative path from the given path by taking your current path in consideration
+            </summary>
+            <param name="path"></param>
+            <returns>the relative path string </returns>
+        </member>
+        <member name="M:QuickTools.QCore.Get.IsDriveChar(System.String)">
+            <summary>
+            Checks if the path given looks like a drive letter on windwos 
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QuickTools.QCore.Get.RelativePath(System.String,System.String)">
+            <summary>
+            Gets the relative path from the given path by taking your current path in consideration
+            </summary>
+            <param name="path"></param>
+            <returns>the relative path string </returns>
         </member>
         <member name="M:QuickTools.QCore.Get.FixPath(System.String)">
             <summary>
@@ -2985,6 +3029,103 @@
             Set this instance.
             </summary>
         </member>
+        <member name="T:QuickTools.QIO.FilesMaper">
+            <summary>
+            This is a class developed to assit to be able to retroactively read files and directories 
+            </summary>
+        </member>
+        <member name="M:QuickTools.QIO.FilesMaper.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:QuickTools.FilesMaper"/> class.
+            </summary>
+        </member>
+        <member name="M:QuickTools.QIO.FilesMaper.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:QuickTools.FilesMaper"/> class.
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="P:QuickTools.QIO.FilesMaper.DirectoryList">
+            <summary>
+            Contains the list of directoys founded 
+            </summary>
+        </member>
+        <member name="P:QuickTools.QIO.FilesMaper.FileList">
+            <summary>
+            Contains the list of files founded 
+            </summary>
+        </member>
+        <member name="F:QuickTools.QIO.FilesMaper.FileErrors">
+            <summary>
+            Collect All The Current Files Error that are encountered by the maper 
+            </summary>
+        </member>
+        <member name="F:QuickTools.QIO.FilesMaper.DirectoriesError">
+            <summary>
+            Collect All The Current Files Error that are encountered by the maper 
+            </summary>
+        </member>
+        <member name="F:QuickTools.QIO.FilesMaper.Path">
+            <summary>
+            gets or set the path where the map will start 
+            </summary>
+        </member>
+        <member name="F:QuickTools.QIO.FilesMaper.Files">
+            <summary>
+            ccontains the lsit of files 
+            </summary>
+        </member>
+        <member name="F:QuickTools.QIO.FilesMaper.Directories">
+            <summary>
+            constins the list of Directories
+            </summary>
+        </member>
+        <member name="F:QuickTools.QIO.FilesMaper.AllowDebugger">
+            <summary>
+            allows to print the status of the current file search 
+            </summary>
+        </member>
+        <member name="M:QuickTools.QIO.FilesMaper.GetFiles(System.String)">
+            <summary>
+            Gets the files from the given path
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QuickTools.QIO.FilesMaper.GetDirs(System.String)">
+            <summary>
+            Gets the directosy 
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QuickTools.QIO.FilesMaper.Map">
+            <summary>
+            reads the path annd load all the files and directorys that it find allong the way
+            </summary>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:QuickTools.QIO.FilesMaper.Map(System.String)">
+            <summary>
+            reads the path annd load all the files and directorys that it find allong the way
+            </summary>
+            <param name="folderPath"></param>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:QuickTools.QIO.FilesMaper.Move(System.String,System.String)">
+            <summary>
+            Move the specified from origen to the given destination.
+            </summary>
+            <param name="origen">Origen.</param>
+            <param name="destination">Destination.</param>
+        </member>
+        <member name="M:QuickTools.QIO.FilesMaper.MoveHere(System.String,System.String)">
+            <summary>
+            Move the specified from origen to the given destination.
+            </summary>
+            <param name="origen">Origen.</param>
+            <param name="destination">Destination.</param>
+        </member>
         <member name="T:QuickTools.QIO.InputParser">
             <summary>
             Input parser.
@@ -3376,58 +3517,6 @@
             </summary>
             <param name="logFile">Log file.</param>
             <param name="message">Message.</param>
-        </member>
-        <member name="T:QuickTools.QIO.FilesMaper">
-            <summary>
-            This is a class developed to assit to be able to retroactively read files and directories 
-            </summary>
-        </member>
-        <member name="P:QuickTools.QIO.FilesMaper.DirectoryList">
-            <summary>
-            Contains the list of directoys founded 
-            </summary>
-        </member>
-        <member name="P:QuickTools.QIO.FilesMaper.FileList">
-            <summary>
-            Contains the list of files founded 
-            </summary>
-        </member>
-        <member name="M:QuickTools.QIO.FilesMaper.Move(System.String,System.String)">
-            <summary>
-            Move the specified from origen to the given destination.
-            </summary>
-            <param name="origen">Origen.</param>
-            <param name="destination">Destination.</param>
-        </member>
-        <member name="M:QuickTools.QIO.FilesMaper.MoveHere(System.String,System.String)">
-            <summary>
-            Move the specified from origen to the given destination.
-            </summary>
-            <param name="origen">Origen.</param>
-            <param name="destination">Destination.</param>
-        </member>
-        <member name="M:QuickTools.QIO.FilesMaper.GetFiles(System.String)">
-            <summary>
-            Gets the files.
-            </summary>
-            <param name="path">Path.</param>
-        </member>
-        <member name="M:QuickTools.QIO.FilesMaper.Parse(System.String[])">
-            <summary>
-            Parse the list of directories given to a list of files and directories 
-            </summary>
-            <param name="dirs">Dirs.</param>
-        </member>
-        <member name="M:QuickTools.QIO.FilesMaper.Parse(System.String)">
-            <summary>
-            Parse the specified path.
-            </summary>
-            <param name="path">Path.</param>
-        </member>
-        <member name="M:QuickTools.QIO.FilesMaper.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:QuickTools.FilesMaper"/> class.
-            </summary>
         </member>
         <member name="T:QuickTools.QIO.Reader">
             <summary>

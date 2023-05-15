@@ -28,7 +28,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks; 
 using System.Threading;
+using QuickTools.QCore; 
 
 namespace QuickToolsScript
 {
@@ -36,8 +38,10 @@ namespace QuickToolsScript
     public class ScriptRunner
     {
         private static BackGroundJob Job = new BackGroundJob();
-
-           public void Run(Action code,bool runInBackGround)
+        private static Thread Loop;
+        public static Thread CurrentScript;
+        public  bool AllowToCancell; 
+        public void Run(Action code,bool runInBackGround)
         {
             if (runInBackGround)
             {
@@ -61,12 +65,64 @@ namespace QuickToolsScript
                 return;
             }
         }
+ 
 
+        //Task RunCode;
+        //Task CancellThread; 
         public void Run(Action code)
         {
+
             try
             {
-                code();
+                if (this.AllowToCancell)
+                {
+
+
+                    CurrentScript = new Thread(() =>
+                    {
+                        code();
+                        Get.White("\n Task Completed Press any key to continue");
+
+                        //Thread.Sleep(100);
+                        if (Loop.IsAlive)
+                        {
+                            Loop.Abort();
+                        }
+                    });
+                    Loop = new Thread(() =>
+                    {
+                        Get.Title("Press Esc  to Cancel");
+                        var key = Console.ReadKey();
+                        if (key.KeyChar == 'Z' && key.Modifiers.HasFlag(ConsoleModifiers.Control) || key.Key.ToString() == "Escape") // key.Key.ToString() == "Escape")
+                        {
+
+                            //if(this.RunCode != null)
+                            //{
+
+                            //}
+                            if (CurrentScript.IsAlive)
+                            {
+                                CurrentScript.Abort();
+                            }
+                        }
+
+                    });
+
+                    Loop.Start();
+                    CurrentScript.Start();
+
+
+                    while (Loop.IsAlive) { }
+                    GC.Collect();
+                    Console.Title = Program.Name; 
+                    return;
+                }
+                else
+                {
+                    code();
+                    return;
+                }
+
             }catch(Exception error)
             {
                 new ErrorHandeler().DisplayError(ErrorHandeler.ErrorType.ExeutionError, error.ToString()); 

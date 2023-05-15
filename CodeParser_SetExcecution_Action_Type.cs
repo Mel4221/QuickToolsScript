@@ -110,8 +110,13 @@ namespace QuickToolsScript
                     runner.Run(() => {
                         //Get.Yellow($"{this.Target}     ClearTarget: {this.ClearTarget} Type: {type}");
                         //Get.Blue(Path.GetDirectoryName(this.Target));
-                        Get.Yellow(ShellLoop.RelativePath);
+                        // Get.Yellow(ShellLoop.RelativePath);
                         // Get.Wait(type);
+                        if (type[0] == '~')
+                        {
+                             Get.Ls(Helper.CheckForPath(type));
+                            return; 
+                        }
                         if (type == "disk")
                         {
                             Print.List(Environment.GetLogicalDrives());

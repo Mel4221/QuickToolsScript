@@ -133,9 +133,13 @@ namespace QuickToolsScript
             while (true)
             {
                 this.shell.Notifications = DateTime.Now.ToString("H:m M:dd:yyyy");
-                this.shell.CurrentPath = ShellLoop.CurrentPath;
-                ShellLoop.RelativePath = Get.RelativePath(ShellLoop.CurrentPath);
-                Get.Yellow(ShellLoop.RelativePath); 
+                this.shell.CurrentPath = Get.RelativePath(ShellLoop.CurrentPath);
+
+                //this.shell.CurrentPath = ShellLoop.CurrentPath;
+
+                Get.Cyan("\n"+this.shell.CurrentPath);
+                // ShellLoop.RelativePath = Get.RelativePath(ShellLoop.CurrentPath);
+                //Get.Yellow(ShellLoop.RelativePath); 
                 input = this.shell.StartInput();
                 SaveHistory(input); 
                 if (input == "exit")

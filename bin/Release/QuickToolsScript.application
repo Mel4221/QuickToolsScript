@@ -7,14 +7,14 @@
     <framework targetVersion="4.7" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="QuickToolsScript.exe.manifest" size="4622">
+    <dependentAssembly dependencyType="install" codebase="QuickToolsScript.exe.manifest" size="5012">
       <assemblyIdentity name="QuickToolsScript.exe" version="3.1.1.5" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>QUeCXSyooz9cW6KiBMtOVv/v2aa+ENtYoWd+CdVqSS8=</dsig:DigestValue>
+        <dsig:DigestValue>SeAidLnZM4Z7kdbQL1VHRFWVzO61jqP6kw9Imxp0x4U=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

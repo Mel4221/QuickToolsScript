@@ -3064,6 +3064,11 @@
             constins the list of Directories
             </summary>
         </member>
+        <member name="F:QuickTools.QIO.FilesMaper.AllowDebugger">
+            <summary>
+            allows to print the status of the current file search 
+            </summary>
+        </member>
         <member name="M:QuickTools.QIO.FilesMaper.GetFiles(System.String)">
             <summary>
             Gets the files from the given path

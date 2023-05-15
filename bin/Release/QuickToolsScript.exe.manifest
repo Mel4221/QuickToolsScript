@@ -43,26 +43,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="QuickTools.dll" size="192512">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="QuickTools.dll" size="199168">
       <assemblyIdentity name="QuickTools" version="2.0.0.4" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>dyheXA7i8OH2QX0Pr8P9UXCF5Dr+jLRPeMlg4igCiXU=</dsig:DigestValue>
+        <dsig:DigestValue>O1MCV/PrYdCavoP6V0jwOf1tBfEla+CBIJvJhHKUGrQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="QuickToolsScript.exe" size="89536">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="QuickToolsScript.exe" size="94656">
       <assemblyIdentity name="QuickToolsScript" version="5.2.1.1" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>XeBAYBnRZ1bbrcuOT9jIQ/ugiwTYoEKa/eM0yt8DZoc=</dsig:DigestValue>
+        <dsig:DigestValue>3ewdu0hHRnZHB/Q1VaAYRufPcmBGmM1wt6fwXxvBZdI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -82,6 +82,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>5IjU9miiUpZgPfs786pMwbN1q2TJ2TF/eDFOoQs8a2c=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ToDoList.txt" size="1377">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>5tP0KaL3iv7jva3We7wMibiUMTnEXrP0n8n8GJ+pMQA=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
