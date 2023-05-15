@@ -58,7 +58,7 @@ namespace QuickToolsScript
               this.cache = new DataCacher();
               this.runner = new ScriptRunner();
               this.error = new ErrorHandeler();
-              this.Target = Get.FixPath(fix); 
+              this.Target = Get.FixPath(fix);
               this.ClearTarget = Get.FixPath($"{ShellLoop.CurrentPath}");
               //type = Get.FixPath(type);
               // Get.Wait(this.Target);
@@ -106,10 +106,11 @@ namespace QuickToolsScript
                 case "ls":
                 case "list":
                 case "list-files":
-                    runner.Run(() => {
-                        Get.Yellow($"{this.Target}     ClearTarget: {this.ClearTarget} Type: {type}");
-                        Get.Blue(Path.GetDirectoryName(this.Target));
 
+                    runner.Run(() => {
+                        //Get.Yellow($"{this.Target}     ClearTarget: {this.ClearTarget} Type: {type}");
+                        //Get.Blue(Path.GetDirectoryName(this.Target));
+                        Get.Yellow(ShellLoop.RelativePath);
                         // Get.Wait(type);
                         if (type == "disk")
                         {

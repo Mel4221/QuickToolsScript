@@ -41,22 +41,39 @@ namespace QuickToolsScript
 {
     public class ShellLoop
     {
+
+
+        /// <summary>
+        /// get or set the current path display in the Shell
+        /// </summary>
         public static string CurrentPath;
+
+        /// <summary>
+        /// get or set the Selected object 
+        /// </summary>
         public static string SelectedOject;
-        public static string[] Disks; 
+
+        /// <summary>
+        /// Holds the list of the disk 
+        /// </summary>
+        public static string[] Disks;
+        /// <summary>
+        /// will contains the relative path to acces to any file in the address 
+        /// to avoid displaying this ~/Desktop/../../../../../ ext...
+        /// </summary>
+        public static string RelativePath;
+
         private ShellInput shell;
 
         private MiniDB db;
 
-  
-          
+        
+         
         public bool ReferToDisk(string input)
         {
             bool refer = false;
-            if(ShellLoop.Disks == null)
-            {
-                ShellLoop.Disks = Environment.GetLogicalDrives(); 
-            }
+
+            ShellLoop.Disks = Environment.GetLogicalDrives();
             foreach (string disk in ShellLoop.Disks)
             {
                 if(disk == input)
@@ -110,11 +127,12 @@ namespace QuickToolsScript
             //ShellLoop.CurrentPath = ShellLoop.CurrentPath != "" ? Get.Path : ShellLoop.CurrentPath;
 
             ShellLoop.CurrentPath = ShellLoop.CurrentPath != "" ? Environment.GetFolderPath(Environment.SpecialFolder.Desktop): ShellLoop.CurrentPath;
-
             while (true)
             {
                 this.shell.Notifications = DateTime.Now.ToString("H:m M:dd:yyyy");
                 this.shell.CurrentPath = ShellLoop.CurrentPath;
+                ShellLoop.RelativePath = Get.RelativePath(ShellLoop.CurrentPath);
+                Get.Yellow(ShellLoop.RelativePath); 
                 input = this.shell.StartInput();
                 SaveHistory(input); 
                 if (input == "exit")

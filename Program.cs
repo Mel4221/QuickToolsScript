@@ -74,8 +74,6 @@ namespace QuickToolsScript
             }
             else
             {
-
-
                 menu = new MainMenu(); 
                 menu.Start();
                 return 0;

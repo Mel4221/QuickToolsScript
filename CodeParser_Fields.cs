@@ -24,11 +24,7 @@ namespace QuickToolsScript
         /// </summary>
         public string ClearTarget;
 
-        /// <summary>
-        /// will contains the relative path to acces to any file in the address 
-        /// to avoid displaying this ~/Desktop/../../../../../ ext...
-        /// </summary>
-        public string PrivatePath; 
+
         /// <summary>
         /// Contains the Code array
         /// </summary>
