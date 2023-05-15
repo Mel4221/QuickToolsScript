@@ -62,9 +62,8 @@ namespace QuickToolsScript
                         case "obj":
                         case "object":
                         case "selected-value":
-                            type = $">{ShellLoop.SelectedOject}"; 
-                            break;
-                  
+                            type = $">{ShellLoop.SelectedOject}";
+                            break; 
                     }
                     
                     this.SetExecution(action, type); 

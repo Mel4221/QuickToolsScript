@@ -39,7 +39,7 @@ using System.Collections.Generic;
 using System.Threading; 
 namespace QuickToolsScript
 {
-    public class ShellLoop
+    public partial class ShellLoop
     {
 
 
@@ -110,11 +110,6 @@ namespace QuickToolsScript
         //public static int Status; 
         public void Start()
         {
-            this.shell = new ShellInput(System.Environment.UserName, System.Environment.MachineName);
-            CodeParser parser;
-
-            string input;
-            input = null;
 
             //BackGroundJob = new Thread(() => {
             //    while (true)
@@ -128,6 +123,11 @@ namespace QuickToolsScript
             //Get.Wait(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles));// Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
             // Get.Wait(ShellLoop.CurrentPath);
             //ShellLoop.CurrentPath = ShellLoop.CurrentPath != "" ? Get.Path : ShellLoop.CurrentPath;
+            this.shell = new ShellInput(System.Environment.UserName, System.Environment.MachineName);
+            CodeParser parser;
+
+            string input;
+            input = null;
 
             ShellLoop.CurrentPath = ShellLoop.CurrentPath != "" ? Environment.GetFolderPath(Environment.SpecialFolder.Desktop): ShellLoop.CurrentPath;
             while (true)
@@ -146,7 +146,6 @@ namespace QuickToolsScript
                 if (input == "back" || input == "go-back" || input == "go back")
                 {
                     break;
-                    
                 }
                 else
                 {

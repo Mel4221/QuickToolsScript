@@ -1302,6 +1302,13 @@
             <param name="path"></param>
             <returns>the relative path string </returns>
         </member>
+        <member name="M:QuickTools.QCore.Get.IsDriveChar(System.String)">
+            <summary>
+            Checks if the path given looks like a drive letter on windwos 
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
         <member name="M:QuickTools.QCore.Get.RelativePath(System.String,System.String)">
             <summary>
             Gets the relative path from the given path by taking your current path in consideration
