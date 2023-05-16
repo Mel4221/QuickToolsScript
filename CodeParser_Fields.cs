@@ -13,7 +13,11 @@ namespace QuickToolsScript
         private DataCacher cache;
         private ScriptRunner runner;
         private ErrorHandeler error;
-
+        
+        /// <summary>
+        /// Holds the redirected text 
+        /// </summary>
+        public StringBuilder RedirectedText; 
         /// <summary>
         /// Containst the path plus the given folder or file given to the shellLoop
         /// </summary>

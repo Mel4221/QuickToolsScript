@@ -53,11 +53,7 @@ namespace QuickToolsScript
         /// </summary>
         public static string SelectedOject;
 
-        /// <summary>
-        /// Holds the list of the disk 
-        /// </summary>
-        public static string[] Disks;
-        /// <summary>
+        
         /// will contains the relative path to acces to any file in the address 
         /// to avoid displaying this ~/Desktop/../../../../../ ext...
         /// </summary>
@@ -67,21 +63,35 @@ namespace QuickToolsScript
 
         private MiniDB db;
 
-        
-         
-        public bool ReferToDisk(string input)
+        /// <summary>
+        /// returns the disks in the system
+        /// </summary>
+        /// <returns></returns>
+        public static string[] Disks() => Environment.GetLogicalDrives();
+
+
+
+
+        /// <summary>
+        /// provides the inforamtion wether the input path has a direct reference to a disk
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static bool ReferToDisk(string input)
         {
             bool refer = false;
-
-            ShellLoop.Disks = Environment.GetLogicalDrives();
-            foreach (string disk in ShellLoop.Disks)
+            string path, drive; 
+             path = Get.FixPath(input);
+            drive = path.Substring(0, path.IndexOf(Get.Slash()) + 1);
+            foreach (string disk in Disks())
             {
-                if(disk == input)
+                //Get.Green(disk);
+                if (disk == drive.ToUpper())
                 {
                     return true; 
+                    //Get.Yellow(drive);
                 }
             }
-
 
             return refer; 
         }
@@ -133,9 +143,8 @@ namespace QuickToolsScript
             while (true)
             {
                 this.shell.Notifications = DateTime.Now.ToString("H:m M:dd:yyyy");
-                this.shell.CurrentPath = Get.RelativePath(ShellLoop.CurrentPath);
-
-                //this.shell.CurrentPath = ShellLoop.CurrentPath;
+                //this.shell.CurrentPath = Get.RelativePath(ShellLoop.CurrentPath);
+                this.shell.CurrentPath = ShellLoop.CurrentPath;
 
                 Get.Cyan("\n"+this.shell.CurrentPath);
                 // ShellLoop.RelativePath = Get.RelativePath(ShellLoop.CurrentPath);

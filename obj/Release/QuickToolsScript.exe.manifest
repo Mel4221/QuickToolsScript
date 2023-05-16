@@ -43,26 +43,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="QuickTools.dll" size="199168">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="QuickTools.dll" size="199680">
       <assemblyIdentity name="QuickTools" version="2.0.0.4" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>O1MCV/PrYdCavoP6V0jwOf1tBfEla+CBIJvJhHKUGrQ=</dsig:DigestValue>
+        <dsig:DigestValue>0Fue49RhMgaphA1F1RPCrtq+bMs34t7piKZxr0yHWqk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="QuickToolsScript.exe" size="94656">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="QuickToolsScript.exe" size="96192">
       <assemblyIdentity name="QuickToolsScript" version="5.2.1.1" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>3ewdu0hHRnZHB/Q1VaAYRufPcmBGmM1wt6fwXxvBZdI=</dsig:DigestValue>
+        <dsig:DigestValue>syLHZ7CYbAgJKUQ0Hp3L5cWfpLVXbocblTVEspKLijU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

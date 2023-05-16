@@ -67,6 +67,7 @@ namespace QuickToolsScript
             this.error = new ErrorHandeler();
             this.Target = Get.FixPath(fix);
             this.ClearTarget = Get.FixPath($"{ShellLoop.CurrentPath}");
+            this.RedirectedText = new StringBuilder();
 
             string[] param =   this.GetParameters(parameters);
             Get.Yellow("For Testing: ");
@@ -105,33 +106,48 @@ namespace QuickToolsScript
                         /*
                          * condition that allow to cancel or stop  the ScriptRunner
                          */
-                        if(param.Length == 3)
+                        if (param.Length == 3)
                         {
                             if (param[2] == "-c" || param[2] == "-cancell")
                             {
-                                runner.AllowToCancell = true; 
+                                runner.AllowToCancell = true;
                             }
                         }
                         runner.Run(() => {
                             //Get.Wait($"{this.ClearTarget}");
-                            Get.Wait($"{Path.GetFullPath(this.ClearTarget)}{Get.Slash()}{param[0]}");
-                            FilesMaper maper = new FilesMaper($"{Path.GetFullPath(this.ClearTarget)}{Get.Slash()}{param[0]}");
+                            Get.Red($"{Path.GetFullPath(this.ClearTarget)}{Get.Slash()}{param[0]}");
+                            Get.Blue($"{Get.Path}");
+                            string str = $"{Get.RelativePath($"{this.Target}")}{this.ClearTarget.Substring(this.ClearTarget.IndexOf(Get.Slash()) + 1)}{Get.Slash()}{param[0]}";
+
+                            Get.Yellow(str);
+
+                            //Writer.Write("file.txt",str);
+                            //Get.Wait();
+                            FilesMaper maper = new FilesMaper(str);
+
                             maper.Map();
+
                             List<string> folders = maper.Directories;
                             List<string> files = maper.Files;
 
                             for (int current = files.Count - 1; current > 0; current--)
                             {
-                                if(param.Length == 2)
+                                if (param.Length == 2)
                                 {
                                     if (param[1] == "-d" || param[1] == "-debug")
                                     {
+
                                         Get.Red($"Deleting...: {files[current]}");
 
+                                    }
+                                    if (param[1] == ">")
+                                    {
+                                        this.RedirectedText.Append(files[current] + "\n");
                                     }
 
                                 }
                             }
+                            //Get.Ok();
                             GC.Collect();// to make sure that it release the path from the files 
                             for (int current = folders.Count - 1; current > 0; current--)
                             {
@@ -141,36 +157,47 @@ namespace QuickToolsScript
                                     {
                                         Get.Red($"Deleting...: {folders[current]}");
                                     }
+                                    if (param[1] == ">")
+                                    {
+                                        this.RedirectedText.Append(folders[current] + "\n");
+                                    }
                                 }
-                            
-                             }
 
+                            }
+                            Get.Ok();
+                            if (param.Length == 2)
+                            {
+                                if (param[1] == ">")
+                                {
+                                    Writer.Write($"{this.ClearTarget}{Get.Slash()}{param[2]}", this.RedirectedText.ToString());
+                                }
+                            }
                         });
                     }
                     break;
                 case "find":
                 case "search":
-                       /*
-                        * condition that allow to cancel or stop  the ScriptRunner
-                        */
-                        if (param.Length == 3)
+                    /*
+                     * condition that allow to cancel or stop  the ScriptRunner
+                     */
+                    if (param.Length == 3)
+                    {
+                        if (param[2] == "-c" || param[2] == "-cancell")
                         {
-                            if (param[2] == "-c" || param[2] == "-cancell")
-                            {
-                                runner.AllowToCancell = true;
-                            }
+                            runner.AllowToCancell = true;
                         }
+                    }
                     // if is retroactive 
                     if (type == "-r" && param.Length >= 1)
                     {
                         runner.Run(() => {
                             //Get.Wait($"{this.ClearTarget}");
                             FilesMaper maper = new FilesMaper(this.ClearTarget);
-                            if(param.Length == 2)
+                            if (param.Length == 2)
                             {
                                 if (param[1] == "-d" || param[1] == "-debug")
                                 {
-                                    maper.AllowDebugger = true; 
+                                    maper.AllowDebugger = true;
                                 }
                             }
                             maper.Map();
@@ -187,12 +214,12 @@ namespace QuickToolsScript
                                     ShellLoop.SelectedOject = files[current]; // auto select the object 
                                     Get.Green($"Founded: {files[current]}");
                                     this.SetExecution("selected"); // print the seleted object 
-                                    return; 
+                                    return;
                                 }
-//Get.Wait($"Target: {this.Target} ClearTarget: {this.ClearTarget} FilesCurrent: {files[current]} Param: {param[0]}");
-                              //  Get.Yellow($" ClearTarget: {this.ClearTarget} FilesCurrent: {files[current]} Param: {param[0]}");
+                                //Get.Wait($"Target: {this.Target} ClearTarget: {this.ClearTarget} FilesCurrent: {files[current]} Param: {param[0]}");
+                                //  Get.Yellow($" ClearTarget: {this.ClearTarget} FilesCurrent: {files[current]} Param: {param[0]}");
 
-                               // new QProgressBar().Display(fCurrent,goal); 
+                                // new QProgressBar().Display(fCurrent,goal); 
                             }
                             Get.Red($"{param[0]} Was Not Founded  FilesChecked: {files.Count}");
                             return;
@@ -213,7 +240,7 @@ namespace QuickToolsScript
                             maper.Map();
                             List<string> folders = maper.Directories;
                             List<string> files = maper.Files;
-                            List<string> founded = new List<string>(); 
+                            List<string> founded = new List<string>();
                             int fCurrent, goal;
                             goal = files.Count - 1;
                             for (int current = files.Count - 1; current > 0; current--)
@@ -234,7 +261,7 @@ namespace QuickToolsScript
 
                                 // new QProgressBar().Display(fCurrent,goal); 
                             }
-                            if(founded.Count == 0)
+                            if (founded.Count == 0)
                             {
                                 Get.Red($"{param[0]} Was Not Founded  FilesChecked: {files.Count}");
                                 return;
@@ -247,26 +274,72 @@ namespace QuickToolsScript
                             return;
                         });
                     }
-                        break; 
+                    break;
                 case "cp":
-                    //Get.Wait($"T: {this.Target} CT: {this.ClearTarget}");
                     runner.Run(() => {
-                        //Get.Wait($"Target: {this.Target}");
-                        //  Get.Wait($"{this.Target}  {this.ClearTarget}");
 
-                      //  Get.Wait($"Target: {this.Target} Param: {Helper.CheckForPath(param[0])}");
 
-                        if (File.Exists(this.Target))
+                        this.Target = $"{type}";
+
+                        //this.ClearTarget = param[0]; 
+                        // to create a local variable 
+                        if (ShellLoop.ReferToDisk(type))
                         {
-                            Get.Wait($"{this.Target} {Helper.CheckForPath(param[0])}");
-                            File.Copy(this.Target, Helper.CheckForPath(param[0]));
-                            Get.Ok();
-                            return;
+                            this.Target = type;
+                            Get.Cyan($"Refer To Disk the Type: {type} = Target");
                         }
-                        else
+
+                        if (ShellLoop.ReferToDisk(param[0]))
                         {
-                            Get.Print("It looks like i did not find the file ", this.Target); 
+                            this.ClearTarget = param[0];
+                            Get.Cyan($"Refer To Disk The Param[0]: {param[0]} = ClearTarget");
+
                         }
+                        //type.Substring(type.IndexOf(Get.Slash()) + 1).ToLower()
+                        if (Helper.HasSecialFolder(param[0]) != null)
+                         {
+                             this.ClearTarget = Helper.HasSecialFolder(param[0]);
+                             Get.Cyan($"Has Special Folder param[0]: {param[0]} = ClearTarget");
+                         }
+
+                         if (Helper.HasSecialFolder(type) != null)
+                         {
+                             this.Target = $"{Helper.HasSecialFolder(type)}{Get.Slash()}{this.ClearTarget}";
+                             Get.Cyan($"Has Special Folder Type: {type} = Target");
+                         }
+
+                         if (param[0] == ".")
+                         {
+                             string slash = ShellLoop.CurrentPath[ShellLoop.CurrentPath.Length - 1].ToString() == Get.Slash() ? null : Get.Slash();
+
+                             this.ClearTarget = $"{this.ClearTarget}{slash}{Get.FileNameFromPath(this.Target)}";
+                             Get.Cyan($"Refer to the local directory param[0]: {param[0]} = ClearTarget");
+
+                             //Get.Wait(this.ClearTarget);
+                         }
+                         //~/Desktop/folder/file.txt
+                         if (this.Target[0] == '~')
+                         {
+                             
+                         }
+
+                         Get.Wait(Helper.HasSecialFolder("desktop"));
+
+                         Get.Wait($"Target: {this.Target}  ClearTarget: {this.ClearTarget}");
+
+                         byte[] bytes = Binary.Reader(this.Target);
+                         Get.Yellow($"File: {this.Target} Length: {bytes.Length} Hash: {Get.HashCode(bytes)}");
+
+                        // Binary.Writer(this.ClearTarget, bytes);
+                        // Writer.Write()
+                        // Get.Yellow($"Status: {status}");
+                         /*
+                             Get.Green($"Target: {this.Target} Clear: {this.ClearTarget} Param: {param[0]}");
+                            Get.Green($"With Helper: {Helper.CheckForPath(param[0])}");
+                            Get.Green($"Type: {Get.FixPath(type.ToUpper())} ");
+                            Get.Yellow($"Refer To Disk: {ShellLoop.ReferToDisk(type.ToUpper())} Type: {type.ToUpper()}");
+                            */
+                        
                     });
                     break;
                 case "ls":

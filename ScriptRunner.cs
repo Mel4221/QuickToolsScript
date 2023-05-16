@@ -39,7 +39,7 @@ namespace QuickToolsScript
     {
         private static BackGroundJob Job = new BackGroundJob();
         private static Thread Loop;
-        public static Thread CurrentScript;
+        public  static Thread CurrentScript;
         public  bool AllowToCancell; 
         public void Run(Action code,bool runInBackGround)
         {

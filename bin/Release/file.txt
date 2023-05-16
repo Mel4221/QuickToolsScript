@@ -1,0 +1,9 @@
+C:\Users\William\Desktop\C#\QuickToolsScript\bin\Release\..\..\..\..\..\..\..\..\Users\William\Desktop\folder
+
+
+
+
+c:/
+c:/data/url/../www
+c:/data/url/file.txt
+c:/data/url/file.txt F:/file.txt

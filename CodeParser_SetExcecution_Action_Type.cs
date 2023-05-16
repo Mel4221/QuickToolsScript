@@ -149,7 +149,7 @@ namespace QuickToolsScript
                             //  Get.Cyan(ShellLoop.CurrentPath);
                             //Get.Wait(type.ToUpper());
                             //Get.Wait(new ShellLoop().ReferToDisk(type.ToUpper()));
-                            if (new ShellLoop().ReferToDisk(type.ToUpper()))
+                            if (ShellLoop.ReferToDisk(type.ToUpper()))
                             {
                                 ShellLoop.CurrentPath = type; 
                                 return;
@@ -216,7 +216,7 @@ namespace QuickToolsScript
                     break;
                 case "cat":
                     runner.Run(() => {
-                        Get.Wait(this.Target);
+                        //Get.Wait(this.Target);
                         Get.WriteL(" ");
                        Get.Write(Reader.Read(this.Target));
                     });

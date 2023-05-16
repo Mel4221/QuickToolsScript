@@ -15,6 +15,35 @@ namespace QuickToolsScript
 {
     static class Helper
     {
+
+
+
+        public static string HasSecialFolder(string type)
+        {
+            if (type[0] == '~')
+            {
+                string p = type.Substring(type.IndexOf(Get.Slash()) + 1).ToLower();
+                switch (p)
+                {
+                    case "desktop":
+                        return ShellLoop.CurrentPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                     case "documents":
+                      return  ShellLoop.CurrentPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                    case "downloads":
+                        string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                        string str = $"{path.Substring(0, path.LastIndexOf(Get.Slash()))}{Get.Slash()}Downloads";
+                        return ShellLoop.CurrentPath = str;
+                    case "mycomputer":
+                        return ShellLoop.CurrentPath = Environment.GetFolderPath(Environment.SpecialFolder.MyComputer);
+                    default:
+                        return null;
+                }
+            }
+            else
+            {
+                return null;
+            }
+         }
         /// <summary>
         /// this method take advantage of a path that it's given 
         /// gets the name path name and identify if is an enviroment path 
