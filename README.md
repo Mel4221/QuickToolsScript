@@ -11,8 +11,8 @@ This Project is a terminal base execution system that runs the QuickTools Librar
 
 
 # About
- QuickToolsScript is basically the shell version from the library QuickTools which provides the funtionality to run all the funtionality given
- on the QuickTools.dll Library 
+ QuickToolsScript is basically the shell version from the library QuickTools which provides a set of features  such as 
+ compressing , encryping , io navigation , scripting languaghe inbeded in it plus must of the funtionalities given in other shells
  
 # How Does it work 
 
