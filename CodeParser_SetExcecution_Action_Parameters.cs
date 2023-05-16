@@ -279,7 +279,9 @@ namespace QuickToolsScript
                     runner.Run(() => {
 
 
-                        this.Target = $"{type}";
+                        this.Target = $"{ShellLoop.CurrentPath}{Get.Slash()}{type}";
+                        this.ClearTarget = $"{ShellLoop.CurrentPath}{Get.Slash()}{param[0]}";
+                        Get.Wait($"Target: {this.ClearTarget} ClearTarget: {this.ClearTarget}"); 
 
                         //this.ClearTarget = param[0]; 
                         // to create a local variable 
@@ -296,16 +298,18 @@ namespace QuickToolsScript
 
                         }
                         //type.Substring(type.IndexOf(Get.Slash()) + 1).ToLower()
-                        if (Helper.HasSecialFolder(param[0]) != null)
+                        if (Helper.HasSpecialFolder(param[0]) != null)
                          {
-                             this.ClearTarget = Helper.HasSecialFolder(param[0]);
+                             this.ClearTarget = Helper.HasSpecialFolder(param[0]);
                              Get.Cyan($"Has Special Folder param[0]: {param[0]} = ClearTarget");
                          }
 
-                         if (Helper.HasSecialFolder(type) != null)
+                         if (Helper.HasSpecialFolder(type) != null)
                          {
-                             this.Target = $"{Helper.HasSecialFolder(type)}{Get.Slash()}{this.ClearTarget}";
-                             Get.Cyan($"Has Special Folder Type: {type} = Target");
+                            //this.Target = $"{Helper.HasSpecialFolder(type)}{Get.Slash()}{this.ClearTarget}";
+                            this.Target = $"{Helper.HasSpecialFolder(type)}";
+
+                            Get.Cyan($"Has Special Folder Type: {type} = Target");
                          }
 
                          if (param[0] == ".")
@@ -317,29 +321,35 @@ namespace QuickToolsScript
 
                              //Get.Wait(this.ClearTarget);
                          }
-                         //~/Desktop/folder/file.txt
-                         if (this.Target[0] == '~')
-                         {
-                             
-                         }
+                      
+                     //    Get.Wait(Helper.HasSpecialFolder("desktop"));
 
-                         Get.Wait(Helper.HasSecialFolder("desktop"));
+                         Get.Yellow($"Target: {this.Target}  ClearTarget: {this.ClearTarget}");
 
-                         Get.Wait($"Target: {this.Target}  ClearTarget: {this.ClearTarget}");
 
-                         byte[] bytes = Binary.Reader(this.Target);
-                         Get.Yellow($"File: {this.Target} Length: {bytes.Length} Hash: {Get.HashCode(bytes)}");
+                        //reads the data // this version works perfect 
+                        //File.SetAttributes(this.Target, FileAttributes.Normal);
+                        //File.Copy(this.Target, this.ClearTarget);
 
-                        // Binary.Writer(this.ClearTarget, bytes);
+                        byte[] bytes = Binary.Reader(this.Target);
+                        Get.Yellow($"File: {this.Target} Length: {bytes.Length} Hash: {Get.HashCode(bytes)}");
+
+                        GC.Collect();
+
+                        //write's it at the given clearTarget
+                        Binary.Writer(this.ClearTarget, bytes);
+
+                        //File.SetAttributes(this.ClearTarget, FileAttributes.Normal);
+
                         // Writer.Write()
                         // Get.Yellow($"Status: {status}");
-                         /*
-                             Get.Green($"Target: {this.Target} Clear: {this.ClearTarget} Param: {param[0]}");
-                            Get.Green($"With Helper: {Helper.CheckForPath(param[0])}");
-                            Get.Green($"Type: {Get.FixPath(type.ToUpper())} ");
-                            Get.Yellow($"Refer To Disk: {ShellLoop.ReferToDisk(type.ToUpper())} Type: {type.ToUpper()}");
-                            */
-                        
+                        /*
+                            Get.Green($"Target: {this.Target} Clear: {this.ClearTarget} Param: {param[0]}");
+                           Get.Green($"With Helper: {Helper.CheckForPath(param[0])}");
+                           Get.Green($"Type: {Get.FixPath(type.ToUpper())} ");
+                           Get.Yellow($"Refer To Disk: {ShellLoop.ReferToDisk(type.ToUpper())} Type: {type.ToUpper()}");
+                           */
+
                     });
                     break;
                 case "ls":

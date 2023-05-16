@@ -146,7 +146,7 @@ namespace QuickToolsScript
                 //this.shell.CurrentPath = Get.RelativePath(ShellLoop.CurrentPath);
                 this.shell.CurrentPath = ShellLoop.CurrentPath;
 
-                Get.Cyan("\n"+this.shell.CurrentPath);
+               // Get.Cyan("\n"+this.shell.CurrentPath);
                 // ShellLoop.RelativePath = Get.RelativePath(ShellLoop.CurrentPath);
                 //Get.Yellow(ShellLoop.RelativePath); 
                 input = this.shell.StartInput();

@@ -18,84 +18,76 @@ namespace QuickToolsScript
 
 
 
-        public static string HasSecialFolder(string type)
-        {
-            if (type[0] == '~')
-            {
-                string p = type.Substring(type.IndexOf(Get.Slash()) + 1).ToLower();
-                switch (p)
-                {
-                    case "desktop":
-                        return ShellLoop.CurrentPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-                     case "documents":
-                      return  ShellLoop.CurrentPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-                    case "downloads":
-                        string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-                        string str = $"{path.Substring(0, path.LastIndexOf(Get.Slash()))}{Get.Slash()}Downloads";
-                        return ShellLoop.CurrentPath = str;
-                    case "mycomputer":
-                        return ShellLoop.CurrentPath = Environment.GetFolderPath(Environment.SpecialFolder.MyComputer);
-                    default:
-                        return null;
-                }
-            }
-            else
-            {
-                return null;
-            }
-         }
+
         /// <summary>
         /// this method take advantage of a path that it's given 
         /// gets the name path name and identify if is an enviroment path 
         /// and add it to the path and if it contains a file in it it does not delet it it add it up 
         /// </summary>
-        /// <param name="param"></param>
+        /// <param name="path"></param>
         /// <returns></returns>
-        public static string CheckForPath(string param)
+        public static string HasSpecialFolder(string path)
         {
-            if (param[0] == '~')
+            if (path[0] == '~')
             {
-                string p = param.Substring(param.IndexOf(Get.Slash()) + 1).ToLower();
-                string str2, str, str3, path;
-                str = null;
-                str2 = null;
-                str3 = null;
-                path = null;
-                if (p.Contains(Get.Slash()))
+                path = Get.FixPath(path);
+                string file, subFolder, specialCase, slash;
+                file = null;
+                subFolder = null;
+                if (path.Contains("."))
                 {
-                    str2 = p.Substring(p.LastIndexOf(Get.Slash()));
-                    p = p.Substring(0, p.IndexOf(Get.Slash()));
-                    Get.Yellow(str2);
+                    file = Get.FileNameFromPath(path);
+                    path = Get.FolderFromPath(path);
+
+
                 }
-                Get.Red(p);
-                //Get.Wait();
-                switch (p)
+                //removes the first slash
+                path = path.Substring(path.IndexOf(Get.Slash()) + 1).ToLower();
+
+                if (path.Contains(Get.Slash()))
+                {
+                    subFolder = path.Substring(path.IndexOf(Get.Slash()));
+                }
+                if (path.Contains(Get.Slash()))
+                {
+                    path = path.Substring(0, path.IndexOf(Get.Slash()));
+
+                }
+                //Get.Wait(path);
+
+                switch (path)
                 {
                     case "desktop":
-                        str3 = str2 == null ? null : str2;
-                        return Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + str3;
-
+                        //str3 = str2 == null ? null : str2;
+                        return Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + $"{subFolder}{file}";
                     case "documents":
-                        str3 = str2 == null ? null : str2;
-                        return Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + str3;
-
+                        //  str3 = str2 == null ? null : str2;
+                        return Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + $"{subFolder}{file}";
                     case "downloads":
-                        str3 = str2 == null ? null : str2;
-                        path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-                        str = $"{path.Substring(0, path.LastIndexOf(Get.Slash()))}{Get.Slash()}Downloads";
-                        return str + str3;
-
+                        //slash = subfolde
+                        specialCase = $"{Get.Slash()}..{Get.Slash()}Downloads{subFolder}{file}";
+                        return Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + specialCase;
+                    case "pictures":
+                        //slash = subfolde
+                        return Environment.GetFolderPath(Environment.SpecialFolder.MyPictures) + $"{subFolder}{file}";
+                    case "music":
+                        //slash = subfolde
+                        return Environment.GetFolderPath(Environment.SpecialFolder.MyMusic) + $"{subFolder}{file}";
+                    case "videos":
+                        //slash = subfolde
+                        return Environment.GetFolderPath(Environment.SpecialFolder.MyVideos) + $"{subFolder}{file}";
                     case "mycomputer":
-                        return Environment.GetFolderPath(Environment.SpecialFolder.MyComputer) + str3;
+                        return Environment.GetFolderPath(Environment.SpecialFolder.MyComputer) + $"{subFolder}{file}";
                     default:
-                        return param;
+                        return null;
                 }
 
             }
             else
             {
-                return param;
+                return null;
             }
         }
+
     }
 }

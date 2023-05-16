@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="QuickToolsScript.exe" size="96192">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="QuickToolsScript.exe" size="96704">
       <assemblyIdentity name="QuickToolsScript" version="5.2.1.1" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>syLHZ7CYbAgJKUQ0Hp3L5cWfpLVXbocblTVEspKLijU=</dsig:DigestValue>
+        <dsig:DigestValue>Zrr3eKEkOTwqTEL0qp82OE11Dkh0bsGzKHg5Ht0NsPE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

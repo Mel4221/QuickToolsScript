@@ -114,7 +114,7 @@ namespace QuickToolsScript
                         // Get.Wait(type);
                         if (type[0] == '~')
                         {
-                             Get.Ls(Helper.CheckForPath(type));
+                             Get.Ls(Helper.HasSpecialFolder(type));
                             return; 
                         }
                         if (type == "disk")

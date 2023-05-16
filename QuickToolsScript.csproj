@@ -92,7 +92,6 @@
     </Compile>
     <Compile Include="ScriptRunner.cs" />
     <Compile Include="ShellLoop.cs" />
-    <Compile Include="ShellLoop_PathManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
