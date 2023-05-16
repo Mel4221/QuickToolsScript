@@ -48,4 +48,4 @@ As you may see is very similar to the version from some terminas out there at le
 
 
 # Current Status Of The Projet 
-> Check The Wiki for more information 
+> Check The Wiki for more information: https://github.com/Mel4221/ClownShell/wiki
