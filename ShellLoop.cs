@@ -63,38 +63,7 @@ namespace QuickToolsScript
 
         private MiniDB db;
 
-        /// <summary>
-        /// returns the disks in the system
-        /// </summary>
-        /// <returns></returns>
-        public static string[] Disks() => Environment.GetLogicalDrives();
 
-
-
-
-        /// <summary>
-        /// provides the inforamtion wether the input path has a direct reference to a disk
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
-        public static bool ReferToDisk(string input)
-        {
-            bool refer = false;
-            string path, drive; 
-             path = Get.FixPath(input);
-            drive = path.Substring(0, path.IndexOf(Get.Slash()) + 1);
-            foreach (string disk in Disks())
-            {
-                //Get.Green(disk);
-                if (disk == drive.ToUpper())
-                {
-                    return true; 
-                    //Get.Yellow(drive);
-                }
-            }
-
-            return refer; 
-        }
         public MiniDB GetHistory()
         {
             db = new MiniDB("QuickTools_Shell_History.xml", true);

@@ -119,7 +119,7 @@ namespace QuickToolsScript
                         }
                         if (type == "disk")
                         {
-                            Print.List(Environment.GetLogicalDrives());
+                            Get.PrintDisks(); 
                             return;
                         }
                         if(type == "-l")
@@ -149,7 +149,7 @@ namespace QuickToolsScript
                             //  Get.Cyan(ShellLoop.CurrentPath);
                             //Get.Wait(type.ToUpper());
                             //Get.Wait(new ShellLoop().ReferToDisk(type.ToUpper()));
-                            if (ShellLoop.ReferToDisk(type.ToUpper()))
+                            if (Helper.ReferToDisk(type.ToUpper()))
                             {
                                 ShellLoop.CurrentPath = type; 
                                 return;
@@ -263,6 +263,17 @@ namespace QuickToolsScript
                       
                     });
                     break;
+                case "get-hash":
+                    runner.Run(() => {
+                        if (!File.Exists(this.Target))
+                        {
+                            Get.Red($"File Not Found: {this.Target}");
+                            return;
+                        }
+                        Get.Print($"{this.Target}", $"{Get.HashCode(Binary.Reader(this.Target))}");
+                    });
+
+                        break;
                 default:
                     error.DisplayError(ErrorHandeler.ErrorType.NotValidAction, this.Code);
                     break;

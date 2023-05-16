@@ -185,6 +185,9 @@ namespace QuickToolsScript
                         });
                     });
                     break;
+                case "disks":
+                    runner.Run(() => { Get.PrintDisks(); });
+                    break;
                 case "get-logs":
                     runner.Run(() => {
                         ShellLoop.CurrentPath = Get.DataPath("logs");

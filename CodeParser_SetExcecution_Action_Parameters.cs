@@ -279,29 +279,32 @@ namespace QuickToolsScript
                     runner.Run(() => {
 
 
+                        string _param = param[0];
+
                         this.Target = $"{ShellLoop.CurrentPath}{Get.Slash()}{type}";
-                        this.ClearTarget = $"{ShellLoop.CurrentPath}{Get.Slash()}{param[0]}";
-                        Get.Wait($"Target: {this.ClearTarget} ClearTarget: {this.ClearTarget}"); 
+                        this.ClearTarget = $"{ShellLoop.CurrentPath}{Get.Slash()}{_param}";
+                        Get.Wait($"Target: {this.ClearTarget} ClearTarget: {this.ClearTarget}");
+          
 
                         //this.ClearTarget = param[0]; 
                         // to create a local variable 
-                        if (ShellLoop.ReferToDisk(type))
+                        if (Helper.ReferToDisk(type))
                         {
                             this.Target = type;
                             Get.Cyan($"Refer To Disk the Type: {type} = Target");
                         }
 
-                        if (ShellLoop.ReferToDisk(param[0]))
+                        if (Helper.ReferToDisk(_param))
                         {
-                            this.ClearTarget = param[0];
-                            Get.Cyan($"Refer To Disk The Param[0]: {param[0]} = ClearTarget");
+                            this.ClearTarget = _param;
+                            Get.Cyan($"Refer To Disk The Param[0]: {_param} = ClearTarget");
 
                         }
                         //type.Substring(type.IndexOf(Get.Slash()) + 1).ToLower()
-                        if (Helper.HasSpecialFolder(param[0]) != null)
+                        if (Helper.HasSpecialFolder(_param) != null)
                          {
-                             this.ClearTarget = Helper.HasSpecialFolder(param[0]);
-                             Get.Cyan($"Has Special Folder param[0]: {param[0]} = ClearTarget");
+                             this.ClearTarget = Helper.HasSpecialFolder(_param);
+                             Get.Cyan($"Has Special Folder param[0]: {_param} = ClearTarget");
                          }
 
                          if (Helper.HasSpecialFolder(type) != null)
@@ -311,13 +314,12 @@ namespace QuickToolsScript
 
                             Get.Cyan($"Has Special Folder Type: {type} = Target");
                          }
-
-                         if (param[0] == ".")
+                         if (_param== ".")
                          {
                              string slash = ShellLoop.CurrentPath[ShellLoop.CurrentPath.Length - 1].ToString() == Get.Slash() ? null : Get.Slash();
 
                              this.ClearTarget = $"{this.ClearTarget}{slash}{Get.FileNameFromPath(this.Target)}";
-                             Get.Cyan($"Refer to the local directory param[0]: {param[0]} = ClearTarget");
+                             Get.Cyan($"Refer to the local directory param[0]: {_param} = ClearTarget");
 
                              //Get.Wait(this.ClearTarget);
                          }
