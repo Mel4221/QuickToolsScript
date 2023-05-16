@@ -48,4 +48,4 @@ As you may see is very similar to the version from some terminas out there at le
 
 
 # Current Status Of The Projet 
-> NOT COMPLETED YET 
+> Check The Wiki for more information 
