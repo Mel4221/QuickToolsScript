@@ -39,7 +39,7 @@ using QuickTools.QConsole;
 using QuickTools.QSecurity;
 using QuickTools.QSecurity.FalseIO;
 
-namespace QuickToolsScript
+namespace ClownShell
 {
     public partial class CodeParser
     {
@@ -59,7 +59,7 @@ namespace QuickToolsScript
               this.runner = new ScriptRunner();
               this.error = new ErrorHandeler();
               this.Target = Get.FixPath(fix);
-              this.ClearTarget = Get.FixPath($"{ShellLoop.CurrentPath}");
+              this.SubTarget = Get.FixPath($"{ShellLoop.CurrentPath}");
               //type = Get.FixPath(type);
               // Get.Wait(this.Target);
             switch (action)
@@ -108,7 +108,7 @@ namespace QuickToolsScript
                 case "list-files":
 
                     runner.Run(() => {
-                        //Get.Yellow($"{this.Target}     ClearTarget: {this.ClearTarget} Type: {type}");
+                        //Get.Yellow($"{this.Target}     ClearTarget: {this.SubTarget} Type: {type}");
                         //Get.Blue(Path.GetDirectoryName(this.Target));
                         // Get.Yellow(ShellLoop.RelativePath);
                         // Get.Wait(type);
@@ -124,13 +124,13 @@ namespace QuickToolsScript
                         }
                         if(type == "-l")
                         {
-                            Get.Ls(this.ClearTarget, "");
+                            Get.Ls(this.SubTarget, "");
                             return; 
                         }
                         if (type[0] == '*')
                         {
                             //Get.Wait($"{this.Target.Substring(0,this.Target.LastIndexOf("*"))} {type.Substring(1)}");
-                            Get.Ls(this.ClearTarget, type.Substring(1),true);
+                            Get.Ls(this.SubTarget, type.Substring(1),true);
                             return;
                         }
                         else
@@ -143,7 +143,7 @@ namespace QuickToolsScript
                 case "cd":
                         runner.Run(() => {
 
-                            //Get.Yellow($"{this.Target}     ClearTarget: {this.ClearTarget}");
+                            //Get.Yellow($"{this.Target}     ClearTarget: {this.SubTarget}");
                             // Print.List(Environment.GetLogicalDrives());
                             //   Get.Wait();
                             //  Get.Cyan(ShellLoop.CurrentPath);
@@ -198,6 +198,7 @@ namespace QuickToolsScript
                             {
                                 ShellLoop.CurrentPath = ShellLoop.CurrentPath.Substring(0, ShellLoop.CurrentPath.LastIndexOf(Get.Slash()));
                             }
+                           
 
                         });
                     break;
@@ -237,7 +238,7 @@ namespace QuickToolsScript
                     //Get.Wait(type);
                         if (type[0] == '*')
                         {
-                            string[] files = new FilesMaper().GetFiles(this.ClearTarget);
+                            string[] files = new FilesMaper().GetFiles(this.SubTarget);
                             List<string> withExt = new List<string>();
                             foreach(string file in files)
                             {
@@ -253,11 +254,11 @@ namespace QuickToolsScript
                             //Print.List(withExt);
                             //Get.Wait();
                             Options option = new Options(files);
-                            Options.Label = this.ClearTarget;
+                            Options.Label = this.SubTarget;
                             Options.SelectorL = "> ";
                             Options.SelectorR = "";
                             int selection = option.Pick();
-                            ShellLoop.SelectedOject = $"{this.ClearTarget}{Get.Slash()}{Get.FileNameFromPath(files[selection])}";
+                            ShellLoop.SelectedOject = $"{this.SubTarget}{Get.Slash()}{Get.FileNameFromPath(files[selection])}";
                             return;
                         }  
                       

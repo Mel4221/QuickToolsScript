@@ -13,7 +13,7 @@ using QuickTools.QSecurity;
 using QuickTools.QSecurity.FalseIO;
 using System.IO;
 
-namespace QuickToolsScript
+namespace ClownShell
 {
     static class Helper
     {
@@ -83,10 +83,85 @@ namespace QuickToolsScript
         /// </summary>
         /// <param name="path"></param>
         /// <returns></returns>
-        public static string ResolvePath(string path)
+        public static CodeParser ResolvePath(CodeParser parser)
         {
-            
-            return path;
+
+            string param, type, target, subTarget;
+            string[] _params;
+            bool resolved; 
+            param = null;
+            type = null;
+            target = null;
+            subTarget = null;
+            resolved = false; 
+
+            target = parser.Target; 
+            subTarget = parser.SubTarget;
+            _params = parser.Parameters;
+            type = parser.Type;
+
+            if(_params.Length!= 0)
+            {
+                param = _params[0];
+                resolved = true; 
+            }
+
+            if (param == ".")
+            {
+                string slash = ShellLoop.CurrentPath[ShellLoop.CurrentPath.Length - 1].ToString() == Get.Slash() ? null : Get.Slash();
+
+                target = $"{subTarget}{slash}{Get.FileNameFromPath(target)}";
+                Get.Cyan($"Refer to the local directory param[0]: {param} = ClearTarget");
+                resolved = true;
+
+
+                //Get.Wait(this.SubTarget);
+            }
+
+
+            if (Helper.ReferToDisk(type))
+            {
+                target = type;
+                Get.Cyan($"Refer To Disk the Type: {type} = Target");
+                resolved = true;
+
+            }
+
+            if (Helper.ReferToDisk(param))
+            {
+                subTarget = param;
+                Get.Cyan($"Refer To Disk The Param[0]: {param} = ClearTarget");
+                resolved = true;
+
+
+            }
+            //type.Substring(type.IndexOf(Get.Slash()) + 1).ToLower()
+            if (Helper.HasSpecialFolder(param) != null)
+            {
+                subTarget = Helper.HasSpecialFolder(param);
+                Get.Cyan($"Has Special Folder param[0]: {param} = ClearTarget");
+                resolved = true;
+
+            }
+
+            if (Helper.HasSpecialFolder(type) != null)
+            {
+                //this.Target = $"{Helper.HasSpecialFolder(type)}{Get.Slash()}{this.SubTarget}";
+                target = $"{Helper.HasSpecialFolder(type)}";
+
+                Get.Cyan($"Has Special Folder Type: {type} = Target");
+                resolved = true;
+
+            }
+
+            return new CodeParser()
+            {
+                Target = target,
+                SubTarget = subTarget,
+                PathResolved = resolved
+
+            };
+           
         }
 
         /// <summary>

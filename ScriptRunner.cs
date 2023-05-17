@@ -32,7 +32,7 @@ using System.Threading.Tasks;
 using System.Threading;
 using QuickTools.QCore; 
 
-namespace QuickToolsScript
+namespace ClownShell
 {
 
     public class ScriptRunner

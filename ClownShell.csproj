@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{823A2180-8759-43E9-8CEB-0D736731BAB1}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>QuickToolsScript</RootNamespace>
-    <AssemblyName>QuickToolsScript</AssemblyName>
+    <RootNamespace>ClownShell</RootNamespace>
+    <AssemblyName>ClownShell</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -49,7 +49,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>setting.ico</ApplicationIcon>
+    <ApplicationIcon>clown.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>353F91E93ECFD9D32AB972E114A3E643B229A76D</ManifestCertificateThumbprint>
@@ -79,6 +79,7 @@
     <Compile Include="CodeParser_SetExcecution_Action_Parameters.cs" />
     <Compile Include="CodeParser_SetExecution_Action.cs" />
     <Compile Include="CodeParser_SetExcecution_Action_Type.cs" />
+    <Compile Include="CodeParser__Constructors.cs" />
     <Compile Include="DefaultSettings.cs" />
     <Compile Include="ErrorHandeler.cs" />
     <Compile Include="Helper.cs" />
@@ -101,6 +102,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="clown.ico" />
     <Content Include="setting.ico" />
     <Content Include="ToDoList.txt" />
   </ItemGroup>

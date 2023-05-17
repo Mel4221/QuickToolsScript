@@ -39,7 +39,7 @@ using QuickTools.QCore;
 using QuickTools.QSecurity.FalseIO;
 using System.IO;
 
-namespace QuickToolsScript
+namespace ClownShell
 {
     public partial class CodeParser
     {

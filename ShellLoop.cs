@@ -37,7 +37,7 @@ using QuickTools.QCore;
 using QuickTools.QSecurity.FalseIO;
 using System.Collections.Generic;
 using System.Threading; 
-namespace QuickToolsScript
+namespace ClownShell
 {
     public partial class ShellLoop
     {

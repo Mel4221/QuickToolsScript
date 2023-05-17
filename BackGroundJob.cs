@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Collections;
 
-namespace QuickToolsScript
+namespace ClownShell
 {
     public class BackGroundJob
     {
@@ -60,6 +60,10 @@ namespace QuickToolsScript
             if (this.Jobs != null)
             {
                 Jobs.ForEach((item) => {
+                    if (!item.AllowToBeKilled)
+                    {
+                        throw new Exception("Item Not Allwed To be Killed");
+                    }
                     if (item.BThread.IsAlive)
                     {
                         item.BThread.Abort();
@@ -75,6 +79,12 @@ namespace QuickToolsScript
                 {
                     if (this.Jobs[current].ID == id)
                     {
+                        if (!this.Jobs[current].AllowToBeKilled)
+                        {
+                            throw new Exception("Item Not Allwed To be Killed");
+                        }
+
+
                         if (this.Jobs[current].BThread.IsAlive)
                         {
                             this.Jobs[current].BThread.Abort();

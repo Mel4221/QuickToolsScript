@@ -1,0 +1,15 @@
+C:\Users\William\Desktop\C#\QuickToolsScript\bin\Debug\ClownShell.exe.config
+C:\Users\William\Desktop\C#\QuickToolsScript\bin\Debug\ClownShell.exe.manifest
+C:\Users\William\Desktop\C#\QuickToolsScript\bin\Debug\ClownShell.application
+C:\Users\William\Desktop\C#\QuickToolsScript\bin\Debug\ClownShell.exe
+C:\Users\William\Desktop\C#\QuickToolsScript\bin\Debug\ClownShell.pdb
+C:\Users\William\Desktop\C#\QuickToolsScript\bin\Debug\QuickTools.dll
+C:\Users\William\Desktop\C#\QuickToolsScript\bin\Debug\QuickTools.xml
+C:\Users\William\Desktop\C#\QuickToolsScript\obj\Debug\ClownShell.csproj.AssemblyReference.cache
+C:\Users\William\Desktop\C#\QuickToolsScript\obj\Debug\ClownShell.csproj.SuggestedBindingRedirects.cache
+C:\Users\William\Desktop\C#\QuickToolsScript\obj\Debug\ClownShell.csproj.CoreCompileInputs.cache
+C:\Users\William\Desktop\C#\QuickToolsScript\obj\Debug\ClownShell.exe.manifest
+C:\Users\William\Desktop\C#\QuickToolsScript\obj\Debug\ClownShell.application
+C:\Users\William\Desktop\C#\QuickToolsScript\obj\Debug\ClownShell.csproj.CopyComplete
+C:\Users\William\Desktop\C#\QuickToolsScript\obj\Debug\ClownShell.exe
+C:\Users\William\Desktop\C#\QuickToolsScript\obj\Debug\ClownShell.pdb

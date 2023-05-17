@@ -23,23 +23,10 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
-using QuickTools.QIO;
-using QuickTools.QNet;
-using QuickTools.QData;
 using QuickTools.QCore;
-using QuickTools.QColors;
-using QuickTools.QConsole;
-using QuickTools.QSecurity;
-using QuickTools.QSecurity.FalseIO;
-using System;
-using System.Collections.Generic;
+ 
 
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Diagnostics; 
-
-namespace QuickToolsScript
+namespace ClownShell
 {
     public partial class CodeParser
     {
@@ -107,17 +94,6 @@ namespace QuickToolsScript
                     break;
             }
 
-        }
-
-
-
-        public CodeParser(string frofileOrCode)
-        {
-            this.Code = IConvert.TextToArray(frofileOrCode);
-        }
-        public CodeParser(string[] fromArgs)
-        {
-            this.Code = fromArgs;
         }
 
     }
