@@ -16,10 +16,9 @@ This Project is a terminal base execution system that runs the QuickTools Librar
  
 # How Does it work 
 
-As this is the Shell from a library all the shell does it either call the methods in quickTools or give the posibillty to  write your own code and give it to it for it to read it and execute the commands in given text 
+As this is the Shell from a library it provide's the basic functions from a shell with some extra features
+for more information visit the Wiky at:  https://github.com/Mel4221/ClownShell/wiki
 
-It has a direct access to the shell by giving as an argument the word "shell" as an argument
-from the terminal but you could just hit shell in the menu as well 
 
 ![image](https://github.com/Mel4221/QuickToolsScript/assets/87794877/2036162f-23a1-4f50-b671-e94cbd550ec4)
 ![image](https://github.com/Mel4221/QuickToolsScript/assets/87794877/8ca1fa3d-b028-4e9c-99ad-2de4a3169155)
