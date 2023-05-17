@@ -43,6 +43,7 @@ As you may see is very similar to the version from some terminas out there at le
  16. find
  17. find -all *file extention like find -all *.pdf 
  18. disks
+ 19. get-hash prints a hash code regarding the given target file example : get-hash file.txt
  
  > Must of this methods have another alias just to help a bit such as 
  1. rm as delete 
