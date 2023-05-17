@@ -30,15 +30,19 @@ As you may see is very similar to the version from some terminas out there at le
  3. mv
  4. ls
  5. ls-l
- 6. ls *file extention
- 7. rm or remove *don't required anythinng else it could literally remove a folder or a file  buf for the lovers of rm -r i added just in case 
- 8. rm -r
- 9. cat
- 10. clear 
- 11. touch
- 12. echo *works but is not fullly supported yet  nor the magic of it
- 13. du *thought it only prints the size of the file and it does it in auto as -h  Human
- 14. mkdir
+ 6. ls disks
+ 7. ls *file extention
+ 8. rm or remove *don't required anythinng else it could literally remove a folder or a file  buf for the lovers of rm -r i added just in case 
+ 9. rm -r
+ 10. cat
+ 11. clear 
+ 12. touch
+ 13. echo *works but is not fullly supported yet  nor the magic of it
+ 14. du *thought it only prints the size of the file and it does it in auto as -h  Human
+ 15. mkdir
+ 16. find
+ 17. find -all *file extention like find -all *.pdf 
+ 18. disks
  
  > Must of this methods have another alias just to help a bit such as 
  1. rm as delete 
