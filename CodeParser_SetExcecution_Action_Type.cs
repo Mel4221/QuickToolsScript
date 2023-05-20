@@ -38,6 +38,7 @@ using QuickTools.QColors;
 using QuickTools.QConsole;
 using QuickTools.QSecurity;
 using QuickTools.QSecurity.FalseIO;
+using System.Threading;
 
 namespace ClownShell
 {
@@ -53,13 +54,26 @@ namespace ClownShell
         public void SetExecution(string action, string type)
         {
 
-              string fix = type[0] == '>' ? type.Substring(1) : Get.FixPath($"{ShellLoop.CurrentPath}{Get.Slash()}{type}");
+              //string fix = type[0] == '>' ? type.Substring(1) : Get.FixPath($"{ShellLoop.CurrentPath}{Get.Slash()}{type}");
               //Get.Wait(fix);
               this.cache = new DataCacher();
               this.runner = new ScriptRunner();
               this.error = new ErrorHandeler();
-              this.Target = Get.FixPath(fix);
-              this.SubTarget = Get.FixPath($"{ShellLoop.CurrentPath}");
+
+            // get the path with the given type and if it does not have an slash add it acordintly 
+            string tar = type[0] == '~' || type[0] == '.' || Helper.ReferToDisk(type)? type :  $"{ShellLoop.CurrentPath}{Get.Slash()}{type}";
+            if (tar.Contains('@'))
+            {
+                tar = tar.Substring(tar.IndexOf('@')+1);
+            }
+            //Get.Wait(Get.FixPath("*.txt"));
+              this.Target = Get.FixPath(tar);
+
+              this.SubTarget = Get.FixPath(type);
+              Get.Yellow($"Target: {this.Target} SubTarget: {this.SubTarget}");
+              Get.Cyan($"Helper: {Helper.ResolvePath(this).Target}");
+              //this.Target = Get.FixPath(fix);
+              //this.SubTarget = Get.FixPath($"{ShellLoop.CurrentPath}");
               //type = Get.FixPath(type);
               // Get.Wait(this.Target);
             switch (action)
@@ -130,15 +144,38 @@ namespace ClownShell
                         if (type[0] == '*')
                         {
                             //Get.Wait($"{this.Target.Substring(0,this.Target.LastIndexOf("*"))} {type.Substring(1)}");
-                            Get.Ls(this.SubTarget, type.Substring(1),true);
+                            // Get.Wait(type);  //Get.FileExention(type)
+                            //Get.Wait(this.Target.Substring(this.Target.LastIndexOf(Get.Slash())));
+                            //this get all the files that has this given type 
+                            Get.Ls(Get.FolderFromPath(this.Target),this.SubTarget,true);
                             return;
                         }
                         else
                         {
 
-                            Get.Ls(type);
+                            Get.Ls(this.Target);
                         }
                     });
+                    break;
+                case "sleep":
+                    runner.Run(() => {
+                        int number;
+                        if (Get.IsNumber(type))
+                        {
+                            if(type.Length <3)
+                            {
+                                type = type + "000";
+                            }
+                            number = int.Parse(type);
+                            Thread.Sleep(number); 
+                            return;
+                        }
+                        else
+                        {
+                            new ErrorHandeler().DisplayError(ErrorHandeler.ErrorType.NotValidParameter, "The Value Must Be a number");
+                        }
+                    
+                    }); 
                     break;
                 case "cd":
                         runner.Run(() => {
@@ -202,24 +239,13 @@ namespace ClownShell
 
                         });
                     break;
-                case "exe":
-                    runner.Run(() => {
-                        //Get.Wait(Get.IsWindow());
-                        if (Get.IsWindow())
-                        {
-                            Process.Start(new ProcessStartInfo("cmd", $"/c start {type}"));
-                        }
-                        if (!Get.IsWindow())
-                        {
-                            Process.Start("open", type);
-                        }
-                    });
-                    break;
                 case "cat":
                     runner.Run(() => {
-                        //Get.Wait(this.Target);
-                        Get.WriteL(" ");
-                       Get.Write(Reader.Read(this.Target));
+                    //Get.Wait(this.Target);
+                    Get.WriteL(" ");
+                        string str = Helper.ResolvePath(this).Target; 
+                    Get.Yellow(str);
+                       Get.Write(Reader.Read(str));
                     });
                     break;
                 case "size":
@@ -260,21 +286,132 @@ namespace ClownShell
                             int selection = option.Pick();
                             ShellLoop.SelectedOject = $"{this.SubTarget}{Get.Slash()}{Get.FileNameFromPath(files[selection])}";
                             return;
-                        }  
-                      
+                        }
+                   // C: \Users\William\Desktop\~\Desktop\Q.dll
                     });
                     break;
                 case "get-hash":
+                case "hash":
                     runner.Run(() => {
-                        if (!File.Exists(this.Target))
+                        if (File.Exists(this.Target))
                         {
-                            Get.Red($"File Not Found: {this.Target}");
+                            byte[] bytes = Binary.Reader(this.Target);
+                            Get.Print($"File: {Get.FileNameFromPath(this.Target)}",$"Hash: {Get.HashCode(bytes)}");
                             return;
                         }
-                        Get.Print($"{this.Target}", $"{Get.HashCode(Binary.Reader(this.Target))}");
+                        else
+                        {
+                            Get.Red($"File Not Found: {this.Target}");
+                        }
                     });
 
                         break;
+                case "cmd":
+                    runner.Run(() => {
+                        Process cmd = new Process();
+
+                        cmd.StartInfo.FileName = "cmd";//"cmd.exe";
+                                                       //cmd.StartInfo.Arguments;
+                                                       //cmd.StartInfo.RedirectStandardInput = true;
+                        cmd.StartInfo.RedirectStandardOutput = false;  // true;
+                        cmd.StartInfo.CreateNoWindow = false;
+                        cmd.StartInfo.UseShellExecute = false;
+                        //cmd.StartInfo.Arguments = "ping www.google.com"; //Helper.ResolvePath(this).Target;
+
+                        cmd.Start();
+                        cmd.WaitForExit();
+                        /* execute "dir" */
+
+                        //cmd.StandardInput.WriteLine(this.SubTarget);
+                        //cmd.StandardInput.Flush();
+                        //cmd.StandardInput.Close();
+                        //Console.WriteLine(cmd.StandardOutput.ReadToEnd());
+                    });
+                    break;
+                case "vim":
+                    runner.Run(() => {
+                        Process cmd = new Process();
+
+                        cmd.StartInfo.FileName = $"{Get.Path}editors/vim/vim.exe";//"cmd.exe";
+                                                       //cmd.StartInfo.Arguments;
+                                                       //cmd.StartInfo.RedirectStandardInput = true;
+                        cmd.StartInfo.RedirectStandardOutput = false;  // true;
+                        cmd.StartInfo.CreateNoWindow = false;
+                        cmd.StartInfo.UseShellExecute = false;
+                        cmd.StartInfo.Arguments = Helper.ResolvePath(this).Target; //"ping www.google.com"; //Helper.ResolvePath(this).Target;
+
+                        cmd.Start();
+                        cmd.WaitForExit();
+                    });
+                    break;
+                case "nano":
+                    runner.Run(() => {
+                        Process cmd = new Process();
+
+                        cmd.StartInfo.FileName = $"{Get.Path}editors/nano/nano.exe";//"cmd.exe";
+                                                                                 //cmd.StartInfo.Arguments;
+                                                                                 //cmd.StartInfo.RedirectStandardInput = true;
+                        cmd.StartInfo.RedirectStandardOutput = false;  // true;
+                        cmd.StartInfo.CreateNoWindow = false;
+                        cmd.StartInfo.UseShellExecute = false;
+                        cmd.StartInfo.Arguments = this.Target; //Helper.ResolvePath(this).Target;
+
+                        cmd.Start();
+                        cmd.WaitForExit();
+                    });
+                    break;
+                case "xxd":
+                    runner.Run(() => {
+                        Process cmd = new Process();
+
+                        cmd.StartInfo.FileName = $"{Get.Path}editors/vim/xxd.exe";//"cmd.exe";
+                                                                                  //cmd.StartInfo.Arguments;
+                                                                                  //cmd.StartInfo.RedirectStandardInput = true;
+                        cmd.StartInfo.RedirectStandardOutput = false;  // true;
+                        cmd.StartInfo.CreateNoWindow = false;
+                        cmd.StartInfo.UseShellExecute = false;
+                        cmd.StartInfo.Arguments = Helper.ResolvePath(this).Target; //"ping www.google.com"; //Helper.ResolvePath(this).Target;
+
+                        cmd.Start();
+                        cmd.WaitForExit();
+                    });
+                    break;
+                case "edit":
+                case "notepad":
+                    runner.Run(() => {
+
+                        Process cmd = new Process();
+                        if (Get.IsWindow())
+                        {
+                            cmd.StartInfo.FileName = "notepad";
+                            cmd.StartInfo.Arguments = Helper.ResolvePath(this).Target;
+
+                        }
+                        if (!Get.IsWindow())
+                        {
+                            cmd.StartInfo.FileName = "open";
+                            cmd.StartInfo.Arguments = Helper.ResolvePath(this).Target;
+                        }
+
+                        //cmd.StartInfo.Arguments;
+                        cmd.StartInfo.RedirectStandardInput = true;
+                        cmd.StartInfo.RedirectStandardOutput = true;
+                        cmd.StartInfo.CreateNoWindow = true;
+                        cmd.StartInfo.UseShellExecute = false;
+
+                        
+                        //Get.Yellow($"Target: {this.Target} SubTarget: {this.SubTarget}");
+                        //CodeParser parser = 
+                        //Get.Wait($"Target: {parser.Target} SubTarget: {parser.SubTarget}");
+                        cmd.Start();
+
+                        /* execute "dir" */
+                        //cmd.StandardInput.WriteLine();
+                        cmd.StandardInput.Flush();
+                        cmd.StandardInput.Close();
+                        Console.WriteLine(cmd.StandardOutput.ReadToEnd());
+                    });
+                    break; 
                 default:
                     error.DisplayError(ErrorHandeler.ErrorType.NotValidAction, this.Code);
                     break;

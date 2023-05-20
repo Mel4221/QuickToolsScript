@@ -61,23 +61,46 @@ namespace ClownShell
 
         public void SetExecution(string action, string type, string[] parameters)
         {
-            string fix = type[0] == '>' ? type.Substring(1) : Get.FixPath($"{ShellLoop.CurrentPath}{Get.Slash()}{type}");
+            //string fix = type[0] == '>' ? type.Substring(1) : Get.FixPath($"{ShellLoop.CurrentPath}{Get.Slash()}{type}");
             this.cache = new DataCacher();
             this.runner = new ScriptRunner();
             this.error = new ErrorHandeler();
-            this.Target = Get.FixPath(fix);
-            this.SubTarget = Get.FixPath($"{ShellLoop.CurrentPath}");
+            //this.Target = Get.FixPath(fix);
+            //this.SubTarget = Get.FixPath($"{ShellLoop.CurrentPath}");
             this.RedirectedText = new StringBuilder();
             string[] param =   this.GetParameters(parameters);
             this.Parameters = param;
             this.Action = action;
-            this.Type = type; 
+            this.Type = type;
+            this.Target = $"{ShellLoop.CurrentPath}{Get.Slash()}{type}";
+            this.SubTarget = $"{ShellLoop.CurrentPath}{Get.Slash()}{param[0]}";
 
             Get.Yellow("For Testing: ");
             Print.List(param);
             switch (action)
             {
                 case "mv":
+                    runner.Run(() =>
+                    {
+
+                        string _param = param[0];
+
+                        this.Target = $"{ShellLoop.CurrentPath}{Get.Slash()}{type}";
+                        this.SubTarget = $"{ShellLoop.CurrentPath}{Get.Slash()}{_param}";
+                        Get.Blue($"Target: {this.SubTarget} SubTarget: {this.SubTarget}");
+
+                        CodeParser parser = Helper.ResolvePath(this);
+
+                        if (parser.PathResolved)
+                        {
+                            this.Target = parser.Target;
+                            this.SubTarget = parser.SubTarget;
+                        }
+
+                        Binary.CopyBinaryFile(this.Target, this.SubTarget);
+                        GC.Collect();
+                        File.Delete(this.Target); 
+                    });
                     break;
                 case "create":
                     //create zero-file 1 file.txt
@@ -194,6 +217,7 @@ namespace ClownShell
                     // if is retroactive 
                     if (type == "-r" && param.Length >= 1)
                     {
+ 
                         runner.Run(() => {
                             //Get.Wait($"{this.SubTarget}");
                             FilesMaper maper = new FilesMaper(this.SubTarget);
@@ -255,7 +279,7 @@ namespace ClownShell
 
                                     founded.Add(files[current]);
                                     //Get.Green($"Founded: {files[current]}"); 
-                                }
+                                }//if the file extention is equal to the file founded add it to the list 
                                 if (param[0][0] == '*' && Get.FileExention(files[current]) == Get.FileExention(param[0]))
                                 {
                                     founded.Add(files[current]);
@@ -281,12 +305,20 @@ namespace ClownShell
                     break;
                 case "cp":
                     runner.Run(() => {
+                        // is trying to select multiple 
+                        if (type.Contains("*"))
+                        {
 
-                
+                            Get.Yellow($"Selecting Multiples");
+                            Get.Green($"Target: {this.Target} SubTarget: {this.SubTarget}");
+
+                            return;
+                        }
+                        
                         string _param = param[0];
-
                         this.Target = $"{ShellLoop.CurrentPath}{Get.Slash()}{type}";
                         this.SubTarget = $"{ShellLoop.CurrentPath}{Get.Slash()}{_param}";
+
                         Get.Blue($"Target: {this.SubTarget} SubTarget: {this.SubTarget}");
 
                         CodeParser parser = Helper.ResolvePath(this);
@@ -342,7 +374,7 @@ namespace ClownShell
                       
                      //    Get.Wait(Helper.HasSpecialFolder("desktop"));
 
-                         Get.Yellow($"Target: {this.Target}  ClearTarget: {this.SubTarget}");
+                         //Get.Yellow($"Target: {this.Target}  ClearTarget: {this.SubTarget}");
 
 
                         //reads the data // this version works perfect 
@@ -352,7 +384,7 @@ namespace ClownShell
                         // byte[] bytes = Binary.Reader(this.Target);
                         //Get.Yellow($"File: {this.Target} Length: {bytes.Length} Hash: {Get.HashCode(bytes)}");
 
-                        Binary.CopyBinaryFile(this.Target, this.SubTarget);
+                        //Binary.CopyBinaryFile(this.Target, this.SubTarget);
 
                         //write's it at the given clearTarget
                         //Binary.Writer(this.SubTarget, bytes);
@@ -387,6 +419,31 @@ namespace ClownShell
                             return;
                         }
                         
+                    });
+                       
+                    break;
+                case "exe":
+                    runner.Run(() => {
+                        //Get.Wait(Get.IsWindow());
+                        if (Get.IsWindow())
+                        {
+                            Process cmd = new Process();
+                           // Get.Yellow(this.Target);
+                            cmd.StartInfo.FileName = type;// $"{ShellLoop.CurrentPath}{Get.Slash()}{type}";//"cmd.exe";
+                                                                      //cmd.StartInfo.Arguments;
+                                                                      //cmd.StartInfo.RedirectStandardInput = true;
+                            cmd.StartInfo.RedirectStandardOutput = false;  // true;
+                            cmd.StartInfo.CreateNoWindow = false;
+                            cmd.StartInfo.UseShellExecute = false;
+                            cmd.StartInfo.Arguments = IConvert.ArrayToText(param);// Helper.ResolvePath(this).Target; //"ping www.google.com"; //Helper.ResolvePath(this).Target;
+
+                            cmd.Start();
+                            cmd.WaitForExit();
+                        }
+                        if (!Get.IsWindow())
+                        {
+                            Process.Start("open", type);
+                        }
                     });
                     break;
                 case "wget":

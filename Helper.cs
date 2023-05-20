@@ -61,21 +61,27 @@ namespace ClownShell
         /// <returns></returns>
         public static bool ReferToDisk(string input)
         {
-            bool refer = false;
-            string path, drive;
-            path = Get.FixPath(input);
-            drive = path.Substring(0, path.IndexOf(Get.Slash()) + 1);
-            foreach (string disk in Disks())
-            {
-                //Get.Green(disk);
-                if (disk == drive.ToUpper())
+          
+                bool refer = false;
+                if(input == null || input == "")
                 {
-                    return true;
-                    //Get.Yellow(drive);
+                    return false; 
                 }
-            }
+                string path, drive;
+                path = Get.FixPath(input);
+                drive = path.Substring(0, path.IndexOf(Get.Slash()) + 1);
+                foreach (string disk in Disks())
+                {
+                    //Get.Green(disk);
+                    if (disk == drive.ToUpper())
+                    {
+                        return true;
+                        //Get.Yellow(drive);
+                    }
+                }
 
-            return refer;
+                return refer;
+           
         }
 
         /// <summary>
@@ -100,7 +106,7 @@ namespace ClownShell
             _params = parser.Parameters;
             type = parser.Type;
 
-            if(_params.Length!= 0)
+            if(_params != null)
             {
                 param = _params[0];
                 resolved = true; 
@@ -111,11 +117,18 @@ namespace ClownShell
                 string slash = ShellLoop.CurrentPath[ShellLoop.CurrentPath.Length - 1].ToString() == Get.Slash() ? null : Get.Slash();
 
                 target = $"{subTarget}{slash}{Get.FileNameFromPath(target)}";
-                Get.Cyan($"Refer to the local directory param[0]: {param} = ClearTarget");
+                Get.Cyan($"Refer to the local directory param[0]: {param} = ClearTarget  = {target}");
                 resolved = true;
-
-
                 //Get.Wait(this.SubTarget);
+            }
+
+            if(target == ".")
+            {
+                string slash = ShellLoop.CurrentPath[ShellLoop.CurrentPath.Length - 1].ToString() == Get.Slash() ? null : Get.Slash();
+
+                target = $"{subTarget}{slash}";
+                Get.Cyan($"Refer to the local directory param[0]: {param} = ClearTarget  = {target}");
+                resolved = true;
             }
 
 
@@ -142,6 +155,13 @@ namespace ClownShell
                 Get.Cyan($"Has Special Folder param[0]: {param} = ClearTarget");
                 resolved = true;
 
+            }
+
+            if (Helper.HasSpecialFolder(target) != null)
+            {
+                target = Helper.HasSpecialFolder(target);
+                Get.Cyan($"Has Special Folder target: {target} = target");
+                resolved = true;
             }
 
             if (Helper.HasSpecialFolder(type) != null)
@@ -173,6 +193,10 @@ namespace ClownShell
         /// <returns></returns>
         public static string HasSpecialFolder(string path)
         {
+            if(path == null || path == "")
+            {
+                return null;
+            }
             if (path[0] == '~')
             {
                 path = Get.FixPath(path);

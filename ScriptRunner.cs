@@ -55,7 +55,7 @@ namespace ClownShell
                 }
                 catch (Exception error)
                 {
-                    new ErrorHandeler().DisplayError(ErrorHandeler.ErrorType.ExeutionError, error.ToString());
+                    new ErrorHandeler().DisplayError(ErrorHandeler.ErrorType.ExecutionError, error.ToString());
                 }
                 return;
             }if(!runInBackGround)
@@ -125,7 +125,7 @@ namespace ClownShell
 
             }catch(Exception error)
             {
-                new ErrorHandeler().DisplayError(ErrorHandeler.ErrorType.ExeutionError, error.ToString()); 
+                new ErrorHandeler().DisplayError(ErrorHandeler.ErrorType.ExecutionError, $"Code Executed: not-available \n Exception: \n{error}"); 
             }
         }
     }

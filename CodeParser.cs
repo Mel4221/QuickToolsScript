@@ -49,7 +49,8 @@ namespace ClownShell
                         case "obj":
                         case "object":
                         case "selected-value":
-                            type = $">{ShellLoop.SelectedOject}";
+                        case "selected":
+                            type = $"@{ShellLoop.SelectedOject}";
                             break;
                         default:
                             
@@ -66,7 +67,8 @@ namespace ClownShell
                         case "obj":
                         case "object":
                         case "selected-value":
-                            type = $">{ShellLoop.SelectedOject}";
+                        case "selected":
+                            type = $"@{ShellLoop.SelectedOject}";
                             break;
                             
                     }

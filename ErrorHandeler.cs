@@ -41,7 +41,7 @@ namespace ClownShell
             NotValidAction,
             NotValidType,
             NotValidParameter,
-            ExeutionError
+            ExecutionError  
         }
 
         public void DisplayError(ErrorType type, string message)

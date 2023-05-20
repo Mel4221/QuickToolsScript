@@ -35,9 +35,9 @@ using QuickTools.QCore;
 using QuickTools.QColors;
 using QuickTools.QConsole;
 using QuickTools.QSecurity;
-using QuickTools.QCore;
 using QuickTools.QSecurity.FalseIO;
 using System.IO;
+using System.Diagnostics;
 
 namespace ClownShell
 {
@@ -173,8 +173,8 @@ namespace ClownShell
                     runner.Run(() => {
                       
                         MiniDB db =  new ShellLoop().GetHistory();
-                        Get.WriteL(" ");
-                        db.DataBase.ForEach((item) => {
+                            Get.WriteL(" ");
+                            db.DataBase.ForEach((item) => {
                             Get.Green();
                             Get.Write($"No: {item.Id} ");
                             Get.Yellow();
@@ -192,6 +192,68 @@ namespace ClownShell
                     runner.Run(() => {
                         ShellLoop.CurrentPath = Get.DataPath("logs");
                     });
+                    break;
+                case "shutdown":
+                    runner.Run(() => {
+                        ProcessStartInfo process = new ProcessStartInfo("shutdown", "/s /t 0");
+                        process.CreateNoWindow = true;
+                        process.UseShellExecute = false;
+                        Process.Start(process);
+                     
+                    });
+                    break;
+                case "reboot":
+                    runner.Run(() => {//shutdown -r -t 0
+                        ProcessStartInfo process = new ProcessStartInfo("shutdown", "-r -t 0");
+                        process.CreateNoWindow = true;
+                        process.UseShellExecute = false;
+                        Process.Start(process);
+                       
+                    });
+                    break;
+                case "cmd":
+                    runner.Run(() => {
+                        Process cmd = new Process();
+
+                        cmd.StartInfo.FileName = "cmd";//"cmd.exe";
+                                                       //cmd.StartInfo.Arguments;
+                                                       //cmd.StartInfo.RedirectStandardInput = true;
+                        cmd.StartInfo.RedirectStandardOutput = false;  // true;
+                        cmd.StartInfo.CreateNoWindow = false;
+                        cmd.StartInfo.UseShellExecute = false;
+                        //cmd.StartInfo.Arguments = "ping www.google.com"; //Helper.ResolvePath(this).Target;
+
+                        cmd.Start();
+                        cmd.WaitForExit();
+                        /* execute "dir" */
+
+                        //cmd.StandardInput.WriteLine(this.SubTarget);
+                        //cmd.StandardInput.Flush();
+                        //cmd.StandardInput.Close();
+                        //Console.WriteLine(cmd.StandardOutput.ReadToEnd());
+                    });
+                    break;
+                case "powershell":
+                    runner.Run(() => {
+                        Process cmd = new Process();
+
+                        cmd.StartInfo.FileName = "powershell";//"cmd.exe";
+                                                       //cmd.StartInfo.Arguments;
+                                                       //cmd.StartInfo.RedirectStandardInput = true;
+                        cmd.StartInfo.RedirectStandardOutput = false;  // true;
+                        cmd.StartInfo.CreateNoWindow = false;
+                        cmd.StartInfo.UseShellExecute = false;
+                        //cmd.StartInfo.Arguments = "ping www.google.com"; //Helper.ResolvePath(this).Target;
+
+                        cmd.Start();
+                        cmd.WaitForExit();
+                        /* execute "dir" */
+
+                        //cmd.StandardInput.WriteLine(this.SubTarget);
+                        //cmd.StandardInput.Flush();
+                        //cmd.StandardInput.Close();
+                        //Console.WriteLine(cmd.StandardOutput.ReadToEnd());
+                    }); 
                     break;
                 default:
                     error.DisplayError(ErrorHandeler.ErrorType.NotValidAction, this.Code);

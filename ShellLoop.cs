@@ -111,13 +111,15 @@ namespace ClownShell
             ShellLoop.CurrentPath = ShellLoop.CurrentPath != "" ? Environment.GetFolderPath(Environment.SpecialFolder.Desktop): ShellLoop.CurrentPath;
             while (true)
             {
-                this.shell.Notifications = DateTime.Now.ToString("H:m M:dd:yyyy");
+                this.shell.Notifications = DateTime.Now.ToString("H:m:ss M:dd:yyyy");
                 //this.shell.CurrentPath = Get.RelativePath(ShellLoop.CurrentPath);
                 this.shell.CurrentPath = ShellLoop.CurrentPath;
 
-               // Get.Cyan("\n"+this.shell.CurrentPath);
+                // Get.Cyan("\n"+this.shell.CurrentPath);
                 // ShellLoop.RelativePath = Get.RelativePath(ShellLoop.CurrentPath);
                 //Get.Yellow(ShellLoop.RelativePath); 
+
+               // Func<ConsoleKeyInfo> F = () => { return Console.ReadKey(); };
                 input = this.shell.StartInput();
                 SaveHistory(input); 
                 if (input == "exit")
