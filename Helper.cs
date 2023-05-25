@@ -111,7 +111,7 @@ namespace ClownShell
                 param = _params[0];
                 resolved = true; 
             }
-
+            
             if (param == ".")
             {
                 string slash = ShellLoop.CurrentPath[ShellLoop.CurrentPath.Length - 1].ToString() == Get.Slash() ? null : Get.Slash();
@@ -127,6 +127,15 @@ namespace ClownShell
                 string slash = ShellLoop.CurrentPath[ShellLoop.CurrentPath.Length - 1].ToString() == Get.Slash() ? null : Get.Slash();
 
                 target = $"{subTarget}{slash}";
+                Get.Cyan($"Refer to the local directory param[0]: {param} = ClearTarget  = {target}");
+                resolved = true;
+            }
+
+            if (subTarget == ".")
+            {
+                string slash = ShellLoop.CurrentPath[ShellLoop.CurrentPath.Length - 1].ToString() == Get.Slash() ? null : Get.Slash();
+
+                subTarget = $"{subTarget}{slash}";
                 Get.Cyan($"Refer to the local directory param[0]: {param} = ClearTarget  = {target}");
                 resolved = true;
             }

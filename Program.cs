@@ -45,8 +45,7 @@ namespace ClownShell
         static int Main(string[] args)
         {
 
-            string str = "app.exe";
-
+          
              //Get.Wait(FixPath("../box/secure/QuickTools.xml"));
             //Get.Wait(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles));// Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
             //while(true)Get.Box(Get.Input().Text);

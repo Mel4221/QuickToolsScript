@@ -39,8 +39,15 @@ namespace ClownShell
     {
         private static BackGroundJob Job = new BackGroundJob();
         private static Thread Loop;
+        private CodeParser Parser; 
         public  static Thread CurrentScript;
         public  bool AllowToCancell; 
+
+        private void ThrowError(Exception error)
+        {
+            string cmd = "not-available";//this.Parser.Code.Length != 0 ? "not-available"/* IConvert.ArrayToText(this.Parser.Code)*/ : "not-available"; /*"not-available";*/
+            new ErrorHandeler().DisplayError(ErrorHandeler.ErrorType.ExecutionError, $"Code Executed: <( {cmd} )> \n Exception: \n{error}");
+        }
         public void Run(Action code,bool runInBackGround)
         {
             if (runInBackGround)
@@ -55,7 +62,7 @@ namespace ClownShell
                 }
                 catch (Exception error)
                 {
-                    new ErrorHandeler().DisplayError(ErrorHandeler.ErrorType.ExecutionError, error.ToString());
+                    this.ThrowError(error); 
                 }
                 return;
             }if(!runInBackGround)
@@ -125,8 +132,17 @@ namespace ClownShell
 
             }catch(Exception error)
             {
-                new ErrorHandeler().DisplayError(ErrorHandeler.ErrorType.ExecutionError, $"Code Executed: not-available \n Exception: \n{error}"); 
+                this.ThrowError(error);
             }
+        }
+
+        public ScriptRunner()
+        {
+            this.Parser = new CodeParser(); 
+        }
+        public ScriptRunner(CodeParser parser)
+        {
+            this.Parser = parser; 
         }
     }
 }

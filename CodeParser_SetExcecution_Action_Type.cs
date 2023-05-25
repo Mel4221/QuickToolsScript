@@ -122,39 +122,52 @@ namespace ClownShell
                 case "list-files":
 
                     runner.Run(() => {
+
+                        if (type == "disk")
+                        {
+                            Get.PrintDisks();
+                            return;
+                        }if(type  == "-l")
+                        {
+                            //ls -l
+                        }
+
+
                         //Get.Yellow($"{this.Target}     ClearTarget: {this.SubTarget} Type: {type}");
                         //Get.Blue(Path.GetDirectoryName(this.Target));
                         // Get.Yellow(ShellLoop.RelativePath);
                         // Get.Wait(type);
-                        if (type[0] == '~')
-                        {
-                             Get.Ls(Helper.HasSpecialFolder(type));
-                            return; 
-                        }
-                        if (type == "disk")
-                        {
-                            Get.PrintDisks(); 
-                            return;
-                        }
-                        if(type == "-l")
-                        {
-                            Get.Ls(this.SubTarget, "");
-                            return; 
-                        }
-                        if (type[0] == '*')
-                        {
-                            //Get.Wait($"{this.Target.Substring(0,this.Target.LastIndexOf("*"))} {type.Substring(1)}");
-                            // Get.Wait(type);  //Get.FileExention(type)
-                            //Get.Wait(this.Target.Substring(this.Target.LastIndexOf(Get.Slash())));
-                            //this get all the files that has this given type 
-                            Get.Ls(Get.FolderFromPath(this.Target),this.SubTarget,true);
-                            return;
-                        }
-                        else
-                        {
-
-                            Get.Ls(this.Target);
-                        }
+                        this.Target = ShellLoop.CurrentPath;
+                        this.SubTarget = type; 
+                        CodeParser helper = Helper.ResolvePath(this);
+                        this.Target = helper.Target;
+                        this.SubTarget = helper.SubTarget;
+                        Get.Cyan($"Target: {this.Target} SubTarget: {this.SubTarget}");
+     
+            
+                        //if(type == "-l")
+                        //{
+                        //    Get.Ls(helper.Target, "");
+                        //    return; 
+                        //}
+                        //if (type.Contains('*'))
+                        //{
+                        //    //Get.Wait($"{this.Target.Substring(0,this.Target.LastIndexOf("*"))} {type.Substring(1)}");
+                        //    // Get.Wait(type);  //Get.FileExention(type)
+                        //    //Get.Wait(this.Target.Substring(this.Target.LastIndexOf(Get.Slash())));
+                        //    //this get all the files that has this given type 
+                        //    Get.Ls(this.Target,this.SubTarget,true);
+                        //    return;
+                        //}
+                        //else
+                        //{
+                        //    if (Directory.Exists(this.Target))
+                        //    {
+                        //        Get.Ls(this.Target);
+                        //        return;
+                        //    }
+             
+                        //}
                     });
                     break;
                 case "sleep":

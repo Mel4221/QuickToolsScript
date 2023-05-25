@@ -63,7 +63,7 @@ namespace ClownShell
         {
             //string fix = type[0] == '>' ? type.Substring(1) : Get.FixPath($"{ShellLoop.CurrentPath}{Get.Slash()}{type}");
             this.cache = new DataCacher();
-            this.runner = new ScriptRunner();
+            this.runner = new ScriptRunner(this);// passing this class for it to have acess to the code being handle 
             this.error = new ErrorHandeler();
             //this.Target = Get.FixPath(fix);
             //this.SubTarget = Get.FixPath($"{ShellLoop.CurrentPath}");
@@ -310,7 +310,40 @@ namespace ClownShell
                         {
 
                             Get.Yellow($"Selecting Multiples");
+                            CodeParser helper = Helper.ResolvePath(this);
+                            this.SubTarget = helper.SubTarget;
+                            this.Target = helper.Target;
                             Get.Green($"Target: {this.Target} SubTarget: {this.SubTarget}");
+                            string path = this.Target.Substring(0,this.Target.IndexOf("*"));
+                            bool allowDebugger = false; 
+                            Get.Yellow($"Source: {path}");
+                            FilesMaper maper = new FilesMaper(path);
+                            //allow Debgugger condition
+                            if(param.Length > 1)
+                            {
+                                if (param[1] == "-d" || param[1] == "-debug")
+                                {
+                                    maper.AllowDebugger = true;
+                                    allowDebugger = true; 
+                                }
+                            }
+                             List<string> files = maper.MapOnlyFiles(this.Target);
+                            if(files.Count == 0)
+                            {
+                                Get.Red($"Not File Founded that match the given Extention: .{Get.FileExention(this.Target)}");
+                                return;
+                            }
+                             for(int f = 0; f < files.Count; f++)
+                            {
+                                if (allowDebugger)
+                                {
+                                    Get.Green($"{this.SubTarget}{Get.FileNameFromPath(files[f])}");
+                                }
+                                
+                                Get.Red($"{this.SubTarget}{Get.FileNameFromPath(files[f])}");
+                                Binary.CopyBinaryFile(files[f], $"{this.SubTarget}{Get.FileNameFromPath(files[f])}");
+                            }
+
 
                             return;
                         }
@@ -415,7 +448,7 @@ namespace ClownShell
                      
                         if (type == "-l")
                         {
-                            Get.Ls(param[0], "");
+                            
                             return;
                         }
                         
