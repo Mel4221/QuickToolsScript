@@ -138,13 +138,13 @@ namespace ClownShell
                         // Get.Yellow(ShellLoop.RelativePath);
                         // Get.Wait(type);
                         this.Target = ShellLoop.CurrentPath;
-                        this.SubTarget = type; 
-                        CodeParser helper = Helper.ResolvePath(this);
-                        this.Target = helper.Target;
-                        this.SubTarget = helper.SubTarget;
-                        Get.Cyan($"Target: {this.Target} SubTarget: {this.SubTarget}");
+                        //this.SubTarget = type; 
+                        //CodeParser helper = Helper.ResolvePath(this);
+                        //this.Target = helper.Target;
+                        //this.SubTarget = helper.SubTarget;
+                        //Get.Cyan($"Target: {this.Target} SubTarget: {this.SubTarget}");
      
-            
+                        Get.Ls(this.Target,null);
                         //if(type == "-l")
                         //{
                         //    Get.Ls(helper.Target, "");

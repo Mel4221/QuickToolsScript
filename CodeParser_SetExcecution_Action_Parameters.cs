@@ -482,6 +482,25 @@ namespace ClownShell
                 case "wget":
                     break;
                 case "secure":
+                    switch (type)
+                    {
+                        case "encrypt":
+                        case "-e":
+                        case "-E":
+                            if (param[0]== "keyless" || param[0] == "-nokey")
+                            {
+                                param[0] = null;
+                            }
+                            Secure secure = new Secure();
+                            Print.List(param);
+                            //secure.Encrypt()
+                            break;
+                        case "decrypt":
+                        case "-d":
+                        case "-D":
+                            
+                            break;
+                    }                    
                     break;
                 default:
                     error.DisplayError(ErrorHandeler.ErrorType.NotValidAction, this.Code);

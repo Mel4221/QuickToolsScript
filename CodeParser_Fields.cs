@@ -70,7 +70,6 @@ namespace ClownShell
         public override string ToString()
         {
             return $"\nAction: {this.Action} \nType: {this.Type}";
-
             //return $"\nAction: {this.Action} \nType: {this.Type} \nParameters: {IConvert.ArrayToText(this.Parameters)} \nCode: {IConvert.ArrayToText(this.Code)}"; 
         }
     }

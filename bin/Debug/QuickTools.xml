@@ -1166,6 +1166,13 @@
             <param name="printType"></param>
             <param name="printOnlyType"></param>
         </member>
+        <member name="M:QuickTools.QCore.Get.LoopInput(System.String)">
+            <summary>
+            Returns an array of the given input
+            </summary>
+            <param name="label"></param>
+            <returns></returns>
+        </member>
         <member name="M:QuickTools.QCore.Get.Print(System.Object,System.Object)">
             <summary>
             Gets a value printed with it's key 
@@ -1798,6 +1805,11 @@
             </summary>
         </member>
         <member name="F:QuickTools.QCore.Get.SizeType.B">
+            <summary>
+            byte
+            </summary>
+        </member>
+        <member name="F:QuickTools.QCore.Get.SizeType.IntConvertible">
             <summary>
             byte
             </summary>
@@ -4547,13 +4559,13 @@
             </summary>
             <value>The index end.</value>
         </member>
-        <member name="P:QuickTools.QSecurity.FalseIO.Trojan.Description">
+        <member name="F:QuickTools.QSecurity.FalseIO.Trojan.Description">
             <summary>
             Gets or sets the description.
             </summary>
             <value>The description.</value>
         </member>
-        <member name="P:QuickTools.QSecurity.FalseIO.Trojan.Date">
+        <member name="F:QuickTools.QSecurity.FalseIO.Trojan.Date">
             <summary>
             Gets or sets the date.
             </summary>

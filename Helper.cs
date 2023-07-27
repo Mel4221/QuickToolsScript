@@ -95,10 +95,10 @@ namespace ClownShell
             string param, type, target, subTarget;
             string[] _params;
             bool resolved; 
-            param = null;
-            type = null;
-            target = null;
-            subTarget = null;
+            param = "";
+            type = "";
+            target = "";
+            subTarget = "";
             resolved = false; 
 
             target = parser.Target; 
@@ -109,9 +109,20 @@ namespace ClownShell
             if(_params != null)
             {
                 param = _params[0];
-                resolved = true; 
+                resolved = true;
             }
-            
+            if (target.Contains(">"))
+            {
+               target =  target.Replace(">", "");
+            }
+            if (subTarget.Contains(">"))
+            {
+               subTarget =  subTarget.Replace(">", "");
+            }
+            if (param.Contains(">"))
+            {
+               param =  param.Replace(">", "");
+            }
             if (param == ".")
             {
                 string slash = ShellLoop.CurrentPath[ShellLoop.CurrentPath.Length - 1].ToString() == Get.Slash() ? null : Get.Slash();
