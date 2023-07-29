@@ -70,4 +70,6 @@
   <Key Value="[log:7/27/2023 12:45:47 AM:1001]####&#xA; There Was an error with the given type of error: 'NotValidAction' 'vim ' &#xA;####" />
   <Key Value="[log:7/27/2023 12:45:51 AM:1001]####&#xA; There Was an error with the given type of error: 'ExecutionError' 'Code Executed: &lt;( not-available )&gt; &#xA; Exception: &#xA;System.ComponentModel.Win32Exception (0x80004005): The system cannot find the file specified&#xD;&#xA;   at System.Diagnostics.Process.StartWithCreateProcess(ProcessStartInfo startInfo)&#xD;&#xA;   at System.Diagnostics.Process.Start()&#xD;&#xA;   at ClownShell.CodeParser.&lt;&gt;c__DisplayClass19_0.&lt;SetExecution&gt;b__11() in C:\Users\Melquiceded\Documents\csharp\ClownShell\CodeParser_SetExcecution_Action_Type.cs:line 356&#xD;&#xA;   at ClownShell.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner.cs:line 129' &#xA;####" />
   <Key Value="[log:7/27/2023 12:51:10 AM:1001]####&#xA; There Was an error with the given type of error: 'NotValidAction' 'exe vim ' &#xA;####" />
+  <Key Value="[log:7/29/2023 6:47:35 PM:1001]####&#xA; There Was an error with the given type of error: 'NotValidAction' 'exi ' &#xA;####" />
+  <Key Value="[log:7/29/2023 6:48:08 PM:1001]####&#xA; There Was an error with the given type of error: 'NotValidAction' 'lasjkdf ' &#xA;####" />
 </DATA>

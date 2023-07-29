@@ -2356,6 +2356,30 @@
             Gets or set the Exception 
             </summary>
         </member>
+        <member name="T:QuickTools.QData.Key">
+            <summary>
+            contains the format for the the key >
+            </summary>
+        </member>
+        <member name="M:QuickTools.QData.Key.ToString(System.String)">
+            <summary>
+            this returns the text into 2 main formats html and json 
+            it will return the formatinto a key and value that will be understood by html
+            and also by json engine 
+            </summary>
+            <param name="format"></param>
+            <returns></returns>
+        </member>
+        <member name="P:QuickTools.QData.KeyManager.FileName">
+            <summary>
+            provides the file name for the file containing the keys
+            </summary>
+        </member>
+        <member name="P:QuickTools.QData.KeyManager.FileExt">
+            <summary>
+            Provides the file extention for the key File 
+            </summary>
+        </member>
         <member name="T:QuickTools.QData.MiniDB">
             <summary>
             Mini DB is a class that provide a semy no relation database 

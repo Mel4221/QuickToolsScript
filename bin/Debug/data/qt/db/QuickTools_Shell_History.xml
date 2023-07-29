@@ -377,4 +377,18 @@
 <Key Value="[command:Thursday, July 27, 2023:1376]exit"/>
 <Key Value="[command:Thursday, July 27, 2023:1377]secure encrypt file.txt keyless private"/>
 <Key Value="[command:Thursday, July 27, 2023:1378]exe notepad file.txt"/>
+<Key Value="[command:Saturday, July 29, 2023:1379]ls"/>
+<Key Value="[command:Saturday, July 29, 2023:1380]exi"/>
+<Key Value="[command:Saturday, July 29, 2023:1381]exit"/>
+<Key Value="[command:Saturday, July 29, 2023:1382]ls"/>
+<Key Value="[command:Saturday, July 29, 2023:1383]ls"/>
+<Key Value="[command:Saturday, July 29, 2023:1384]touch file"/>
+<Key Value="[command:Saturday, July 29, 2023:1385]ls"/>
+<Key Value="[command:Saturday, July 29, 2023:1386]ls folder"/>
+<Key Value="[command:Saturday, July 29, 2023:1387]lasjkdf"/>
+<Key Value="[command:Saturday, July 29, 2023:1388]cd ~/Desktop"/>
+<Key Value="[command:Saturday, July 29, 2023:1389]ls"/>
+<Key Value="[command:Saturday, July 29, 2023:1390]ls -ll"/>
+<Key Value="[command:Saturday, July 29, 2023:1391]clear"/>
+<Key Value="[command:Saturday, July 29, 2023:1392]exit"/>
 </DATA>
