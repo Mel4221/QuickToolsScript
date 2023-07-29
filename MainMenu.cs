@@ -34,7 +34,7 @@ using QuickTools.QSecurity;
 using QuickTools.QCore;
 using QuickTools.QSecurity.FalseIO;
 
-namespace QuickToolsScript
+namespace ClownShell
 {
     internal class MainMenu
     {

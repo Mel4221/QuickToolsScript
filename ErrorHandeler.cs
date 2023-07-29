@@ -31,7 +31,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuickToolsScript
+namespace ClownShell
 {
     public class ErrorHandeler
     {
@@ -41,7 +41,7 @@ namespace QuickToolsScript
             NotValidAction,
             NotValidType,
             NotValidParameter,
-            ExeutionError
+            ExecutionError  
         }
 
         public void DisplayError(ErrorType type, string message)

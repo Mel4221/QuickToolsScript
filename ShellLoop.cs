@@ -37,7 +37,7 @@ using QuickTools.QCore;
 using QuickTools.QSecurity.FalseIO;
 using System.Collections.Generic;
 using System.Threading; 
-namespace QuickToolsScript
+namespace ClownShell
 {
     public partial class ShellLoop
     {
@@ -63,38 +63,7 @@ namespace QuickToolsScript
 
         private MiniDB db;
 
-        /// <summary>
-        /// returns the disks in the system
-        /// </summary>
-        /// <returns></returns>
-        public static string[] Disks() => Environment.GetLogicalDrives();
 
-
-
-
-        /// <summary>
-        /// provides the inforamtion wether the input path has a direct reference to a disk
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
-        public static bool ReferToDisk(string input)
-        {
-            bool refer = false;
-            string path, drive; 
-             path = Get.FixPath(input);
-            drive = path.Substring(0, path.IndexOf(Get.Slash()) + 1);
-            foreach (string disk in Disks())
-            {
-                //Get.Green(disk);
-                if (disk == drive.ToUpper())
-                {
-                    return true; 
-                    //Get.Yellow(drive);
-                }
-            }
-
-            return refer; 
-        }
         public MiniDB GetHistory()
         {
             db = new MiniDB("QuickTools_Shell_History.xml", true);
@@ -142,13 +111,15 @@ namespace QuickToolsScript
             ShellLoop.CurrentPath = ShellLoop.CurrentPath != "" ? Environment.GetFolderPath(Environment.SpecialFolder.Desktop): ShellLoop.CurrentPath;
             while (true)
             {
-                this.shell.Notifications = DateTime.Now.ToString("H:m M:dd:yyyy");
+                this.shell.Notifications = DateTime.Now.ToString("H:m:ss M:dd:yyyy");
                 //this.shell.CurrentPath = Get.RelativePath(ShellLoop.CurrentPath);
                 this.shell.CurrentPath = ShellLoop.CurrentPath;
 
-               // Get.Cyan("\n"+this.shell.CurrentPath);
+                // Get.Cyan("\n"+this.shell.CurrentPath);
                 // ShellLoop.RelativePath = Get.RelativePath(ShellLoop.CurrentPath);
                 //Get.Yellow(ShellLoop.RelativePath); 
+
+               // Func<ConsoleKeyInfo> F = () => { return Console.ReadKey(); };
                 input = this.shell.StartInput();
                 SaveHistory(input); 
                 if (input == "exit")

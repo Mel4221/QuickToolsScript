@@ -23,33 +23,30 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
-using QuickTools.QCore;
 using System;
 using QuickTools.QIO;
 using QuickTools.QNet;
-using QuickTools.QData;
 using QuickTools.QCore;
+using QuickTools.QData;
 using QuickTools.QColors;
 using QuickTools.QConsole;
 using QuickTools.QSecurity;
 using QuickTools.QSecurity.FalseIO;
 
 
-namespace QuickToolsScript
+namespace ClownShell
 {
     internal class Program
     {
 
-        public const string Name = "QuickTools Shell";
+        public const string Name = "ClownShell";
 
         
         static int Main(string[] args)
         {
 
-            string str = "app.exe";
-
-
-            //Get.Wait(FixPath("../box/secure/QuickTools.xml"));
+          
+             //Get.Wait(FixPath("../box/secure/QuickTools.xml"));
             //Get.Wait(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles));// Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
             //while(true)Get.Box(Get.Input().Text);
              //return 0; 
