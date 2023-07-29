@@ -365,4 +365,16 @@
 <Key Value="[command:Thursday, July 27, 2023:1364]vim file.txt"/>
 <Key Value="[command:Thursday, July 27, 2023:1365]exe vim"/>
 <Key Value="[command:Thursday, July 27, 2023:1366]powershell"/>
+<Key Value="[command:Thursday, July 27, 2023:1367]ls"/>
+<Key Value="[command:Thursday, July 27, 2023:1368]powershell"/>
+<Key Value="[command:Thursday, July 27, 2023:1369]exit"/>
+<Key Value="[command:Thursday, July 27, 2023:1370]ls"/>
+<Key Value="[command:Thursday, July 27, 2023:1371]exit"/>
+<Key Value="[command:Thursday, July 27, 2023:1372]secure encrypt file.txt keyless 1234"/>
+<Key Value="[command:Thursday, July 27, 2023:1373]exit"/>
+<Key Value="[command:Thursday, July 27, 2023:1374]ls"/>
+<Key Value="[command:Thursday, July 27, 2023:1375]history"/>
+<Key Value="[command:Thursday, July 27, 2023:1376]exit"/>
+<Key Value="[command:Thursday, July 27, 2023:1377]secure encrypt file.txt keyless private"/>
+<Key Value="[command:Thursday, July 27, 2023:1378]exe notepad file.txt"/>
 </DATA>

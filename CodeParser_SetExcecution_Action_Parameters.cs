@@ -487,18 +487,18 @@ namespace ClownShell
                         case "encrypt":
                         case "-e":
                         case "-E":
-                            if (param[0]== "keyless" || param[0] == "-nokey")
-                            {
-                                param[0] = null;
-                            }
-                            Secure secure = new Secure();
                             Print.List(param);
+
+                            Get.Red("Not Done Yet"); 
+                           
+
+
                             //secure.Encrypt()
                             break;
                         case "decrypt":
                         case "-d":
                         case "-D":
-                            
+                            Get.Red("Not Done Yet");
                             break;
                     }                    
                     break;
