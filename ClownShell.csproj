@@ -37,4 +37,11 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="CodeParser\Scripts\Loops\" />
+    <Folder Include="CodeParser\Scripts\Functions\" />
+    <Folder Include="CodeParser\Scripts\Conditions\" />
+    <Folder Include="CodeParser\Scripts\PrimitiveValues\" />
+  </ItemGroup>
+
 </Project>

@@ -1,3 +1,8 @@
+C:\Users\Melquiceded\Documents\csharp\ClownShell\obj\Release\net7.0\ClownShell.csproj.AssemblyReference.cache
+C:\Users\Melquiceded\Documents\csharp\ClownShell\obj\Release\net7.0\ClownShell.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Melquiceded\Documents\csharp\ClownShell\obj\Release\net7.0\ClownShell.AssemblyInfoInputs.cache
+C:\Users\Melquiceded\Documents\csharp\ClownShell\obj\Release\net7.0\ClownShell.AssemblyInfo.cs
+C:\Users\Melquiceded\Documents\csharp\ClownShell\obj\Release\net7.0\ClownShell.csproj.CoreCompileInputs.cache
 C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Release\net7.0\ClownShell.exe
 C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Release\net7.0\ClownShell.deps.json
 C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Release\net7.0\ClownShell.runtimeconfig.json
@@ -5,11 +10,6 @@ C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Release\net7.0\ClownShell.d
 C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Release\net7.0\ClownShell.pdb
 C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Release\net7.0\QuickTools.dll
 C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Release\net7.0\QuickTools.xml
-C:\Users\Melquiceded\Documents\csharp\ClownShell\obj\Release\net7.0\ClownShell.csproj.AssemblyReference.cache
-C:\Users\Melquiceded\Documents\csharp\ClownShell\obj\Release\net7.0\ClownShell.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Melquiceded\Documents\csharp\ClownShell\obj\Release\net7.0\ClownShell.AssemblyInfoInputs.cache
-C:\Users\Melquiceded\Documents\csharp\ClownShell\obj\Release\net7.0\ClownShell.AssemblyInfo.cs
-C:\Users\Melquiceded\Documents\csharp\ClownShell\obj\Release\net7.0\ClownShell.csproj.CoreCompileInputs.cache
 C:\Users\Melquiceded\Documents\csharp\ClownShell\obj\Release\net7.0\ClownShell.csproj.CopyComplete
 C:\Users\Melquiceded\Documents\csharp\ClownShell\obj\Release\net7.0\ClownShell.dll
 C:\Users\Melquiceded\Documents\csharp\ClownShell\obj\Release\net7.0\refint\ClownShell.dll

@@ -48,7 +48,31 @@ namespace ClownShell
             this.runner = new ScriptRunner();
             this.error = new ErrorHandeler();
             this.Target = Get.FixPath($"{ShellLoop.CurrentPath}");
-             
+         
+
+            if (action.Substring(0, 2) == "./")
+            {
+                runner.Run(() => {
+
+                    Process.Start(action.Substring(2));
+                    //cmd.StartInfo.FileName = "";//"cmd.exe";
+                    //cmd.StartInfo.Arguments = action.Substring(2);
+                                                   //cmd.StartInfo.RedirectStandardInput = true;
+                   // cmd.StartInfo.RedirectStandardOutput = false;  // true;
+                  //  cmd.StartInfo.CreateNoWindow = false;
+                  //  cmd.StartInfo.UseShellExecute = false;
+                    //cmd.StartInfo.Arguments = "ping www.google.com"; //Helper.ResolvePath(this).Target;
+
+                    //cmd.Start();
+                     /* execute "dir" */
+
+                    //cmd.StandardInput.WriteLine(this.SubTarget);
+                    //cmd.StandardInput.Flush();
+                    //cmd.StandardInput.Close();
+                    //Console.WriteLine(cmd.StandardOutput.ReadToEnd());
+                });
+                return;
+            }
             switch (action)
             {
                 /*
@@ -142,9 +166,9 @@ namespace ClownShell
                         }
             
                         Options option = new Options(both);
-                        Options.Label = this.Target;
-                        Options.SelectorL = "> "; 
-                        Options.SelectorR = ""; 
+                        option.Label = this.Target;
+                        option.SelectorL = "> ";
+                        option.SelectorR = ""; 
                         int selection = option.Pick();
                         string str = null;
                         str = this.Target[this.Target.Length - 1].ToString() == Get.Slash() ? "" : Get.Slash(); 

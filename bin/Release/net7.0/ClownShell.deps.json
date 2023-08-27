@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "ClownShell/1.0.0": {
+        "dependencies": {
+          "QuickTools": "2.0.0.4"
+        },
+        "runtime": {
+          "ClownShell.dll": {}
+        }
+      },
+      "QuickTools/2.0.0.4": {
+        "runtime": {
+          "QuickTools.dll": {
+            "assemblyVersion": "2.0.0.4",
+            "fileVersion": "2.0.0.4"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ClownShell/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "QuickTools/2.0.0.4": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

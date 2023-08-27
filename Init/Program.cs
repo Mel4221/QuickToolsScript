@@ -23,16 +23,10 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
-using System;
-using QuickTools.QIO;
-using QuickTools.QNet;
-using QuickTools.QCore;
-using QuickTools.QData;
-using QuickTools.QColors;
-using QuickTools.QConsole;
-using QuickTools.QSecurity;
-using QuickTools.QSecurity.FalseIO;
 
+using QuickTools.QCore;
+using QuickTools.QColors;
+ 
 
 namespace ClownShell.Init
 {
@@ -68,7 +62,7 @@ namespace ClownShell.Init
                 result = parser.CheckFile(commands[0]);
                 commands = IConvert.TextToArray(result.Code);
             }
-            Color.Yellow(commands[0]);
+            //Color.Yellow(commands[0]);
             if (commands.Length > 0)
             {
 

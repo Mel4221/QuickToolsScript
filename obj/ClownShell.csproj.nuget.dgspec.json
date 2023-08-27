@@ -56,22 +56,6 @@
           "warn": true,
           "downloadDependencies": [
             {
-              "name": "Microsoft.AspNetCore.App.Runtime.linux-arm64",
-              "version": "[7.0.5, 7.0.5]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.linux-arm64",
-              "version": "[7.0.5, 7.0.5]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Runtime.linux-arm64",
-              "version": "[7.0.5, 7.0.5]"
-            },
-            {
-              "name": "runtime.linux-arm64.Microsoft.DotNet.ILCompiler",
-              "version": "[7.0.5, 7.0.5]"
-            },
-            {
               "name": "runtime.win-x64.Microsoft.DotNet.ILCompiler",
               "version": "[7.0.5, 7.0.5]"
             }
@@ -82,11 +66,6 @@
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "linux-arm64": {
-          "#import": []
         }
       }
     }

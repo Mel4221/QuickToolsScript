@@ -286,9 +286,9 @@ namespace ClownShell
                             //Print.List(withExt);
                             //Get.Wait();
                             Options option = new Options(files);
-                            Options.Label = this.SubTarget;
-                            Options.SelectorL = "> ";
-                            Options.SelectorR = "";
+                            option.Label = this.SubTarget;
+                            option.SelectorL = "> ";
+                            option.SelectorR = "";
                             int selection = option.Pick();
                             ShellLoop.SelectedOject = $"{this.SubTarget}{Get.Slash()}{Get.FileNameFromPath(files[selection])}";
                             return;
