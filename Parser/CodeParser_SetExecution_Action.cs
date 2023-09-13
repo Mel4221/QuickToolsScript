@@ -31,8 +31,10 @@ using System.Diagnostics;
 using ClownShell.Init;
 using ClownShell.ErrorHandler;
 using ClownShell.ScripRunner;
-namespace ClownShell
+namespace ClownShell.Parser
 {
+
+
     public partial class CodeParser
     {
         /// <summary>
@@ -41,88 +43,26 @@ namespace ClownShell
         /// <param name="action"></param>
         public void SetExecution(string action)
         {
-        
-                
-           // Get.Wait(Get.DataPath());
+            
+            
+            // Get.Wait(Get.DataPath());
             this.cache = new DataCacher();
             this.runner = new ScriptRunner();
             this.error = new ErrorHandeler();
-            this.Target = Get.FixPath($"{ShellLoop.CurrentPath}");
-         
-
-            if (action.Substring(0, 2) == "./")
-            {
-                runner.Run(() => {
-
-                    Process.Start(action.Substring(2));
-                    //cmd.StartInfo.FileName = "";//"cmd.exe";
-                    //cmd.StartInfo.Arguments = action.Substring(2);
-                                                   //cmd.StartInfo.RedirectStandardInput = true;
-                   // cmd.StartInfo.RedirectStandardOutput = false;  // true;
-                  //  cmd.StartInfo.CreateNoWindow = false;
-                  //  cmd.StartInfo.UseShellExecute = false;
-                    //cmd.StartInfo.Arguments = "ping www.google.com"; //Helper.ResolvePath(this).Target;
-
-                    //cmd.Start();
-                     /* execute "dir" */
-
-                    //cmd.StandardInput.WriteLine(this.SubTarget);
-                    //cmd.StandardInput.Flush();
-                    //cmd.StandardInput.Close();
-                    //Console.WriteLine(cmd.StandardOutput.ReadToEnd());
-                });
-                return;
-            }
+            this.Target = Get.FixPath(ShellLoop.CurrentPath);
+       
             switch (action)
             {
-                /*
-                    Exit The Shell
-                 */
+       
                 case "exit":
                     Environment.Exit(0);
                     return;
-                    /*
-                        Reset the currentpath to the path where the program
-                        is allocated.
-                     */
-                case "reset-path":
-                        ShellLoop.CurrentPath = Directory.GetCurrentDirectory();
-                    break; 
                 case "console-clear":
                 case "clear":
                     runner.Run(() => { Get.Clear(); });
                     break;
-                case "set-color-pink":
-                case "pink":
-                    runner.Run(() => { Get.Pink(); });
-                    break;
-                case "set-color-red":
-                case "red":
-                    runner.Run(() => { Get.Red(); });
-                    break;
-                case "set-color-blue":
-                case "blue":
-                    runner.Run(() => { Get.Blue(); });
-                    break;
-                case "set-color-yellow":
-                case "yellow":
-                    runner.Run(() => { Get.Yellow(); });
-                    break;
-                case "set-color-green":
-                case "green":
-                    runner.Run(() => { Get.Green(); });
-                    break;
-                case "set-color-gray":
-                case "gray":
-                    runner.Run(() => { Get.Gray(); });
-                    break;
-                case "set-color-cyan":
-                case "cyan":
-                    runner.Run(() => { Get.Cyan(); });
-                    break;
-                case "set-color-black":
-                case "black":
-                    runner.Run(() => { Get.Black(); });
+                case "reset-path":
+                        ShellLoop.CurrentPath = Directory.GetCurrentDirectory();
                     break;
                 case "clear-cache":
                 case "cache-reset":

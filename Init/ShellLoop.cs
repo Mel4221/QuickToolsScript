@@ -28,7 +28,8 @@
 using QuickTools.QData;
 using QuickTools.QConsole;
 using System.Reflection.Metadata;
-
+using ClownShell.Parser;
+using QuickTools.QCore; 
 namespace ClownShell.Init
 {
     public partial class ShellLoop
@@ -60,6 +61,7 @@ namespace ClownShell.Init
         private ShellInput shell;
 
         private MiniDB db;
+        private CodeParser parser = new CodeParser(); 
 
 
         public MiniDB GetHistory()
@@ -111,7 +113,7 @@ namespace ClownShell.Init
             // Get.Wait(ShellLoop.CurrentPath);
             //ShellLoop.CurrentPath = ShellLoop.CurrentPath != "" ? Get.Path : ShellLoop.CurrentPath;
             shell = new ShellInput(Environment.UserName, Environment.MachineName);
-            CodeParser parser;
+           
 
             string input;
             input = null;
@@ -137,8 +139,8 @@ namespace ClownShell.Init
                 }
                 else
                 {
-                    parser = new CodeParser(input);
-                    parser.Start();
+                    this.parser.Code = IConvert.TextToArray(input);
+                    this.parser.Start();
                 }
             }
             new MainMenu().Start();

@@ -13,7 +13,7 @@ using QuickTools.QSecurity;
 using QuickTools.QSecurity.FalseIO;
 using System.IO;
 using ClownShell.Init;
-
+using ClownShell.Parser; 
 namespace ClownShell.Helpers
 {
     static class Helper

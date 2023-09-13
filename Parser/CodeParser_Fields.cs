@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using ClownShell.ScripRunner;
 using ClownShell.ErrorHandler;
 
-namespace ClownShell
+namespace ClownShell.Parser
 {
     public partial class CodeParser 
     {
@@ -18,6 +18,11 @@ namespace ClownShell
         /// Holds the redirected text 
         /// </summary>
         public StringBuilder RedirectedText;
+
+        /// <summary>
+        /// Contains a Virtual stack 
+        /// </summary>
+        public static VirtualStack VStack { get; set; } = new VirtualStack(); 
 
         /// <summary>
         /// provides the given action type 
@@ -53,6 +58,17 @@ namespace ClownShell
         /// notify that the path was resolved
         /// </summary>
         public bool PathResolved;
+
+        /// <summary>
+        /// Determines if the script will be readed line by line until meet with an special character
+        /// </summary>
+        public bool RunContinues;
+
+        /// <summary>
+        /// this character will be required at the end of each line 
+        /// </summary>
+        public char LineEndingChar { get; set; } = ';'; 
+
 
         /// <summary>
         /// Contains the list of commands that the code will be executting

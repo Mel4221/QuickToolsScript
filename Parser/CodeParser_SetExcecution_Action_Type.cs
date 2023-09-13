@@ -33,7 +33,7 @@ using ClownShell.Init;
 using ClownShell.Helpers;
 using ClownShell.ScripRunner;
 using ClownShell.ErrorHandler;
-namespace ClownShell
+namespace ClownShell.Parser
 {
     public partial class CodeParser
     {
@@ -81,6 +81,38 @@ namespace ClownShell
                 case "echo":
                     runner.Run(() => { Make.File(this.Target); });
                     break;
+                case "set-color-pink":
+                case "pink":
+                    runner.Run(() => { Get.Pink(type); });
+                    break;
+                case "set-color-red":
+                case "red":
+                    runner.Run(() => { Get.Red(type); });
+                    break;
+                case "set-color-blue":
+                case "blue":
+                    runner.Run(() => { Get.Blue(type); });
+                    break;
+                case "set-color-yellow":
+                case "yellow":
+                    runner.Run(() => { Get.Yellow(type); });
+                    break;
+                case "set-color-green":
+                case "green":
+                    runner.Run(() => { Get.Green(type); });
+                    break;
+                case "set-color-gray":
+                case "gray":
+                    runner.Run(() => { Get.Gray(type); });
+                    break;
+                case "set-color-cyan":
+                case "cyan":
+                    runner.Run(() => { Get.Cyan(type); });
+                    break;
+                case "set-color-black":
+                case "black":
+                    runner.Run(() => { Get.Black(type); });
+                    break;
                 case "rm":
                 case "remove":
                 case "delete":
@@ -100,9 +132,8 @@ namespace ClownShell
                     {
                             GC.Collect();
                             GC.WaitForPendingFinalizers();
-                           Directory.Delete(this.Target);
-
-                        return;
+                            Directory.Delete(this.Target);
+                            return;
                     }
                     else
                     {

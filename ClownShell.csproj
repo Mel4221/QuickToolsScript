@@ -14,6 +14,15 @@
     <RepositoryUrl>https://github.com/Mel4221/ClownShell/tree/v2</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageReleaseNotes>Testing</PackageReleaseNotes>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <WarningLevel>0</WarningLevel>
   </PropertyGroup>
  
   <ItemGroup>
@@ -38,10 +47,24 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="CodeParser\Scripts\Loops\" />
-    <Folder Include="CodeParser\Scripts\Functions\" />
-    <Folder Include="CodeParser\Scripts\Conditions\" />
-    <Folder Include="CodeParser\Scripts\PrimitiveValues\" />
+    <Folder Include="Parser\Scripts\Loops\" />
+    <Folder Include="Parser\Scripts\Conditions\" />
+    <Folder Include="Parser\Scripts\PrimitiveValues\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

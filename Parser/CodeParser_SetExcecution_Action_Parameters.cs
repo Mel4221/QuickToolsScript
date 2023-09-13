@@ -33,8 +33,8 @@ using QuickTools.QCore;
 using ClownShell.Init;
 using ClownShell.Helpers;
 using ClownShell.ScripRunner;
-using ClownShell.ErrorHandler; 
-namespace ClownShell
+using ClownShell.ErrorHandler;
+namespace ClownShell.Parser
 {
     public partial class CodeParser
     {
@@ -72,6 +72,34 @@ namespace ClownShell
             Print.List(param);
             switch (action)
             {
+
+                case "var":
+                    runner.Run(() => {
+                        Get.Yellow($"{type} = {param[1]};");
+                        //var y = ls;
+                        //var x = input;
+                        CodeParser.VStack.SetVariable(type, param[1]); 
+                     
+                    });
+                    break;
+             
+                case "const":
+                    runner.Run(() => {
+                        Get.Yellow($"{type} = {param[1]};");
+                        //var y = ls;
+                        //var x = input;
+                        CodeParser.VStack.SetVariable(new Variable() { 
+                            Name = type,
+                            Value = param[1],
+                            IsConstant = true
+                        });
+                    });
+                    break;
+                case "function":
+                    runner.Run(() => {
+                            
+                    });
+                    break;
                 case "mv":
                     runner.Run(() =>
                     {

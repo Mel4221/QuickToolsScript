@@ -27,7 +27,7 @@ using ClownShell.Init;
 using QuickTools.QCore;
 using QuickTools.QIO;
 using ClownShell.ErrorHandler;
-namespace ClownShell
+namespace ClownShell.Parser
 {
     public partial class CodeParser
     {
@@ -59,6 +59,7 @@ namespace ClownShell
             }
 
         }
+
         private void Parse(CodeType codeType)
         {
             string action, type;
@@ -107,6 +108,29 @@ namespace ClownShell
         
         public void Start()
         {
+             /*
+                
+                
+                var x = 22; 
+                var name = Melquiceded; 
+                const user = name;
+                mem password = input;
+                var http = run(http check-internet); 
+                 
+                if(http != ok)
+                {
+                    red "There is no internet available"; 
+                    return; 
+                }
+                
+                sexure-encrypt *.log password -same -d -ds; 
+                secure-encrypt *.log pass=password iv=same debugger=true delete_source=true; 
+                
+                qhttp upload *.log www.account/backup/ user=admin pass=1234 -d -log;
+                rm *.log; 
+                exit; 
+               
+             */
             switch(this.Code.Length)
             {
                 case 0:

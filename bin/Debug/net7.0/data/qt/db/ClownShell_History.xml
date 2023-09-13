@@ -1,12 +1,58 @@
 <DATA>
-<Key Value="[command:Saturday, August 26, 2023:1001]select"/>
-<Key Value="[command:Saturday, August 26, 2023:1002]selected?"/>
-<Key Value="[command:Saturday, August 26, 2023:1003]selected"/>
-<Key Value="[command:Saturday, August 26, 2023:1004]Selected"/>
-<Key Value="[command:Saturday, August 26, 2023:1005]selected"/>
-<Key Value="[command:Saturday, August 26, 2023:1006]ls disk"/>
-<Key Value="[command:Saturday, August 26, 2023:1007]ls disk"/>
-<Key Value="[command:Saturday, August 26, 2023:1008]ls obj"/>
-<Key Value="[command:Saturday, August 26, 2023:1009]ls"/>
-<Key Value="[command:Saturday, August 26, 2023:1010]ls -ll"/>
+<Key Value="[command:Monday, August 28, 2023:1047]clear"/>
+<Key Value="[command:Monday, August 28, 2023:1048]ls"/>
+<Key Value="[command:Monday, August 28, 2023:1049]cat Screenshot.txt"/>
+<Key Value="[command:Monday, August 28, 2023:1050]clear"/>
+<Key Value="[command:Monday, August 28, 2023:1051]ls"/>
+<Key Value="[command:Monday, August 28, 2023:1052]cat Doc.html"/>
+<Key Value="[command:Monday, August 28, 2023:1053]start Doc.html"/>
+<Key Value="[command:Monday, August 28, 2023:1054]clear"/>
+<Key Value="[command:Monday, August 28, 2023:1055]ls"/>
+<Key Value="[command:Monday, August 28, 2023:1056]edit"/>
+<Key Value="[command:Monday, August 28, 2023:1057]ls -ll"/>
+<Key Value="[command:Monday, August 28, 2023:1058]clear"/>
+<Key Value="[command:Monday, August 28, 2023:1059]ls"/>
+<Key Value="[command:Monday, August 28, 2023:1060]ls"/>
+<Key Value="[command:Monday, August 28, 2023:1061]clear"/>
+<Key Value="[command:Monday, August 28, 2023:1062]ls"/>
+<Key Value="[command:Monday, August 28, 2023:1063]sys"/>
+<Key Value="[command:Monday, August 28, 2023:1064]clear"/>
+<Key Value="[command:Monday, August 28, 2023:1065]ls"/>
+<Key Value="[command:Monday, August 28, 2023:1066]exe PasswordManager.exe"/>
+<Key Value="[command:Monday, August 28, 2023:1067]cat dd.pdf"/>
+<Key Value="[command:Monday, August 28, 2023:1068]ls"/>
+<Key Value="[command:Monday, August 28, 2023:1069]cat ddd.pdf"/>
+<Key Value="[command:Monday, August 28, 2023:1070]cat icon.txt"/>
+<Key Value="[command:Monday, August 28, 2023:1071]clear"/>
+<Key Value="[command:Monday, August 28, 2023:1072]ls"/>
+<Key Value="[command:Monday, August 28, 2023:1073]cat Soup_Locations.txt"/>
+<Key Value="[command:Monday, August 28, 2023:1074]cat Script.qqs"/>
+<Key Value="[command:Monday, August 28, 2023:1075]clear"/>
+<Key Value="[command:Monday, August 28, 2023:1076]ls"/>
+<Key Value="[command:Monday, August 28, 2023:1077]cat Script.qqs"/>
+<Key Value="[command:Monday, August 28, 2023:1078]vim Script.qqs"/>
+<Key Value="[command:Monday, August 28, 2023:1079]nano Script.qqs"/>
+<Key Value="[command:Monday, August 28, 2023:1080]selected"/>
+<Key Value="[command:Monday, August 28, 2023:1081]var x = 22;"/>
+<Key Value="[command:Monday, August 28, 2023:1082]var x = 22; "/>
+<Key Value="[command:Monday, August 28, 2023:1083]var name = melquiceded; "/>
+<Key Value="[command:Monday, August 28, 2023:1084]exit\"/>
+<Key Value="[command:Monday, August 28, 2023:1085]exit;"/>
+<Key Value="[command:Monday, August 28, 2023:1086]input"/>
+<Key Value="[command:Monday, August 28, 2023:1087]exit;"/>
+<Key Value="[command:Monday, August 28, 2023:1088]ls"/>
+<Key Value="[command:Monday, August 28, 2023:1089]clear"/>
+<Key Value="[command:Tuesday, August 29, 2023:1090]var x = 22"/>
+<Key Value="[command:Tuesday, August 29, 2023:1091]var x = 22"/>
+<Key Value="[command:Tuesday, August 29, 2023:1092]var x = 22; "/>
+<Key Value="[command:Tuesday, August 29, 2023:1093]var x = 22"/>
+<Key Value="[command:Tuesday, August 29, 2023:1094]x = 22;"/>
+<Key Value="[command:Tuesday, August 29, 2023:1095]var x = 4251"/>
+<Key Value="[command:Tuesday, August 29, 2023:1096]var x = 22;"/>
+<Key Value="[command:Tuesday, August 29, 2023:1097]ls"/>
+<Key Value="[command:Tuesday, August 29, 2023:1098]touch file.txt"/>
+<Key Value="[command:Tuesday, August 29, 2023:1099]ls "/>
+<Key Value="[command:Tuesday, August 29, 2023:1100]touch FFFF.txt"/>
+<Key Value="[command:Tuesday, August 29, 2023:1101]clear"/>
+<Key Value="[command:Tuesday, August 29, 2023:1102]ls"/>
 </DATA>

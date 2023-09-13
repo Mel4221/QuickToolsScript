@@ -34,6 +34,7 @@ using QuickTools.QCore;
 using ClownShell.BackGroundFunctions;
 using ClownShell.Init;
 using ClownShell.ErrorHandler;
+using ClownShell.Parser;
 
 namespace ClownShell.ScripRunner
 {

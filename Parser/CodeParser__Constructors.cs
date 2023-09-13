@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClownShell
+namespace ClownShell.Parser
 {
     public partial class CodeParser
     {

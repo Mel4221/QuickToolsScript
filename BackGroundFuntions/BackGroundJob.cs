@@ -104,12 +104,19 @@ namespace ClownShell.BackGroundFunctions
                     {
                         if (this.Jobs[current].BThread.IsAlive)
                         {
+#pragma warning disable CS0618 // Type or member is obsolete
                             this.Jobs[current].BThread.Suspend();
+#pragma warning restore CS0618 // Type or member is obsolete
                         }
                     }
                 }
             }
         }
+
+        /// <summary>
+        /// Resume the background worker
+        /// </summary>
+        /// <param name="id"></param>
         public void Resume(int id)
         {
             if (this.Jobs != null)
@@ -126,6 +133,10 @@ namespace ClownShell.BackGroundFunctions
                 }
             }
         }
+
+        /// <summary>
+        /// Run the background jobs
+        /// </summary>
         public void RunJobs()
         {
             if (this.Jobs != null)

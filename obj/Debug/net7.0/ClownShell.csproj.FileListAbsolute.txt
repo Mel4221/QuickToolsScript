@@ -16,3 +16,5 @@ C:\Users\Melquiceded\Documents\csharp\ClownShell\obj\Debug\net7.0\refint\ClownSh
 C:\Users\Melquiceded\Documents\csharp\ClownShell\obj\Debug\net7.0\ClownShell.pdb
 C:\Users\Melquiceded\Documents\csharp\ClownShell\obj\Debug\net7.0\ClownShell.genruntimeconfig.cache
 C:\Users\Melquiceded\Documents\csharp\ClownShell\obj\Debug\net7.0\ref\ClownShell.dll
+C:\Users\Melquiceded\Documents\csharp\ClownShell\obj\Debug\net7.0\ClownShell.Properties.Resources.resources
+C:\Users\Melquiceded\Documents\csharp\ClownShell\obj\Debug\net7.0\ClownShell.csproj.GenerateResource.cache

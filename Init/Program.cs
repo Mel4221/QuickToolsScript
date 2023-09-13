@@ -26,7 +26,8 @@
 
 using QuickTools.QCore;
 using QuickTools.QColors;
- 
+using ClownShell.Parser;
+using ClownShell.Parser.Scripts.RuleChecks;
 
 namespace ClownShell.Init
 {
@@ -46,23 +47,25 @@ namespace ClownShell.Init
             //while(true)Get.Box(Get.Input().Text);
             //return 0; 
             Get.Title(Name);
-            CodeParser parser = new CodeParser();
-            CodeParser.CodeResult result;
+            //CodeParser parser = new CodeParser();
+            //CodeParser.CodeResult result;
             MainMenu menu;
             ShellLoop shellLoop;
+            ScriptChecker checker;  
             string[] commands = args;
 
+
+
+            //if (parser.CheckFile(commands[0]).IsValid)
+            //{
+            //    result = parser.CheckFile(commands[0]);
+            //    commands = IConvert.TextToArray(result.Code);
+            //}
+            //Color.Yellow(commands[0]);
             if (commands.Length == 0)
             {
                 commands = new string[] { "shell" };
             }
-
-            if (parser.CheckFile(commands[0]).IsValid)
-            {
-                result = parser.CheckFile(commands[0]);
-                commands = IConvert.TextToArray(result.Code);
-            }
-            //Color.Yellow(commands[0]);
             if (commands.Length > 0)
             {
 
@@ -73,11 +76,12 @@ namespace ClownShell.Init
                     return 0;
                 }
 
-                parser = new CodeParser();
-                parser.Code = commands;
+                //parser = new CodeParser();
+                //parser.Code = commands;
                 //for debugging porpuses
-                parser.Start();
-                Get.Wait();
+                checker = new ScriptChecker(); 
+                checker.Check(args);
+                //Get.Wait();
                 return 0;
             }
             else
