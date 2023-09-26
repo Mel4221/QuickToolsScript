@@ -28,4 +28,8 @@
 <Key Value="[command:Saturday, July 29, 2023:1333]exe fileexplorer"/>
 <Key Value="[command:Saturday, July 29, 2023:1334]exe fileexplorer.exe $pwd"/>
 <Key Value="[command:Saturday, July 29, 2023:1335]exit"/>
+<Key Value="[command:Sunday, September 10, 2023:1336]clear"/>
+<Key Value="[command:Sunday, September 10, 2023:1337]ls"/>
+<Key Value="[command:Sunday, September 10, 2023:1338]ls"/>
+<Key Value="[command:Sunday, September 10, 2023:1339]exit"/>
 </DATA>
