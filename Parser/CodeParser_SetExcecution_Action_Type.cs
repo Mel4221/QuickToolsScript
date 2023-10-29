@@ -46,35 +46,43 @@ namespace ClownShell.Parser
         /// <param name="type"></param>
         public void SetExecution(string action, string type)
         {
-
+            
               //string fix = type[0] == '>' ? type.Substring(1) : Get.FixPath($"{ShellLoop.CurrentPath}{Get.Slash()}{type}");
               //Get.Wait(fix);
-              this.cache = new DataCacher();
-              this.runner = new ScriptRunner();
-              this.error = new ErrorHandeler();
+              this.cache  =  new DataCacher();
+              this.runner =  new ScriptRunner();
+              this.error  =  new ErrorHandeler();
 
             // get the path with the given type and if it does not have an slash add it acordintly 
-            string tar = type[0] == '~' || type[0] == '.' || Helper.ReferToDisk(type)? type :  $"{ShellLoop.CurrentPath}{Get.Slash()}{type}";
-            if (tar.Contains('@'))
-            {
-                tar = tar.Substring(tar.IndexOf('@')+1);
-            }
-            //Get.Wait(Get.FixPath("*.txt"));
-              this.Target = Get.FixPath(tar);
+            //string tar = type[0] == '~' || type[0] == '.' || Helper.ReferToDisk(type)? type :  $"{ShellLoop.CurrentPath}{Get.Slash()}{type}";
 
+            //if (tar.Contains('@'))
+            //{
+            //    tar = tar.Substring(tar.IndexOf('@')+1);
+            //}
+            //Get.Wait(Get.FixPath("*.txt"));
+            //this.Target = Get.FixPath(tar);
+              
+             // this = Helper.ResolvePath(this).Target; 
+             // this.Target = temp == null || temp == ""? type:temp; 
               this.SubTarget = Get.FixPath(type);
+              //this.Target = $"{this.Target}{Get.Slash()}{this.SubTarget}"; 
               Get.Yellow($"Target: {this.Target} SubTarget: {this.SubTarget}");
               Get.Cyan($"Helper: {Helper.ResolvePath(this).Target}");
-              //this.Target = Get.FixPath(fix);
-              //this.SubTarget = Get.FixPath($"{ShellLoop.CurrentPath}");
-              //type = Get.FixPath(type);
-              // Get.Wait(this.Target);
+ 
+            //this.Target = Get.FixPath(fix;
+            //this.SubTarget = Get.FixPath($"{ShellLoop.CurrentPath}");
+            //type = Get.FixPath(type);
+            // Get.Wait(this.Target);
             switch (action)
             {
 
 
                 case "mkdir":
-                    runner.Run(() => { Make.Directory(this.Target); });
+                    runner.Run(() => { 
+                        
+                        Make.Directory(this.Target); 
+                    });
                     break;
                 case "touch":
                 case "create":
@@ -144,16 +152,25 @@ namespace ClownShell.Parser
                 case "ls":
                 case "list":
                 case "list-files":
-
                     runner.Run(() => {
 
-                        if (type == "disk")
+                        if (this.Target == "disk")
                         {
                             Get.PrintDisks();
                             return;
-                        }if(type  == "-l")
+                        }if(this.Target == "-l")
                         {
-                            //ls -l
+                            Get.Ls(this.Target, null);
+                            return;
+                        }if(this.Target == ".")
+                        {
+                            Get.Ls(ShellLoop.CurrentPath); 
+                            return;
+                        }
+                        else
+                        {
+                            Get.Ls(type); 
+                            return;
                         }
 
 
@@ -161,14 +178,12 @@ namespace ClownShell.Parser
                         //Get.Blue(Path.GetDirectoryName(this.Target));
                         // Get.Yellow(ShellLoop.RelativePath);
                         // Get.Wait(type);
-                        this.Target = ShellLoop.CurrentPath;
                         //this.SubTarget = type; 
                         //CodeParser helper = Helper.ResolvePath(this);
                         //this.Target = helper.Target;
                         //this.SubTarget = helper.SubTarget;
                         //Get.Cyan($"Target: {this.Target} SubTarget: {this.SubTarget}");
      
-                        Get.Ls(this.Target,null);
                         //if(type == "-l")
                         //{
                         //    Get.Ls(helper.Target, "");
@@ -368,10 +383,10 @@ namespace ClownShell.Parser
                 case "vim":
                     runner.Run(() => {
                         Process cmd = new Process();
-
+                        
                         cmd.StartInfo.FileName = $"{Get.Path}editors/vim/vim.exe";//"cmd.exe";
-                                                       //cmd.StartInfo.Arguments;
-                                                       //cmd.StartInfo.RedirectStandardInput = true;
+                        //cmd.StartInfo.Arguments;
+                        //cmd.StartInfo.RedirectStandardInput = true;
                         cmd.StartInfo.RedirectStandardOutput = false;  // true;
                         cmd.StartInfo.CreateNoWindow = false;
                         cmd.StartInfo.UseShellExecute = false;

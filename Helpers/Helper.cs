@@ -21,6 +21,24 @@ namespace ClownShell.Helpers
 
 
         /// <summary>
+        /// Checks if the file provided is an executable and if it has to ber run instead 
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public static bool IsExecutable(string action)
+        {
+            if (!action.Contains("."))
+            {
+                return false;
+            }
+            if (action[action.IndexOf(".")+1] == '/')
+            {
+                return true;
+            }
+            
+            return false; 
+        }
+        /// <summary>
         /// returns the disks in the system
         /// </summary>
         /// <returns></returns>
@@ -112,17 +130,27 @@ namespace ClownShell.Helpers
                 param = _params[0];
                 resolved = true;
             }
-            if (target.Contains(">"))
-            {
-                target = target.Replace(">", "");
+            if (target != null && target != "")
+            { 
+                if (target.Contains(">"))
+                {
+                    target = target.Replace(">", "");
+
+                }
             }
-            if (subTarget.Contains(">"))
+            if (subTarget != null && subTarget != "")
             {
-                subTarget = subTarget.Replace(">", "");
+                if (subTarget.Contains(">"))
+                {
+                    subTarget = subTarget.Replace(">", "");
+                }
             }
-            if (param.Contains(">"))
+            if (param != null && param != "")
             {
-                param = param.Replace(">", "");
+                if (param.Contains(">"))
+                {
+                    param = param.Replace(">", "");
+                }
             }
             if (param == ".")
             {

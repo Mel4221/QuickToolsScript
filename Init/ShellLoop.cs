@@ -46,29 +46,34 @@ namespace ClownShell.Init
         /// </summary>
         public static string SelectedOject;
 
-        public const string HistoryFile = "ClownShell_History.xml";
+        /// will contains the relative path to acces to any file in the address 
+        /// to avoid displaying this ~/Desktop/../../../../../ ext...
+        /// </summary>
+        public static string RelativePath;
+
+
+        /// <summary>
+        /// This is the file for the shell history by default is set to be ClownShell_History.xml
+        /// </summary>
+        public const string HistoryFile  =  "ClownShell_History.xml";
 
         /// <summary>
         /// by default save the history
         /// </summary>
         public bool AllowToSaveHistory { get; set; } = true;
 
-        /// will contains the relative path to acces to any file in the address 
-        /// to avoid displaying this ~/Desktop/../../../../../ ext...
-        /// </summary>
-        public static string RelativePath;
 
-        private ShellInput shell;
 
+        public ShellInput shell;
         private MiniDB db;
         private CodeParser parser = new CodeParser(); 
 
 
         public MiniDB GetHistory()
         {
-            db = new MiniDB(HistoryFile, true);
-            db.Load();
-            return db;
+            this.db = new MiniDB(HistoryFile, true);
+            this.db.Load();
+            return this.db;
         }
         private bool IsShellCommand(string command)
         {
@@ -94,6 +99,33 @@ namespace ClownShell.Init
         }
 
 
+        /// <summary>
+        /// returns a grup o files located on the current path 
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        private string LoadCurrentItems(string path)
+        {
+
+            string  items;
+            int max; 
+            items = null;
+            max = 0; 
+            foreach(string dir in Directory.GetDirectories(path))
+            { 
+                if (max == 5) break;
+                items += $"{Get.FolderFromPath(dir)}{Get.Slash()},";
+                max++;
+            }
+            max = 0; 
+            foreach (string file in Directory.GetFiles(path))
+            {
+                if (max == 5) break;
+                items += Get.FileNameFromPath(file).Length > 5 ? Get.FileNameFromPath(file).Substring(0,5)+"...,":Get.FileNameFromPath(file)+",";
+                max++;
+            }
+            return items;
+        }
         //public static Thread BackGroundJob;
         ////                    Get.Title("QuickTools Shell");
         //public static int Status; 
@@ -121,17 +153,17 @@ namespace ClownShell.Init
             CurrentPath = CurrentPath != "" ? Environment.GetFolderPath(Environment.SpecialFolder.Desktop) : CurrentPath;
             while (true)
             {
-                shell.Notifications = DateTime.Now.ToString("H:m:ss M:dd:yyyy");
+                shell.Notifications = null;//LoadCurrentItems(CurrentPath==""?".":CurrentPath);//DateTime.Now.ToString("H:m:ss M:dd:yyyy");
                 //this.shell.CurrentPath = Get.RelativePath(ShellLoop.CurrentPath);
                 shell.CurrentPath = CurrentPath;
-
+                
                 // Get.Cyan("\n"+this.shell.CurrentPath);
                 // ShellLoop.RelativePath = Get.RelativePath(ShellLoop.CurrentPath);
                 //Get.Yellow(ShellLoop.RelativePath); 
 
                 // Func<ConsoleKeyInfo> F = () => { return Console.ReadKey(); };
                 input = shell.StartInput();
-                
+
                 SaveHistory(input);
                 if (input == "back" || input == "go-back" || input == "go back")
                 {
@@ -139,7 +171,9 @@ namespace ClownShell.Init
                 }
                 else
                 {
-                    this.parser.Code = IConvert.TextToArray(input);
+                    this.parser.Code = IConvert.TextToArray(input); 
+                    //Print.List(this.parser.Code); 
+                    //Get.Wait($"{this.parser.Code.Length}");
                     this.parser.Start();
                 }
             }

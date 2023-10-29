@@ -1,0 +1,16 @@
+ls ~/Desktop
+ls .
+ls F:/
+ls ../
+ls box/folder/
+Case 1:
+cp ~/Desktop/file.txt box/file.txt
+cp ~/Desktop/file.txt box/
+cp box/file.txt ~/Desktop/file.txt
+cp box/file.txt ~/Desktop/
+Case 2: 
+cp f:/file.txt ~/Desktop/file.txt
+cp d:/file.txt box/file.txt
+
+
+

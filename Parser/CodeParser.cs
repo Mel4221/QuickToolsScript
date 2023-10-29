@@ -31,10 +31,6 @@ namespace ClownShell.Parser
 {
     public partial class CodeParser
     {
-        public class CodeResult {
-            public bool IsValid { get; set; } = false;
-            public string Code { get; set; } = null; 
-        }
 
         
         public CodeResult CheckFile(string file)
@@ -85,7 +81,6 @@ namespace ClownShell.Parser
                             
                             break;
                     }
-                    
                     this.SetExecution(action, type); 
                     break;
                 case CodeType.Complete:

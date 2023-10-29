@@ -1,8 +1,7 @@
 {
   "profiles": {
     "ClownShell": {
-      "commandName": "Project",
-      "commandLineArgs": "green \"Starting...\";\r\ntouch file.txt; \r\ngreen \"File_Created_Sucessfully\"; "
+      "commandName": "Project"
     }
   }
 }

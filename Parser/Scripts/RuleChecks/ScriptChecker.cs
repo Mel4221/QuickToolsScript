@@ -81,7 +81,9 @@ namespace ClownShell.Parser.Scripts.RuleChecks
                                         yellow Copying_File; 
                                         cp file.txt box/file.txt; 
                                         green Task_Completed;
-                                        "); 
+                                        var a = 22; 
+                                        var x = 32; 
+                                        ");
             string code = IConvert.ArrayToText(args);
             
             this.Parser(code); 

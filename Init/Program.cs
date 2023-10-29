@@ -40,19 +40,39 @@ namespace ClownShell.Init
 
         static int Main(string[] args)
         {
-
+            /*
+             green "Starting...";
+touch file.txt; 
+green "File_Created_Sucessfully"; 
+             */
 
             //Get.Wait(FixPath("../box/secure/QuickTools.xml"));
             //Get.Wait(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles));// Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
             //while(true)Get.Box(Get.Input().Text);
             //return 0; 
-            Get.Title(Name);
+            //Get.Wait(ClownShell.Helpers.Helper.IsExecutable("./file.txt")); 
+            Get.Title(Program.Name);
             //CodeParser parser = new CodeParser();
             //CodeParser.CodeResult result;
-            MainMenu menu;
+            //MainMenu menu;
+            //Print.List(args); 
+            //Get.Wait(Get.Slash());
             ShellLoop shellLoop;
             ScriptChecker checker;  
             string[] commands = args;
+            
+            if(commands.Length == 0) {
+                shellLoop = new ShellLoop();
+                shellLoop.Start();
+                return 0;
+            }
+            else
+            {
+                checker = new ScriptChecker();
+                checker.Check(args);
+                return 0; 
+            }
+
 
 
 
@@ -62,34 +82,16 @@ namespace ClownShell.Init
             //    commands = IConvert.TextToArray(result.Code);
             //}
             //Color.Yellow(commands[0]);
-            if (commands.Length == 0)
-            {
-                commands = new string[] { "shell" };
-            }
-            if (commands.Length > 0)
-            {
 
-                if (commands[0] == "shell")
-                {
-                    shellLoop = new ShellLoop();
-                    shellLoop.Start();
-                    return 0;
-                }
+            //parser = new CodeParser();
+            //parser.Code = commands;
+            //for debugging porpuses
+            //checker = new ScriptChecker(); 
+            //checker.Check(args);
+            //Get.Wait();
 
-                //parser = new CodeParser();
-                //parser.Code = commands;
-                //for debugging porpuses
-                checker = new ScriptChecker(); 
-                checker.Check(args);
-                //Get.Wait();
-                return 0;
-            }
-            else
-            {
-                menu = new MainMenu();
-                menu.Start();
-                return 0;
-            }
+
+
 
         }
     }

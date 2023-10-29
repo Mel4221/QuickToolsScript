@@ -31,6 +31,7 @@ using System.Diagnostics;
 using ClownShell.Init;
 using ClownShell.ErrorHandler;
 using ClownShell.ScripRunner;
+using ClownShell.Helpers; 
 namespace ClownShell.Parser
 {
 
@@ -49,11 +50,20 @@ namespace ClownShell.Parser
             this.cache = new DataCacher();
             this.runner = new ScriptRunner();
             this.error = new ErrorHandeler();
+            ProcessStartInfo process;
+
             this.Target = Get.FixPath(ShellLoop.CurrentPath);
-       
+            if (Helper.IsExecutable(action)) {
+                runner.Run(() => {
+                    process = new ProcessStartInfo($"{this.Target}\\index.html");
+                    process.CreateNoWindow = true;
+                    process.UseShellExecute = false;
+                    Process.Start(process);
+                }); 
+                return; 
+            }
             switch (action)
             {
-       
                 case "exit":
                     Environment.Exit(0);
                     return;
@@ -161,20 +171,42 @@ namespace ClownShell.Parser
                     break;
                 case "shutdown":
                     runner.Run(() => {
-                        ProcessStartInfo process = new ProcessStartInfo("shutdown", "/s /t 0");
-                        process.CreateNoWindow = true;
-                        process.UseShellExecute = false;
-                        Process.Start(process);
+                        switch (Get.IsWindow())
+                        { case true:
+                                process = new ProcessStartInfo("shutdown", "/s /t 0");
+                                process.CreateNoWindow = true;
+                                process.UseShellExecute = false;
+                                Process.Start(process);
+                                break;
+                            default:
+                                process = new ProcessStartInfo("shutdown", "0");
+                                process.CreateNoWindow = true;
+                                process.UseShellExecute = false;
+                                Process.Start(process);
+                                break; 
+                        }
+                      
                      
                     });
                     break;
                 case "reboot":
                     runner.Run(() => {//shutdown -r -t 0
-                        ProcessStartInfo process = new ProcessStartInfo("shutdown", "-r -t 0");
-                        process.CreateNoWindow = true;
-                        process.UseShellExecute = false;
-                        Process.Start(process);
-                       
+                         switch (Get.IsWindow())
+                        {
+                            case true:
+                                process = new ProcessStartInfo("shutdown", "-r -t 0");
+                                process.CreateNoWindow = true;
+                                process.UseShellExecute = false;
+                                Process.Start(process);
+                                break;
+                            default:
+                                process = new ProcessStartInfo("reboot", "0");
+                                process.CreateNoWindow = true;
+                                process.UseShellExecute = false;
+                                Process.Start(process);
+                                break;
+                        }
+
                     });
                     break;
                 case "cmd":

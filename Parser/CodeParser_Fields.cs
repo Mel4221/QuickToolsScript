@@ -13,7 +13,16 @@ namespace ClownShell.Parser
         private DataCacher cache;
         private ScriptRunner runner;
         private ErrorHandeler error;
-        
+
+        /// <summary>
+        /// This is a class that contains info about the code that is being process
+        /// </summary>
+        public class CodeResult
+        {
+            public bool IsValid { get; set; } = false;
+            public string Code { get; set; } = null;
+        }
+
         /// <summary>
         /// Holds the redirected text 
         /// </summary>
@@ -87,7 +96,7 @@ namespace ClownShell.Parser
         }
         public override string ToString()
         {
-            return $"\nAction: {this.Action} \nType: {this.Type}";
+            return IConvert.ArrayToText(this.Code);
             //return $"\nAction: {this.Action} \nType: {this.Type} \nParameters: {IConvert.ArrayToText(this.Parameters)} \nCode: {IConvert.ArrayToText(this.Code)}"; 
         }
     }
