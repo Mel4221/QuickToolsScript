@@ -59,7 +59,7 @@ namespace ClownShell.Init
         /// <summary>
         /// This is the file for the shell history by default is set to be ClownShell_History.xml
         /// </summary>
-        public const string HistoryFile  =  "ClownShell_History.xml";
+        public const string HistoryFile  =  "ClownShell.history";
 
         /// <summary>
         /// by default save the history
