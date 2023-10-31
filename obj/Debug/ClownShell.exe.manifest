@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClownShell.exe" size="163328">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClownShell.exe" size="164352">
       <assemblyIdentity name="ClownShell" version="5.2.1.1" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>leK/qAdMijZFInu1Zml5MeuWaODGzlsVnnW93lOXxhg=</dsig:DigestValue>
+        <dsig:DigestValue>Kq/zLeeVnniRbhHR+ChG1ejFm5scuHZ6hdWEuQ910V0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

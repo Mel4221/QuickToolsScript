@@ -19,7 +19,7 @@ namespace ClownShell.Helpers
     static class Helper
     {
 
-
+        
         /// <summary>
         /// Checks if the file provided is an executable and if it has to ber run instead 
         /// </summary>
@@ -249,7 +249,7 @@ namespace ClownShell.Helpers
             if (path[0] == '~')
             {
                 path = Get.FixPath(path);
-                string file, subFolder, specialCase, slash;
+                string file, subFolder, specialCase;
                 file = null;
                 subFolder = null;
                 if (path.Contains("."))

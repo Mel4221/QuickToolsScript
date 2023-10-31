@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using QuickTools.QCore; 
 using System.Threading;
- 
+using QuickTools.QIO;
 
 namespace ClownShell.BackGroundFunctions
 {
@@ -26,13 +26,15 @@ namespace ClownShell.BackGroundFunctions
             return $"ID: [{this.ID}] Job Name: [{this.Name}] Status: [{this.Status}] Job Info: [{this.Info}] AlowToBeKilled: [{this.AllowToBeKilled}]";
         }
     }
-    public static class BackGroundJob 
+    public static class BackGroundJob
     {
-        public static bool MonitorStarted { get; set; } 
-        private static Thread MonitorThread { get; set; } 
+        public static string BackGroundJobLogFileName { get; set; } = "BackGroundJobs";
+        public static bool MonitorStarted { get; set; }
+        private static Thread MonitorThread { get; set; }
         private static int Indexer { get; set; } = 0;
-        private static List<Job> Jobs { get; set; } = new List<Job>(); 
-        public static bool HasJobs { get; set; } = false; 
+        private static List<Job> Jobs { get; set; } = new List<Job>();
+        public static bool HasJobs { get; set; } = false;
+        public static int MonitorThreadSpeed {get;set;} = 500; 
         
 
         private static void RemoveTerminatedJobs()
@@ -41,7 +43,9 @@ namespace ClownShell.BackGroundFunctions
             {
                 if (!Jobs[job].BThread.IsAlive)
                 {
+                    Log.Event(BackGroundJobLogFileName, $"Job {Jobs[job].ToString()} Completed");
                     Jobs.RemoveAt(job); 
+
                 }
             }
         }
@@ -53,13 +57,14 @@ namespace ClownShell.BackGroundFunctions
                 switch (Jobs.Count)
                 {
                     case 0:
-                        HasJobs = false; 
+                        Indexer = 0; 
+                        HasJobs = false;
                         break;
                     default:
                         HasJobs = true; 
                         break;
                 }
-                Thread.Sleep(500); 
+                Thread.Sleep(MonitorThreadSpeed); 
             }
         }
 
@@ -112,7 +117,7 @@ namespace ClownShell.BackGroundFunctions
         public static void AddJob(Job job)
         {
 
-            
+
             Jobs.Add(new Job()
             { 
                 Name = job.Name,
@@ -123,6 +128,7 @@ namespace ClownShell.BackGroundFunctions
                 Status = job.Status,
                 Info = job.Info
             });
+            Log.Event(BackGroundJobLogFileName, $"Job Added {Jobs[Indexer].ToString()}");
             Indexer++;
             Get.White($"BackGroundJob Added ID:[{Indexer}]");
         }
@@ -136,6 +142,8 @@ namespace ClownShell.BackGroundFunctions
                         Jobs[id].JobAction();
                     });
                     Jobs[id].BThread.Start();
+                    Log.Event(BackGroundJobLogFileName, $"Job Manually Started {Jobs[id].ToString()}");
+
                 }
             }
         }
@@ -145,12 +153,15 @@ namespace ClownShell.BackGroundFunctions
             if (Jobs != null)
             {
                 Jobs.ForEach((item) => {
+
                     if (!item.AllowToBeKilled)
                     {
                         throw new Exception("Item Not Allwed To be Killed");
                     }
                     if (item.BThread.IsAlive)
                     {
+                        Log.Event(BackGroundJobLogFileName, $"KILL-ALL-REQUEST {item.ToString()}");
+
                         try
                         {
                             item.BThread.Abort();
@@ -162,6 +173,7 @@ namespace ClownShell.BackGroundFunctions
                     }
                 });
                 Jobs.Clear();
+                Indexer = 0; 
             }
         }
         public static void Kill(int id)
@@ -181,6 +193,8 @@ namespace ClownShell.BackGroundFunctions
                         if (Jobs[current].BThread.IsAlive)
                         {
                             string msg = $"Job Killed ID:[{Indexer}] Name: [{Jobs[current].Name}] Info: [{Jobs[current].Info}]";
+                            Log.Event(BackGroundJobLogFileName,msg);
+
                             try
                             {
                                 Jobs[current].BThread.Abort();
@@ -209,6 +223,8 @@ namespace ClownShell.BackGroundFunctions
                     {
                         if (Jobs[current].BThread.IsAlive)
                         {
+                            Log.Event(BackGroundJobLogFileName, $"Job Suspended {Jobs[current].ToString()}");
+
 #pragma warning disable CS0618 // Type or member is obsolete
                             Jobs[current].BThread.Suspend();
 #pragma warning restore CS0618 // Type or member is obsolete
@@ -232,7 +248,11 @@ namespace ClownShell.BackGroundFunctions
                     {
                         if (Jobs[current].BThread.IsAlive)
                         {
+                            Log.Event(BackGroundJobLogFileName, $"Job Resumed {Jobs[current].ToString()}");
+
+#pragma warning disable CS0618 // Type or member is obsolete
                             Jobs[current].BThread.Resume();
+#pragma warning restore CS0618 // Type or member is obsolete
                         }
                     }
                 }

@@ -35,6 +35,7 @@ using ClownShell.BackGroundFunctions;
 using ClownShell.Init;
 using ClownShell.ErrorHandler;
 using ClownShell.Parser;
+using QuickTools.QIO;
 
 namespace ClownShell.ScripRunner
 {
@@ -150,7 +151,8 @@ namespace ClownShell.ScripRunner
 
             }catch(ThreadAbortException ex)
             {
-                //Get.Yellow("Job Killed"); 
+                //Get.Yellow("Job Killed");
+                Log.Event("ExptectedErros", ex.Message);
                 Reset();
                 return; 
             }catch (Exception error)

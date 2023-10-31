@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("ClownShell")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("This is a shell Design to execute the programs and function from the QuickTools Library")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("MBV")]
 [assembly: AssemblyProduct("ClownShell")]
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("5.2.1.1")]
-[assembly: AssemblyFileVersion("5.1.1.1")]
+[assembly: AssemblyVersion("7.1.1.1")]
+[assembly: AssemblyFileVersion("7.1.1.1")]

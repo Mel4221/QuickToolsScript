@@ -31,7 +31,9 @@ using QuickTools.QConsole;
 using System.Reflection;
 using ClownShell.Parser;
 using QuickTools.QCore;
-using System.IO; 
+using System.IO;
+using ClownShell.Security;
+
 namespace ClownShell.Init
 {
     public partial class ShellLoop
@@ -155,7 +157,7 @@ namespace ClownShell.Init
             CurrentPath = CurrentPath != "" ? Environment.GetFolderPath(Environment.SpecialFolder.Desktop) : CurrentPath;
             while (true)
             {
-                shell.Notifications = null;//LoadCurrentItems(CurrentPath==""?".":CurrentPath);//DateTime.Now.ToString("H:m:ss M:dd:yyyy");
+                shell.Notifications = ShellUser.Name;//LoadCurrentItems(CurrentPath==""?".":CurrentPath);//DateTime.Now.ToString("H:m:ss M:dd:yyyy");
                 //this.shell.CurrentPath = Get.RelativePath(ShellLoop.CurrentPath);
                 shell.CurrentPath = CurrentPath;
                 

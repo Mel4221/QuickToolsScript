@@ -35,6 +35,7 @@ using ClownShell.ErrorHandler;
 using ClownShell.ScripRunner;
 using ClownShell.Helpers;
 using ClownShell.BackGroundFunctions;
+using ClownShell.Security; 
 
 namespace ClownShell.Parser
 {
@@ -70,7 +71,21 @@ namespace ClownShell.Parser
             //}
             switch (action)
             {
-
+                case "whoami":
+                    runner.Run(() => {
+                        Get.Green(ShellUser.Name); 
+                    });
+                    break;
+                case "singup":
+                    runner.Run(() => {
+                        new Credentials().SingUp();
+                    });
+                    break; 
+                case "login":
+                    runner.Run(() => {
+                        new Credentials().Login(); 
+                    }); 
+                    break;
                 case "beep":
                     runner.Run(() => {
                         Console.Beep(); 

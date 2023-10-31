@@ -232,3 +232,43 @@ Value=####
  There Was an error with the given type of error: 'NotValidAction' 'job ' 
 ####;
 Relation=10/30/2023 11:06:52 PM;
+ID=1053;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'mem ' 
+####;
+Relation=10/31/2023 12:03:38 PM;
+ID=1055;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( cat ExpectedErros.log  )> 
+ Exception: 
+System.Exception: The file C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Debug\data\qt\logs does not exsit or it was not founded
+   at QuickTools.QIO.Reader.Read(String file)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass32_0.<SetExecution>b__17() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Type.cs:line 347
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 148' 
+####;
+Relation=10/31/2023 12:12:31 PM;
+ID=1057;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( cat ExptectedErros.log  )> 
+ Exception: 
+System.Exception: The file C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Debug\data\qt\logs does not exsit or it was not founded
+   at QuickTools.QIO.Reader.Read(String file)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass32_0.<SetExecution>b__17() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Type.cs:line 347
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 148' 
+####;
+Relation=10/31/2023 12:12:49 PM;
+ID=1059;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'reset ' 
+####;
+Relation=10/31/2023 12:32:20 PM;
+ID=1061;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'ill 0 ' 
+####;
+Relation=10/31/2023 12:32:44 PM;

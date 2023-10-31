@@ -117,6 +117,17 @@ namespace ClownShell.Parser
                         return; 
                     }, true); 
                     break;
+                case "resume":
+                    runner.Run(() => {
+                        BackGroundJob.Resume(int.Parse(type));
+                    });
+                    break;
+                case "pause":
+                case "stop":
+                    runner.Run(() => {
+                        BackGroundJob.Pause(int.Parse(type));
+                    });
+                    break;
                 case "kill":
                     runner.Run(() => {
                         BackGroundJob.Kill(int.Parse(type));    
@@ -137,7 +148,7 @@ namespace ClownShell.Parser
                 case "touch":
                 case "create":
                 case "echo":
-                    runner.Run(() => { Make.File(this.Target); });
+                    runner.Run(() => { Make.File(type); });
                     break;
                 case "set-color-pink":
                 case "pink":
@@ -290,31 +301,11 @@ namespace ClownShell.Parser
                                 ShellLoop.CurrentPath = type; 
                                 return;
                             }
-                            if (type[0] == '~')
+                            if(Helper.HasSpecialFolder(type) != null)
                             {
-                                string p = type.Substring(type.IndexOf(Get.Slash()) + 1).ToLower();
-                                switch (p)
-                                {
-                                    case "desktop":
-                                        ShellLoop.CurrentPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-                                        break;
-                                    case "documents":
-                                        ShellLoop.CurrentPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-                                        break;
-                                    case "downloads":
-                                        string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-                                        string str = $"{path.Substring(0, path.LastIndexOf(Get.Slash()))}{Get.Slash()}Downloads";
-                                        ShellLoop.CurrentPath = str;  
-                                        break;
-                                    case "mycomputer":
-                                        ShellLoop.CurrentPath = Environment.GetFolderPath(Environment.SpecialFolder.MyComputer);
-                                        break;
-
-                                }
-                                //Get.Wait($"{}");
-                                // Environment.SpecialFolder.MyComputer
-                                return;
+                                ShellLoop.CurrentPath = $"{Helper.HasSpecialFolder(type)}"; 
                             }
+                               
                             if (type != ".." && type != Get.Slash() && type != $"{Get.Slash()}{Get.Slash()}"&&
                             type != $"{Get.Slash()}{Get.Slash()}{Get.Slash()}")
                             {
