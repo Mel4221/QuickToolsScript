@@ -43,26 +43,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClownShell.exe" size="153600">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClownShell.exe" size="163328">
       <assemblyIdentity name="ClownShell" version="5.2.1.1" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>yJr0K3q9tsULMBP+R/2BWgoKyGAY4HKGNDpvXZgvJs8=</dsig:DigestValue>
+        <dsig:DigestValue>leK/qAdMijZFInu1Zml5MeuWaODGzlsVnnW93lOXxhg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="QuickTools.dll" size="207360">
-      <assemblyIdentity name="QuickTools" version="2.0.0.4" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="QuickTools.dll" size="225280">
+      <assemblyIdentity name="QuickTools" version="3000.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>mzmOd4xXRIqsyEXf8uvkYEOmWZhq10GQzaK3T/HwDXY=</dsig:DigestValue>
+        <dsig:DigestValue>XSHPKX3VY829IImz3e2T6+pEFK0rOI1DhAmC1FXyAd4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -73,15 +73,6 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>HEpMKhZQtWhG3D/+M9FVZsb7EqLFLZzkzRGN0b1f59s=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="ClownShell.exe.config" size="187">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>ibSJhBWt6kT1jcg30WbAXCZJOzy699/zUdgGnXs5g9w=</dsig:DigestValue>
     </hash>
   </file>
   <file name="setting.ico" size="67646">
