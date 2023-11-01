@@ -296,6 +296,8 @@ namespace ClownShell.Parser
                             //  Get.Cyan(ShellLoop.CurrentPath);
                             //Get.Wait(type.ToUpper());
                             //Get.Wait(new ShellLoop().ReferToDisk(type.ToUpper()));
+                            string path = null; 
+                            
                             if (Helper.ReferToDisk(type.ToUpper()))
                             {
                                 ShellLoop.CurrentPath = type; 
@@ -303,39 +305,50 @@ namespace ClownShell.Parser
                             }
                             if(Helper.HasSpecialFolder(type) != null)
                             {
-                                ShellLoop.CurrentPath = $"{Helper.HasSpecialFolder(type)}"; 
+                                ShellLoop.CurrentPath = Helper.HasSpecialFolder(type);
+                                return;
                             }
-                               
-                            if (type != ".." && type != Get.Slash() && type != $"{Get.Slash()}{Get.Slash()}"&&
-                            type != $"{Get.Slash()}{Get.Slash()}{Get.Slash()}")
+
+                            if (type.Contains(".") && type.Length <= 3)
                             {
-                                if (Directory.Exists(this.Target))
-                                {
-                                    ShellLoop.CurrentPath += $"{Get.Slash()}{type}";
-                                    return;
-                                }
-                                else
-                                {
-                                    Get.Print("Directory Not Found:", type);
-                                    return;
-                                }
-                              
+                                path = $"{ShellLoop.CurrentPath}{Get.Slash()}../";
+                                ShellLoop.CurrentPath = Helper.RemoveDirs(path,Helper.CountDirs(path));
+                                return;
                             }
-                           if(type == "..")
+                            else
                             {
-                                ShellLoop.CurrentPath = ShellLoop.CurrentPath.Substring(0, ShellLoop.CurrentPath.LastIndexOf(Get.Slash()));
+                                ShellLoop.CurrentPath += $"{Get.Slash()}{type}";
                             }
-                           
 
                         });
                     break;
                 case "cat":
                     runner.Run(() => {
-                    //Get.Wait(this.Target);
-                    Get.WriteL(" ");
-                        string str = Helper.ResolvePath(this).Target; 
-                    Get.Yellow(str);
-                       Get.Write(Reader.Read(str));
+
+                        string file = null; 
+                        if (Helper.HasSpecialFolder(type) != null)
+                        {
+                            file = Helper.HasSpecialFolder(type); 
+                        }if(file == null)
+                        {
+                            file = Path.Combine(ShellLoop.CurrentPath, type);
+                        }
+                        if (!File.Exists(file))
+                        {
+                            Get.Red($"The file {file} was not found!!!");
+                            return;
+                        }
+                        else
+                        {
+                            try
+                            {
+                                Get.Write(Reader.Read(file));
+                            }catch(Exception ex)
+                            {
+                                Get.Red($"There was an error while reading the file more info: \n{ex.Message}");
+                            }
+                        }
+              
                     });
                     break;
                 case "size":

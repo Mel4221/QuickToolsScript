@@ -93,6 +93,7 @@
     <Compile Include="BackGroundFunctions\BackGroundJob.cs" />
     <Compile Include="ErrorHandeler\ErrorHandeler.cs" />
     <Compile Include="Helpers\Helper.cs" />
+    <Compile Include="Helpers\Helper_DirsCounter.cs" />
     <Compile Include="Init\MainMenu.cs" />
     <Compile Include="Init\Program.cs" />
     <Compile Include="Init\ShellLoop.cs" />
@@ -114,6 +115,7 @@
     <Compile Include="ScriptRunner\ScriptRunner_Fields.cs" />
     <Compile Include="Security\Credentials.cs" />
     <Compile Include="Security\User.cs" />
+    <Compile Include="Settings\ShellSettings.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

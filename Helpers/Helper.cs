@@ -16,10 +16,10 @@ using ClownShell.Init;
 using ClownShell.Parser; 
 namespace ClownShell.Helpers
 {
-    static class Helper
+    public partial class Helper
     {
 
-        
+
         /// <summary>
         /// Checks if the file provided is an executable and if it has to ber run instead 
         /// </summary>
@@ -283,8 +283,8 @@ namespace ClownShell.Helpers
                         return Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + $"{subFolder}{file}";
                     case "downloads":
                         //slash = subfolde
-                        specialCase = $"{Get.Slash()}..{Get.Slash()}Downloads{subFolder}{file}";
-                        return Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + specialCase;
+                        string str = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                        return str.Substring(0, str.LastIndexOf(Get.Slash()))+$"{Get.Slash()}Downloads";
                     case "pictures":
                         //slash = subfolde
                         return Environment.GetFolderPath(Environment.SpecialFolder.MyPictures) + $"{subFolder}{file}";

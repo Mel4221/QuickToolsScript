@@ -51,6 +51,22 @@
             <param name="path"></param>
             <returns></returns>
         </member>
+        <member name="M:ClownShell.Helpers.Helper.CountDirs(System.String)">
+            <summary>
+            This counts the number of directories in a path that 
+            requireds to move back
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClownShell.Helpers.Helper.RemoveDirs(System.String,System.Int32)">
+            <summary>
+            Removes the directoies that is required to move bakc 
+            </summary>
+            <param name="path"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
         <member name="F:ClownShell.Init.ShellLoop.CurrentPath">
             <summary>
             get or set the current path display in the Shell
