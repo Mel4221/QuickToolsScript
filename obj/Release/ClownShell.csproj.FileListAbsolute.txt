@@ -1,4 +1,3 @@
-C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Release\ClownShell.exe.config
 C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Release\ClownShell.exe.manifest
 C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Release\ClownShell.application
 C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Release\ClownShell.xml

@@ -33,6 +33,7 @@ using ClownShell.Parser;
 using QuickTools.QCore;
 using System.IO;
 using ClownShell.Security;
+using ClownShell.Settings; 
 
 namespace ClownShell.Init
 {
@@ -55,11 +56,11 @@ namespace ClownShell.Init
         /// </summary>
         public static string RelativePath;
 
-
+        public static bool ExitLoop { get; set; } = false; 
         /// <summary>
         /// This is the file for the shell history by default is set to be ClownShell_History.xml
         /// </summary>
-        public const string HistoryFile  =  "ClownShell.history";
+        public string HistoryFile = ShellSettings.ShellHistoryFileName;
 
         /// <summary>
         /// by default save the history
@@ -94,7 +95,7 @@ namespace ClownShell.Init
         {
             if (this.IsShellCommand(command)) return;// if is a shell command don't save it
             if(this.AllowToSaveHistory == false) return;// if is not allowed to show history return
-            db = new MiniDB(HistoryFile,true);
+            db = new MiniDB(HistoryFile);
             db.AllowRepeatedKeys = true;
             db.Create();
             db.Load();
@@ -154,8 +155,8 @@ namespace ClownShell.Init
             string input;
             input = null;
 
-            CurrentPath = CurrentPath != "" ? Environment.GetFolderPath(Environment.SpecialFolder.Desktop) : CurrentPath;
-            while (true)
+            CurrentPath = CurrentPath != "" ? ShellSettings.ShellDefaultStartPath : CurrentPath;
+            while (!ExitLoop)
             {
                 shell.Notifications = ShellUser.Name;//LoadCurrentItems(CurrentPath==""?".":CurrentPath);//DateTime.Now.ToString("H:m:ss M:dd:yyyy");
                 //this.shell.CurrentPath = Get.RelativePath(ShellLoop.CurrentPath);
@@ -169,19 +170,16 @@ namespace ClownShell.Init
                 input = shell.StartInput();
 
                 SaveHistory(input);
-                if (input == "back" || input == "go-back" || input == "go back")
+                if (input != "back")
                 {
-                    break;
-                }
-                else
-                {
-                    this.parser.Code = IConvert.TextToArray(input); 
+                    this.parser.Code = IConvert.TextToArray(input);
                     //Print.List(this.parser.Code); 
                     //Get.Wait($"{this.parser.Code.Length}");
                     this.parser.Start();
                 }
+                
             }
-            new MainMenu().Start();
+           
         }
 
     }

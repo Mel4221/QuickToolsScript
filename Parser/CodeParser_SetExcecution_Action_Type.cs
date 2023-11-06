@@ -92,10 +92,21 @@ namespace ClownShell.Parser
             //this.SubTarget = Get.FixPath($"{ShellLoop.CurrentPath}");
             //type = Get.FixPath(type);
             // Get.Wait(this.Target);
+            string file, path;
             switch (action)
             {
-
-
+                case "echo":
+                case "print":
+                case "log":
+                    runner.Run(() => {
+                        Get.Write(type); 
+                    });
+                    break;
+                case "free":
+                    runner.Run(() => {
+                        VStack.Free(type); 
+                    });
+                    break;
                 case "wait":
                     this.runner.RunningCodeInfo = $"waiting for {type}ms";
                     this.runner.RunningBackGroundCodeName = "Process Wait...";
@@ -140,14 +151,35 @@ namespace ClownShell.Parser
                     });
                     break;
                 case "mkdir":
-                    runner.Run(() => { 
-                        
-                        Make.Directory(this.Target); 
+                    runner.Run(() => {
+                         path = ShellLoop.CurrentPath[ShellLoop.CurrentPath.Length-1] != Get.Slash()[0] ? $"{ShellLoop.CurrentPath}{Get.Slash()}{type}" : $"{ShellLoop.CurrentPath}{type}";
+
+                        if (Directory.Exists(path))
+                        {
+                            Get.Red($"The directory '{path}' already exit"); 
+                            return; 
+                        }
+                        if (Helper.HasSpecialFolder(path) != null)
+                        {
+                            path = Helper.HasSpecialFolder(type);
+                            Get.Cyan(path); 
+                            //Directory.CreateDirectory(path); 
+                            return;
+                        }
+                        if (Helper.ReferToDisk(type.ToUpper()))
+                        {
+                            Directory.CreateDirectory(type);
+                            return; 
+                        }
+                        else
+                        {
+                            path = ShellLoop.CurrentPath[ShellLoop.CurrentPath.Length-1] != Get.Slash()[0] ? $"{ShellLoop.CurrentPath}{Get.Slash()}{type}" : $"{ShellLoop.CurrentPath}{type}";
+                            Directory.CreateDirectory(path);
+                        }
                     });
                     break;
                 case "touch":
                 case "create":
-                case "echo":
                     runner.Run(() => { Make.File(type); });
                     break;
                 case "set-color-pink":
@@ -185,15 +217,25 @@ namespace ClownShell.Parser
                 case "rm":
                 case "remove":
                 case "delete":
+                    file = type;
                     runner.Run(() =>
                     {
-                    if (File.Exists(this.Target))
+                    if(Helper.HasSpecialFolder(file)!= null)
+                        {
+                            file = Helper.HasSpecialFolder(file); 
+                        }
+                    if(Helper.ReferToDisk(file))
+                        {
+                            file = $"{file}";
+                        }
+                    if (File.Exists(file))
                     {
 
                             //  Get.Yellow(this.Target);
-                             GC.Collect();
-                             GC.WaitForPendingFinalizers(); 
-                            File.Delete(this.Target); 
+                            GC.Collect();
+                            GC.WaitForPendingFinalizers();
+                            //File.Delete(file); 
+                            Get.Red(file); 
                             return;
                     }
 
@@ -296,8 +338,8 @@ namespace ClownShell.Parser
                             //  Get.Cyan(ShellLoop.CurrentPath);
                             //Get.Wait(type.ToUpper());
                             //Get.Wait(new ShellLoop().ReferToDisk(type.ToUpper()));
-                            string path = null; 
-                            
+                             path = null;
+                          
                             if (Helper.ReferToDisk(type.ToUpper()))
                             {
                                 ShellLoop.CurrentPath = type; 
@@ -317,7 +359,27 @@ namespace ClownShell.Parser
                             }
                             else
                             {
-                                ShellLoop.CurrentPath += $"{Get.Slash()}{type}";
+                                path = $"{ShellLoop.CurrentPath}{Get.Slash()}{type}";
+                                if(type == "/" || type == "\\")
+                                {
+                                    switch (Get.IsWindow())
+                                    {
+                                        case true:
+                                            ShellLoop.CurrentPath = $"{Directory.GetDirectoryRoot(Get.Slash())}";
+                                            break;
+                                        case false:
+                                            ShellLoop.CurrentPath = type; 
+                                            break;
+                                    } 
+                                    return;
+                                }
+                                if (Directory.Exists(path))
+                                {
+                                    path = ShellLoop.CurrentPath[ShellLoop.CurrentPath.Length-1]!=Get.Slash()[0]?$"{Get.Slash()}{type}":$"{type}"; 
+                                    ShellLoop.CurrentPath += path; 
+                                    return;
+                                }
+
                             }
 
                         });
@@ -325,7 +387,7 @@ namespace ClownShell.Parser
                 case "cat":
                     runner.Run(() => {
 
-                        string file = null; 
+                        file = null; 
                         if (Helper.HasSpecialFolder(type) != null)
                         {
                             file = Helper.HasSpecialFolder(type); 
@@ -354,11 +416,20 @@ namespace ClownShell.Parser
                 case "size":
                 case "du":
                     runner.Run(() => {
-                      string file =  Get.FileSize(this.Target);
+
+                        string size;
+                        file = type;
+                        
+                        if (!File.Exists(file))
+                        {
+                            Get.Red($"The {file} Was not found or does not exist");
+                            return;
+                        }
+
                         Get.Green();
-                        Get.Write($"\n{Get.FileNameFromPath(this.Target)}\t");
+                        Get.Write($"\n{ }\t");
                         Get.Yellow(); 
-                        Get.Write($"{file}\n");
+                        Get.Write($"{size}\n");
                     });
                     break;
                 case "select":
@@ -369,11 +440,11 @@ namespace ClownShell.Parser
                         {
                             string[] files = new FilesMaper().GetFiles(this.SubTarget);
                             List<string> withExt = new List<string>();
-                            foreach(string file in files)
+                            foreach(string f in files)
                             {
-                                if (Get.FileExention(file) == Get.FileExention(type))
+                                if (Get.FileExention(f) == Get.FileExention(type))
                                 {
-                                    withExt.Add(file);
+                                    withExt.Add(f);
                                 }
                             }
                             if(withExt != null || withExt.Count > 0)

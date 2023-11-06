@@ -27,7 +27,11 @@
 using QuickTools.QCore;
 using QuickTools.QColors;
 using ClownShell.Parser;
+using ClownShell.Settings;
 using ClownShell.Parser.Scripts.RuleChecks;
+using QuickTools.QIO;
+using System.Reflection;
+using System;
 
 namespace ClownShell.Init
 {
@@ -36,10 +40,13 @@ namespace ClownShell.Init
 
         public const string Name = "ClownShell";
 
-
-
         static int Main(string[] args)
         {
+            //Log.Event("working", "it works");
+            //Get.Wait(ShellSettings.LogsFile);
+
+            //Get.Wait($"{Get.DataPath(ClownShell.Settings.ShellSettings.ShellVariablesDB+Get.Slash()+"user")}");
+            //Get.Wait(Get.DataPath("shell"));
             /*
             green "Starting...";
             touch file.txt; 
@@ -58,22 +65,37 @@ namespace ClownShell.Init
             //Print.List(args); 
             //Get.Wait(Get.Slash());
             ShellLoop shellLoop;
-            ScriptChecker checker;  
+            ScriptChecker checker;
             string[] commands = args;
-            
-            if(commands.Length == 0) 
+            try
             {
-                shellLoop = new ShellLoop();
-                shellLoop.Start();
-                return 0;
+                if (commands.Length == 0)
+                {
+                    Log.Event(ShellSettings.LogsFile, $"Shell Started With no Arguments");
+                    shellLoop = new ShellLoop();
+                    shellLoop.Start();
+                    Log.Event(ShellSettings.LogsFile, $"Shell Exited With no Events");
+                    Environment.Exit(0);
+                    return 0;
+                }
+                else
+                {
+                    Log.Event(ShellSettings.LogsFile, $"Shell Started With Arguments Length: {args.Length}");
+                    checker = new ScriptChecker();
+                    checker.Check(args);
+                    Log.Event(ShellSettings.LogsFile, $"Shell Exited With no Events");
+                    Environment.Exit(0);
+                    return 0;
+                }
             }
-            else
+            catch(Exception ex)
             {
-                checker = new ScriptChecker();
-                checker.Check(args);
-                return 0; 
+                Log.Event(ShellSettings.LogsFile, $"Shell Exited With a FATAL-ERROR More info in the logs file:  \n{ex}");
+                Get.Alert($"There was a FATAL ERROR MORE INFO IN this path: \n{ShellSettings.LogsFile}.log");
+                Environment.Exit(1);
+                return 1; 
             }
-
+         
             //if (parser.CheckFile(commands[0]).IsValid)
             //{
             //    result = parser.CheckFile(commands[0]);
