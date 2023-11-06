@@ -1,0 +1,274 @@
+ID=1001;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( wait 50000  )> 
+ Exception: 
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.SleepInternal(Int32 millisecondsTimeout)
+   at System.Threading.Thread.Sleep(Int32 millisecondsTimeout)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass32_0.<SetExecution>b__15() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Type.cs:line 261
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 147' 
+####;
+Relation=10/30/2023 9:54:26 PM;
+ID=1003;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( wait 50000  )> 
+ Exception: 
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.SleepInternal(Int32 millisecondsTimeout)
+   at System.Threading.Thread.Sleep(Int32 millisecondsTimeout)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass32_0.<SetExecution>b__15() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Type.cs:line 261
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 147' 
+####;
+Relation=10/30/2023 9:56:49 PM;
+ID=1005;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' '' 
+####;
+Relation=10/30/2023 9:57:06 PM;
+ID=1007;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( wait 50000  )> 
+ Exception: 
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.SleepInternal(Int32 millisecondsTimeout)
+   at System.Threading.Thread.Sleep(Int32 millisecondsTimeout)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass32_0.<SetExecution>b__15() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Type.cs:line 261
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 147' 
+####;
+Relation=10/30/2023 9:57:27 PM;
+ID=1009;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( wait 60000  )> 
+ Exception: 
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.SleepInternal(Int32 millisecondsTimeout)
+   at System.Threading.Thread.Sleep(Int32 millisecondsTimeout)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass32_0.<SetExecution>b__15() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Type.cs:line 261
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 147' 
+####;
+Relation=10/30/2023 10:02:03 PM;
+ID=1011;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' '' 
+####;
+Relation=10/30/2023 10:02:07 PM;
+ID=1013;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'kill ' 
+####;
+Relation=10/30/2023 10:02:16 PM;
+ID=1015;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( wait 50000  )> 
+ Exception: 
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.SleepInternal(Int32 millisecondsTimeout)
+   at System.Threading.Thread.Sleep(Int32 millisecondsTimeout)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass32_0.<SetExecution>b__15() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Type.cs:line 261
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 147' 
+####;
+Relation=10/30/2023 10:10:10 PM;
+ID=1017;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' '' 
+####;
+Relation=10/30/2023 10:10:14 PM;
+ID=1019;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( wait 50000  )> 
+ Exception: 
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.SleepInternal(Int32 millisecondsTimeout)
+   at System.Threading.Thread.Sleep(Int32 millisecondsTimeout)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass32_0.<SetExecution>b__15() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Type.cs:line 261
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 147' 
+####;
+Relation=10/30/2023 10:10:31 PM;
+ID=1021;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'vim ' 
+####;
+Relation=10/30/2023 10:20:30 PM;
+ID=1023;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'vi ' 
+####;
+Relation=10/30/2023 10:20:35 PM;
+ID=1025;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( kill 2  )> 
+ Exception: 
+System.Exception: Job Killed Sucessfully
+Job Killed ID:[3] Name: [Process Wait...] Info: [waiting for 60000ms]
+   at ClownShell.BackGroundFunctions.BackGroundJob.Kill(Int32 id) in C:\Users\Melquiceded\Documents\csharp\ClownShell\BackGroundFunctions\BackGroundJob.cs:line 188
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass32_0.<SetExecution>b__1() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Type.cs:line 113
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 147' 
+####;
+Relation=10/30/2023 10:24:53 PM;
+ID=1027;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( wait 40000  )> 
+ Exception: 
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.SleepInternal(Int32 millisecondsTimeout)
+   at System.Threading.Thread.Sleep(Int32 millisecondsTimeout)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass32_0.<SetExecution>b__15() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Type.cs:line 261
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 147' 
+####;
+Relation=10/30/2023 10:26:37 PM;
+ID=1029;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'k ' 
+####;
+Relation=10/30/2023 10:26:49 PM;
+ID=1031;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( not-available )> 
+ Exception: 
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.SleepInternal(Int32 millisecondsTimeout)
+   at System.Threading.Thread.Sleep(Int32 millisecondsTimeout)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass32_0.<SetExecution>b__15() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Type.cs:line 261
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 147' 
+####;
+Relation=10/30/2023 10:26:57 PM;
+ID=1033;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'c ' 
+####;
+Relation=10/30/2023 10:26:58 PM;
+ID=1035;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( wait 60000  )> 
+ Exception: 
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.SleepInternal(Int32 millisecondsTimeout)
+   at System.Threading.Thread.Sleep(Int32 millisecondsTimeout)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass32_0.<SetExecution>b__15() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Type.cs:line 261
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 153' 
+####;
+Relation=10/30/2023 10:30:18 PM;
+ID=1037;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' '' 
+####;
+Relation=10/30/2023 10:30:23 PM;
+ID=1039;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( wait 60000  )> 
+ Exception: 
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.SleepInternal(Int32 millisecondsTimeout)
+   at System.Threading.Thread.Sleep(Int32 millisecondsTimeout)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass32_0.<SetExecution>b__15() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Type.cs:line 261
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 147' 
+####;
+Relation=10/30/2023 10:32:30 PM;
+ID=1041;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' '' 
+####;
+Relation=10/30/2023 10:32:34 PM;
+ID=1043;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( clear  )> 
+ Exception: 
+System.Threading.ThreadInterruptedException: Thread was interrupted from a waiting state.
+   at System.Threading.Thread.SleepInternal(Int32 millisecondsTimeout)
+   at System.Threading.Thread.Sleep(Int32 millisecondsTimeout)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass32_0.<SetExecution>b__15() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Type.cs:line 270
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 147' 
+####;
+Relation=10/30/2023 10:50:39 PM;
+ID=1045;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' '' 
+####;
+Relation=10/30/2023 10:50:42 PM;
+ID=1047;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( kill 0  )> 
+ Exception: 
+System.Threading.ThreadInterruptedException: Thread was interrupted from a waiting state.
+   at System.Threading.Thread.SleepInternal(Int32 millisecondsTimeout)
+   at System.Threading.Thread.Sleep(Int32 millisecondsTimeout)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass32_0.<SetExecution>b__15() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Type.cs:line 270
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 147' 
+####;
+Relation=10/30/2023 10:50:58 PM;
+ID=1049;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' '' 
+####;
+Relation=10/30/2023 10:50:59 PM;
+ID=1051;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'job ' 
+####;
+Relation=10/30/2023 11:06:52 PM;
+ID=1053;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'mem ' 
+####;
+Relation=10/31/2023 12:03:38 PM;
+ID=1055;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( cat ExpectedErros.log  )> 
+ Exception: 
+System.Exception: The file C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Debug\data\qt\logs does not exsit or it was not founded
+   at QuickTools.QIO.Reader.Read(String file)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass32_0.<SetExecution>b__17() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Type.cs:line 347
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 148' 
+####;
+Relation=10/31/2023 12:12:31 PM;
+ID=1057;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( cat ExptectedErros.log  )> 
+ Exception: 
+System.Exception: The file C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Debug\data\qt\logs does not exsit or it was not founded
+   at QuickTools.QIO.Reader.Read(String file)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass32_0.<SetExecution>b__17() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Type.cs:line 347
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 148' 
+####;
+Relation=10/31/2023 12:12:49 PM;
+ID=1059;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'reset ' 
+####;
+Relation=10/31/2023 12:32:20 PM;
+ID=1061;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'ill 0 ' 
+####;
+Relation=10/31/2023 12:32:44 PM;

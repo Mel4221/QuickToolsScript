@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ClownShell</name>
+    </assembly>
+    <members>
+        <member name="M:ClownShell.BackGroundFunctions.BackGroundJob.Resume(System.Int32)">
+            <summary>
+            Resume the background worker
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:ClownShell.BackGroundFunctions.BackGroundJob.RunJobs">
+            <summary>
+            Run the background jobs
+            </summary>
+        </member>
+        <member name="M:ClownShell.Helpers.Helper.IsExecutable(System.String)">
+            <summary>
+            Checks if the file provided is an executable and if it has to ber run instead 
+            </summary>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClownShell.Helpers.Helper.Disks">
+            <summary>
+            returns the disks in the system
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClownShell.Helpers.Helper.ReferToDisk(System.String)">
+            <summary>
+            provides the inforamtion wether the input path has a direct reference to a disk
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClownShell.Helpers.Helper.ResolvePath(ClownShell.Parser.CodeParser)">
+            <summary>
+            Resolve the path of the given file or folder 
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClownShell.Helpers.Helper.HasSpecialFolder(System.String)">
+            <summary>
+            this method take advantage of a path that it's given 
+            gets the name path name and identify if is an enviroment path 
+            and add it to the path and if it contains a file in it it does not delet it it add it up 
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClownShell.Helpers.Helper.CountDirs(System.String)">
+            <summary>
+            This counts the number of directories in a path that 
+            requireds to move back
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClownShell.Helpers.Helper.RemoveDirs(System.String,System.Int32)">
+            <summary>
+            Removes the directoies that is required to move bakc 
+            </summary>
+            <param name="path"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="F:ClownShell.Init.ShellLoop.CurrentPath">
+            <summary>
+            get or set the current path display in the Shell
+            </summary>
+        </member>
+        <member name="F:ClownShell.Init.ShellLoop.SelectedOject">
+            <summary>
+            get or set the Selected object 
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:ClownShell.Init.ShellLoop.RelativePath" -->
+        <member name="F:ClownShell.Init.ShellLoop.HistoryFile">
+            <summary>
+            This is the file for the shell history by default is set to be ClownShell_History.xml
+            </summary>
+        </member>
+        <member name="P:ClownShell.Init.ShellLoop.AllowToSaveHistory">
+            <summary>
+            by default save the history
+            </summary>
+        </member>
+        <member name="M:ClownShell.Init.ShellLoop.LoadCurrentItems(System.String)">
+            <summary>
+            returns a grup o files located on the current path 
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ClownShell.Parser.CodeParser.CodeResult">
+            <summary>
+            This is a class that contains info about the code that is being process
+            </summary>
+        </member>
+        <member name="F:ClownShell.Parser.CodeParser.RedirectedText">
+            <summary>
+            Holds the redirected text 
+            </summary>
+        </member>
+        <member name="P:ClownShell.Parser.CodeParser.VStack">
+            <summary>
+            Contains a Virtual stack 
+            </summary>
+        </member>
+        <member name="F:ClownShell.Parser.CodeParser.Action">
+            <summary>
+            provides the given action type 
+            </summary>
+        </member>
+        <member name="F:ClownShell.Parser.CodeParser.Type">
+            <summary>
+            provides the type of execution 
+            </summary>
+        </member>
+        <member name="F:ClownShell.Parser.CodeParser.Target">
+            <summary>
+            Containst the path plus the given folder or file given to the shellLoop
+            </summary>
+        </member>
+        <member name="F:ClownShell.Parser.CodeParser.SubTarget">
+            <summary>
+            Contains only the current path
+            </summary>
+        </member>
+        <member name="F:ClownShell.Parser.CodeParser.Parameters">
+            <summary>
+            contains the given parameters to the method CodeParser.GetExecution(Action = Type = Parameter)
+            </summary>
+        </member>
+        <member name="F:ClownShell.Parser.CodeParser.Code">
+            <summary>
+            Contains the Code array
+            </summary>
+        </member>
+        <member name="F:ClownShell.Parser.CodeParser.PathResolved">
+            <summary>
+            notify that the path was resolved
+            </summary>
+        </member>
+        <member name="F:ClownShell.Parser.CodeParser.RunContinues">
+            <summary>
+            Determines if the script will be readed line by line until meet with an special character
+            </summary>
+        </member>
+        <member name="P:ClownShell.Parser.CodeParser.LineEndingChar">
+            <summary>
+            this character will be required at the end of each line 
+            </summary>
+        </member>
+        <member name="F:ClownShell.Parser.CodeParser.Commands">
+            <summary>
+            Contains the list of commands that the code will be executting
+            </summary>
+        </member>
+        <member name="T:ClownShell.Parser.CodeParser.CodeType">
+            <summary>
+            Contains the types of code that will have to be parse 
+            </summary>
+            
+        </member>
+        <member name="M:ClownShell.Parser.CodeParser.SetExecution(System.String,System.String)">
+            <summary>
+            This method set the exectution delegate Action that will handle the excution of the program
+            </summary>
+            <param name="action"></param>
+            <param name="type"></param>
+        </member>
+        <member name="M:ClownShell.Parser.CodeParser.SetExecution(System.String)">
+            <summary>
+            runs the action without any other 
+            </summary>
+            <param name="action"></param>
+        </member>
+        <member name="M:ClownShell.Parser.Scripts.Functions.GlobalFunctions.Parse(System.String)">
+            <summary>
+            Parse the clear text to an usable function 
+            </summary>
+            <param name="function"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClownShell.ScripRunner.ScriptRunner.Run(System.Action,System.Boolean)">
+            <summary>
+            Run the given action on the background
+            </summary>
+            <param name="code"></param>
+            <param name="runInBackGround"></param>
+        </member>
+        <member name="P:ClownShell.ScripRunner.ScriptRunner.RunningCode">
+            <summary>
+            Stablish the current running code
+            </summary>
+        </member>
+    </members>
+</doc>
