@@ -31,8 +31,8 @@ namespace ClownShell.Parser
         /// <summary>
         /// Contains a Virtual stack 
         /// </summary>
-        public static VirtualStack VStack { get; set; } = new VirtualStack(); 
-
+        public static VirtualStack VStack { get; set; } = new VirtualStack();
+       
         /// <summary>
         /// provides the given action type 
         /// </summary>

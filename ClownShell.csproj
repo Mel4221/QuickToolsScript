@@ -81,6 +81,8 @@
   <ItemGroup>
     <Reference Include="QuickTools">
       <HintPath>..\QuickTools\bin\Release\QuickTools.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -118,7 +120,6 @@
     <Compile Include="Settings\ShellSettings.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
     <None Include="ClownShell.manifest" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">

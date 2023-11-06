@@ -8,7 +8,8 @@ using System.Security.Principal;
 using QuickTools.QCore;
 using QuickTools.QIO;
 using QuickTools.QNet;
-using System.Security.Cryptography.X509Certificates;
+using ClownShell.Settings;
+using System.IO;
 
 namespace ClownShell.Security
 {
@@ -33,8 +34,8 @@ namespace ClownShell.Security
                     string path, userFile, user, password, str; 
                     byte[] pass, random, iv, key; 
                     user = Get.Input("user").Text;
-                    path = Get.DataPath("user");
-                    
+                    path = ShellSettings.Path; 
+
                     userFile = path+$"{user}.pubkey";
                     if (System.IO.File.Exists(userFile))
                     {
@@ -42,7 +43,7 @@ namespace ClownShell.Security
                         return;
                     }
                     random = IRandom.RandomByteArray(16);
-                    Get.Green($"RandomKey: {random}");
+                    //Get.Green($"RandomKey: {random}");
                     Secure secure = new Secure();
                     password = Get.Password();
                     pass = secure.CreatePassword(password);
@@ -75,7 +76,7 @@ namespace ClownShell.Security
                     byte[] pubkey, pass, iv;
 
                     user = Get.Input("user").Text;
-                    path = Get.DataPath("user");
+                    path = ShellSettings.Path;
                     userFile = path+$"{user}.pubkey";
                     if (!System.IO.File.Exists(userFile))
                     {

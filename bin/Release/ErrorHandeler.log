@@ -1,0 +1,158 @@
+ID=1001;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'cldear ' 
+####;
+Relation=11/1/2023 11:25:49 PM;
+ID=1003;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' '' 
+####;
+Relation=11/1/2023 11:26:08 PM;
+ID=1005;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( ./Doc.pdf  )> 
+ Exception: 
+System.ComponentModel.Win32Exception (0x80004005): The specified executable is not a valid application for this OS platform.
+   at System.Diagnostics.Process.StartWithCreateProcess(ProcessStartInfo startInfo)
+   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass33_0.<SetExecution>b__0() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExecution_Action.cs:line 76
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/1/2023 11:26:22 PM;
+ID=1007;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( ./text.txt  )> 
+ Exception: 
+System.ComponentModel.Win32Exception (0x80004005): The specified executable is not a valid application for this OS platform.
+   at System.Diagnostics.Process.StartWithCreateProcess(ProcessStartInfo startInfo)
+   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass33_0.<SetExecution>b__0() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExecution_Action.cs:line 76
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/1/2023 11:26:35 PM;
+ID=1009;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( ./ddd.pdf  )> 
+ Exception: 
+System.ComponentModel.Win32Exception (0x80004005): The specified executable is not a valid application for this OS platform.
+   at System.Diagnostics.Process.StartWithCreateProcess(ProcessStartInfo startInfo)
+   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass33_0.<SetExecution>b__0() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExecution_Action.cs:line 76
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/1/2023 11:26:44 PM;
+ID=1011;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( ./ClownShell.log  )> 
+ Exception: 
+System.ComponentModel.Win32Exception (0x80004005): The specified executable is not a valid application for this OS platform.
+   at System.Diagnostics.Process.StartWithCreateProcess(ProcessStartInfo startInfo)
+   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass33_0.<SetExecution>b__0() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExecution_Action.cs:line 76
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/1/2023 11:29:23 PM;
+ID=1013;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( ./mel.pubkey  )> 
+ Exception: 
+System.ComponentModel.Win32Exception (0x80004005): The specified executable is not a valid application for this OS platform.
+   at System.Diagnostics.Process.StartWithCreateProcess(ProcessStartInfo startInfo)
+   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass33_0.<SetExecution>b__0() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExecution_Action.cs:line 76
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/1/2023 11:29:30 PM;
+ID=1015;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( ls -l  )> 
+ Exception: 
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Release\-l'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFiles(String path)
+   at QuickTools.QCore.Get.Ls(String path)
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/1/2023 11:33:04 PM;
+ID=1017;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' '{} ' 
+####;
+Relation=11/1/2023 11:51:18 PM;
+ID=1019;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( {  )> 
+ Exception: 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ClownShell.Parser.CodeParser.Parse(CodeType codeType) in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser.cs:line 79
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at ClownShell.Parser.CodeParser.<>c.<SetExecution>b__34_1() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExecution_Action.cs:line 98
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/2/2023 12:06:40 AM;
+ID=1021;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( du wii.iso  )> 
+ Exception: 
+System.UnauthorizedAccessException: Access to the path 'C:\Users\Melquiceded\Desktop\wii' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at QuickTools.QCore.Get.FileSize(String fileName)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass33_0.<SetExecution>b__22() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Type.cs:line 419
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/5/2023 9:11:27 PM;
+ID=1023;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'du ' 
+####;
+Relation=11/5/2023 9:11:35 PM;
+ID=1025;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( du file.txt  )> 
+ Exception: 
+System.UnauthorizedAccessException: Access to the path 'C:\Users\Melquiceded\Desktop\wii' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at QuickTools.QCore.Get.FileSize(String fileName)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass33_0.<SetExecution>b__22() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Type.cs:line 419
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/5/2023 9:11:40 PM;
+ID=1027;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( du rufus.com  )> 
+ Exception: 
+System.UnauthorizedAccessException: Access to the path 'C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Release' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at QuickTools.QCore.Get.FileSize(String fileName)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass33_0.<SetExecution>b__22() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Type.cs:line 419
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/5/2023 9:11:55 PM;
+ID=1029;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'clsize ' 
+####;
+Relation=11/5/2023 9:11:59 PM;

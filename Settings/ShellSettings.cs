@@ -1,28 +1,40 @@
-﻿using System;
+﻿using QuickTools.QCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
-
+using QuickTools.QCore; 
 namespace ClownShell.Settings
 {
-    public class ShellSettings
+    public static class ShellSettings
     {
-        private Thread SettingsWatcher;
+        private static string RootPath()
+        {
+            return Get.DataPath("shell"); 
+        }
+        public static string ShellDefaultStartPath { get; set; } = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+        public static string ShellVariablesDB { get; set; } = RootPath();
+        public static string File { get; set; } = RootPath();
+        public static string Path { get; set; } = RootPath();  
+        public static string ShellHistoryFileName { get; set; } = $"{ShellSettings.Path}ClownShell.history";
+        public static string LogsFile { get; set; } = $"{ShellSettings.Path}ClownShell";
 
-        private void SyncSettings()
+        private static Thread SettingsWatcher;
+
+        private static void SyncSettings()
         {
             
         }
-        public void ResetToDefault()
+        public static void ResetToDefault()
         {
 
         }
-        public void LoadSettings()
+        public static void LoadSettings()
         {
 
         }
-        public void SaveSettings() 
+        public static void SaveSettings() 
         {
             
         }

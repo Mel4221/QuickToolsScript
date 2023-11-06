@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using QuickTools.QCore; 
 using System.Threading;
 using QuickTools.QIO;
+using ClownShell.Settings;
 
 namespace ClownShell.BackGroundFunctions
 {
@@ -28,7 +29,7 @@ namespace ClownShell.BackGroundFunctions
     }
     public static class BackGroundJob
     {
-        public static string BackGroundJobLogFileName { get; set; } = "BackGroundJobs";
+        public static string BackGroundJobLogFileName { get; set; } = ShellSettings.LogsFile;
         public static bool MonitorStarted { get; set; }
         private static Thread MonitorThread { get; set; }
         private static int Indexer { get; set; } = 0;

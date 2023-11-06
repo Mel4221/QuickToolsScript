@@ -284,7 +284,7 @@ namespace ClownShell.Helpers
                     case "downloads":
                         //slash = subfolde
                         string str = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-                        return str.Substring(0, str.LastIndexOf(Get.Slash()))+$"{Get.Slash()}Downloads";
+                        return str.Substring(0, str.LastIndexOf(Get.Slash()))+$"{Get.Slash()}Downloads"+$"{subFolder}{file}";
                     case "pictures":
                         //slash = subfolde
                         return Environment.GetFolderPath(Environment.SpecialFolder.MyPictures) + $"{subFolder}{file}";
