@@ -42,28 +42,28 @@ namespace ClownShell.Parser
         
       
    
-        public CodeResult CheckFile(string file)
-        {
-            string content;
-            if (!File.Exists(file))
-            {
-                return new CodeResult() { IsValid = false };
-            }
-            content = Reader.Read(file);
-            if(content != null || content != "")
-            {
-                return new CodeResult()
-                {
-                    IsValid = true,
-                    Code = content
-                };
-            }
-            else
-            {
-                return new CodeResult() { IsValid = false };
-            }
+        //public CodeResult CheckFile(string file)
+        //{
+        //    string content;
+        //    if (!File.Exists(file))
+        //    {
+        //        return new CodeResult() { IsValid = false };
+        //    }
+        //    content = Reader.Read(file);
+        //    if(content != null || content != "")
+        //    {
+        //        return new CodeResult()
+        //        {
+        //            IsValid = true,
+        //            Code = content
+        //        };
+        //    }
+        //    else
+        //    {
+        //        return new CodeResult() { IsValid = false };
+        //    }
 
-        }
+        //}
 
         private void Parse(CodeType codeType)
         {
@@ -148,8 +148,40 @@ namespace ClownShell.Parser
                     break;
             }
         }
+
+        public void FixStringFormat()
+        {
+            List<string> code = new List<string>();
+            string str = "";
+            bool active = false; 
+            for(int ch = 0; ch < this.Code.Length; ch++)
+            {
+                if ((this.Code[ch].Contains('"'.ToString()) || this.Code[ch].Contains("'")) && active)
+                {
+                    active = false;
+                }
+                if (this.Code[ch].Contains('"'.ToString()) || this.Code[ch].Contains("'"))
+                {
+                    active = true; 
+                }
+                if (active)
+                {
+                    str+=this.Code[ch]; 
+                }
+                if (!active)
+                {
+                    code.Add(this.Code[ch]);
+                }
+            }
+
+            this.Code = code.ToArray();
+            Print.List(this.Code); 
+            Get.Wait();
+        }
         public void Start()
         {
+            FixStringFormat();
+
              /*
                 
                 
@@ -173,7 +205,7 @@ namespace ClownShell.Parser
                 exit; 
                
              */
-            switch(this.Code.Length)
+            switch (this.Code.Length)
             {
                 case 0:
                     this.error = new ErrorHandeler();

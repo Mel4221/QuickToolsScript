@@ -46,26 +46,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClownShell.exe" size="168960">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClownShell.exe" size="147968">
       <assemblyIdentity name="ClownShell" version="7.1.1.1" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>FrgM8vXy+DPmvN6I8UqADTDukyxMNSjVY8tIK/cProI=</dsig:DigestValue>
+        <dsig:DigestValue>u/KiW979fghsQcbBKYb1vkQ9KtC98BooIT2GJFXcvQg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="QuickTools.dll" size="223744">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="QuickTools.dll" size="226816">
       <assemblyIdentity name="QuickTools" version="3000.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Ugzr/LE+KxAjwjNHsSLIekg6nMk5+2nkcYo4hMtgD7k=</dsig:DigestValue>
+        <dsig:DigestValue>Ox0JHUZ2QLBrFsXwQ3ctCqDXdQ3Lk0P9Tsyf0YoZ5gA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

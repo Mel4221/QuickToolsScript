@@ -104,33 +104,33 @@ namespace ClownShell.Init
         }
 
 
-        /// <summary>
-        /// returns a grup o files located on the current path 
-        /// </summary>
-        /// <param name="path"></param>
-        /// <returns></returns>
-        private string LoadCurrentItems(string path)
-        {
+        ///// <summary>
+        ///// returns a grup o files located on the current path 
+        ///// </summary>
+        ///// <param name="path"></param>
+        ///// <returns></returns>
+        //private string LoadCurrentItems(string path)
+        //{
 
-            string  items;
-            int max; 
-            items = null;
-            max = 0; 
-            foreach(string dir in Directory.GetDirectories(path))
-            { 
-                if (max == 5) break;
-                items += $"{Get.FolderFromPath(dir)}{Get.Slash()},";
-                max++;
-            }
-            max = 0; 
-            foreach (string file in Directory.GetFiles(path))
-            {
-                if (max == 5) break;
-                items += Get.FileNameFromPath(file).Length > 5 ? Get.FileNameFromPath(file).Substring(0,5)+"...,":Get.FileNameFromPath(file)+",";
-                max++;
-            }
-            return items;
-        }
+        //    string  items;
+        //    int max; 
+        //    items = null;
+        //    max = 0; 
+        //    foreach(string dir in Directory.GetDirectories(path))
+        //    { 
+        //        if (max == 5) break;
+        //        items += $"{Get.FolderFromPath(dir)}{Get.Slash()},";
+        //        max++;
+        //    }
+        //    max = 0; 
+        //    foreach (string file in Directory.GetFiles(path))
+        //    {
+        //        if (max == 5) break;
+        //        items += Get.FileNameFromPath(file).Length > 5 ? Get.FileNameFromPath(file).Substring(0,5)+"...,":Get.FileNameFromPath(file)+",";
+        //        max++;
+        //    }
+        //    return items;
+        //}
         //public static Thread BackGroundJob;
         ////                    Get.Title("QuickTools Shell");
         //public static int Status; 

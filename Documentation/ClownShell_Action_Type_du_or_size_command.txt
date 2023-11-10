@@ -1,0 +1,40 @@
+                case "size":
+                case "du":
+                    runner.Run(() => {
+
+                        
+                       
+                        file = $"{ShellLoop.CurrentPath}{Get.Slash()}{type}";
+
+                        long size = 0;
+                        
+                        if (Directory.Exists(file))
+                        {
+                            FilesMaper maper = new FilesMaper(file);
+                            maper.Map();
+                           
+                            foreach(string f in maper.Files)
+                            {
+                              
+                                if (maper.Files.Count < 100)
+                                {
+                                    Get.Print(f, Get.FileSize(f));
+                                }if(maper.Files.Count > 100)
+                                {
+                                    Get.FileSize(f);
+                                }
+                                size += Get.LongNumber;
+                            }
+                             
+                            Get.White($"Total Size of {type}: {Get.FileSize(size)}");
+                            return;
+                        }
+                        if (!File.Exists(file))
+                        {
+                            Get.Red($"The {file} Was not found or does not exist");
+                            return;
+                        }
+
+                        Get.Print(type, Get.FileSize(file)); 
+                    });
+                    break;

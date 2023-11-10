@@ -37,6 +37,10 @@ namespace ClownShell.Init
     
     internal class MainMenu
     {
+
+        /// <summary>
+        /// Will be disabled 
+        /// </summary>
         internal void Start()
         {
 

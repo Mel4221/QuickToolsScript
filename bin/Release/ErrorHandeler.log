@@ -156,3 +156,93 @@ Value=####
  There Was an error with the given type of error: 'NotValidAction' 'clsize ' 
 ####;
 Relation=11/5/2023 9:11:59 PM;
+ID=1031;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( du wii  )> 
+ Exception: 
+System.IO.IOException: The process cannot access the file 'C:\Users\Melquiceded\Desktop\wii\Kirby Wii.iso' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+   at System.IO.FileStream..ctor(String path, FileMode mode)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass33_0.<SetExecution>b__22() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Type.cs:line 432
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/6/2023 6:07:01 PM;
+ID=1033;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'force ' 
+####;
+Relation=11/6/2023 6:32:36 PM;
+ID=1035;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' '~ ' 
+####;
+Relation=11/6/2023 6:41:10 PM;
+ID=1037;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ' green "Starting..." ' 
+####;
+Relation=11/6/2023 10:51:42 PM;
+ID=1039;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ' touch "New_File.txt" ' 
+####;
+Relation=11/6/2023 10:51:43 PM;
+ID=1041;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ' green "File_Created_Sucessfully" ' 
+####;
+Relation=11/6/2023 10:51:44 PM;
+ID=1043;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ' mkdir box ' 
+####;
+Relation=11/6/2023 10:51:44 PM;
+ID=1045;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' '  touch file.txt ' 
+####;
+Relation=11/6/2023 10:51:44 PM;
+ID=1047;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ' yellow Copying_File ' 
+####;
+Relation=11/6/2023 10:51:45 PM;
+ID=1049;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' '  cp file.txt box/file.txt ' 
+####;
+Relation=11/6/2023 10:51:45 PM;
+ID=1051;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' '  green Task_Completed ' 
+####;
+Relation=11/6/2023 10:51:45 PM;
+ID=1053;
+Key=log;
+Value= 22 ' 
+####;
+Relation=11/6/2023 10:51:45 PM;
+ID=1055;
+Key=log;
+Value= 32 ' 
+####;
+Relation=11/6/2023 10:51:46 PM;
+ID=1057;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'ls' 
+####;
+Relation=11/7/2023 5:00:34 PM;

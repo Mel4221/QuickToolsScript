@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using QuickTools.QIO;
 using System.Runtime.CompilerServices;
 using System.Text;
-using ClownShell.Init; 
+using ClownShell.Init;
+using System.Text.RegularExpressions;
 
 namespace ClownShell.Parser.Scripts.RuleChecks
 {
@@ -69,50 +70,96 @@ namespace ClownShell.Parser.Scripts.RuleChecks
             return this.CommandLines; 
         }
       
-     
+        public static bool IsScriptFile(string file)
+        {
+            if (Get.FileExention(file)=="qtls")
+            {
+                return true;
+            }
+            else
+            {
+                return false; 
+            }
+        }
+        public string[] Filter(string[] args)
+        {
+            List<string> list = new List<string>();
+            string reg = @"^(|\d{10})$";
+
+            foreach (string arg in args)
+            {
+                if(!Regex.IsMatch(reg, arg))
+                {
+                    list.Add(arg); 
+                }                   
+            }
+            return list.ToArray();
+        }
+        public List<string[]> Parse(string[] args)
+        {
+            List<string[]> commands = new List<string[]>();
+            foreach(string arg in args)
+            {
+                commands.Add(IConvert.TextToArray(arg));
+            }
+            return commands; 
+        }
+        
         public void Check(string[] args)
         {
-            if (args.Length == 0) return;
-            args = IConvert.TextToArray(@"
-                                        green ""Starting..."";
-                                        touch ""New_File.txt"";
-                                        green ""File_Created_Sucessfully"";
-                                        mkdir box; 
-                                        touch file.txt;
-                                        yellow Copying_File; 
-                                        cp file.txt box/file.txt; 
-                                        green Task_Completed;
-                                        var a = 22; 
-                                        var x = 32; 
-                                        ");
-            string code = IConvert.ArrayToText(args);
-            
-            this.Parser(code); 
-            Print.List(args);
-            Get.Yellow("Ussable Lines"); 
-            Print.List(this.CommandLines);
-            //Get.Ok(3);
-            //Get.Yellow(this.CommandLines[1].Replace("\n",""));
-
-
-
-
-
-            //Print.List(this.Code);
-
-            //Get.Blue($"Length: {this.Code.Length}");
-            //Get.Wait(code);
-            Get.Yellow("ForEach"); 
-            foreach(string line in  this.CommandLines) 
+            foreach (string arg in this.Filter(args)) Get.Green($"> {arg}");
+            //Print.List(args); 
+            args = this.Filter(args);
+            CodeParser parser;
+          
+            foreach (string[] command in this.Parse(args))
             {
-                this.Code = line.Split(' ');//IConvert.TextToArray(line.Replace("\n", ""));
-                Print.List(this.Code);
-                Get.Blue($"Length: {this.Code.Length}");
-                Get.Wait(IConvert.ArrayToText(this.Code)); 
-                this.Start();
+                parser = new CodeParser(command);
+                parser.Start();
             }
 
-            Get.Wait(); 
+            
+            //if (args.Length == 0) return;
+            //args = IConvert.TextToArray(@"
+            //                            green ""Starting..."";
+            //                            touch ""New_File.txt"";
+            //                            green ""File_Created_Sucessfully"";
+            //                            mkdir box; 
+            //                            touch file.txt;
+            //                            yellow Copying_File; 
+            //                            cp file.txt box/file.txt; 
+            //                            green Task_Completed;
+            //                            var a = 22; 
+            //                            var x = 32; 
+            //                            ");
+            //string code = IConvert.ArrayToText(args);
+            
+            //this.Parser(code); 
+            //Print.List(args);
+            //Get.Yellow("Ussable Lines"); 
+            //Print.List(this.CommandLines);
+            ////Get.Ok(3);
+            ////Get.Yellow(this.CommandLines[1].Replace("\n",""));
+
+
+
+
+
+            ////Print.List(this.Code);
+
+            ////Get.Blue($"Length: {this.Code.Length}");
+            ////Get.Wait(code);
+            //Get.Yellow("ForEach"); 
+            //foreach(string line in  this.CommandLines) 
+            //{
+            //    this.Code = line.Split(' ');//IConvert.TextToArray(line.Replace("\n", ""));
+            //    Print.List(this.Code);
+            //    Get.Blue($"Length: {this.Code.Length}");
+            //    Get.Wait(IConvert.ArrayToText(this.Code)); 
+            //    this.Start();
+            //}
+
+            //Get.Wait(); 
 
 
             /*

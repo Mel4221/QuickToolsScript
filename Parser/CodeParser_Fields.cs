@@ -10,12 +10,12 @@ namespace ClownShell.Parser
     public partial class CodeParser 
     {
 
-        private DataCacher cache;
-        private ScriptRunner runner;
-        private ErrorHandeler error;
+        private DataCacher cache { get; set; } = new DataCacher();
+        private ScriptRunner runner { get; set; } = new ScriptRunner();
+        private ErrorHandeler error { get; set; } = new ErrorHandeler(); 
 
         /// <summary>
-        /// This is a class that contains info about the code that is being process
+        /// This is a class that contains info abou t the code that is being process
         /// </summary>
         public class CodeResult
         {

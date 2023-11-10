@@ -69,6 +69,20 @@ namespace ClownShell.Init
             string[] commands = args;
             try
             {
+                ///if contains a file only read the file and execute the actions
+                ///and return after is completed
+                if(commands.Length == 1)
+                {
+                    if (ScriptChecker.IsScriptFile(commands[0]))
+                    {
+                        checker = new ScriptChecker();
+                        checker.Check(System.IO.File.ReadAllLines(commands[0]));   
+                        return 0;
+                    }
+                    
+                }
+                ///if no files and no arguments were given
+                ///just start the shell 
                 if (commands.Length == 0)
                 {
                     Log.Event(ShellSettings.LogsFile, $"Shell Started With no Arguments");
@@ -78,6 +92,8 @@ namespace ClownShell.Init
                     Environment.Exit(0);
                     return 0;
                 }
+                ///if the arguments given are not for a file
+                ///just run the rest of the functions as given
                 else
                 {
                     Log.Event(ShellSettings.LogsFile, $"Shell Started With Arguments Length: {args.Length}");

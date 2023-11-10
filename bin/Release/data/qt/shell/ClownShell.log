@@ -98,3 +98,160 @@ ID=1047;
 Key=log;
 Value=Shell Started With no Arguments;
 Relation=11/5/2023 9:12:05 PM;
+ID=1049;
+Key=log;
+Value=Shell Started With no Arguments;
+Relation=11/6/2023 5:56:38 PM;
+ID=1051;
+Key=log;
+Value=Shell Started With no Arguments;
+Relation=11/6/2023 5:59:53 PM;
+ID=1053;
+Key=log;
+Value=Shell Exited With no Events;
+Relation=11/6/2023 6:01:37 PM;
+ID=1055;
+Key=log;
+Value=Shell Started With no Arguments;
+Relation=11/6/2023 6:01:52 PM;
+ID=1057;
+Key=log;
+Value=Shell Started With no Arguments;
+Relation=11/6/2023 6:06:55 PM;
+ID=1059;
+Key=log;
+Value=Shell Exited With no Events;
+Relation=11/6/2023 6:07:29 PM;
+ID=1061;
+Key=log;
+Value=Shell Started With no Arguments;
+Relation=11/6/2023 6:18:05 PM;
+ID=1063;
+Key=log;
+Value=Shell Started With no Arguments;
+Relation=11/6/2023 6:20:01 PM;
+ID=1065;
+Key=log;
+Value=Shell Started With no Arguments;
+Relation=11/6/2023 6:20:57 PM;
+ID=1067;
+Key=log;
+Value=Shell Started With no Arguments;
+Relation=11/6/2023 6:21:54 PM;
+ID=1069;
+Key=log;
+Value=Shell Started With no Arguments;
+Relation=11/6/2023 6:22:17 PM;
+ID=1071;
+Key=log;
+Value=Shell Started With no Arguments;
+Relation=11/6/2023 6:22:20 PM;
+ID=1073;
+Key=log;
+Value=Shell Exited With no Events;
+Relation=11/6/2023 6:22:21 PM;
+ID=1075;
+Key=log;
+Value=Shell Exited With no Events;
+Relation=11/6/2023 6:32:00 PM;
+ID=1077;
+Key=log;
+Value=Shell Started With no Arguments;
+Relation=11/6/2023 6:32:24 PM;
+ID=1079;
+Key=log;
+Value=Shell Started With no Arguments;
+Relation=11/6/2023 6:34:46 PM;
+ID=1081;
+Key=log;
+Value=Shell Exited With no Events;
+Relation=11/6/2023 6:35:05 PM;
+ID=1083;
+Key=log;
+Value=Shell Started With no Arguments;
+Relation=11/6/2023 6:35:57 PM;
+ID=1085;
+Key=log;
+Value=Shell Started With no Arguments;
+Relation=11/6/2023 6:38:00 PM;
+ID=1087;
+Key=log;
+Value=Shell Started With no Arguments;
+Relation=11/6/2023 6:40:53 PM;
+ID=1089;
+Key=log;
+Value=Shell Exited With no Events;
+Relation=11/6/2023 6:41:27 PM;
+ID=1091;
+Key=log;
+Value=Shell Started With Arguments Length: 1;
+Relation=11/6/2023 10:50:14 PM;
+ID=1093;
+Key=log;
+Value=Shell Exited With a FATAL-ERROR More info in the logs file:  
+System.InvalidOperationException: Cannot read keys when either application does not have a console or when console input has been redirected from a file. Try Console.Read.
+   at System.Console.ReadKey(Boolean intercept)
+   at QuickTools.QCore.Get.Wait(Object Caller)
+   at ClownShell.Parser.Scripts.RuleChecks.ScriptChecker.Check(String[] args) in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\Scripts\RuleChecks\ScriptChecker.cs:line 112
+   at ClownShell.Init.Program.Main(String[] args) in C:\Users\Melquiceded\Documents\csharp\ClownShell\Init\Program.cs:line 85;
+Relation=11/6/2023 10:50:14 PM;
+ID=1095;
+Key=log;
+Value=Shell Started With Arguments Length: 1;
+Relation=11/6/2023 10:51:38 PM;
+ID=1097;
+Key=log;
+Value=Shell Exited With no Events;
+Relation=11/6/2023 10:51:46 PM;
+ID=1099;
+Key=log;
+Value=Shell Started With Arguments Length: 1;
+Relation=11/6/2023 10:53:39 PM;
+ID=1101;
+Key=log;
+Value=Shell Exited With a FATAL-ERROR More info in the logs file:  
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuickTools.QCore.Get.FixPath(String path)
+   at ClownShell.Parser.CodeParser.SetExecution(String action) in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExecution_Action.cs:line 59
+   at ClownShell.Init.Program.Main(String[] args) in C:\Users\Melquiceded\Documents\csharp\ClownShell\Init\Program.cs:line 85;
+Relation=11/6/2023 10:53:39 PM;
+ID=1103;
+Key=log;
+Value=Shell Started With Arguments Length: 2;
+Relation=11/6/2023 10:55:41 PM;
+ID=1105;
+Key=log;
+Value=Shell Exited With no Events;
+Relation=11/6/2023 10:55:42 PM;
+ID=1107;
+Key=log;
+Value=Shell Started With Arguments Length: 2;
+Relation=11/6/2023 10:59:28 PM;
+ID=1109;
+Key=log;
+Value=Shell Exited With no Events;
+Relation=11/6/2023 10:59:28 PM;
+ID=1111;
+Key=log;
+Value=Shell Exited With a FATAL-ERROR More info in the logs file:  
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuickTools.QCore.Get.FixPath(String path)
+   at ClownShell.Parser.CodeParser.SetExecution(String action) in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExecution_Action.cs:line 59
+   at ClownShell.Init.Program.Main(String[] args) in C:\Users\Melquiceded\Documents\csharp\ClownShell\Init\Program.cs:line 77;
+Relation=11/6/2023 11:20:33 PM;
+ID=1113;
+Key=log;
+Value=Shell Exited With a FATAL-ERROR More info in the logs file:  
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuickTools.QCore.Get.FixPath(String path)
+   at ClownShell.Parser.CodeParser.SetExecution(String action) in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExecution_Action.cs:line 58
+   at ClownShell.Init.Program.Main(String[] args) in C:\Users\Melquiceded\Documents\csharp\ClownShell\Init\Program.cs:line 79;
+Relation=11/6/2023 11:22:38 PM;
+ID=1115;
+Key=log;
+Value=Shell Started With no Arguments;
+Relation=11/6/2023 11:37:18 PM;
+ID=1117;
+Key=log;
+Value=Shell Started With no Arguments;
+Relation=11/7/2023 5:00:32 PM;
