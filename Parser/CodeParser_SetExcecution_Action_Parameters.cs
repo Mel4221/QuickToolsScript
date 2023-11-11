@@ -97,13 +97,13 @@ namespace ClownShell.Parser
 
             //Get.Yellow("For Testing: ");
             //Print.List(param);
-            Get.Yellow();
-            Get.Write($"Action: {action} ");
-            Get.Blue();
-            Get.Write($"Type: {type} ");
-            Get.Green();
-            Get.Write($"Parameters: {IConvert.ArrayToText(param)}\n");
-            Get.Reset();
+            //Get.Yellow();
+            //Get.Write($"Action: {action} ");
+            //Get.Blue();
+            //Get.Write($"Type: {type} ");
+            //Get.Green();
+            //Get.Write($"Parameters: {IConvert.ArrayToText(param)}\n");
+            //Get.Reset();
             switch (action)
             {
                 case "echo":

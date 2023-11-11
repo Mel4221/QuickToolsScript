@@ -25,7 +25,6 @@
 // THE SOFTWARE.
 using QuickTools.QCore;
 using QuickTools.QIO;
-
 using System;
 using System.Security.Cryptography.X509Certificates;
 

@@ -162,7 +162,10 @@ namespace ClownShell.Parser
 
             //return new int[] {-1,-1};
         }
+        public void ReplaceSpecialCharacters()
+        {
 
+        }
         public void FixStringFormat()
         {
             this.Code = this.FormatStrings(this.Code);

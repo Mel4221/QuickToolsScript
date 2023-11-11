@@ -56,7 +56,7 @@ namespace ClownShell.Parser
             ScriptRunner runner = new ScriptRunner();
             ErrorHandeler error = new ErrorHandeler();
             ProcessStartInfo process;
-            Get.Yellow($"Action {action}\n");
+            //Get.Yellow($"Action {action}\n");
             // Get.Wait(Get.DataPath());
             //this.cache = new DataCacher();
             //this.runner = new ScriptRunner();

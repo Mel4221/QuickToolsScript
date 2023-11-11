@@ -72,11 +72,11 @@ namespace ClownShell.Parser
 
             ScriptRunner runner = new ScriptRunner();
             ErrorHandeler error = new ErrorHandeler();
-            Get.Yellow();
-            Get.Write($"Action: {action} ");
-            Get.Blue();
-            Get.Write($"Type: {type}\n");
-            Get.Reset();
+            //Get.Yellow();
+            //Get.Write($"Action: {action} ");
+            //Get.Blue();
+            //Get.Write($"Type: {type}\n");
+            //Get.Reset();
             // get the path with the given type and if it does not have an slash add it acordintly 
             //string tar = type[0] == '~' || type[0] == '.' || Helper.ReferToDisk(type)? type :  $"{ShellLoop.CurrentPath}{Get.Slash()}{type}";
 
@@ -103,6 +103,7 @@ namespace ClownShell.Parser
             {
 
                 case "echo":
+                case "write":
                 case "print":
                 case "log":
                     runner.Run(() => {
@@ -118,20 +119,35 @@ namespace ClownShell.Parser
                     runner.RunningCodeInfo = $"waiting for {type}ms";
                     runner.RunningBackGroundCodeName = "Process Wait...";
                     runner.Run(() => {
+                        this.Call("clear");
                         this.Call("sleep",type);
+                        this.Call("write", "|");
                         this.Call("title", "|");
+
+                        this.Call("clear");
                         this.Call("sleep", type);
-                        this.Call("title", "-");
-                        this.Call("sleep", type);
+                        this.Call("write", "/");
                         this.Call("title", "/");
+
+                        this.Call("clear");
                         this.Call("sleep", type);
+                        this.Call("write", "-");
                         this.Call("title", "-");
+
+                        this.Call("clear");
                         this.Call("sleep", type);
+                        this.Call("write", "\\");
                         this.Call("title", "\\");
+
+                        this.Call("clear");
                         this.Call("sleep", type);
+                        this.Call("write", "|");
                         this.Call("title", "|");
+
+                        this.Call("clear");
                         this.Call("sleep", type);
                         this.Call("reset-title");
+                        this.Call("write", "Done!!!");
                         return; 
                     }, true); 
                     break;
@@ -433,9 +449,9 @@ namespace ClownShell.Parser
                         {
                             try
                             {
-                                Get.Wait("Reading...",() => { 
+                                //Get.Wait("Reading...",() => { 
                                 Get.Write(Reader.Read(file));
-                                });
+                                ////});
                             }
                             catch(Exception ex)
                             {
