@@ -156,3 +156,594 @@ Value=####
  There Was an error with the given type of error: 'NotValidAction' 'clsize ' 
 ####;
 Relation=11/5/2023 9:11:59 PM;
+ID=1031;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ' green "Starting..." ' 
+####;
+Relation=11/9/2023 9:13:51 PM;
+ID=1033;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ' touch "New_File.txt" ' 
+####;
+Relation=11/9/2023 9:13:52 PM;
+ID=1035;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ' green "File_Created_Sucessfully" ' 
+####;
+Relation=11/9/2023 9:13:53 PM;
+ID=1037;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ' mkdir box ' 
+####;
+Relation=11/9/2023 9:13:53 PM;
+ID=1039;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' '  touch file.txt ' 
+####;
+Relation=11/9/2023 9:13:53 PM;
+ID=1041;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ' yellow Copying_File ' 
+####;
+Relation=11/9/2023 9:13:53 PM;
+ID=1043;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' '  cp file.txt box/file.txt ' 
+####;
+Relation=11/9/2023 9:13:54 PM;
+ID=1045;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' '  green Task_Completed ' 
+####;
+Relation=11/9/2023 9:13:54 PM;
+ID=1047;
+Key=log;
+Value= 22 ' 
+####;
+Relation=11/9/2023 9:13:54 PM;
+ID=1049;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'Not Valid Action At: 'green'' 
+####;
+Relation=11/9/2023 11:57:27 PM;
+ID=1051;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'Not Valid Action At: 'blue'' 
+####;
+Relation=11/10/2023 12:03:28 AM;
+ID=1053;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'Not Valid Action At: 'blue'' 
+####;
+Relation=11/10/2023 12:03:46 AM;
+ID=1055;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'Not Valid Action At: 'blue'' 
+####;
+Relation=11/10/2023 12:03:50 AM;
+ID=1057;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'Not Valid Action At: 'green'' 
+####;
+Relation=11/10/2023 12:25:35 AM;
+ID=1059;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'Not Valid Action At: 'green'' 
+####;
+Relation=11/10/2023 12:26:37 AM;
+ID=1061;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'Not Valid Action At: 'green'' 
+####;
+Relation=11/10/2023 12:55:15 AM;
+ID=1063;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'Not Valid Action At: 'green'' 
+####;
+Relation=11/10/2023 1:00:59 AM;
+ID=1065;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'Not Valid Action At: 'green'' 
+####;
+Relation=11/10/2023 1:01:13 AM;
+ID=1067;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'Not Valid Action At: 'green'' 
+####;
+Relation=11/10/2023 1:02:09 AM;
+ID=1069;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'Not Valid Action At: 'green'' 
+####;
+Relation=11/10/2023 1:02:48 AM;
+ID=1071;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidType' 'String Format Not Closing Qoutes Open Qoutes: "working Never Closed' 
+####;
+Relation=11/10/2023 1:07:19 AM;
+ID=1073;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'Not Valid Action At: 'green'' 
+####;
+Relation=11/10/2023 1:07:20 AM;
+ID=1075;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidType' 'String Format Not Closing Qoutes Open Qoutes: ("working) Never Closed' 
+####;
+Relation=11/10/2023 1:08:20 AM;
+ID=1077;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'Not Valid Action At: 'green'' 
+####;
+Relation=11/10/2023 1:08:20 AM;
+ID=1079;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidType' 'Qoutes not close , Opened on ( "working )' 
+####;
+Relation=11/10/2023 1:10:39 AM;
+ID=1081;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' '' 
+####;
+Relation=11/10/2023 1:10:40 AM;
+ID=1083;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidType' 'Qoutes not close , Opened on ( input" )' 
+####;
+Relation=11/10/2023 1:16:31 AM;
+ID=1085;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidType' 'Qoutes not close , Opened on ( input" )' 
+####;
+Relation=11/10/2023 1:16:49 AM;
+ID=1087;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidType' 'Qoutes not close , Opened on ( "working )' 
+####;
+Relation=11/10/2023 1:17:09 AM;
+ID=1089;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidType' 'Qoutes not close , Opened on ( now" )' 
+####;
+Relation=11/10/2023 1:20:00 AM;
+ID=1091;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidType' 'Qoutes not close , Opened on ( "working )' 
+####;
+Relation=11/10/2023 1:20:10 AM;
+ID=1093;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'Not Valid Action At: 'green'' 
+####;
+Relation=11/10/2023 1:20:10 AM;
+ID=1095;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''working' "green input working" ' 
+####;
+Relation=11/10/2023 1:21:45 AM;
+ID=1097;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''working' "' 
+####;
+Relation=11/10/2023 1:21:45 AM;
+ID=1099;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'Not Valid Action At: 'green'' 
+####;
+Relation=11/10/2023 1:25:24 AM;
+ID=1101;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'Not Valid Action At: 'green'' 
+####;
+Relation=11/10/2023 1:25:33 AM;
+ID=1103;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'Not Valid Action At: 'green'' 
+####;
+Relation=11/10/2023 1:26:12 AM;
+ID=1105;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'Not Valid Action At: '-encodedCommand'' 
+####;
+Relation=11/10/2023 1:26:26 AM;
+ID=1107;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'Not Valid Action At: 'green'' 
+####;
+Relation=11/10/2023 1:58:14 AM;
+ID=1109;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'Not Valid Action At: 'green'' 
+####;
+Relation=11/10/2023 2:01:16 AM;
+ID=1111;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'Not Valid Action At: 'green'' 
+####;
+Relation=11/10/2023 2:01:36 AM;
+ID=1113;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( echo "working with this input"  input" > file.txt  )> 
+ Exception: 
+System.ArgumentException: Illegal characters in path.
+   at System.IO.Path.CheckInvalidPathChars(String path, Boolean checkAdditional)
+   at System.IO.Path.GetFileName(String path)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at QuickTools.QIO.Writer.Write(String file, Object data)
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/10/2023 2:01:59 AM;
+ID=1115;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( echo "1 2 3 4 5"  5" > file.txt  )> 
+ Exception: 
+System.ArgumentException: Illegal characters in path.
+   at System.IO.Path.CheckInvalidPathChars(String path, Boolean checkAdditional)
+   at System.IO.Path.GetFileName(String path)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at QuickTools.QIO.Writer.Write(String file, Object data)
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/10/2023 2:06:39 AM;
+ID=1117;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( echo "working text"  text" > file.txt  )> 
+ Exception: 
+System.ArgumentException: Illegal characters in path.
+   at System.IO.Path.CheckInvalidPathChars(String path, Boolean checkAdditional)
+   at System.IO.Path.GetFileName(String path)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at QuickTools.QIO.Writer.Write(String file, Object data)
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/10/2023 2:23:32 AM;
+ID=1119;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( not-available )> 
+ Exception: 
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Release\-l'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFiles(String path)
+   at QuickTools.QCore.Get.Ls(String path, String dateFormat)
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/10/2023 9:57:25 AM;
+ID=1121;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( not-available )> 
+ Exception: 
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Release\-l'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFiles(String path)
+   at QuickTools.QCore.Get.Ls(String path, String dateFormat)
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/10/2023 9:57:27 AM;
+ID=1123;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'Not Valid Action At: 'encrypt'' 
+####;
+Relation=11/10/2023 3:05:32 PM;
+ID=1125;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'Not Valid Action At: 'LS'' 
+####;
+Relation=11/10/2023 8:04:23 PM;
+ID=1127;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'Not Valid Action At: 'c:/users/melquiceded/desktop/WII'' 
+####;
+Relation=11/10/2023 8:34:30 PM;
+ID=1129;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( not-available )> 
+ Exception: 
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Release\wii'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFiles(String path)
+   at QuickTools.QCore.Get.Ls(String path)
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/10/2023 8:39:59 PM;
+ID=1131;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( not-available )> 
+ Exception: 
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Release\WII'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFiles(String path)
+   at QuickTools.QCore.Get.Ls(String path)
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/10/2023 8:40:10 PM;
+ID=1133;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'Not Valid Action At: 's'' 
+####;
+Relation=11/11/2023 12:01:49 AM;
+ID=1135;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'Not Valid Action At: './.exe'' 
+####;
+Relation=11/11/2023 12:03:35 AM;
+ID=1137;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''exe' R.exe' 
+####;
+Relation=11/11/2023 12:03:40 AM;
+ID=1139;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotImplemented' 'The code is recongnized but sadly there are only 2 wasy to run a program and is either by providing the entired path or  by being in the same directory on the shell and running the program' 
+####;
+Relation=11/11/2023 12:26:46 AM;
+ID=1141;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'Not Valid Action At: 'git'' 
+####;
+Relation=11/11/2023 12:28:39 AM;
+ID=1143;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'Not Valid Action At: 'git-push'' 
+####;
+Relation=11/11/2023 12:28:42 AM;
+ID=1145;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( not-available )> 
+ Exception: 
+System.ArgumentException: The path is not of a legal form.
+   at System.IO.Path.NewNormalizePath(String path, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.Path.GetFullPathInternal(String path)
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFiles(String path)
+   at QuickTools.QCore.Get.Ls(String path)
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/11/2023 12:28:51 AM;
+ID=1147;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotImplemented' 'The code is recongnized but sadly there are only 2 wasy to run a program and is either by providing the entired path or  by being in the same directory on the shell and running the program' 
+####;
+Relation=11/11/2023 12:35:10 AM;
+ID=1149;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotImplemented' 'The code is recongnized but sadly there are only 2 wasy to run a program and is either by providing the entired path or  by being in the same directory on the shell and running the program' 
+####;
+Relation=11/11/2023 12:35:33 AM;
+ID=1151;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( not-available )> 
+ Exception: 
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Release\~\Documents'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFiles(String path)
+   at QuickTools.QCore.Get.Ls(String path)
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/11/2023 12:36:53 AM;
+ID=1153;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( not-available )> 
+ Exception: 
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Release\WII'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFiles(String path)
+   at QuickTools.QCore.Get.Ls(String path)
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/11/2023 12:39:43 AM;
+ID=1155;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( not-available )> 
+ Exception: 
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Release\WII'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFiles(String path)
+   at QuickTools.QCore.Get.Ls(String path)
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/11/2023 12:39:52 AM;
+ID=1157;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( not-available )> 
+ Exception: 
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Release\WII'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFiles(String path)
+   at QuickTools.QCore.Get.Ls(String path)
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/11/2023 12:39:56 AM;
+ID=1159;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' '' 
+####;
+Relation=11/11/2023 12:41:25 AM;
+ID=1161;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( echo "this has to have some text here in the desktop directory"  > file.txt  )> 
+ Exception: 
+System.ArgumentException: Illegal characters in path.
+   at System.IO.Path.CheckInvalidPathChars(String path, Boolean checkAdditional)
+   at System.IO.Path.IsPathRooted(String path)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass31_0.<SetExecution>b__0() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Parameters.cs:line 113
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/11/2023 12:52:09 AM;
+ID=1163;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( echo "this text has to be written on the Desktop and on the file.txt file"  > file.txt  )> 
+ Exception: 
+System.ArgumentException: Illegal characters in path.
+   at System.IO.Path.CheckInvalidPathChars(String path, Boolean checkAdditional)
+   at System.IO.Path.IsPathRooted(String path)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass31_0.<SetExecution>b__0() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Parameters.cs:line 113
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/11/2023 12:56:53 AM;
+ID=1165;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( echo "1 2 3 4 5 5 6 6"  > file.txt  )> 
+ Exception: 
+System.ArgumentException: Illegal characters in path.
+   at System.IO.Path.CheckInvalidPathChars(String path, Boolean checkAdditional)
+   at System.IO.Path.IsPathRooted(String path)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass31_0.<SetExecution>b__0() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Parameters.cs:line 113
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/11/2023 12:59:29 AM;
+ID=1167;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( echo "this text has to be written to a file that is in the Desktop"  c:/users/melquiceded/desktop/file.txt  )> 
+ Exception: 
+System.ArgumentException: Illegal characters in path.
+   at System.IO.Path.CheckInvalidPathChars(String path, Boolean checkAdditional)
+   at System.IO.Path.IsPathRooted(String path)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass31_0.<SetExecution>b__0() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Parameters.cs:line 113
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/11/2023 1:03:27 AM;
+ID=1169;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( echo "this text has to be written to a file that is in the Desktop"  C:/users/melquiceded/desktop/file.txt  )> 
+ Exception: 
+System.ArgumentException: Illegal characters in path.
+   at System.IO.Path.CheckInvalidPathChars(String path, Boolean checkAdditional)
+   at System.IO.Path.IsPathRooted(String path)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass31_0.<SetExecution>b__0() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Parameters.cs:line 113
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/11/2023 1:04:42 AM;
+ID=1171;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( echo "this text has to be written to a file that is in the Desktop"  c:\users\melquiceded\desktop\file.txt  )> 
+ Exception: 
+System.ArgumentException: Illegal characters in path.
+   at System.IO.Path.CheckInvalidPathChars(String path, Boolean checkAdditional)
+   at System.IO.Path.IsPathRooted(String path)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass31_0.<SetExecution>b__0() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Parameters.cs:line 113
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/11/2023 1:05:16 AM;
+ID=1173;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( echo "1 2 3 4"  > file.txt  )> 
+ Exception: 
+System.ArgumentException: Illegal characters in path.
+   at System.IO.Path.CheckInvalidPathChars(String path, Boolean checkAdditional)
+   at System.IO.Path.IsPathRooted(String path)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass31_0.<SetExecution>b__0() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Parameters.cs:line 113
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/11/2023 1:09:21 AM;
+ID=1175;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( echo "1 2 3 4 5"  > file.txt  )> 
+ Exception: 
+System.ArgumentException: Illegal characters in path.
+   at System.IO.Path.CheckInvalidPathChars(String path, Boolean checkAdditional)
+   at System.IO.Path.IsPathRooted(String path)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass31_0.<SetExecution>b__0() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Parameters.cs:line 113
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/11/2023 1:10:21 AM;
+ID=1177;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( echo "1 2 3 4 5"  > file.txt  )> 
+ Exception: 
+System.ArgumentException: Illegal characters in path.
+   at System.IO.Path.CheckInvalidPathChars(String path, Boolean checkAdditional)
+   at System.IO.Path.IsPathRooted(String path)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass31_0.<SetExecution>b__0() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Parameters.cs:line 113
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/11/2023 1:11:14 AM;

@@ -47,7 +47,7 @@ namespace ClownShell.ScripRunner
         private void ThrowError(Exception error)
         {
             string cmd = this.RunningCode.Length == 0 ? "not-available" : IConvert.ArrayToText(this.RunningCode);//*/ : "not-available"; /*"not-available";*/
-            new ErrorHandeler().DisplayError(ErrorHandeler.ErrorType.ExecutionError, $"Code Executed: <( {cmd} )> \n Exception: \n{error}");
+            new ErrorHandeler().DisplayError(ErrorType.ExecutionError, $"Code Executed: <( {cmd} )> \n Exception: \n{error}");
         }
         private void Reset()
         {

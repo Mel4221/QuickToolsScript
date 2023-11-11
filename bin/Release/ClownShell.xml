@@ -110,31 +110,6 @@
             Contains a Virtual stack 
             </summary>
         </member>
-        <member name="F:ClownShell.Parser.CodeParser.Action">
-            <summary>
-            provides the given action type 
-            </summary>
-        </member>
-        <member name="F:ClownShell.Parser.CodeParser.Type">
-            <summary>
-            provides the type of execution 
-            </summary>
-        </member>
-        <member name="F:ClownShell.Parser.CodeParser.Target">
-            <summary>
-            Containst the path plus the given folder or file given to the shellLoop
-            </summary>
-        </member>
-        <member name="F:ClownShell.Parser.CodeParser.SubTarget">
-            <summary>
-            Contains only the current path
-            </summary>
-        </member>
-        <member name="F:ClownShell.Parser.CodeParser.Parameters">
-            <summary>
-            contains the given parameters to the method CodeParser.GetExecution(Action = Type = Parameter)
-            </summary>
-        </member>
         <member name="F:ClownShell.Parser.CodeParser.Code">
             <summary>
             Contains the Code array
@@ -165,6 +140,30 @@
             Contains the types of code that will have to be parse 
             </summary>
             
+        </member>
+        <member name="M:ClownShell.Parser.CodeParser.GetPathWithType(System.String)">
+            <summary>
+            Returns the pah properly bounded to the actual path
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClownShell.Parser.CodeParser.FormatStrings(System.String[])">
+            <summary>
+            this is not an string formatter this is more like an array
+            unifier this joings the arrays of strings into one if it finds
+            that they have an open and closing qoutes
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClownShell.Parser.CodeParser.SetExecution(System.String,System.String,System.String[])">
+            <summary>
+            Runst the script provided with an Action , Type and parameters
+            </summary>
+            <param name="action"></param>
+            <param name="type"></param>
+            <param name="parameters"></param>
         </member>
         <member name="M:ClownShell.Parser.CodeParser.SetExecution(System.String,System.String)">
             <summary>

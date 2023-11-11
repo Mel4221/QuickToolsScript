@@ -59,29 +59,78 @@ namespace ClownShell.Parser
             return param;
         }
 
+
+
+        /// <summary>
+        /// Runst the script provided with an Action , Type and parameters
+        /// </summary>
+        /// <param name="action"></param>
+        /// <param name="type"></param>
+        /// <param name="parameters"></param>
         public void SetExecution(string action, string type, string[] parameters)
         {
+
+            /*
+             * Action   type  Parameter[0]     param[1]
+                var     words       =       "this input is a very long input"
+                en      file.txt   1234
+                mv      file.txt   ../file.txt -v
+                echo    "1234"      >           file.txt
+                write   file.txt    "this input has to be written to it"
+             */
+
             //string fix = type[0] == '>' ? type.Substring(1) : Get.FixPath($"{ShellLoop.CurrentPath}{Get.Slash()}{type}");
-            this.cache = new DataCacher();
-            this.runner = new ScriptRunner();// passing this class for it to have acess to the code being handle 
-            this.runner.RunningCode = this.Code; 
-            this.error = new ErrorHandeler();
+            //this.cache = new DataCacher();
+            ScriptRunner runner = new ScriptRunner();// passing this class for it to have acess to the code being handle 
+            runner.RunningCode = this.Code;
+            ErrorHandeler error = new ErrorHandeler();
 
             //this.Target = Get.FixPath(fix);
-            //this.SubTarget = Get.FixPath($"{ShellLoop.CurrentPath}");
+            //this.SubTarget = Get.FixPath($"{ShellLoop.Cur rentPath}");
             this.RedirectedText = new StringBuilder();
             string[] param =   this.GetParameters(parameters);
-            this.Parameters = param;
-            this.Action = action;
-            this.Type = type;
-            this.Target = $"{ShellLoop.CurrentPath}{Get.Slash()}{type}";
-            this.SubTarget = $"{ShellLoop.CurrentPath}{Get.Slash()}{param[0]}";
+            //this.Parameters = param;
+            //this.Action = action;
+            //this.Type = type;
+            //this.Target = $"{ShellLoop.CurrentPath}{Get.Slash()}{type}";
+            //this.SubTarget = $"{ShellLoop.CurrentPath}{Get.Slash()}{param[0]}";
 
-            Get.Yellow("For Testing: ");
-            Print.List(param);
+            //Get.Yellow("For Testing: ");
+            //Print.List(param);
+            Get.Yellow();
+            Get.Write($"Action: {action} ");
+            Get.Blue();
+            Get.Write($"Type: {type} ");
+            Get.Green();
+            Get.Write($"Parameters: {IConvert.ArrayToText(param)}\n");
+            Get.Reset();
             switch (action)
             {
+                case "echo":
+                    //Get.Wait($"{this.IsRootPath(type)} {this.IsRootPath(param[1])}");
+                    runner.Run(() => {
+                        // Get.Wait($"{this.GetPathWithType(param[1])}");
 
+                        //echo "this text" > file.txt
+                        //Print.List(param); 
+                        
+                        if (this.IsRootPath(type) && this.IsRootPath(param[1]))
+                        {
+                            //Get.Wait("Rooted");
+                            Binary.CopyBinaryFile(type, param[1]);
+                      
+                            return;
+                        }
+                        else
+                        {
+
+                            //Get.Yellow($"{this.GetPathWithType(param[1])} > {type}");
+                            string str = type.Replace('"'.ToString(), ""); 
+                            Writer.Write(this.GetPathWithType(param[1]),str );
+                            Get.Yellow($"{type} > {param[1]} {Get.FileSize(Get.Bytes(str))}");
+                        }
+                    });
+                    break;
                 case "var":
                 case "mem":
                     runner.Run(() => {
@@ -121,296 +170,307 @@ namespace ClownShell.Parser
                     break;
                 case "function":
                     runner.Run(() => {
-                            
+                        error.DisplayError(ErrorType.NotImplemented);
+
                     });
                     break;
                 case "mv":
-                    runner.Run(() =>
-                    {
+                    error.DisplayError(ErrorType.NotImplemented);
 
-                        string _param = param[0];
+                    //runner.Run(() =>
+                    //{
 
-                        this.Target = $"{ShellLoop.CurrentPath}{Get.Slash()}{type}";
-                        this.SubTarget = $"{ShellLoop.CurrentPath}{Get.Slash()}{_param}";
-                        Get.Blue($"Target: {this.SubTarget} SubTarget: {this.SubTarget}");
+                    //    string _param = param[0];
 
-                        CodeParser parser = Helper.ResolvePath(this);
+                    //    this.Target = $"{ShellLoop.CurrentPath}{Get.Slash()}{type}";
+                    //    this.SubTarget = $"{ShellLoop.CurrentPath}{Get.Slash()}{_param}";
+                    //    Get.Blue($"Target: {this.SubTarget} SubTarget: {this.SubTarget}");
 
-                        if (parser.PathResolved)
-                        {
-                            this.Target = parser.Target;
-                            this.SubTarget = parser.SubTarget;
-                        }
+                    //    CodeParser parser = Helper.ResolvePath(this);
 
-                        Binary.CopyBinaryFile(this.Target, this.SubTarget);
-                        GC.Collect();
-                        File.Delete(this.Target); 
-                    });
+                    //    if (parser.PathResolved)
+                    //    {
+                    //        this.Target = parser.Target;
+                    //        this.SubTarget = parser.SubTarget;
+                    //    }
+
+                    //    Binary.CopyBinaryFile(this.Target, this.SubTarget);
+                    //    GC.Collect();
+                    //    File.Delete(this.Target); 
+                    //});
                     break;
                 case "create":
-                    //create zero-file 1 file.txt
-                    if (type == "zero-file" && param.Length >= 2)
-                    {
-                        if (Get.IsNumber(param[0]))
-                        {
-                            runner.Run(() => {
-                                Console.Title = Console.Title + "Working With A BackGround Job";
-                                int size = int.Parse(param[0]);
-                                Binary.CreateZeroFile(param[1], size, false);
-                                Console.Title = " Task Completed";
-                                Thread.Sleep(5000);
-                                Console.Title = Program.Name;
-                            }, true);
-                            return;
-                        }
-                        else
-                        {
-                            Get.Yellow($"The Right Way is: ");
-                            Get.Green($"create zero-file gbSize fileName");
-                            Get.Green("create zero-file 1 zeroFile.iso");
+                    error.DisplayError(ErrorType.NotImplemented);
 
-                        }
-                    }
+                    ////create zero-file 1 file.txt
+                    //if (type == "zero-file" && param.Length >= 2)
+                    //{
+                    //    if (Get.IsNumber(param[0]))
+                    //    {
+                    //        runner.Run(() => {
+                    //            Console.Title = Console.Title + "Working With A BackGround Job";
+                    //            int size = int.Parse(param[0]);
+                    //            Binary.CreateZeroFile(param[1], size, false);
+                    //            Console.Title = " Task Completed";
+                    //            Thread.Sleep(5000);
+                    //            Console.Title = Program.Name;
+                    //        }, true);
+                    //        return;
+                    //    }
+                    //    else
+                    //    {
+                    //        Get.Yellow($"The Right Way is: ");
+                    //        Get.Green($"create zero-file gbSize fileName");
+                    //        Get.Green("create zero-file 1 zeroFile.iso");
+
+                    //    }
+                    //}
                     break;
                 case "rm":
-                    if (type == "-r" && param.Length >= 1)
-                    {
-                        /*
-                         * condition that allow to cancel or stop  the ScriptRunner
-                         */
-                        if (param.Length == 3)
-                        {
-                            if (param[2] == "-c" || param[2] == "-cancell")
-                            {
-                                runner.AllowToCancell = true;
-                            }
-                        }
-                        runner.Run(() => {
-                            //Get.Wait($"{this.SubTarget}");
-                            Get.Red($"{Path.GetFullPath(this.SubTarget)}{Get.Slash()}{param[0]}");
-                            Get.Blue($"{Get.Path}");
-                            string str = $"{Get.RelativePath($"{this.Target}")}{this.SubTarget.Substring(this.SubTarget.IndexOf(Get.Slash()) + 1)}{Get.Slash()}{param[0]}";
+                    error.DisplayError(ErrorType.NotImplemented);
 
-                            Get.Yellow(str);
+                    //if (type == "-r" && param.Length >= 1)
+                    //{
+                    //    /*
+                    //     * condition that allow to cancel or stop  the ScriptRunner
+                    //     */
+                    //    if (param.Length == 3)
+                    //    {
+                    //        if (param[2] == "-c" || param[2] == "-cancell")
+                    //        {
+                    //            runner.AllowToCancell = true;
+                    //        }
+                    //    }
+                    //    runner.Run(() => {
+                    //        //Get.Wait($"{this.SubTarget}");
+                    //        Get.Red($"{Path.GetFullPath(this.SubTarget)}{Get.Slash()}{param[0]}");
+                    //        Get.Blue($"{Get.Path}");
+                    //        string str = $"{Get.RelativePath($"{this.Target}")}{this.SubTarget.Substring(this.SubTarget.IndexOf(Get.Slash()) + 1)}{Get.Slash()}{param[0]}";
 
-                            //Writer.Write("file.txt",str);
-                            //Get.Wait();
-                            FilesMaper maper = new FilesMaper(str);
+                    //        Get.Yellow(str);
 
-                            maper.Map();
+                    //        //Writer.Write("file.txt",str);
+                    //        //Get.Wait();
+                    //        FilesMaper maper = new FilesMaper(str);
 
-                            List<string> folders = maper.Directories;
-                            List<string> files = maper.Files;
+                    //        maper.Map();
 
-                            for (int current = files.Count - 1; current > 0; current--)
-                            {
-                                if (param.Length == 2)
-                                {
-                                    if (param[1] == "-d" || param[1] == "-debug")
-                                    {
+                    //        List<string> folders = maper.Directories;
+                    //        List<string> files = maper.Files;
 
-                                        Get.Red($"Deleting...: {files[current]}");
+                    //        for (int current = files.Count - 1; current > 0; current--)
+                    //        {
+                    //            if (param.Length == 2)
+                    //            {
+                    //                if (param[1] == "-d" || param[1] == "-debug")
+                    //                {
 
-                                    }
-                                    if (param[1] == ">")
-                                    {
-                                        this.RedirectedText.Append(files[current] + "\n");
-                                    }
+                    //                    Get.Red($"Deleting...: {files[current]}");
 
-                                }
-                            }
-                            //Get.Ok();
-                            GC.Collect();// to make sure that it release the path from the files 
-                            for (int current = folders.Count - 1; current > 0; current--)
-                            {
-                                if (param.Length == 2)
-                                {
-                                    if (param[1] == "-d" || param[1] == "-debug")
-                                    {
-                                        Get.Red($"Deleting...: {folders[current]}");
-                                    }
-                                    if (param[1] == ">")
-                                    {
-                                        this.RedirectedText.Append(folders[current] + "\n");
-                                    }
-                                }
+                    //                }
+                    //                if (param[1] == ">")
+                    //                {
+                    //                    this.RedirectedText.Append(files[current] + "\n");
+                    //                }
 
-                            }
-                            Get.Ok();
-                            if (param.Length == 2)
-                            {
-                                if (param[1] == ">")
-                                {
-                                    Writer.Write($"{this.SubTarget}{Get.Slash()}{param[2]}", this.RedirectedText.ToString());
-                                }
-                            }
-                        });
-                    }
+                    //            }
+                    //        }
+                    //        //Get.Ok();
+                    //        GC.Collect();// to make sure that it release the path from the files 
+                    //        for (int current = folders.Count - 1; current > 0; current--)
+                    //        {
+                    //            if (param.Length == 2)
+                    //            {
+                    //                if (param[1] == "-d" || param[1] == "-debug")
+                    //                {
+                    //                    Get.Red($"Deleting...: {folders[current]}");
+                    //                }
+                    //                if (param[1] == ">")
+                    //                {
+                    //                    this.RedirectedText.Append(folders[current] + "\n");
+                    //                }
+                    //            }
+
+                    //        }
+                    //        Get.Ok();
+                    //        if (param.Length == 2)
+                    //        {
+                    //            if (param[1] == ">")
+                    //            {
+                    //                Writer.Write($"{this.SubTarget}{Get.Slash()}{param[2]}", this.RedirectedText.ToString());
+                    //            }
+                    //        }
+                    //    });
+                    //}
                     break;
                 case "find":
                 case "search":
                     /*
                      * condition that allow to cancel or stop  the ScriptRunner
                      */
-                    if (param.Length == 3)
-                    {
-                        if (param[2] == "-c" || param[2] == "-cancell")
-                        {
-                            runner.AllowToCancell = true;
-                        }
-                    }
-                    // if is retroactive 
-                    if (type == "-r" && param.Length >= 1)
-                    {
- 
-                        runner.Run(() => {
-                            //Get.Wait($"{this.SubTarget}");
-                            FilesMaper maper = new FilesMaper(this.SubTarget);
-                            if (param.Length == 2)
-                            {
-                                if (param[1] == "-d" || param[1] == "-debug")
-                                {
-                                    maper.AllowDebugger = true;
-                                }
-                            }
-                            maper.Map();
-                            List<string> folders = maper.Directories;
-                            List<string> files = maper.Files;
-                            int fCurrent, goal;
-                            goal = files.Count - 1;
-                            // start at the end of the list the loop 
-                            for (int current = files.Count - 1; current > 0; current--)
-                            {
-                                fCurrent = current;
-                                if (param[0] == Get.FileNameFromPath(files[current]))
-                                {
-                                    ShellLoop.SelectedOject = files[current]; // auto select the object 
-                                    Get.Green($"Founded: {files[current]}");
-                                    this.SetExecution("selected"); // print the seleted object 
-                                    return;
-                                }
-                                //Get.Wait($"Target: {this.Target} ClearTarget: {this.SubTarget} FilesCurrent: {files[current]} Param: {param[0]}");
-                                //  Get.Yellow($" ClearTarget: {this.SubTarget} FilesCurrent: {files[current]} Param: {param[0]}");
+                    error.DisplayError(ErrorType.NotImplemented);
 
-                                // new QProgressBar().Display(fCurrent,goal); 
-                            }
-                            Get.Red($"{param[0]} Was Not Founded  FilesChecked: {files.Count}");
-                            return;
-                        });
-                    }
-                    if (type == "-all" || type == "-a" && param.Length >= 1)
-                    {
-                        runner.Run(() => {
-                            //Get.Wait($"{this.SubTarget}");
-                            FilesMaper maper = new FilesMaper(this.SubTarget);
-                            if (param.Length == 2)
-                            {
-                                if (param[1] == "-d" || param[1] == "-debug")
-                                {
-                                    maper.AllowDebugger = true;
-                                }
-                            }
-                            maper.Map();
-                            List<string> folders = maper.Directories;
-                            List<string> files = maper.Files;
-                            List<string> founded = new List<string>();
-                            int fCurrent, goal;
-                            goal = files.Count - 1;
-                            for (int current = files.Count - 1; current > 0; current--)
-                            {
-                                fCurrent = current;
-                                if (param[0] == Get.FileNameFromPath(files[current]))
-                                {
+                    //if (param.Length == 3)
+                    //{
+                    //    if (param[2] == "-c" || param[2] == "-cancell")
+                    //    {
+                    //        runner.AllowToCancell = true;
+                    //    }
+                    //}
+                    //// if is retroactive 
+                    //if (type == "-r" && param.Length >= 1)
+                    //{
 
-                                    founded.Add(files[current]);
-                                    //Get.Green($"Founded: {files[current]}"); 
-                                }//if the file extention is equal to the file founded add it to the list 
-                                if (param[0][0] == '*' && Get.FileExention(files[current]) == Get.FileExention(param[0]))
-                                {
-                                    founded.Add(files[current]);
-                                }
-                                //Get.Wait($"Target: {this.Target} ClearTarget: {this.SubTarget} FilesCurrent: {files[current]} Param: {param[0]}");
-                                //  Get.Yellow($" ClearTarget: {this.SubTarget} FilesCurrent: {files[current]} Param: {param[0]}");
+                    //    runner.Run(() => {
+                    //        //Get.Wait($"{this.SubTarget}");
+                    //        FilesMaper maper = new FilesMaper(this.SubTarget);
+                    //        if (param.Length == 2)
+                    //        {
+                    //            if (param[1] == "-d" || param[1] == "-debug")
+                    //            {
+                    //                maper.AllowDebugger = true;
+                    //            }
+                    //        }
+                    //        maper.Map();
+                    //        List<string> folders = maper.Directories;
+                    //        List<string> files = maper.Files;
+                    //        int fCurrent, goal;
+                    //        goal = files.Count - 1;
+                    //        // start at the end of the list the loop 
+                    //        for (int current = files.Count - 1; current > 0; current--)
+                    //        {
+                    //            fCurrent = current;
+                    //            if (param[0] == Get.FileNameFromPath(files[current]))
+                    //            {
+                    //                ShellLoop.SelectedOject = files[current]; // auto select the object 
+                    //                Get.Green($"Founded: {files[current]}");
+                    //                this.SetExecution("selected"); // print the seleted object 
+                    //                return;
+                    //            }
+                    //            //Get.Wait($"Target: {this.Target} ClearTarget: {this.SubTarget} FilesCurrent: {files[current]} Param: {param[0]}");
+                    //            //  Get.Yellow($" ClearTarget: {this.SubTarget} FilesCurrent: {files[current]} Param: {param[0]}");
 
-                                // new QProgressBar().Display(fCurrent,goal); 
-                            }
-                            if (founded.Count == 0)
-                            {
-                                Get.Red($"{param[0]} Was Not Founded  FilesChecked: {files.Count}");
-                                return;
-                            }
-                            else
-                            {
-                                founded.ForEach((item) => { Get.Yellow(item); });
-                                Get.Green($"File: {param[0]} Founded {founded.Count} Time's");
-                            }
-                            return;
-                        });
-                    }
+                    //            // new QProgressBar().Display(fCurrent,goal); 
+                    //        }
+                    //        Get.Red($"{param[0]} Was Not Founded  FilesChecked: {files.Count}");
+                    //        return;
+                    //    });
+                    //}
+                    //if (type == "-all" || type == "-a" && param.Length >= 1)
+                    //{
+                    //    runner.Run(() => {
+                    //        //Get.Wait($"{this.SubTarget}");
+                    //        FilesMaper maper = new FilesMaper(this.SubTarget);
+                    //        if (param.Length == 2)
+                    //        {
+                    //            if (param[1] == "-d" || param[1] == "-debug")
+                    //            {
+                    //                maper.AllowDebugger = true;
+                    //            }
+                    //        }
+                    //        maper.Map();
+                    //        List<string> folders = maper.Directories;
+                    //        List<string> files = maper.Files;
+                    //        List<string> founded = new List<string>();
+                    //        int fCurrent, goal;
+                    //        goal = files.Count - 1;
+                    //        for (int current = files.Count - 1; current > 0; current--)
+                    //        {
+                    //            fCurrent = current;
+                    //            if (param[0] == Get.FileNameFromPath(files[current]))
+                    //            {
+
+                    //                founded.Add(files[current]);
+                    //                //Get.Green($"Founded: {files[current]}"); 
+                    //            }//if the file extention is equal to the file founded add it to the list 
+                    //            if (param[0][0] == '*' && Get.FileExention(files[current]) == Get.FileExention(param[0]))
+                    //            {
+                    //                founded.Add(files[current]);
+                    //            }
+                    //            //Get.Wait($"Target: {this.Target} ClearTarget: {this.SubTarget} FilesCurrent: {files[current]} Param: {param[0]}");
+                    //            //  Get.Yellow($" ClearTarget: {this.SubTarget} FilesCurrent: {files[current]} Param: {param[0]}");
+
+                    //            // new QProgressBar().Display(fCurrent,goal); 
+                    //        }
+                    //        if (founded.Count == 0)
+                    //        {
+                    //            Get.Red($"{param[0]} Was Not Founded  FilesChecked: {files.Count}");
+                    //            return;
+                    //        }
+                    //        else
+                    //        {
+                    //            founded.ForEach((item) => { Get.Yellow(item); });
+                    //            Get.Green($"File: {param[0]} Founded {founded.Count} Time's");
+                    //        }
+                    //        return;
+                    //    });
+                    //}
                     break;
                 case "cp":
                     runner.Run(() => {
+                        error.DisplayError(ErrorType.NotImplemented);
+
                         // is trying to select multiple 
-                        if (type.Contains("*"))
-                        {
+                        //if (type.Contains("*"))
+                        //{
 
-                            Get.Yellow($"Selecting Multiples");
-                            CodeParser helper = Helper.ResolvePath(this);
-                            this.SubTarget = helper.SubTarget;
-                            this.Target = helper.Target;
-                            Get.Green($"Target: {this.Target} SubTarget: {this.SubTarget}");
-                            string path = this.Target.Substring(0,this.Target.IndexOf("*"));
-                            bool allowDebugger = false; 
-                            Get.Yellow($"Source: {path}");
-                            FilesMaper maper = new FilesMaper(path);
-                            //allow Debgugger condition
-                            if(param.Length > 1)
-                            {
-                                if (param[1] == "-d" || param[1] == "-debug")
-                                {
-                                    maper.AllowDebugger = true;
-                                    allowDebugger = true; 
-                                }
-                            }
-                             List<string> files = maper.MapOnlyFiles(this.Target);
-                            if(files.Count == 0)
-                            {
-                                Get.Red($"Not File Founded that match the given Extention: .{Get.FileExention(this.Target)}");
-                                return;
-                            }
-                             for(int f = 0; f < files.Count; f++)
-                            {
-                                if (allowDebugger)
-                                {
-                                    Get.Green($"{this.SubTarget}{Get.FileNameFromPath(files[f])}");
-                                }
-                                
-                                Get.Red($"{this.SubTarget}{Get.FileNameFromPath(files[f])}");
-                                Binary.CopyBinaryFile(files[f], $"{this.SubTarget}{Get.FileNameFromPath(files[f])}");
-                            }
+                        //    Get.Yellow($"Selecting Multiples");
+                        //    CodeParser helper = Helper.ResolvePath(this);
+                        //    this.SubTarget = helper.SubTarget;
+                        //    this.Target = helper.Target;
+                        //    Get.Green($"Target: {this.Target} SubTarget: {this.SubTarget}");
+                        //    string path = this.Target.Substring(0, this.Target.IndexOf("*"));
+                        //    bool allowDebugger = false;
+                        //    Get.Yellow($"Source: {path}");
+                        //    FilesMaper maper = new FilesMaper(path);
+                        //    allow Debgugger condition
+                        //    if (param.Length > 1)
+                        //    {
+                        //        if (param[1] == "-d" || param[1] == "-debug")
+                        //        {
+                        //            maper.AllowDebugger = true;
+                        //            allowDebugger = true;
+                        //        }
+                        //    }
+                        //    List<string> files = maper.MapOnlyFiles(this.Target);
+                        //    if (files.Count == 0)
+                        //    {
+                        //        Get.Red($"Not File Founded that match the given Extention: .{Get.FileExention(this.Target)}");
+                        //        return;
+                        //    }
+                        //    for (int f = 0; f < files.Count; f++)
+                        //    {
+                        //        if (allowDebugger)
+                        //        {
+                        //            Get.Green($"{this.SubTarget}{Get.FileNameFromPath(files[f])}");
+                        //        }
+
+                        //        Get.Red($"{this.SubTarget}{Get.FileNameFromPath(files[f])}");
+                        //        Binary.CopyBinaryFile(files[f], $"{this.SubTarget}{Get.FileNameFromPath(files[f])}");
+                        //    }
 
 
-                            return;
-                        }
-                        
-                        string _param = param[0];
-                        this.Target = $"{ShellLoop.CurrentPath}{Get.Slash()}{type}";
-                        this.SubTarget = $"{ShellLoop.CurrentPath}{Get.Slash()}{_param}";
+                        //    return;
+                        //}
 
-                        Get.Blue($"Target: {this.SubTarget} SubTarget: {this.SubTarget}");
+                        //string _param = param[0];
+                        //this.Target = $"{ShellLoop.CurrentPath}{Get.Slash()}{type}";
+                        //this.SubTarget = $"{ShellLoop.CurrentPath}{Get.Slash()}{_param}";
 
-                        CodeParser parser = Helper.ResolvePath(this);
+                        //Get.Blue($"Target: {this.SubTarget} SubTarget: {this.SubTarget}");
 
-                        if (parser.PathResolved)
-                        {
-                            this.Target = parser.Target;
-                            this.SubTarget = parser.SubTarget; 
-                        }
-                        
-                        Binary.CopyBinaryFile(this.Target, this.SubTarget);
+                        //CodeParser parser = Helper.ResolvePath(this);
 
-                     //   Get.Red($"Target: {obj.Target} SubTarget: {obj.SubTarget}");
-                        return;
+                        //if (parser.PathResolved)
+                        //{
+                        //    this.Target = parser.Target;
+                        //    this.SubTarget = parser.SubTarget;
+                        //}
+
+                        //Binary.CopyBinaryFile(this.Target, this.SubTarget);
+
+                        //Get.Red($"Target: {obj.Target} SubTarget: {obj.SubTarget}");
+                        //return;
 
                         ////this.SubTarget = param[0]; 
                         //// to create a local variable 
@@ -449,10 +509,10 @@ namespace ClownShell.Parser
 
                         //     //Get.Wait(this.SubTarget);
                         // }
-                      
-                     //    Get.Wait(Helper.HasSpecialFolder("desktop"));
 
-                         //Get.Yellow($"Target: {this.Target}  ClearTarget: {this.SubTarget}");
+                        //    Get.Wait(Helper.HasSpecialFolder("desktop"));
+
+                        //Get.Yellow($"Target: {this.Target}  ClearTarget: {this.SubTarget}");
 
 
                         //reads the data // this version works perfect 
@@ -484,19 +544,19 @@ namespace ClownShell.Parser
                 case "list":
                 case "list-files":
                     runner.Run(() => {
-                        
-                        if (param.Length != 1)
-                        {
-                            error.DisplayError(ErrorHandeler.ErrorType.NotValidParameter, this.Code);
+                        error.DisplayError(ErrorType.NotImplemented);
+                        //if (param.Length != 1)
+                        //{
+                        //    error.DisplayError(ErrorHandeler.ErrorType.NotValidParameter, this.Code);
 
-                            return;
-                        }
+                        //    return;
+                        //}
                      
-                        if (type == "-l")
-                        {
+                        //if (type == "-l")
+                        //{
                             
-                            return;
-                        }
+                        //    return;
+                        //}
                         
                     });
                        
@@ -544,12 +604,12 @@ namespace ClownShell.Parser
                         case "decrypt":
                         case "-d":
                         case "-D":
-                            Get.Red("Not Done Yet");
+                            error.DisplayError(ErrorType.NotImplemented);
                             break;
                     }                    
                     break;
                 default:
-                    error.DisplayError(ErrorHandeler.ErrorType.NotValidAction, this.Code);
+                    error.DisplayError(ErrorType.NotValidAction,$"Not Valid Action At: '{action}'");
                     break;
             }
         }

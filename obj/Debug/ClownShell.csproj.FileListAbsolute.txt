@@ -1,12 +1,13 @@
-C:\Users\Melquiceded\Documents\csharp\ClownShell\obj\Debug\ClownShell.csproj.AssemblyReference.cache
-C:\Users\Melquiceded\Documents\csharp\ClownShell\obj\Debug\ClownShell.csproj.SuggestedBindingRedirects.cache
-C:\Users\Melquiceded\Documents\csharp\ClownShell\obj\Debug\ClownShell.csproj.CoreCompileInputs.cache
 C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Debug\ClownShell.exe.manifest
 C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Debug\ClownShell.application
 C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Debug\ClownShell.exe
 C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Debug\ClownShell.pdb
 C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Debug\QuickTools.dll
 C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Debug\QuickTools.xml
+C:\Users\Melquiceded\Documents\csharp\ClownShell\obj\Debug\ClownShell.csproj.AssemblyReference.cache
+C:\Users\Melquiceded\Documents\csharp\ClownShell\obj\Debug\ClownShell.csproj.SuggestedBindingRedirects.cache
+C:\Users\Melquiceded\Documents\csharp\ClownShell\obj\Debug\ClownShell.csproj.CoreCompileInputs.cache
+C:\Users\Melquiceded\Documents\csharp\ClownShell\obj\Debug\ClownShell.TrustInfo.xml
 C:\Users\Melquiceded\Documents\csharp\ClownShell\obj\Debug\ClownShell.exe.manifest
 C:\Users\Melquiceded\Documents\csharp\ClownShell\obj\Debug\ClownShell.application
 C:\Users\Melquiceded\Documents\csharp\ClownShell\obj\Debug\ClownShell.csproj.CopyComplete

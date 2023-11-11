@@ -32,7 +32,6 @@ using ClownShell.Parser.Scripts.RuleChecks;
 using QuickTools.QIO;
 using System.Reflection;
 using System;
-
 namespace ClownShell.Init
 {
     internal class Program
@@ -90,6 +89,7 @@ namespace ClownShell.Init
             }
             catch(Exception ex)
             {
+                new ClownShell.ErrorHandler.ErrorHandeler().DisplayError(ClownShell.ErrorHandler.ErrorType.FATAL, "FATAL-ERROR");
                 Log.Event(ShellSettings.LogsFile, $"Shell Exited With a FATAL-ERROR More info in the logs file:  \n{ex}");
                 Get.Alert($"There was a FATAL ERROR MORE INFO IN this path: \n{ShellSettings.LogsFile}.log");
                 Environment.Exit(1);

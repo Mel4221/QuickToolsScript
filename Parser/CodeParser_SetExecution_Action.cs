@@ -37,6 +37,7 @@ using ClownShell.Helpers;
 using ClownShell.BackGroundFunctions;
 using ClownShell.Security;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 
 namespace ClownShell.Parser
 {
@@ -50,32 +51,42 @@ namespace ClownShell.Parser
         /// <param name="action"></param>
         public void SetExecution(string action)
         {
-            
-            
-            // Get.Wait(Get.DataPath());
-            this.cache = new DataCacher();
-            this.runner = new ScriptRunner();
-            this.error = new ErrorHandeler();
-            this.runner.RunningCode = new string[] {action};
+
+
+            ScriptRunner runner = new ScriptRunner();
+            ErrorHandeler error = new ErrorHandeler();
             ProcessStartInfo process;
+            Get.Yellow($"Action {action}\n");
+            // Get.Wait(Get.DataPath());
+            //this.cache = new DataCacher();
+            //this.runner = new ScriptRunner();
 
-            this.Target = Get.FixPath(ShellLoop.CurrentPath);
-            if (action[0] == '.' && action.Contains("/") || action.Contains("\\"))
+            //this.runner.RunningCode = new string[] {action};
+            //ProcessStartInfo process;
+
+            //this.Target = Get.FixPath(ShellLoop.CurrentPath);
+            //if (action[0] == '.' && action.Contains("/") || action.Contains("\\"))
+            //{
+            //    runner.Run(() =>
+            //    {
+            //        if (Get.IsWindow())
+            //        {
+            //            action = action.Substring(1).Replace("/", "").Replace("\\", "");
+            //            process = new ProcessStartInfo();
+            //            process.FileName = $"{ShellLoop.CurrentPath}{Get.Slash()}{action}";
+            //            process.CreateNoWindow = false;
+            //            process.UseShellExecute = false;
+            //            Process.Start(process);
+            //        }
+
+            //    });
+            //    return;
+            //}
+
+            if (this.HasExecutable(action))
             {
-                runner.Run(() =>
-                {
-                    if (Get.IsWindow())
-                    {
-                        action = action.Substring(1).Replace("/", "").Replace("\\", "");
-                        process = new ProcessStartInfo();
-                        process.FileName = $"{ShellLoop.CurrentPath}{Get.Slash()}{action}";
-                        process.CreateNoWindow = false;
-                        process.UseShellExecute = false;
-                        Process.Start(process);
-                    }
-
-                });
-                return;
+                this.RunExecutable(action); 
+                return; 
             }
             switch (action)
             {
@@ -98,10 +109,11 @@ namespace ClownShell.Parser
                         lines.ForEach(item => {
                             Get.Green($"Running: {item}");
                             string[] code = IConvert.TextToArray(item);
-                            this.Code = code;
-                            this.Start();
+                            CodeParser parser = new CodeParser(code);
+                            parser.Start(); 
+                            
                         });
-                        Get.Wait();
+                      
                     });
                     break;
                 case "free-stack":
@@ -137,7 +149,7 @@ namespace ClownShell.Parser
                 case "jobs":
                 case "job?":
                     runner.Run(() => {
-                        BackGroundJob.PrintRunningJobs(); 
+                        BackGroundJob.PrintRunningJobs();
                     }); 
                     break;
                 case "hold":
@@ -176,56 +188,62 @@ namespace ClownShell.Parser
                     break;
                 case "clear-cache":
                 case "cache-reset":
-                    runner.Run(() => { cache.ClearCache(); });
+                    runner.Run(() => { /*cache.ClearCache();*/ });
                     break;
                 case "clear-logs":
                     runner.Run(() => { Log.ClearLogs(); });
                     break;
                 case "ls":
-                     runner.Run(() => { Get.Ls(this.Target); });
+                     runner.Run(() => {
+                        
+                         Get.Ls(ShellLoop.CurrentPath); 
+                     });
                    // Get.Ls(ShellLoop.CurrentPath);
                     break;
                 case "get-input":
                 case "input":
                     runner.Run(() => {
-                        cache.Cach("EntryInput", Get.Input("Type Something: ").Text);
+                        //cache.Cach("EntryInput", Get.Input("Type Something: ").Text);
+                        error.DisplayError(ErrorType.NotImplemented, $"The command is recognized but is not currently implemented or is Disabled");
                     });
                     break;
                 case "select":
                 case "-S":
-                    runner.Run(() => {
-                        string[] files = new FilesMaper().GetFiles(this.Target);
-                        string[] folders = Directory.GetDirectories(this.Target);
-                        string[] both = new string[files.Length+folders.Length];
-                        if (files.Length > 0)
-                        {
-                            for (int current = 0; current < files.Length; current++)
-                            {
-                                both[current] = Get.FileNameFromPath(files[current]);
-                            }
-                        }
-                        int bothLength = both.Length - 1;  
-                        if(folders.Length > 0)
-                        {
-                            for (int current = 0; current < folders.Length; current++)
-                            {
-                                string path = folders[current];
-                                both[bothLength] = path.Substring(path.LastIndexOf(Get.Slash()) + 1);
-                                bothLength--;
-                            }
-                        }
-            
-                        Options option = new Options(both);
-                        option.Label = this.Target;
-                        option.SelectorL = "> ";
-                        option.SelectorR = ""; 
-                        int selection = option.Pick();
-                        string str = null;
-                        str = this.Target[this.Target.Length - 1].ToString() == Get.Slash() ? "" : Get.Slash(); 
-                        ShellLoop.SelectedOject = $">{this.Target}{Get.Slash()}{both[selection]}";
-                        //Get.Yellow(this.Target);
-                        //Get.Wait(ShellLoop.SelectedOject);
-                    });
+                    error.DisplayError(ErrorType.NotImplemented, $"The command is recognized but is not currently implemented or is Disabled");
+
+                    //runner.Run(() => {
+                    //    string[] files = new FilesMaper().GetFiles();
+                    //    string[] folders = Directory.GetDirectories(this.Target);
+                    //    string[] both = new string[files.Length+folders.Length];
+                    //    if (files.Length > 0)
+                    //    {
+                    //        for (int current = 0; current < files.Length; current++)
+                    //        {
+                    //            both[current] = Get.FileNameFromPath(files[current]);
+                    //        }
+                    //    }
+                    //    int bothLength = both.Length - 1;  
+                    //    if(folders.Length > 0)
+                    //    {
+                    //        for (int current = 0; current < folders.Length; current++)
+                    //        {
+                    //            string path = folders[current];
+                    //            both[bothLength] = path.Substring(path.LastIndexOf(Get.Slash()) + 1);
+                    //            bothLength--;
+                    //        }
+                    //    }
+
+                    //    Options option = new Options(both);
+                    //    option.Label = this.Target;
+                    //    option.SelectorL = "> ";
+                    //    option.SelectorR = ""; 
+                    //    int selection = option.Pick();
+                    //    string str = null;
+                    //    str = this.Target[this.Target.Length - 1].ToString() == Get.Slash() ? "" : Get.Slash(); 
+                    //    ShellLoop.SelectedOject = $">{this.Target}{Get.Slash()}{both[selection]}";
+                    //    //Get.Yellow(this.Target);
+                    //    //Get.Wait(ShellLoop.SelectedOject);
+                    //});
                     break;
                 case "select?":
                 case "selected":
@@ -355,7 +373,7 @@ namespace ClownShell.Parser
                     }); 
                     break;
                 default:
-                    error.DisplayError(ErrorHandeler.ErrorType.NotValidAction, this.Code);
+                    error.DisplayError(ErrorType.NotValidAction, $"Not Valid Action At: '{action}'");
                     break;
             }
         }

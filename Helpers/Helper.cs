@@ -110,126 +110,127 @@ namespace ClownShell.Helpers
         /// <returns></returns>
         public static CodeParser ResolvePath(CodeParser parser)
         {
+            return new CodeParser();
 
-            string param, type, target, subTarget;
-            string[] _params;
-            bool resolved;
-            param = "";
-            type = "";
-            target = "";
-            subTarget = "";
-            resolved = false;
+            //string param, type, target, subTarget;
+            //string[] _params;
+            //bool resolved;
+            //param = "";
+            //type = "";
+            //target = "";
+            //subTarget = "";
+            //resolved = false;
 
-            target = parser.Target;
-            subTarget = parser.SubTarget;
-            _params = parser.Parameters;
-            type = parser.Type;
+            //target = parser.Target;
+            //subTarget = parser.SubTarget;
+            //_params = parser.Parameters;
+            //type = parser.Type;
 
-            if (_params != null)
-            {
-                param = _params[0];
-                resolved = true;
-            }
-            if (target != null && target != "")
-            { 
-                if (target.Contains(">"))
-                {
-                    target = target.Replace(">", "");
+            //if (_params != null)
+            //{
+            //    param = _params[0];
+            //    resolved = true;
+            //}
+            //if (target != null && target != "")
+            //{ 
+            //    if (target.Contains(">"))
+            //    {
+            //        target = target.Replace(">", "");
 
-                }
-            }
-            if (subTarget != null && subTarget != "")
-            {
-                if (subTarget.Contains(">"))
-                {
-                    subTarget = subTarget.Replace(">", "");
-                }
-            }
-            if (param != null && param != "")
-            {
-                if (param.Contains(">"))
-                {
-                    param = param.Replace(">", "");
-                }
-            }
-            if (param == ".")
-            {
-                string slash = ShellLoop.CurrentPath[ShellLoop.CurrentPath.Length - 1].ToString() == Get.Slash() ? null : Get.Slash();
+            //    }
+            //}
+            //if (subTarget != null && subTarget != "")
+            //{
+            //    if (subTarget.Contains(">"))
+            //    {
+            //        subTarget = subTarget.Replace(">", "");
+            //    }
+            //}
+            //if (param != null && param != "")
+            //{
+            //    if (param.Contains(">"))
+            //    {
+            //        param = param.Replace(">", "");
+            //    }
+            //}
+            //if (param == ".")
+            //{
+            //    string slash = ShellLoop.CurrentPath[ShellLoop.CurrentPath.Length - 1].ToString() == Get.Slash() ? null : Get.Slash();
 
-                target = $"{subTarget}{slash}{Get.FileNameFromPath(target)}";
-                Color.Cyan($"Refer to the local directory param[0]: {param} = ClearTarget  = {target}");
-                resolved = true;
-                //Get.Wait(this.SubTarget);
-            }
+            //    target = $"{subTarget}{slash}{Get.FileNameFromPath(target)}";
+            //    Color.Cyan($"Refer to the local directory param[0]: {param} = ClearTarget  = {target}");
+            //    resolved = true;
+            //    //Get.Wait(this.SubTarget);
+            //}
 
-            if (target == ".")
-            {
-                string slash = ShellLoop.CurrentPath[ShellLoop.CurrentPath.Length - 1].ToString() == Get.Slash() ? null : Get.Slash();
+            //if (target == ".")
+            //{
+            //    string slash = ShellLoop.CurrentPath[ShellLoop.CurrentPath.Length - 1].ToString() == Get.Slash() ? null : Get.Slash();
 
-                target = $"{subTarget}{slash}";
-                Color.Cyan($"Refer to the local directory param[0]: {param} = ClearTarget  = {target}");
-                resolved = true;
-            }
+            //    target = $"{subTarget}{slash}";
+            //    Color.Cyan($"Refer to the local directory param[0]: {param} = ClearTarget  = {target}");
+            //    resolved = true;
+            //}
 
-            if (subTarget == ".")
-            {
-                string slash = ShellLoop.CurrentPath[ShellLoop.CurrentPath.Length - 1].ToString() == Get.Slash() ? null : Get.Slash();
+            //if (subTarget == ".")
+            //{
+            //    string slash = ShellLoop.CurrentPath[ShellLoop.CurrentPath.Length - 1].ToString() == Get.Slash() ? null : Get.Slash();
 
-                subTarget = $"{subTarget}{slash}";
-                Color.Cyan($"Refer to the local directory param[0]: {param} = ClearTarget  = {target}");
-                resolved = true;
-            }
-
-
-            if (ReferToDisk(type))
-            {
-                target = type;
-                Color.Cyan($"Refer To Disk the Type: {type} = Target");
-                resolved = true;
-
-            }
-
-            if (ReferToDisk(param))
-            {
-                subTarget = param;
-                Color.Cyan($"Refer To Disk The Param[0]: {param} = ClearTarget");
-                resolved = true;
+            //    subTarget = $"{subTarget}{slash}";
+            //    Color.Cyan($"Refer to the local directory param[0]: {param} = ClearTarget  = {target}");
+            //    resolved = true;
+            //}
 
 
-            }
-            //type.Substring(type.IndexOf(Get.Slash()) + 1).ToLower()
-            if (HasSpecialFolder(param) != null)
-            {
-                subTarget = HasSpecialFolder(param);
-                Color.Cyan($"Has Special Folder param[0]: {param} = ClearTarget");
-                resolved = true;
+            //if (ReferToDisk(type))
+            //{
+            //    target = type;
+            //    Color.Cyan($"Refer To Disk the Type: {type} = Target");
+            //    resolved = true;
 
-            }
+            //}
 
-            if (HasSpecialFolder(target) != null)
-            {
-                target = HasSpecialFolder(target);
-                Color.Cyan($"Has Special Folder target: {target} = target");
-                resolved = true;
-            }
+            //if (ReferToDisk(param))
+            //{
+            //    subTarget = param;
+            //    Color.Cyan($"Refer To Disk The Param[0]: {param} = ClearTarget");
+            //    resolved = true;
 
-            if (HasSpecialFolder(type) != null)
-            {
-                //this.Target = $"{Helper.HasSpecialFolder(type)}{Get.Slash()}{this.SubTarget}";
-                target = $"{HasSpecialFolder(type)}";
 
-                Color.Cyan($"Has Special Folder Type: {type} = Target");
-                resolved = true;
+            //}
+            ////type.Substring(type.IndexOf(Get.Slash()) + 1).ToLower()
+            //if (HasSpecialFolder(param) != null)
+            //{
+            //    subTarget = HasSpecialFolder(param);
+            //    Color.Cyan($"Has Special Folder param[0]: {param} = ClearTarget");
+            //    resolved = true;
 
-            }
+            //}
 
-            return new CodeParser()
-            {
-                Target = target,
-                SubTarget = subTarget,
-                PathResolved = resolved
+            //if (HasSpecialFolder(target) != null)
+            //{
+            //    target = HasSpecialFolder(target);
+            //    Color.Cyan($"Has Special Folder target: {target} = target");
+            //    resolved = true;
+            //}
 
-            };
+            //if (HasSpecialFolder(type) != null)
+            //{
+            //    //this.Target = $"{Helper.HasSpecialFolder(type)}{Get.Slash()}{this.SubTarget}";
+            //    target = $"{HasSpecialFolder(type)}";
+
+            //    Color.Cyan($"Has Special Folder Type: {type} = Target");
+            //    resolved = true;
+
+            //}
+
+            //return new CodeParser()
+            //{
+            //    Target = target,
+            //    SubTarget = subTarget,
+            //    PathResolved = resolved
+
+            //};
 
         }
 

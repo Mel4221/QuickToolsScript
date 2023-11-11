@@ -33,37 +33,13 @@ using System.Collections.Generic;
 using System.Net;
 using QuickTools.QData;
 using ClownShell.Settings;
+using System.Security.Policy;
 
 namespace ClownShell.Parser
 {
     public partial class CodeParser
     {
-
-        
-      
-   
-        public CodeResult CheckFile(string file)
-        {
-            string content;
-            if (!File.Exists(file))
-            {
-                return new CodeResult() { IsValid = false };
-            }
-            content = Reader.Read(file);
-            if(content != null || content != "")
-            {
-                return new CodeResult()
-                {
-                    IsValid = true,
-                    Code = content
-                };
-            }
-            else
-            {
-                return new CodeResult() { IsValid = false };
-            }
-
-        }
+       
 
         private void Parse(CodeType codeType)
         {
@@ -134,8 +110,7 @@ namespace ClownShell.Parser
             switch (code.Length)
             {
                 case 0:
-                    
-                    error.DisplayError(ErrorHandeler.ErrorType.NotValidAction, code);
+                    error.DisplayError(ErrorType.NotValidAction, code);
                     break;
                 case 1:
                     parser.Parse(CodeType.Action);
@@ -150,34 +125,36 @@ namespace ClownShell.Parser
         }
         public void Start()
         {
-             /*
-                
-                
-                var x = 22; 
-                var name = Melquiceded; 
-                const user = name;
-                mem password = input;
-                var http = run(http check-internet); 
-                 
-                if(http != ok)
-                {
-                    red "There is no internet available"; 
-                    return; 
-                }
-                
-                sexure-encrypt *.log password -same -d -ds; 
-                secure-encrypt *.log pass=password iv=same debugger=true delete_source=true; 
-                
-                qhttp upload *.log www.account/backup/ user=admin pass=1234 -d -log;
-                rm *.log; 
-                exit; 
-               
-             */
-            switch(this.Code.Length)
+            /*
+
+
+               var x = 22; 
+               var name = Melquiceded; 
+               const user = name;
+               mem password = input;
+               var http = run(http check-internet); 
+
+               if(http != ok)
+               {
+                   red "There is no internet available"; 
+                   return; 
+               }
+
+               sexure-encrypt *.log password -same -d -ds; 
+               secure-encrypt *.log pass=password iv=same debugger=true delete_source=true; 
+
+               qhttp upload *.log www.account/backup/ user=admin pass=1234 -d -log;
+               rm *.log; 
+               exit; 
+
+            */
+            FixStringFormat();
+            ErrorHandeler error = new ErrorHandeler(); 
+            switch (this.Code.Length)
             {
                 case 0:
-                    this.error = new ErrorHandeler();
-                    this.error.DisplayError(ErrorHandeler.ErrorType.NotValidAction,this.Code);
+                    
+                    error.DisplayError(ErrorType.NotValidAction,this.Code);
                     break; 
                 case 1:
                     this.Parse(CodeType.Action); 

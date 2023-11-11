@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using QuickTools.QIO;
 using System.Runtime.CompilerServices;
 using System.Text;
-using ClownShell.Init; 
+using ClownShell.Init;
+using System.IO;
 
 namespace ClownShell.Parser.Scripts.RuleChecks
 {
@@ -36,83 +37,93 @@ namespace ClownShell.Parser.Scripts.RuleChecks
         //{
             
       
-        private List<string> CommandLines = new List<string>();
-        private List<string> Parser(string code)
-        {
-            string temp = "";
-            for(int c = 0; c < code.Length; c++)
-            {
-                if (code[c] == this.LineEndingChar)
-                {
-                    this.CommandLines.Add(temp.Replace("\n",""));
-                    temp = ""; 
-                }
-                if (code[c] != this.LineEndingChar)
-                {
-                    if(code[c] != ' ')
-                    {
-                        temp += code[c];
-                    }
-                    if (code[c] == ' ')
-                    {
-                      if(code.Length > c +1)
-                        {
-                            if (code[c+1]  != ' ' && code[c-1] != ' ')
-                            {
-                                temp+= code[c];
-                            }
-                        }
-                    }
+        //private List<string> CommandLines = new List<string>();
+        //private List<string> Parser(string code)
+        //{
+        //    string temp = "";
+        //    for(int c = 0; c < code.Length; c++)
+        //    {
+        //        if (code[c] == this.LineEndingChar)
+        //        {
+        //            this.CommandLines.Add(temp.Replace("\n",""));
+        //            temp = ""; 
+        //        }
+        //        if (code[c] != this.LineEndingChar)
+        //        {
+        //            if(code[c] != ' ')
+        //            {
+        //                temp += code[c];
+        //            }
+        //            if (code[c] == ' ')
+        //            {
+        //              if(code.Length > c +1)
+        //                {
+        //                    if (code[c+1]  != ' ' && code[c-1] != ' ')
+        //                    {
+        //                        temp+= code[c];
+        //                    }
+        //                }
+        //            }
                         
-                }
-            }
-            return this.CommandLines; 
-        }
+        //        }
+        //    }
+        //    return this.CommandLines; 
+        //}
       
      
         public void Check(string[] args)
         {
-            if (args.Length == 0) return;
-            args = IConvert.TextToArray(@"
-                                        green ""Starting..."";
-                                        touch ""New_File.txt"";
-                                        green ""File_Created_Sucessfully"";
-                                        mkdir box; 
-                                        touch file.txt;
-                                        yellow Copying_File; 
-                                        cp file.txt box/file.txt; 
-                                        green Task_Completed;
-                                        var a = 22; 
-                                        var x = 32; 
-                                        ");
-            string code = IConvert.ArrayToText(args);
-            
-            this.Parser(code); 
-            Print.List(args);
-            Get.Yellow("Ussable Lines"); 
-            Print.List(this.CommandLines);
-            //Get.Ok(3);
-            //Get.Yellow(this.CommandLines[1].Replace("\n",""));
-
-
-
-
-
-            //Print.List(this.Code);
-
-            //Get.Blue($"Length: {this.Code.Length}");
-            //Get.Wait(code);
-            Get.Yellow("ForEach"); 
-            foreach(string line in  this.CommandLines) 
+            if (args.Length == 1)
             {
-                this.Code = line.Split(' ');//IConvert.TextToArray(line.Replace("\n", ""));
-                Print.List(this.Code);
-                Get.Blue($"Length: {this.Code.Length}");
-                Get.Wait(IConvert.ArrayToText(this.Code)); 
-                this.Start();
+                if (File.Exists(args[0]))
+                {
+                    args = File.ReadAllLines(args[0]);
+                }
             }
 
-            Get.Wait(); 
+
+            CodeParser parser = new CodeParser(args);
+            parser.Start(); 
+            //args = IConvert.TextToArray(@"
+            //                            green ""Starting..."";
+            //                            touch ""New_File.txt"";
+            //                            green ""File_Created_Sucessfully"";
+            //                            mkdir box; 
+            //                            touch file.txt;
+            //                            yellow Copying_File; 
+            //                            cp file.txt box/file.txt; 
+            //                            green Task_Completed;
+            //                            var a = 22; 
+            //                            var x = 32; 
+            //                            ");
+            //string code = IConvert.ArrayToText(args);
+            
+            //this.Parser(code); 
+            //Print.List(args);
+            //Get.Yellow("Ussable Lines"); 
+            //Print.List(this.CommandLines);
+            ////Get.Ok(3);
+            ////Get.Yellow(this.CommandLines[1].Replace("\n",""));
+
+
+
+
+
+            ////Print.List(this.Code);
+
+            ////Get.Blue($"Length: {this.Code.Length}");
+            ////Get.Wait(code);
+            //Get.Yellow("ForEach"); 
+            //foreach(string line in  this.CommandLines) 
+            //{
+            //    this.Code = line.Split(' ');//IConvert.TextToArray(line.Replace("\n", ""));
+            //    Print.List(this.Code);
+            //    Get.Blue($"Length: {this.Code.Length}");
+            //    Get.Wait(IConvert.ArrayToText(this.Code)); 
+            //    this.Start();
+            //}
+
+            //Get.Wait(); 
 
 
             /*

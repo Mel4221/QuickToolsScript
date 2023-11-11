@@ -10,9 +10,9 @@ namespace ClownShell.Parser
     public partial class CodeParser 
     {
 
-        private DataCacher cache;
-        private ScriptRunner runner;
-        private ErrorHandeler error;
+        //private DataCacher cache;
+        //private ScriptRunner runner;
+        //private ErrorHandeler error;
 
         /// <summary>
         /// This is a class that contains info about the code that is being process
@@ -33,30 +33,30 @@ namespace ClownShell.Parser
         /// </summary>
         public static VirtualStack VStack { get; set; } = new VirtualStack();
        
-        /// <summary>
-        /// provides the given action type 
-        /// </summary>
-        public string Action;
+        ///// <summary>
+        ///// provides the given action type 
+        ///// </summary>
+        //public string Action;
 
-        /// <summary>
-        /// provides the type of execution 
-        /// </summary>
-        public string Type; 
+        ///// <summary>
+        ///// provides the type of execution 
+        ///// </summary>
+        //public string Type; 
 
-        /// <summary>
-        /// Containst the path plus the given folder or file given to the shellLoop
-        /// </summary>
-        public string Target;
+        ///// <summary>
+        ///// Containst the path plus the given folder or file given to the shellLoop
+        ///// </summary>
+        //public string Target;
 
-        /// <summary>
-        /// Contains only the current path
-        /// </summary>
-        public string SubTarget;
+        ///// <summary>
+        ///// Contains only the current path
+        ///// </summary>
+        //public string SubTarget;
 
-        /// <summary>
-        /// contains the given parameters to the method CodeParser.GetExecution(Action = Type = Parameter)
-        /// </summary>
-        public string[] Parameters; 
+        ///// <summary>
+        ///// contains the given parameters to the method CodeParser.GetExecution(Action = Type = Parameter)
+        ///// </summary>
+        //public string[] Parameters; 
 
         /// <summary>
         /// Contains the Code array
@@ -67,6 +67,8 @@ namespace ClownShell.Parser
         /// notify that the path was resolved
         /// </summary>
         public bool PathResolved;
+
+        public bool IsShellOn { get; set; } = false;
 
         /// <summary>
         /// Determines if the script will be readed line by line until meet with an special character

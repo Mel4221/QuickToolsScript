@@ -101,6 +101,7 @@
     <Compile Include="Init\ShellLoop.cs" />
     <Compile Include="Parser\CodeParser.cs" />
     <Compile Include="Parser\CodeParser_Fields.cs" />
+    <Compile Include="Parser\CodeParser_Methods.cs" />
     <Compile Include="Parser\CodeParser_SetExcecution_Action_Parameters.cs" />
     <Compile Include="Parser\CodeParser_SetExcecution_Action_Type.cs" />
     <Compile Include="Parser\CodeParser_SetExecution_Action.cs" />

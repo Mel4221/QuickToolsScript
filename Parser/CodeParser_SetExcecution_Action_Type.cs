@@ -66,11 +66,17 @@ namespace ClownShell.Parser
 
             //string fix = type[0] == '>' ? type.Substring(1) : Get.FixPath($"{ShellLoop.CurrentPath}{Get.Slash()}{type}");
             //Get.Wait(fix);
-            this.cache  =  new DataCacher();
-            this.runner =  new ScriptRunner();
-            this.runner.RunningCode = this.Code;
-            this.error  =  new ErrorHandeler();
+            //this.cache  =  new DataCacher();
+            //this.runner.RunningCode = this.Code;
+            //this.error  =  new ErrorHandeler();
 
+            ScriptRunner runner = new ScriptRunner();
+            ErrorHandeler error = new ErrorHandeler();
+            Get.Yellow();
+            Get.Write($"Action: {action} ");
+            Get.Blue();
+            Get.Write($"Type: {type}\n");
+            Get.Reset();
             // get the path with the given type and if it does not have an slash add it acordintly 
             //string tar = type[0] == '~' || type[0] == '.' || Helper.ReferToDisk(type)? type :  $"{ShellLoop.CurrentPath}{Get.Slash()}{type}";
 
@@ -83,7 +89,7 @@ namespace ClownShell.Parser
 
             // this = Helper.ResolvePath(this).Target; 
             // this.Target = temp == null || temp == ""? type:temp; 
-            this.SubTarget = Get.FixPath(type);
+           // this.SubTarget = Get.FixPath(type);
             //this.Target = $"{this.Target}{Get.Slash()}{this.SubTarget}"; 
             //Get.Yellow($"Target: {this.Target} SubTarget: {this.SubTarget}");
             //Get.Cyan($"Helper: {Helper.ResolvePath(this).Target}");
@@ -95,6 +101,7 @@ namespace ClownShell.Parser
             string file, path;
             switch (action)
             {
+
                 case "echo":
                 case "print":
                 case "log":
@@ -108,8 +115,8 @@ namespace ClownShell.Parser
                     });
                     break;
                 case "wait":
-                    this.runner.RunningCodeInfo = $"waiting for {type}ms";
-                    this.runner.RunningBackGroundCodeName = "Process Wait...";
+                    runner.RunningCodeInfo = $"waiting for {type}ms";
+                    runner.RunningBackGroundCodeName = "Process Wait...";
                     runner.Run(() => {
                         this.Call("sleep",type);
                         this.Call("title", "|");
@@ -163,7 +170,7 @@ namespace ClownShell.Parser
                         {
                             path = Helper.HasSpecialFolder(type);
                             Get.Cyan(path); 
-                            //Directory.CreateDirectory(path); 
+                            Directory.CreateDirectory(path); 
                             return;
                         }
                         if (Helper.ReferToDisk(type.ToUpper()))
@@ -239,16 +246,17 @@ namespace ClownShell.Parser
                             return;
                     }
 
-                    if (Directory.Exists(this.Target))
+                    if (Directory.Exists(type))
                     {
                             GC.Collect();
                             GC.WaitForPendingFinalizers();
-                            Directory.Delete(this.Target);
+                            Directory.Delete(type);
                             return;
                     }
                     else
                     {
-                        Get.Print("File or Directory not found: ", type);
+                            error.DisplayError(ErrorType.NotValidType, $"File or Directory '{type}' was not found!!!");
+                          
                     }
                     });
                     break;
@@ -257,24 +265,44 @@ namespace ClownShell.Parser
                 case "list-files":
                     runner.Run(() => {
 
-                      
-                        if (this.Target == "disk")
+
+                        if (this.IsRootPath(type))
+                        {
+                            Get.Ls(type);
+                            return;
+                        }
+                        if (type == "disk")
                         {
                             Get.PrintDisks();
                             return;
-                        }if(this.Target == "-l")
+                        }if(type == "-l")
                         {
-                            Get.Ls(this.Target, null);
+                            Get.Ls(ShellLoop.CurrentPath, null);
                             return;
-                        }if(this.Target == ".")
+                        }if(type == ".")
                         {
                             Get.Ls(ShellLoop.CurrentPath); 
                             return;
                         }
+                        if (Directory.Exists(this.GetPathWithType(type)))
+                        {
+                            Get.Ls(this.GetPathWithType(type));
+                            return;
+                        }
+                        if (Helper.HasSpecialFolder(type) != null)
+                        {
+                            Get.Ls(Helper.HasSpecialFolder(type));
+                            return;
+                        }
+                        if (type.Contains(".")&&type.Length >=2)
+                        {
+                             //path = ShellLoop.CurrentPath[ShellLoop.CurrentPath.Length-1]==Get.Slash()[0] ? $"{ShellLoop.CurrentPath}{type}" : $"{ShellLoop.CurrentPath}{Get.Slash()}{type}";
+                            Get.Ls(this.GetPathWithType(type));
+                            return;
+                        }
                         else
                         {
-                            Get.Ls(type); 
-                            return;
+                            Get.Ls(type);
                         }
 
 
@@ -325,7 +353,7 @@ namespace ClownShell.Parser
                         }
                         else
                         {
-                            new ErrorHandeler().DisplayError(ErrorHandeler.ErrorType.NotValidParameter, "The Value Must Be a number");
+                            error.DisplayError(ErrorType.NotValidParameter, "The Value Must Be a number");
                         }
                     }); 
                     break;
@@ -388,12 +416,13 @@ namespace ClownShell.Parser
                     runner.Run(() => {
 
                         file = null; 
+                        
                         if (Helper.HasSpecialFolder(type) != null)
                         {
                             file = Helper.HasSpecialFolder(type); 
                         }if(file == null)
                         {
-                            file = Path.Combine(ShellLoop.CurrentPath, type);
+                            file = this.GetPathWithType(type);  
                         }
                         if (!File.Exists(file))
                         {
@@ -404,8 +433,11 @@ namespace ClownShell.Parser
                         {
                             try
                             {
+                                Get.Wait("Reading...",() => { 
                                 Get.Write(Reader.Read(file));
-                            }catch(Exception ex)
+                                });
+                            }
+                            catch(Exception ex)
                             {
                                 Get.Red($"There was an error while reading the file more info: \n{ex.Message}");
                             }
@@ -415,21 +447,48 @@ namespace ClownShell.Parser
                     break;
                 case "size":
                 case "du":
-                    runner.Run(() => {
+                    runner.Run(() =>
+                    {
 
-                        string size;
-                        file = type;
-                        
+
+
+                        file =  type;
+                        if (!this.IsRootPath(file))
+                        {
+                            file = this.GetPathWithType(file); 
+                        }
+
+                        long size = 0;
+
+                        if (Directory.Exists(file))
+                        {
+                            FilesMaper maper = new FilesMaper(file);
+                            maper.Map();
+
+                            foreach (string f in maper.Files)
+                            {
+
+                                if (maper.Files.Count < 100)
+                                {
+                                    Get.Print(f, Get.FileSize(f));
+                                }
+                                if (maper.Files.Count > 100)
+                                {
+                                    Get.FileSize(f);
+                                }
+                                size += Get.LongNumber;
+                            }
+
+                            Get.White($"Total Size of {type}: {Get.FileSize(size)}");
+                            return;
+                        }
                         if (!File.Exists(file))
                         {
                             Get.Red($"The {file} Was not found or does not exist");
                             return;
                         }
 
-                        Get.Green();
-                        Get.Write($"\n{ }\t");
-                        Get.Yellow(); 
-                        Get.Write($"{size}\n");
+                        Get.Print(type, Get.FileSize(file));
                     });
                     break;
                 case "select":
@@ -438,7 +497,7 @@ namespace ClownShell.Parser
                     //Get.Wait(type);
                         if (type[0] == '*')
                         {
-                            string[] files = new FilesMaper().GetFiles(this.SubTarget);
+                            string[] files = new FilesMaper().GetFiles(type);
                             List<string> withExt = new List<string>();
                             foreach(string f in files)
                             {
@@ -454,11 +513,11 @@ namespace ClownShell.Parser
                             //Print.List(withExt);
                             //Get.Wait();
                             Options option = new Options(files);
-                            option.Label = this.SubTarget;
-                            option.SelectorL = "> ";
+                            option.Label = type; 
+                            option.SelectorL = "> "; 
                             option.SelectorR = "";
                             int selection = option.Pick();
-                            ShellLoop.SelectedOject = $"{this.SubTarget}{Get.Slash()}{Get.FileNameFromPath(files[selection])}";
+                            ShellLoop.SelectedOject = $"{type}{Get.Slash()}{Get.FileNameFromPath(files[selection])}";
                             return;
                         }
                    // C: \Users\William\Desktop\~\Desktop\Q.dll
@@ -467,15 +526,15 @@ namespace ClownShell.Parser
                 case "get-hash":
                 case "hash":
                     runner.Run(() => {
-                        if (File.Exists(this.Target))
+                        if (File.Exists(type))
                         {
-                            byte[] bytes = Binary.Reader(this.Target);
-                            Get.Print($"File: {Get.FileNameFromPath(this.Target)}",$"Hash: {Get.HashCode(bytes)}");
+                            byte[] bytes = Binary.Reader(type);
+                            Get.Print($"File: {Get.FileNameFromPath(type)}",$"Hash: {Get.HashCode(bytes)}");
                             return;
                         }
                         else
                         {
-                            Get.Red($"File Not Found: {this.Target}");
+                            Get.Red($"File Not Found: {type}");
                         }
                     });
 
@@ -512,7 +571,7 @@ namespace ClownShell.Parser
                         cmd.StartInfo.RedirectStandardOutput = false;  // true;
                         cmd.StartInfo.CreateNoWindow = false;
                         cmd.StartInfo.UseShellExecute = false;
-                        cmd.StartInfo.Arguments = Helper.ResolvePath(this).Target; //"ping www.google.com"; //Helper.ResolvePath(this).Target;
+                        cmd.StartInfo.Arguments = type; //"ping www.google.com"; //Helper.ResolvePath(this).Target;
 
                         cmd.Start();
                         cmd.WaitForExit();
@@ -528,7 +587,7 @@ namespace ClownShell.Parser
                         cmd.StartInfo.RedirectStandardOutput = false;  // true;
                         cmd.StartInfo.CreateNoWindow = false;
                         cmd.StartInfo.UseShellExecute = false;
-                        cmd.StartInfo.Arguments = this.Target; //Helper.ResolvePath(this).Target;
+                        cmd.StartInfo.Arguments = type; //Helper.ResolvePath(this).Target;
 
                         cmd.Start();
                         cmd.WaitForExit();
@@ -544,7 +603,7 @@ namespace ClownShell.Parser
                         cmd.StartInfo.RedirectStandardOutput = false;  // true;
                         cmd.StartInfo.CreateNoWindow = false;
                         cmd.StartInfo.UseShellExecute = false;
-                        cmd.StartInfo.Arguments = Helper.ResolvePath(this).Target; //"ping www.google.com"; //Helper.ResolvePath(this).Target;
+                        cmd.StartInfo.Arguments = type; //"ping www.google.com"; //Helper.ResolvePath(this).Target;
 
                         cmd.Start();
                         cmd.WaitForExit();
@@ -558,13 +617,13 @@ namespace ClownShell.Parser
                         if (Get.IsWindow())
                         {
                             cmd.StartInfo.FileName = "notepad";
-                            cmd.StartInfo.Arguments = Helper.ResolvePath(this).Target;
+                            cmd.StartInfo.Arguments =type;
 
                         }
                         if (!Get.IsWindow())
                         {
                             cmd.StartInfo.FileName = "open";
-                            cmd.StartInfo.Arguments = Helper.ResolvePath(this).Target;
+                            cmd.StartInfo.Arguments = type;
                         }
 
                         //cmd.StartInfo.Arguments;
@@ -587,7 +646,7 @@ namespace ClownShell.Parser
                     });
                     break; 
                 default:
-                    error.DisplayError(ErrorHandeler.ErrorType.NotValidAction, this.Code);
+                    error.DisplayError(ErrorType.NotValidAction,$"'{action}' {type}");
                     break;
                     
             }

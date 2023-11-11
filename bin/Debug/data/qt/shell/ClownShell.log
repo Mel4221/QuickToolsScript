@@ -1,0 +1,92 @@
+ID=1001;
+Key=log;
+Value=Shell Started With no Arguments;
+Relation=11/11/2023 1:15:05 AM;
+ID=1003;
+Key=log;
+Value=Shell Exited With no Events;
+Relation=11/11/2023 1:15:36 AM;
+ID=1005;
+Key=log;
+Value=Shell Started With no Arguments;
+Relation=11/11/2023 1:20:11 AM;
+ID=1007;
+Key=log;
+Value=Shell Started With no Arguments;
+Relation=11/11/2023 1:21:22 AM;
+ID=1009;
+Key=log;
+Value=Shell Exited With no Events;
+Relation=11/11/2023 1:21:56 AM;
+ID=1011;
+Key=log;
+Value=Shell Started With no Arguments;
+Relation=11/11/2023 1:22:59 AM;
+ID=1013;
+Key=log;
+Value=Shell Exited With no Events;
+Relation=11/11/2023 1:23:11 AM;
+ID=1015;
+Key=log;
+Value=Shell Started With no Arguments;
+Relation=11/11/2023 1:23:41 AM;
+ID=1017;
+Key=log;
+Value=Shell Started With no Arguments;
+Relation=11/11/2023 1:24:09 AM;
+ID=1019;
+Key=log;
+Value=Shell Exited With no Events;
+Relation=11/11/2023 1:24:22 AM;
+ID=1021;
+Key=log;
+Value=Shell Started With no Arguments;
+Relation=11/11/2023 1:24:32 AM;
+ID=1023;
+Key=log;
+Value=Shell Started With no Arguments;
+Relation=11/11/2023 1:25:36 AM;
+ID=1025;
+Key=log;
+Value=Shell Exited With a FATAL-ERROR More info in the logs file:  
+System.ArgumentException: Illegal characters in path.
+   at System.IO.Path.CheckInvalidPathChars(String path, Boolean checkAdditional)
+   at System.IO.Path.IsPathRooted(String path)
+   at ClownShell.Parser.CodeParser.SetExecution(String action, String type, String[] parameters) in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Parameters.cs:line 110
+   at ClownShell.Parser.CodeParser.Parse(CodeType codeType) in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser.cs:line 101
+   at ClownShell.Parser.CodeParser.Start() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser.cs:line 166
+   at ClownShell.Init.ShellLoop.Start() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Init\ShellLoop.cs:line 178
+   at ClownShell.Init.Program.Main(String[] args) in C:\Users\Melquiceded\Documents\csharp\ClownShell\Init\Program.cs:line 75;
+Relation=11/11/2023 1:25:44 AM;
+ID=1027;
+Key=log;
+Value=Shell Started With no Arguments;
+Relation=11/11/2023 1:28:08 AM;
+ID=1029;
+Key=log;
+Value=Shell Started With no Arguments;
+Relation=11/11/2023 1:30:34 AM;
+ID=1031;
+Key=log;
+Value=Shell Exited With no Events;
+Relation=11/11/2023 1:31:17 AM;
+ID=1033;
+Key=log;
+Value=Shell Started With no Arguments;
+Relation=11/11/2023 1:35:46 AM;
+ID=1035;
+Key=log;
+Value=Shell Started With no Arguments;
+Relation=11/11/2023 1:39:55 AM;
+ID=1037;
+Key=log;
+Value=Shell Exited With no Events;
+Relation=11/11/2023 1:41:00 AM;
+ID=1039;
+Key=log;
+Value=Shell Started With no Arguments;
+Relation=11/11/2023 1:41:07 AM;
+ID=1041;
+Key=log;
+Value=Shell Exited With no Events;
+Relation=11/11/2023 1:46:50 AM;

@@ -1,0 +1,180 @@
+ID=1001;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( echo "1 2 3 4 5"  > file.txt  )> 
+ Exception: 
+System.ArgumentException: Illegal characters in path.
+   at System.IO.Path.CheckInvalidPathChars(String path, Boolean checkAdditional)
+   at System.IO.Path.IsPathRooted(String path)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass31_0.<SetExecution>b__0() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Parameters.cs:line 117
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/11/2023 1:15:17 AM;
+ID=1003;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( echo "1 2 3 4 5"  > file.txt  )> 
+ Exception: 
+System.ArgumentException: Illegal characters in path.
+   at System.IO.Path.CheckInvalidPathChars(String path, Boolean checkAdditional)
+   at System.IO.Path.IsPathRooted(String path)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass31_0.<SetExecution>b__0() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Parameters.cs:line 115
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/11/2023 1:20:21 AM;
+ID=1005;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( echo "1 2 3 4 5"  > file.txt  )> 
+ Exception: 
+System.ArgumentException: Illegal characters in path.
+   at System.IO.Path.CheckInvalidPathChars(String path, Boolean checkAdditional)
+   at System.IO.Path.IsPathRooted(String path)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass31_0.<SetExecution>b__0() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Parameters.cs:line 115
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/11/2023 1:21:33 AM;
+ID=1007;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( echo "1 2 3 4 5"  > file.txt  )> 
+ Exception: 
+System.ArgumentException: Illegal characters in path.
+   at System.IO.Path.CheckInvalidPathChars(String path, Boolean checkAdditional)
+   at System.IO.Path.IsPathRooted(String path)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass31_0.<SetExecution>b__0() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Parameters.cs:line 115
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/11/2023 1:23:08 AM;
+ID=1009;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( echo "1 2 3 4 5"  > file.txt  )> 
+ Exception: 
+System.ArgumentException: Illegal characters in path.
+   at System.IO.Path.CheckInvalidPathChars(String path, Boolean checkAdditional)
+   at System.IO.Path.IsPathRooted(String path)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass31_0.<SetExecution>b__0() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Parameters.cs:line 116
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/11/2023 1:24:18 AM;
+ID=1011;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( echo "1 2 3 4 5"  > file.txt  )> 
+ Exception: 
+System.ArgumentException: Illegal characters in path.
+   at System.IO.Path.CheckInvalidPathChars(String path, Boolean checkAdditional)
+   at System.IO.Path.IsPathRooted(String path)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass31_0.<SetExecution>b__0() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Parameters.cs:line 116
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/11/2023 1:24:41 AM;
+ID=1013;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=11/11/2023 1:25:44 AM;
+ID=1015;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'Not Valid Action At: 'LS'' 
+####;
+Relation=11/11/2023 1:40:03 AM;
+ID=1017;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'Not Valid Action At: 'Cclear'' 
+####;
+Relation=11/11/2023 1:40:05 AM;
+ID=1019;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'Not Valid Action At: '[?61;
+Relation=6;
+ID=7;
+Key=22;
+Value=23;
+Relation=24;
+ID=28;
+Key=32;
+Value=42c[?61;
+Relation=6;
+ID=7;
+Key=22;
+Value=23;
+Relation=24;
+ID=28;
+Key=32;
+Value=42c[?61;
+Relation=6;
+ID=7;
+Key=22;
+Value=23;
+Relation=24;
+ID=28;
+Key=32;
+Value=42c[?61;
+Relation=6;
+ID=7;
+Key=22;
+Value=23;
+Relation=24;
+ID=28;
+Key=32;
+Value=42c[?61;
+Relation=6;
+ID=7;
+Key=22;
+Value=23;
+Relation=24;
+ID=28;
+Key=32;
+Value=42c[?61;
+Relation=6;
+ID=7;
+Key=22;
+Value=23;
+Relation=24;
+ID=28;
+Key=32;
+Value=42c[?61;
+Relation=6;
+ID=7;
+Key=22;
+Value=23;
+Relation=24;
+ID=28;
+Key=32;
+Value=42c[?61;
+Relation=6;
+ID=7;
+Key=22;
+Value=23;
+Relation=24;
+ID=28;
+Key=32;
+Value=42c[?61;
+Relation=6;
+ID=7;
+Key=22;
+Value=23;
+Relation=24;
+ID=28;
+Key=32;
+Value=42c['' 
+####;
+Relation=11/11/2023 1:40:27 AM;
+ID=1057;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'Not Valid Action At: 'cat'' 
+####;
+Relation=11/11/2023 1:42:04 AM;
+ID=1059;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' '' 
+####;
+Relation=11/11/2023 1:46:31 AM;
