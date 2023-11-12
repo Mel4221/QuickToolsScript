@@ -1,0 +1,2 @@
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Parser\obj\Debug\ClownShell.Parser.csproj.AssemblyReference.cache
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Parser\obj\Debug\ClownShell.Parser.csproj.CoreCompileInputs.cache

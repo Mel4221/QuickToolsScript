@@ -1,0 +1,6 @@
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.State\bin\Debug\ClownShell.State.dll
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.State\bin\Debug\ClownShell.State.pdb
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.State\obj\Debug\ClownShell.State.csproj.AssemblyReference.cache
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.State\obj\Debug\ClownShell.State.csproj.CoreCompileInputs.cache
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.State\obj\Debug\ClownShell.State.dll
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.State\obj\Debug\ClownShell.State.pdb

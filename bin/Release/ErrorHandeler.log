@@ -789,3 +789,51 @@ Value=####
  There Was an error with the given type of error: 'NotValidAction' ''write' |' 
 ####;
 Relation=11/11/2023 1:44:15 PM;
+ID=1193;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''exit'' 
+####;
+Relation=11/12/2023 12:10:49 AM;
+ID=1195;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''exit'' 
+####;
+Relation=11/12/2023 12:10:57 AM;
+ID=1197;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''exit'' 
+####;
+Relation=11/12/2023 12:18:31 AM;
+ID=1199;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''ext'' 
+####;
+Relation=11/12/2023 12:18:48 AM;
+ID=1201;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''exit'' 
+####;
+Relation=11/12/2023 12:18:50 AM;
+ID=1203;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''exit'' 
+####;
+Relation=11/12/2023 12:18:52 AM;
+ID=1205;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''ls'' 
+####;
+Relation=11/12/2023 12:19:40 AM;
+ID=1207;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''echo'' 
+####;
+Relation=11/12/2023 3:59:21 PM;

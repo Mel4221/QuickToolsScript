@@ -7,14 +7,14 @@
     <framework targetVersion="4.7" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="ClownShell.exe.manifest" size="6225">
+    <dependentAssembly dependencyType="install" codebase="ClownShell.exe.manifest" size="10165">
       <assemblyIdentity name="ClownShell.exe" version="7.1.1.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>b2lzaBnFswYR3BRZ1eqBbT+TDittSt3xdUj3XfSAKfA=</dsig:DigestValue>
+        <dsig:DigestValue>8FvHw4qv/piCTof07qWWBNu+uFodhdbb6rl0yJfa6Us=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
