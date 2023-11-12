@@ -789,3 +789,15 @@ Value=####
  There Was an error with the given type of error: 'NotValidAction' ''write' |' 
 ####;
 Relation=11/11/2023 1:44:15 PM;
+ID=1193;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=11/11/2023 6:32:22 PM;
+ID=1195;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=11/11/2023 6:35:16 PM;

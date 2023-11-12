@@ -1410,3 +1410,7 @@ ID=1705;
 Key=command;
 Value=wait 500;
 Relation=Saturday, November 11, 2023;
+ID=1707;
+Key=command;
+Value=ls;
+Relation=Saturday, November 11, 2023;

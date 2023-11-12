@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ClownShell</name>
+    </assembly>
+    <members>
+        <member name="F:ClownShell.Init.ShellLoop.CurrentPath">
+            <summary>
+            get or set the current path display in the Shell
+            </summary>
+        </member>
+        <member name="F:ClownShell.Init.ShellLoop.SelectedOject">
+            <summary>
+            get or set the Selected object 
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:ClownShell.Init.ShellLoop.RelativePath" -->
+        <member name="F:ClownShell.Init.ShellLoop.HistoryFile">
+            <summary>
+            This is the file for the shell history by default is set to be ClownShell_History.xml
+            </summary>
+        </member>
+        <member name="P:ClownShell.Init.ShellLoop.AllowToSaveHistory">
+            <summary>
+            by default save the history
+            </summary>
+        </member>
+        <member name="M:ClownShell.Init.ShellLoop.LoadCurrentItems(System.String)">
+            <summary>
+            returns a grup o files located on the current path 
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

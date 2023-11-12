@@ -1,0 +1,9 @@
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ErrorHandeler\bin\Release\ClownShell.ErrorHandeler.dll
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ErrorHandeler\bin\Release\ClownShell.ErrorHandeler.pdb
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ErrorHandeler\bin\Release\QuickTools.dll
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ErrorHandeler\bin\Release\QuickTools.xml
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ErrorHandeler\obj\Release\ClownShell.ErrorHandeler.csproj.AssemblyReference.cache
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ErrorHandeler\obj\Release\ClownShell.ErrorHandeler.csproj.CoreCompileInputs.cache
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ErrorHandeler\obj\Release\ClownShell.ErrorHandeler.csproj.CopyComplete
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ErrorHandeler\obj\Release\ClownShell.ErrorHandeler.dll
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ErrorHandeler\obj\Release\ClownShell.ErrorHandeler.pdb

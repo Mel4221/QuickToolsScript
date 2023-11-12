@@ -1,0 +1,9 @@
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.BackGroundFunctions\bin\Debug\ClownShell.BackGroundFunctions.dll
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.BackGroundFunctions\bin\Debug\ClownShell.BackGroundFunctions.pdb
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.BackGroundFunctions\bin\Debug\QuickTools.dll
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.BackGroundFunctions\bin\Debug\QuickTools.xml
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.BackGroundFunctions\obj\Debug\ClownShell.BackGroundFunctions.csproj.AssemblyReference.cache
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.BackGroundFunctions\obj\Debug\ClownShell.BackGroundFunctions.csproj.CoreCompileInputs.cache
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.BackGroundFunctions\obj\Debug\ClownShell.BackGroundFunctions.csproj.CopyComplete
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.BackGroundFunctions\obj\Debug\ClownShell.BackGroundFunctions.dll
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.BackGroundFunctions\obj\Debug\ClownShell.BackGroundFunctions.pdb

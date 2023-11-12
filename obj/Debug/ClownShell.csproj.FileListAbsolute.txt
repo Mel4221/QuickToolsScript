@@ -13,3 +13,16 @@ C:\Users\Melquiceded\Documents\csharp\ClownShell\obj\Debug\ClownShell.applicatio
 C:\Users\Melquiceded\Documents\csharp\ClownShell\obj\Debug\ClownShell.csproj.CopyComplete
 C:\Users\Melquiceded\Documents\csharp\ClownShell\obj\Debug\ClownShell.exe
 C:\Users\Melquiceded\Documents\csharp\ClownShell\obj\Debug\ClownShell.pdb
+C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Debug\ClownShell.BackGroundFunctions.dll
+C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Debug\ClownShell.ErrorHandeler.dll
+C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Debug\ClownShell.Helpers.dll
+C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Debug\ClownShell.Security.dll
+C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Debug\ClownShell.Settings.dll
+C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Debug\ClownShell.BackGroundFunctions.pdb
+C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Debug\ClownShell.ErrorHandeler.pdb
+C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Debug\ClownShell.Helpers.pdb
+C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Debug\ClownShell.Security.pdb
+C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Debug\ClownShell.Settings.pdb
+C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Debug\ClownShell.Parser.dll
+C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Debug\ClownShell.Parser.pdb
+C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Debug\ClownShell.xml

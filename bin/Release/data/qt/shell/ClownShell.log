@@ -774,3 +774,26 @@ ID=1383;
 Key=log;
 Value=Job ID: [0] Job Name: [Process Wait...] Status: [0] Job Info: [waiting for 500ms] AlowToBeKilled: [True] Completed;
 Relation=11/11/2023 1:45:50 PM;
+ID=1385;
+Key=log;
+Value=Shell Started With no Arguments;
+Relation=11/11/2023 6:32:22 PM;
+ID=1387;
+Key=log;
+Value=Shell Exited With a FATAL-ERROR More info in the logs file:  
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ClownShell.Init.ShellLoop.Start() in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Init\ShellLoop.cs:line 170
+   at ClownShell.Init.Program.Main(String[] args) in C:\Users\Melquiceded\Documents\csharp\ClownShell\Program.cs:line 89;
+Relation=11/11/2023 6:32:24 PM;
+ID=1389;
+Key=log;
+Value=Shell Started With no Arguments;
+Relation=11/11/2023 6:35:13 PM;
+ID=1391;
+Key=log;
+Value=Shell Exited With a FATAL-ERROR More info in the logs file:  
+System.TypeLoadException: Could not load type 'ClownShell.Init.ShellLoop' from assembly 'ClownShell, Version=7.1.1.1, Culture=neutral, PublicKeyToken=null'.
+   at ClownShell.Parser.CodeParser.Parse(CodeType codeType)
+   at ClownShell.Init.ShellLoop.Start() in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Init\ShellLoop.cs:line 187
+   at ClownShell.Init.Program.Main(String[] args) in C:\Users\Melquiceded\Documents\csharp\ClownShell\Program.cs:line 89;
+Relation=11/11/2023 6:35:16 PM;

@@ -1,0 +1,9 @@
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Helpers\bin\Debug\ClownShell.Helpers.dll
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Helpers\bin\Debug\ClownShell.Helpers.pdb
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Helpers\bin\Debug\QuickTools.dll
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Helpers\bin\Debug\QuickTools.xml
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Helpers\obj\Debug\ClownShell.Helpers.csproj.AssemblyReference.cache
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Helpers\obj\Debug\ClownShell.Helpers.csproj.CoreCompileInputs.cache
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Helpers\obj\Debug\ClownShell.Helpers.csproj.CopyComplete
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Helpers\obj\Debug\ClownShell.Helpers.dll
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Helpers\obj\Debug\ClownShell.Helpers.pdb

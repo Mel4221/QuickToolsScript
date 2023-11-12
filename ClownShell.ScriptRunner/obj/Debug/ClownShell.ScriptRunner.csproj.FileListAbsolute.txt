@@ -1,0 +1,16 @@
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\bin\Debug\ClownShell.ScriptRunner.dll
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\bin\Debug\ClownShell.ScriptRunner.pdb
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\bin\Debug\ClownShell.BackGroundFunctions.dll
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\bin\Debug\ClownShell.ErrorHandeler.dll
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\bin\Debug\ClownShell.exe
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\bin\Debug\QuickTools.dll
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\bin\Debug\ClownShell.pdb
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\bin\Debug\ClownShell.xml
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\bin\Debug\ClownShell.BackGroundFunctions.pdb
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\bin\Debug\ClownShell.ErrorHandeler.pdb
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\bin\Debug\QuickTools.xml
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\obj\Debug\ClownShell.ScriptRunner.csproj.AssemblyReference.cache
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\obj\Debug\ClownShell.ScriptRunner.csproj.CoreCompileInputs.cache
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\obj\Debug\ClownShell.ScriptRunner.csproj.CopyComplete
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\obj\Debug\ClownShell.ScriptRunner.dll
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\obj\Debug\ClownShell.ScriptRunner.pdb
