@@ -5,7 +5,7 @@ using System.Threading;
 using QuickTools.QIO;
 using Settings;
 
-namespace ScriptRunner
+namespace States
 {
 
 	public class Job
@@ -68,6 +68,7 @@ namespace ScriptRunner
 				}
 			}
 
+			public static int JobsCount() => Jobs.Count;
 			public static void PrintRunningJobs()
 			{
 				if (Jobs.Count == 0)

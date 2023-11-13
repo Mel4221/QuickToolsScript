@@ -22,12 +22,34 @@ namespace Parser
             Runner runner = new Runner();
 			ProcessStartInfo process;
 			string file, path;
+			bool isBackGroundAction;
 			switch (action)
             {
                 case "fuck":
 					runner.Run(() =>
 					{
-						Get.Pink("I got you bro. LOL");
+						switch(type)
+						{
+							case "this":
+								Get.Pink("This What??? are your retarded???");
+								break;
+							case "them":
+								Get.Pink("Group of clowns!!!");
+								break;
+							case "me":
+								Get.Pink("Sorry but i don't like idiots");
+								break;
+							case "him":
+								Get.Pink("Yeah He is an Idiot");
+								break;
+							case "you":
+								Get.Pink("Thanks!!!");
+								break;
+							default:
+								Get.Pink("I got you bro. LOL");
+								break;
+						}
+
 					});
                     break;
 				case "read":

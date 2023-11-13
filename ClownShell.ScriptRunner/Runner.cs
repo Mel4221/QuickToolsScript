@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Threading;
-using ErrorHandelers; 
+using ErrorHandelers;
+using States;
 namespace ScriptRunner
 {
 	
@@ -21,12 +21,18 @@ namespace ScriptRunner
         {
             try
             {
-				Job job = new Job();
-				job.JobAction = code;
-				job.Info = this.RunningCodeInfo;
-				job.Name = this.RunningBackGroundCodeName;
-				BackGroundJob.AddJob(job);
-				BackGroundJob.RunJobs();
+                if (backGround)
+                {
+                    Job job = new Job();
+                    job.JobAction = code;
+                    job.Info = this.RunningCodeInfo;
+                    job.Name = this.RunningBackGroundCodeName;
+                    BackGroundJob.AddJob(job);
+                    BackGroundJob.RunJobs();
+                    return;
+                }else{
+                    this.Run(code); return;
+                }
 			}
 			catch (Exception ex) 
             {

@@ -1127,3 +1127,72 @@ Value=####
  There Was an error with the given type of error: 'NotValidAction' ''echo' "Melquiceded Balbi Villanueva" ' 
 ####;
 Relation=11/13/2023 2:19:36 AM;
+ID=1297;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''ftp'' 
+####;
+Relation=11/13/2023 3:20:17 PM;
+ID=1299;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''ftp'' 
+####;
+Relation=11/13/2023 3:20:29 PM;
+ID=1301;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''print-vstack'' 
+####;
+Relation=11/13/2023 3:34:52 PM;
+ID=1303;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Parser.CodeParser.<>c__DisplayClass25_0.<SetExecution>b__0() in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Parser\SetExecution_Action_Type_Parameters.cs:line 29
+   at ScriptRunner.Runner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\Runner.cs:line 14' 
+####;
+Relation=11/13/2023 3:48:48 PM;
+ID=1305;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.Exception: Variable Already Set
+   at QuickTools.QData.VirtualStack.SetVariable(Variable variable)
+   at ScriptRunner.Runner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\Runner.cs:line 14' 
+####;
+Relation=11/13/2023 3:49:07 PM;
+ID=1307;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' '' 
+####;
+Relation=11/13/2023 4:37:46 PM;
+ID=1309;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' '' 
+####;
+Relation=11/13/2023 4:39:34 PM;
+ID=1311;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''wait'' 
+####;
+Relation=11/13/2023 4:43:37 PM;
+ID=1313;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' '' 
+####;
+Relation=11/13/2023 4:43:52 PM;
+ID=1315;
+Key=log;
+Value=' 
+####;
+Relation=11/13/2023 5:20:11 PM;
+ID=1317;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''echo'' 
+####;
+Relation=11/13/2023 5:30:13 PM;

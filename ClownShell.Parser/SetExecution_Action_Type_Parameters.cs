@@ -20,7 +20,8 @@ namespace Parser
 			Runner runner = new Runner();
 			ProcessStartInfo process;
 			string[] param = parameters;
-			Print.List(param); 
+			//Print.List(param); 
+
 			switch (action)
               {
 				case "var":
@@ -84,6 +85,18 @@ namespace Parser
 					});
 					break;
 				default:
+					//name = "new value"
+					//number = 200
+					//number = "829-978-2244"
+					//2 / 4
+					//var * 7
+					//x = var * 7
+					Variable v = Shell.VStack.GetVariable(action);
+					if (!v.IsEmpty && type == "=")
+					{
+						Shell.VStack.UpdateVariable(action, param[0]);
+						return;
+					}
 					error.DisplayError(ErrorType.NotValidAction, $"'{action}' {type}");
 				break; 
               }

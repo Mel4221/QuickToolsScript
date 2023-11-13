@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ClownShell.Settings, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ClownShell.Dependencies\ClownShell.Settings.dll</HintPath>
+    </Reference>
     <Reference Include="QuickTools, Version=3000.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\QuickTools\bin\Release\QuickTools.dll</HintPath>
@@ -45,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BackGroundjobs.cs" />
     <Compile Include="Shell.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

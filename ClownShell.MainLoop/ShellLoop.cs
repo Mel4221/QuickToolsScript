@@ -6,23 +6,41 @@ using States;
 using Security;
 using QuickTools.QData;
 using System.IO;
+using System.Threading; 
 
 namespace MainLoop
 	{
 
+		
+
 		public partial class ShellLoop
 		{
-
+		//private Thread TitileUpdateThread;
+		 
+		//private void AutoUpdateTitle()
+		//{
+		//	while(true)
+		//	{
+		//		string title = Shell.Title == null ? Shell.Name : Shell.Title;
+		//		Console.Title = $"{title} V[{Shell.VStack.VirtualStackSize()}] J[{BackGroundJob.JobsCount()}]";
+		//		Get.WaitTime(100);
+		//	}
+		//}
 		private ShellInput shell;
 		private CodeParser parser;
 		private void RunShellLoop()
 		{
 			shell = new ShellInput(Environment.UserName, Environment.MachineName);
+			shell.ProgramName = Shell.Name;
+			////TitileUpdateThread = new Thread(() => { this.AutoUpdateTitle(); });
+			////TitileUpdateThread.Start();
 
 			while (!Shell.ExitRequest)
 			{
 				shell.CurrentPath = Shell.CurrentPath;
 				shell.Notifications = ShellUser.Name == null ? $"'{Environment.UserName}' Without Credentials" : ShellUser.Name;
+				////shell.TextSimbol = Shell.VStack.VirtualStackSize()=="0B" ? ">" : $"[{Shell.VStack.VirtualStackSize()}]>";
+			    ////shell.ProgramName = $"{Shell.Name} [{Shell.VStack.VirtualStackSize()}]";
 				string input = shell.StartInput();
 				this.SaveHistory(input);
 				string[] commands = IConvert.TextToArray(input);
@@ -33,9 +51,7 @@ namespace MainLoop
 
 
 		public void Start()
-			{
-				
-			
+			{	
 				if (this.Arguments.Length  > 0)
 				{
 					this.CheckArguments();
