@@ -2377,6 +2377,12 @@
             Contains the value of the variable
             </summary>
         </member>
+        <member name="P:QuickTools.QData.Variable.Buffer">
+            <summary>
+            This inplementation was added to allwo the virtual stack
+            to hold binary data insede of it aswell 
+            </summary>
+        </member>
         <member name="P:QuickTools.QData.Variable.IsConstant">
             <summary>
             Contains the property that make the object to be treated as a contant
@@ -2409,6 +2415,32 @@
             By default the name is "Stack.dump"
             </summary>
         </member>
+        <member name="M:QuickTools.QData.VirtualStack.GetIndex">
+            <summary>
+            Gets the current varialble count and subtract 1 and returns the value of the Variables list
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QuickTools.QData.VirtualStack.VirtualStackSize">
+            <summary>
+            Returns the size of the current stack
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QuickTools.QData.VirtualStack.Exist(QuickTools.QData.Variable)">
+            <summary>
+            finds if the given variable exist
+            </summary>
+            <param name="variable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QuickTools.QData.VirtualStack.SetVariable(QuickTools.QData.Variable)">
+            <summary>
+            Set the variable with the given value
+            </summary>
+            <param name="variable"></param>
+            <exception cref="T:System.Exception"></exception>
+        </member>
         <member name="M:QuickTools.QData.VirtualStack.GetVariable(System.String)">
             <summary>
             Gets the value from the value from the variable in the stack
@@ -2430,12 +2462,6 @@
             <param name="variable"></param>
             <param name="value"></param>
             <exception cref="T:System.Exception"></exception>
-        </member>
-        <member name="M:QuickTools.QData.VirtualStack.SetVariable(QuickTools.QData.Variable)">
-            <summary>
-            Set the variable with the given value
-            </summary>
-            <param name="variable"></param>
         </member>
         <member name="M:QuickTools.QData.VirtualStack.SetConstant(System.String,System.String)">
             <summary>

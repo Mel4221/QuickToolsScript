@@ -6,20 +6,33 @@ namespace ScriptRunner
 	
 	public partial class Runner
     {
-        public void Run(Action code)
+		private ErrorHandeler error = new ErrorHandeler();
+		public void Run(Action code)
         {
             try 
             {
                 code();
             }catch (Exception ex)
             {
-                ErrorHandeler error = new ErrorHandeler();
                 error.DisplayError(ErrorType.ExecutionError, $"{ex}"); 
             }
         }
-
-
-
+        public void Run(Action code,bool backGround)
+        {
+            try
+            {
+				Job job = new Job();
+				job.JobAction = code;
+				job.Info = this.RunningCodeInfo;
+				job.Name = this.RunningBackGroundCodeName;
+				BackGroundJob.AddJob(job);
+				BackGroundJob.RunJobs();
+			}
+			catch (Exception ex) 
+            {
+                error.DisplayError(ErrorType.ExecutionError, $"There was an error while running a background Job \n{ex}");
+            }
+        }
 
         public Runner() { }
     }

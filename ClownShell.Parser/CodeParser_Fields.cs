@@ -10,6 +10,6 @@ namespace Parser
     public partial class CodeParser
     {
         public string[] Code { get; set; }
-        public VirtualStack VStack { get; set; } = new VirtualStack(); 
+        
     }
 }

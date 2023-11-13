@@ -8,6 +8,8 @@ namespace Parser
 {
     public partial class CodeParser
     {
+        public CodeParser() { } 
+
         public CodeParser(string[] code)
         {
             this.Code = code; 

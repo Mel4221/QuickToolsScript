@@ -837,3 +837,293 @@ Value=####
  There Was an error with the given type of error: 'NotValidAction' ''echo'' 
 ####;
 Relation=11/12/2023 3:59:21 PM;
+ID=1209;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''exity'' 
+####;
+Relation=11/12/2023 7:07:21 PM;
+ID=1211;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''free-objects'' 
+####;
+Relation=11/12/2023 7:12:29 PM;
+ID=1213;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Release'' 
+####;
+Relation=11/12/2023 10:35:48 PM;
+ID=1215;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''wait'' 
+####;
+Relation=11/13/2023 12:01:33 AM;
+ID=1217;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''d'' 
+####;
+Relation=11/13/2023 12:27:56 AM;
+ID=1219;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''d'' 
+####;
+Relation=11/13/2023 12:28:02 AM;
+ID=1221;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''d'' 
+####;
+Relation=11/13/2023 12:28:32 AM;
+ID=1223;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''d'' 
+####;
+Relation=11/13/2023 12:30:06 AM;
+ID=1225;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.Exception: Variable is already set
+   at QuickTools.QData.VirtualStack.SetVariable(String variable, String value)
+   at ScriptRunner.Runner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\Runner.cs:line 14' 
+####;
+Relation=11/13/2023 1:40:20 AM;
+ID=1227;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''print-vstack-size'' 
+####;
+Relation=11/13/2023 1:41:13 AM;
+ID=1229;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''print-vstack-size'' 
+####;
+Relation=11/13/2023 1:41:19 AM;
+ID=1231;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''vstack-size'' 
+####;
+Relation=11/13/2023 1:41:27 AM;
+ID=1233;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.Exception: Variable is already set
+   at QuickTools.QData.VirtualStack.SetVariable(String variable, String value)
+   at ScriptRunner.Runner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\Runner.cs:line 14' 
+####;
+Relation=11/13/2023 1:43:20 AM;
+ID=1235;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Parser.CodeParser.<>c__DisplayClass25_0.<SetExecution>b__0() in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Parser\SetExecution_Action_Type_Parameters.cs:line 26
+   at ScriptRunner.Runner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\Runner.cs:line 14' 
+####;
+Relation=11/13/2023 1:46:51 AM;
+ID=1237;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''exitexit'' 
+####;
+Relation=11/13/2023 1:51:18 AM;
+ID=1239;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''pv-stack'' 
+####;
+Relation=11/13/2023 1:57:48 AM;
+ID=1241;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''fuck'' 
+####;
+Relation=11/13/2023 1:58:03 AM;
+ID=1243;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''Fuck'' 
+####;
+Relation=11/13/2023 1:58:05 AM;
+ID=1245;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''Fuck' yeah' 
+####;
+Relation=11/13/2023 1:58:10 AM;
+ID=1247;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''grep'' 
+####;
+Relation=11/13/2023 2:01:45 AM;
+ID=1249;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''vstacksize'' 
+####;
+Relation=11/13/2023 2:03:33 AM;
+ID=1251;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''x' \' 
+####;
+Relation=11/13/2023 2:06:41 AM;
+ID=1253;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=11/13/2023 2:06:58 AM;
+ID=1255;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''1' 2' 
+####;
+Relation=11/13/2023 2:07:30 AM;
+ID=1257;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=11/13/2023 2:07:38 AM;
+ID=1259;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''a' *' 
+####;
+Relation=11/13/2023 2:10:15 AM;
+ID=1261;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''a' b' 
+####;
+Relation=11/13/2023 2:10:26 AM;
+ID=1263;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.ComponentModel.Win32Exception (0x80004005): The specified executable is not a valid application for this OS platform.
+   at System.Diagnostics.Process.StartWithCreateProcess(ProcessStartInfo startInfo)
+   at Parser.CodeParser.<>c__DisplayClass11_0.<RunProcess>b__0() in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Parser\CodeParser_Methods.cs:line 70
+   at ScriptRunner.Runner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\Runner.cs:line 14' 
+####;
+Relation=11/13/2023 2:11:11 AM;
+ID=1265;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotImplemented' 'The code is recongnized but sadly there are only 2 wasy to run a program and is either by providing the entired path or  by being in the same directory on the shell and running the program' 
+####;
+Relation=11/13/2023 2:11:39 AM;
+ID=1267;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.ArgumentException: Illegal characters in path.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFiles(String path)
+   at QuickTools.QCore.Get.Ls(String path)
+   at ScriptRunner.Runner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\Runner.cs:line 14' 
+####;
+Relation=11/13/2023 2:11:49 AM;
+ID=1269;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Release\-ll'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFiles(String path)
+   at QuickTools.QCore.Get.Ls(String path)
+   at ScriptRunner.Runner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\Runner.cs:line 14' 
+####;
+Relation=11/13/2023 2:11:59 AM;
+ID=1271;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''cexit'' 
+####;
+Relation=11/13/2023 2:12:29 AM;
+ID=1273;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidParameter' 'I'M sorry but the path C:\Users\Melquiceded\Documents\You does not exist!!!' 
+####;
+Relation=11/13/2023 2:15:08 AM;
+ID=1275;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.ComponentModel.Win32Exception (0x80004005): The specified executable is not a valid application for this OS platform.
+   at System.Diagnostics.Process.StartWithCreateProcess(ProcessStartInfo startInfo)
+   at Parser.CodeParser.<>c__DisplayClass11_0.<RunProcess>b__0() in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Parser\CodeParser_Methods.cs:line 70
+   at ScriptRunner.Runner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\Runner.cs:line 14' 
+####;
+Relation=11/13/2023 2:15:53 AM;
+ID=1277;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotImplemented' 'The code is recongnized but sadly there are only 2 wasy to run a program and is either by providing the entired path or  by being in the same directory on the shell and running the program' 
+####;
+Relation=11/13/2023 2:16:11 AM;
+ID=1279;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''exe' python3' 
+####;
+Relation=11/13/2023 2:16:20 AM;
+ID=1281;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''exe' python' 
+####;
+Relation=11/13/2023 2:16:24 AM;
+ID=1283;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''exe' python' 
+####;
+Relation=11/13/2023 2:16:32 AM;
+ID=1285;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.ComponentModel.Win32Exception (0x80004005): The specified executable is not a valid application for this OS platform.
+   at System.Diagnostics.Process.StartWithCreateProcess(ProcessStartInfo startInfo)
+   at Parser.CodeParser.<>c__DisplayClass11_0.<RunProcess>b__0() in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Parser\CodeParser_Methods.cs:line 70
+   at ScriptRunner.Runner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\Runner.cs:line 14' 
+####;
+Relation=11/13/2023 2:17:43 AM;
+ID=1287;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''open'' 
+####;
+Relation=11/13/2023 2:17:55 AM;
+ID=1289;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''open' index.html' 
+####;
+Relation=11/13/2023 2:18:01 AM;
+ID=1291;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''chrome'' 
+####;
+Relation=11/13/2023 2:18:07 AM;
+ID=1293;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotImplemented' 'The code is recongnized but sadly there are only 2 wasy to run a program and is either by providing the entired path or  by being in the same directory on the shell and running the program' 
+####;
+Relation=11/13/2023 2:18:14 AM;
+ID=1295;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''echo' "Melquiceded Balbi Villanueva" ' 
+####;
+Relation=11/13/2023 2:19:36 AM;

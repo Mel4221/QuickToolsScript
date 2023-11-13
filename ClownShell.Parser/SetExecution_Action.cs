@@ -22,8 +22,39 @@ namespace Parser
 			ErrorHandeler error = new ErrorHandeler();
 			Runner runner = new Runner();
 			ProcessStartInfo process;
+
+
+			if(this.HasExecutable(action))
+			{
+				this.RunExecutable(action); 
+				return;
+			}if(Get.FileExention(action) == "clown")
+			{
+				this.ParseFromFile(action); 
+				return;
+			}
             switch (action)
             {
+				case "input":
+					runner.Run(() => {
+						Shell.VStack.Free("input");
+						Shell.VStack.SetVariable(new Variable()
+						{
+							Name = $"input",
+							Value = null,
+							IsConstant = false
+						});
+					});
+					break;
+				case "print-stack-size":
+				case "print-vstack-size":
+				case "stack-size":
+					runner.Run(() => { Get.Yellow(Shell.VStack.VirtualStackSize());});
+					break;
+				case "clear-objects":
+				case "clear-obj":
+					runner.Run(()=> { this.FreeObjects(); });
+					break;
                 case "clear":
                     runner.Run(() => { Get.Clear(); });
                     break;
@@ -65,7 +96,7 @@ namespace Parser
 					break;
 				case "free-stack":
 					runner.Run(() => {
-						VStack.Flush();
+						Shell.VStack.Flush();
 					});
 					break;
 				case "whoami":
@@ -127,13 +158,6 @@ namespace Parser
 						Get.Ls(Shell.CurrentPath);
 					});
 					// Get.Ls(ShellLoop.CurrentPath);
-					break;
-				case "get-input":
-				case "input":
-					runner.Run(() => {
-						//cache.Cach("EntryInput", Get.Input("Type Something: ").Text);
-						error.DisplayError(ErrorType.NotImplemented, $"The command is recognized but is not currently implemented or is Disabled");
-					});
 					break;
 				case "select":
 				case "-S":

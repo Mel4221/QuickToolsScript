@@ -69,10 +69,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CodeParser_Call.cs" />
+    <Compile Include="CodeParser_CheckForVariables.cs" />
+    <Compile Include="CodeParser_FreeObjects.cs" />
     <Compile Include="CodeParser_Constructor.cs" />
     <Compile Include="CodeParser_Methods.cs" />
     <Compile Include="CodeParser_Parse.cs" />
     <Compile Include="CodeParser_Fields.cs" />
+    <Compile Include="CodeParser_ParseFromFile.cs" />
     <Compile Include="CodeParser_RunChecks.cs" />
     <Compile Include="CodeParser_RunExecutable.cs" />
     <Compile Include="CodeParser_Start.cs" />

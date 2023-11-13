@@ -3,37 +3,47 @@ using QuickTools.QConsole;
 using QuickTools.QCore;
 using Parser;
 using States;
-	namespace MainLoop
+using Security;
+using QuickTools.QData;
+using System.IO;
+
+namespace MainLoop
 	{
-		
+
 		public partial class ShellLoop
 		{
 
-			public void Start()
+		private ShellInput shell;
+		private CodeParser parser;
+		private void RunShellLoop()
+		{
+			shell = new ShellInput(Environment.UserName, Environment.MachineName);
+
+			while (!Shell.ExitRequest)
 			{
+				shell.CurrentPath = Shell.CurrentPath;
+				shell.Notifications = ShellUser.Name == null ? $"'{Environment.UserName}' Without Credentials" : ShellUser.Name;
+				string input = shell.StartInput();
+				this.SaveHistory(input);
+				string[] commands = IConvert.TextToArray(input);
+				parser = new CodeParser(commands);
+				parser.Start();
+			}
+		}
 
-				ShellInput shell;
-				CodeParser parser;
 
+		public void Start()
+			{
+				
+			
 				if (this.Arguments.Length  > 0)
 				{
-				parser = new CodeParser(this.Arguments);
-				parser.Start();
+					this.CheckArguments();
 					return;
 				}
 				else
 				{
-					shell = new ShellInput(Environment.UserName, Environment.MachineName);
-					
-					while (!Shell.ExitRequest)
-					{
-						shell.CurrentPath = Shell.CurrentPath;
-						string input = shell.StartInput();
-						this.SaveHistory(input); 
-						string[] commands = IConvert.TextToArray(input);
-						parser = new CodeParser(commands);
-						parser.Start(); 
-					}
+					this.RunShellLoop(); 
 				}
 			}
 			public ShellLoop() { }

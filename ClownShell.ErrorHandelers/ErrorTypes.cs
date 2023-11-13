@@ -12,7 +12,8 @@ using System.Threading.Tasks;
             NotValidParameter,
             ExecutionError,
             NotImplemented,
-            FATAL
+            FATAL,
+            VariableAlreadySet
         }
 
     }
