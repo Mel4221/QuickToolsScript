@@ -3,7 +3,11 @@
 
 > ClownShell
 
-# Goal
+# Support
+## Donations
+If you would like to donate no matter the amount here is [Paypal](https://www.paypal.com/donate/?hosted_button_id=YLKHHW3VW5MNL)
+
+# Goal 
 > The goal of this project is to create an interpreter for all the commands listed in the QuickTools library  to be able to automate funtions with simple scripting commands 
 
 QuickTools Execution Program 
