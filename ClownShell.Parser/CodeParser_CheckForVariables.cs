@@ -19,11 +19,22 @@ namespace Parser
 		{
 			try
 			{
-				if (type.Contains("*"))
+				string variable = type.Substring(1);
+				if (type.Contains("*") || type.Contains("$"))
 				{
-					if (type[0] == '*' && type[1] != '.')
+					if (type[0] == '*' || type[0] == '$' && type[1] != '.')
 					{
-						Variable v = Shell.VStack.GetVariable(type.Substring(1));
+						if(this.IsInternalVariable(variable))
+						{
+							switch(variable) 
+							{
+								case "shell-path":
+									return Shell.CurrentPath;
+								default:
+									return null;
+							}
+						}
+						Variable v = Shell.VStack.GetVariable(variable);
 						if (!v.IsEmpty) return v.Value;
 					}
 				}
@@ -43,13 +54,27 @@ namespace Parser
 		{
 			try
 			{
+				string variable;
 				for (int word = 0; word < parameters.Length; word++)
 				{
-					if (parameters[word].Contains("*"))
+					variable = parameters[word].Substring(1);
+					if (parameters[word].Contains("*") || parameters[word].Contains("$"))
 					{
-						if (parameters[word][0] == '*' && parameters[word][1] != '.')
+						if (parameters[word][0] == '*' || parameters[word][0] == '$' && parameters[word][1] != '.')
 						{
+							if (this.IsInternalVariable(variable))
+							{
+								switch (variable)
+								{
+									case "shell-path":
+										parameters[word] = Shell.CurrentPath;
+										continue;
+									default:
+										continue;
+								}
+							}
 							Variable v = Shell.VStack.GetVariable(parameters[word].Substring(1));
+		
 							switch (v.IsEmpty)
 							{
 								case false:

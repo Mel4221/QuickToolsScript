@@ -1196,3 +1196,66 @@ Value=####
  There Was an error with the given type of error: 'NotValidAction' ''echo'' 
 ####;
 Relation=11/13/2023 5:30:13 PM;
+ID=1319;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''echo'' 
+####;
+Relation=11/13/2023 5:41:40 PM;
+ID=1321;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''echo'' 
+####;
+Relation=11/13/2023 8:24:10 PM;
+ID=1323;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''echo'' 
+####;
+Relation=11/13/2023 9:22:02 PM;
+ID=1325;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''vstack'' 
+####;
+Relation=11/13/2023 9:27:27 PM;
+ID=1327;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''const' name' 
+####;
+Relation=11/13/2023 9:32:59 PM;
+ID=1329;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' ''const' name' 
+####;
+Relation=11/13/2023 9:33:05 PM;
+ID=1331;
+Key=log;
+Value=' 
+####;
+Relation=11/13/2023 10:11:56 PM;
+ID=1333;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidParameter' 'I'M sorry but the path C:\Users\Melquiceded\Desktop\f does not exist!!!' 
+####;
+Relation=11/13/2023 10:24:50 PM;
+ID=1335;
+Key=log;
+Value= Parameters: 5  At:11/13/2023 10:27:27
+Trace: Action Was not Recognized as a valid Action At:11/13/2023 10:27:27
+' 
+####;
+Relation=11/13/2023 10:27:28 PM;
+ID=1337;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution Action With Type and parameters '$x' = 7 Trace: 
+Execution Started With Action: $x Type: = Parameters: 7 Trace: Execution Started With Action: $x Type: = Parameters: 7  At:11/13/2023 10:42:56
+Trace: Action Was not Recognized as a valid Action At:11/13/2023 10:42:56
+' 
+####;
+Relation=11/13/2023 10:42:56 PM;

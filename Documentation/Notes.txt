@@ -1,0 +1,4 @@
+Date: 11/15/2023
+Thoghts and Notes
+
+When this Project was consived this project had a different name , this Project was named QuickToolsScript as this was Basically created at first to run the Functionalites mainly from QuickTools Library but as the Library got bigger it made more sence to actually add some extra functionalites to the console and that is how the ClownShell was then Burn on the idea that if it was a console , it should have at least the basic commands of a shell such as cd,cp,mv,rm,ls... along other commands , and as today ClownShell is a Console Application that can navigate around the system and also invoke Programs from the system such as cmd,Powershell along others...

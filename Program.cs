@@ -7,7 +7,10 @@ using QuickTools.QCore;
 using QuickTools.QIO;
 using Settings;
 using ErrorHandelers;
-using MainLoop; 
+using MainLoop;
+using States;
+using System.Diagnostics;
+
 namespace ClownShell
 {
     namespace Init
@@ -18,34 +21,38 @@ namespace ClownShell
             public const string Name = "ClownShell";
             public static int Main(string[] args)
             {
-
-                try
-                {
+				ShellTrace.AddTrace("ClownShell Started");
+        
+				try
+				{
 
                     Get.Title(Program.Name);
                     ShellLoop shell;
-
                     if (args.Length == 0)
                     {
-                        shell = new ShellLoop();
+						ShellTrace.AddTrace("Without Arguments");
+						shell = new ShellLoop();
                         shell.Start();
                         return 0;
                     }
                     else
                     {
-                        shell = new ShellLoop(args);
+						ShellTrace.AddTrace($"With Arguments Length: {args.Length}");
+						shell = new ShellLoop(args);
                         shell.Start();
                         return 0;
                     }
                 }
                 catch (Exception ex)
                 {
+                    ShellTrace.AddTrace($"FATAL-ERROR Encountered {ex}");
                     ErrorHandeler error = new ErrorHandeler();
                     error.DisplayError(ErrorType.FATAL, "FATAL-ERROR");
-                    Log.Event(ShellSettings.LogsFile, $"Shell Exited With a FATAL-ERROR More info in the logs file:  \n{ex}");
+                    Log.Event(ShellSettings.LogsFile, $"Shell Exited With a FATAL-ERROR More info in the logs file: \nStartTrace\n {ShellTrace.GetTrace()} \nEndTrace \nStartExeption \n{ex} \nEndExeption\n");
                     Get.White(ex);
                     Get.Alert($"There was a FATAL ERROR MORE INFO IN this path: \n{ShellSettings.LogsFile}.log");
-                    Environment.Exit(1);
+					
+					Environment.Exit(1);
                     return 1;
                 }
             }

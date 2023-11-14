@@ -9,7 +9,6 @@ namespace Parser
 {
     public partial class CodeParser
     {
-        public string[] Code { get; set; }
-        
+        public string[] Code { get; set; } = new string[0]; 
     }
 }

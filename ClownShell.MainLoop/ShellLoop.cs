@@ -30,13 +30,15 @@ namespace MainLoop
 		private CodeParser parser;
 		private void RunShellLoop()
 		{
+			ShellTrace.AddTrace($"ShellLoop Started {this}");
 			shell = new ShellInput(Environment.UserName, Environment.MachineName);
 			shell.ProgramName = Shell.Name;
 			////TitileUpdateThread = new Thread(() => { this.AutoUpdateTitle(); });
 			////TitileUpdateThread.Start();
-
+			ShellTrace.AddTrace($"LoopInput Started {this}");
 			while (!Shell.ExitRequest)
 			{
+				
 				shell.CurrentPath = Shell.CurrentPath;
 				shell.Notifications = ShellUser.Name == null ? $"'{Environment.UserName}' Without Credentials" : ShellUser.Name;
 				////shell.TextSimbol = Shell.VStack.VirtualStackSize()=="0B" ? ">" : $"[{Shell.VStack.VirtualStackSize()}]>";
@@ -44,6 +46,7 @@ namespace MainLoop
 				string input = shell.StartInput();
 				this.SaveHistory(input);
 				string[] commands = IConvert.TextToArray(input);
+				ShellTrace.AddTrace($"Commands Inputed Length: {commands.Length}");
 				parser = new CodeParser(commands);
 				parser.Start();
 			}

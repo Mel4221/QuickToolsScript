@@ -22,7 +22,7 @@ namespace Parser
 			ErrorHandeler error = new ErrorHandeler();
 			Runner runner = new Runner();
 			ProcessStartInfo process;
-
+			ShellTrace.AddTrace($"Execution Set With Action: {action} ");
 
 			if(this.HasExecutable(action))
 			{
@@ -330,7 +330,8 @@ namespace Parser
 					});
 					break;
 				default:
-                    error.DisplayError(ErrorType.NotValidAction, $"'{action}'");
+					ShellTrace.AddTrace($"Action Was not Recognized as a valid Action");
+                    error.DisplayError(ErrorType.NotValidAction, $"At: Execution With Action: '{action}' Trace: \n{ShellTrace.GetTrace()}");
                     break;
             }
         }

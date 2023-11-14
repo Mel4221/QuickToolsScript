@@ -46,14 +46,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClownShell.exe" size="124416">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClownShell.exe" size="124928">
       <assemblyIdentity name="ClownShell" version="7.1.1.1" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>0eYUeIv/g6pEZJoX8Y+026GO0qE73f0GEzusHlGm0KY=</dsig:DigestValue>
+        <dsig:DigestValue>YqBE6+5QZcrNVb5C0rtsnUe7zsjGmhu1VTDOGViq6hE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -70,26 +70,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClownShell.MainLoop.dll" size="6656">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClownShell.MainLoop.dll" size="7168">
       <assemblyIdentity name="ClownShell.MainLoop" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>x5jGjNaGhd47sTgUZgAWj5k0NYFWz8tGdc2vXW3SN+Y=</dsig:DigestValue>
+        <dsig:DigestValue>HWt8iunuQYSM5NWvl6UUYX609tMJDAnUOzIa2YzHXeI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClownShell.Parser.dll" size="30208">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClownShell.Parser.dll" size="32256">
       <assemblyIdentity name="ClownShell.Parser" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>zOXNDzDVL8ww4uBLcLiFmoQZZKlw14nffXqXT8nduHo=</dsig:DigestValue>
+        <dsig:DigestValue>WFdoHh0riySkqkACdCsn0wnO50EI95acC+q5SVvX16A=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -130,14 +130,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClownShell.State.dll" size="11776">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClownShell.State.dll" size="12800">
       <assemblyIdentity name="ClownShell.State" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>yXagg1qM7ow/ERf/S6En+PHR83kttkmuUQf/Ke300MA=</dsig:DigestValue>
+        <dsig:DigestValue>9eMgWDUafEZKYh/iBKJ/Sv6RHCBd0f8KooTYMJdN/IA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -39,13 +39,12 @@ namespace Parser
 			if(File.Exists(file))
 			{
 				string[] code = File.ReadAllLines(file);
-				Print.List(code);
-				
-				foreach(string cmd in code)
+				//Print.List(code);
+				CodeParser parser;
+				foreach (string cmd in code)
 				{
-					CodeParser parser = new CodeParser(IConvert.TextToArray(cmd));
+					parser = new CodeParser(IConvert.TextToArray(cmd));
 					parser.Start();
-				    
 				}
 				return;
 			}

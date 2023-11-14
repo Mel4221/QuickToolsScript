@@ -3,22 +3,29 @@ using States;
 using System.Diagnostics;
 using ScriptRunner;
 using System.IO;
-using System.Collections.Generic; 
+using System.Collections.Generic;
 
-
+using QuickTools.QCore; 
 namespace Parser
 {
 	public partial class CodeParser
 	{
-
-
+		/// <summary>
+		/// Collects all the data related with the code that is running and returns it in an string format
+		/// </summary>
+		/// <returns></returns>
+		public override string ToString()
+		{
+			string code = this.Code.Length > 0 ? IConvert.ArrayToText(this.Code) : null;
+			return $" Code: {code}";
+		}
 		/// <summary>
 		/// adds Quotes to the string around the string given without braking the string format
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
 		public string ToQoutesString(string input) => $"'{input}'".Replace("'", '"'.ToString());
-		
+
 
 		/// <summary>
 		/// gets the <see cref="States.Shell.CurrentPath"/>and returns it with the given type without braking the path
@@ -26,7 +33,7 @@ namespace Parser
 		/// <param name="type"></param>
 		/// <returns></returns>
 		public string GetPathWithType(string type) => Shell.CurrentPath[Shell.CurrentPath.Length-1]==Get.Slash()[0] ? $"{Shell.CurrentPath}{type}" : $"{Shell.CurrentPath}{Get.Slash()}{type}";
-		 
+
 		/// <summary>
 		/// Returns either the given path contains a file
 		/// </summary>
@@ -149,13 +156,28 @@ namespace Parser
 
 			//return new int[] {-1,-1};
 		}
-		
+
 		/// <summary>
 		/// fix the given string format
 		/// </summary>
 		public void FixStringFormat() => this.Code = this.FormatStrings(this.Code);
- 
 
+
+		public bool IsInternalVariable(string variable) => this.IsIlligalVariableName(variable) == true ? true : false;
+		public bool IsIlligalVariableName(string variableName)	
+		{
+			switch(variableName)
+			{
+				case "var":
+				case "cat":
+				case "read":
+				case "echo":
+				case "shell-path":
+					return true; 
+				default:
+				return false;	
+			}
+		}
 
 	}
 }

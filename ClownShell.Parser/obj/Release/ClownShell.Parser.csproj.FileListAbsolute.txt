@@ -21,3 +21,4 @@ C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Dependencies\ClownSh
 C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Parser\obj\Release\ClownShell.Parser.csproj.CopyComplete
 C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Parser\obj\Release\ClownShell.Parser.dll
 C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Parser\obj\Release\ClownShell.Parser.pdb
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Dependencies\ClownShell.Parser.dll

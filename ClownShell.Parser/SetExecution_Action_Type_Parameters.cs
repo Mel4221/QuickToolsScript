@@ -21,22 +21,44 @@ namespace Parser
 			ProcessStartInfo process;
 			string[] param = parameters;
 			//Print.List(param); 
+			ShellTrace.AddTrace($"Execution Started With Action: {action} Type: {type} Parameters: {IConvert.ArrayToText(param)}");
 
 			switch (action)
               {
+				case "shell-path":
+					runner.Run(() => {
+						Shell.CurrentPath = param[0];
+					});
+					break;
 				case "var":
-				case "mem":
 					runner.Run(() => {
 						Get.Yellow($"{type} = {param[1]};");
 						//var y = ls;
 						//var x = input;
-						//action  type     
+						//action  type
+						//shell-path = d:/path/folder/
 						//var     user = "melquiceded balbi villanueva"
 						Shell.VStack.SetVariable(new Variable(){
 							Name=type,
 							Value=param[1],
 							IsEmpty=false
 						});	
+					});
+					break;
+				case "const":
+					runner.Run(() => {
+						Get.Yellow($"{type} = {param[1]};");
+						//var y = ls;
+						//var x = input;
+						//action  type     
+						//var     user = "melquiceded balbi villanueva"
+						Shell.VStack.SetVariable(new Variable()
+						{
+							Name=type,
+							Value=param[1],
+							IsEmpty=false,
+							IsConstant = true
+						});
 					});
 					break;
 				case "input":
@@ -97,8 +119,10 @@ namespace Parser
 						Shell.VStack.UpdateVariable(action, param[0]);
 						return;
 					}
-					error.DisplayError(ErrorType.NotValidAction, $"'{action}' {type}");
-				break; 
+					ShellTrace.AddTrace($"Action Was not Recognized as a valid Action");
+					error.DisplayError(ErrorType.NotValidAction, $"At: Execution Action With Type and parameters '{action}' {type} {IConvert.ArrayToText(param)}Trace: \n{ShellTrace.GetTrace()}");
+
+					break; 
               }
         }
     }

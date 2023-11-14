@@ -13,12 +13,14 @@ namespace MainLoop
 	{
 		private void CheckArguments()
 		{
+			ShellTrace.AddTrace("Checking Arguments");
 			int length = this.Arguments.Length;
 			string path = this.Arguments[0];
 			//if is a direct path just set the current path as the path
 			if (length == 1 && new CodeParser().IsRootPath(path) && Directory.Exists(path))
 			{
 				Shell.CurrentPath = path;
+				ShellTrace.AddTrace("RootPath Detected");
 				this.RunShellLoop();
 				return; 
 			}
@@ -29,6 +31,8 @@ namespace MainLoop
 				path = Helper.HasSpecialFolder(path);
 				if (Directory.Exists(path))
 				{
+					ShellTrace.AddTrace("HasSpecial Folder Detected");
+
 					Shell.CurrentPath = path;
 					this.RunShellLoop();
 					return; 
@@ -36,6 +40,7 @@ namespace MainLoop
 			}
 			else
 			{
+				ShellTrace.AddTrace("Did not match any Supported Path Crateries");
 				this.parser = new CodeParser(this.Arguments);
 				this.parser.Start();
 				return;

@@ -52,6 +52,7 @@
     <Compile Include="BackGroundjobs.cs" />
     <Compile Include="Shell.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShellStrace.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

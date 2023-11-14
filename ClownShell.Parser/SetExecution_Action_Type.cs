@@ -23,6 +23,7 @@ namespace Parser
 			ProcessStartInfo process;
 			string file, path;
 			bool isBackGroundAction;
+			ShellTrace.AddTrace($"Execution Started With Action: {action} Type: {type}");
 			switch (action)
             {
                 case "fuck":
@@ -691,9 +692,10 @@ namespace Parser
 					});
 					break;
 				default:
-                    error.DisplayError(ErrorType.NotValidAction, $"'{action}' {type}");
+					ShellTrace.AddTrace($"Action Was not Recognized as a valid Action");
+					error.DisplayError(ErrorType.NotValidAction, $"At: Execution Action With Type '{action}' {type} Trace: \n{ShellTrace.GetTrace()}");
                     break;
             }
-        }
+        } 
     }
 }

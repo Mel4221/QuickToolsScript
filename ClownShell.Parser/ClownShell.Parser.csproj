@@ -35,10 +35,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\ClownShell.Dependencies\ClownShell.ErrorHandelers.dll</HintPath>
     </Reference>
-    <Reference Include="ClownShell.Parser, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ClownShell.Dependencies\ClownShell.Parser.dll</HintPath>
-    </Reference>
     <Reference Include="ClownShell.ScriptRunner, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\ClownShell.Dependencies\ClownShell.ScriptRunner.dll</HintPath>
