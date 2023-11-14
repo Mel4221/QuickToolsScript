@@ -1,5 +1,8 @@
 # ClownShell 
-QuickToolsScript Interpreter
+<img width="377" alt="image" src="https://github.com/Mel4221/ClownShell/assets/87794877/758a1c61-e42e-4d98-aeea-2fc74d263eb8">
+
+> ClownShell
+
 # Goal
 > The goal of this project is to create an interpreter for all the commands listed in the QuickTools library  to be able to automate funtions with simple scripting commands 
 
