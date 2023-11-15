@@ -3,6 +3,8 @@
 
 > ClownShell
 
+# Visit our Wiki
+> [Wiki](https://github.com/Mel4221/ClownShell/Home)
 # Support
 ## Report Issues
 > Please open a [issue on git](https://github.com/Mel4221/ClownShell/issues) or open a [discussion on git](https://github.com/Mel4221/ClownShell/discussions)
