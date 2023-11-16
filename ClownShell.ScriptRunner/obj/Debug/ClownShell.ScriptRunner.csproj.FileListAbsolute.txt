@@ -1,2 +1,15 @@
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\bin\Debug\ClownShell.ScriptRunner.dll
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\bin\Debug\ClownShell.ScriptRunner.pdb
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\bin\Debug\ClownShell.ErrorHandelers.dll
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\bin\Debug\ClownShell.Settings.dll
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\bin\Debug\ClownShell.State.dll
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\bin\Debug\QuickTools.dll
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\bin\Debug\ClownShell.ErrorHandelers.pdb
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\bin\Debug\ClownShell.Settings.pdb
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\bin\Debug\ClownShell.State.pdb
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\bin\Debug\QuickTools.xml
 C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\obj\Debug\ClownShell.ScriptRunner.csproj.AssemblyReference.cache
 C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\obj\Debug\ClownShell.ScriptRunner.csproj.CoreCompileInputs.cache
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\obj\Debug\ClownShell.ScriptRunner.csproj.CopyComplete
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\obj\Debug\ClownShell.ScriptRunner.dll
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\obj\Debug\ClownShell.ScriptRunner.pdb

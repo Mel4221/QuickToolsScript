@@ -42,6 +42,9 @@ using System;
                     case ErrorType.FATAL:
                         Get.Red($"There was a [FATAL] error and the system will not be able to recover from it ");
                         break;
+                default:
+                    Get.Red($"Error Detected: {errorType}");
+                    break;
                 }
             }
 

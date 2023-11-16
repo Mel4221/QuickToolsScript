@@ -1252,10 +1252,452 @@ Trace: Action Was not Recognized as a valid Action At:11/13/2023 10:27:27
 Relation=11/13/2023 10:27:28 PM;
 ID=1337;
 Key=log;
-Value=####
- There Was an error with the given type of error: 'NotValidAction' 'At: Execution Action With Type and parameters '$x' = 7 Trace: 
-Execution Started With Action: $x Type: = Parameters: 7 Trace: Execution Started With Action: $x Type: = Parameters: 7  At:11/13/2023 10:42:56
+Value= Parameters: 7  At:11/13/2023 10:42:56
 Trace: Action Was not Recognized as a valid Action At:11/13/2023 10:42:56
 ' 
 ####;
 Relation=11/13/2023 10:42:56 PM;
+ID=1339;
+Key=log;
+Value= Parameters: name  At:11/14/2023 02:58:58
+Trace: Execution Set With Action: echo  At:11/14/2023 02:59:01
+Trace: Action Was not Recognized as a valid Action At:11/14/2023 02:59:01
+' 
+####;
+Relation=11/14/2023 2:59:01 PM;
+ID=1341;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution Action With Type 'login' mel Trace: 
+Trace: ClownShell Started At:11/14/2023 03:5:03
+Trace: Without Arguments At:11/14/2023 03:5:03
+Trace: ShellLoop Started MainLoop.ShellLoop At:11/14/2023 03:5:03
+Trace: LoopInput Started MainLoop.ShellLoop At:11/14/2023 03:5:03
+Trace: Commands Inputed Length: 1 At:11/14/2023 03:5:05
+Trace: Execution Set With Action: ls  At:11/14/2023 03:5:05
+Trace: Commands Inputed Length: 1 At:11/14/2023 03:5:08
+Trace: Execution Set With Action: clear  At:11/14/2023 03:5:08
+Trace: Commands Inputed Length: 2 At:11/14/2023 03:5:49
+Trace: Execution Started With Action: login Type: mel At:11/14/2023 03:5:49
+Trace: Action Was not Recognized as a valid Action At:11/14/2023 03:5:49
+' 
+####;
+Relation=11/14/2023 3:05:49 PM;
+ID=1343;
+Key=log;
+Value= Parameters: {}  At:11/14/2023 03:10:00
+Trace: Action Was not Recognized as a valid Action At:11/14/2023 03:10:00
+' 
+####;
+Relation=11/14/2023 3:10:00 PM;
+ID=1345;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution With Action: 'wait' Trace: 
+Trace: ClownShell Started At:11/14/2023 09:12:09
+Trace: Without Arguments At:11/14/2023 09:12:09
+Trace: ShellLoop Started MainLoop.ShellLoop At:11/14/2023 09:12:10
+Trace: LoopInput Started MainLoop.ShellLoop At:11/14/2023 09:12:10
+Trace: Commands Inputed Length: 1 At:11/14/2023 09:14:35
+Trace: Execution Set With Action: ls  At:11/14/2023 09:14:35
+Trace: Commands Inputed Length: 2 At:11/14/2023 09:14:40
+Trace: Execution Started With Action: read Type: index.html At:11/14/2023 09:14:40
+Trace: Commands Inputed Length: 2 At:11/14/2023 09:14:47
+Trace: Execution Started With Action: cat Type:  At:11/14/2023 09:14:47
+Trace: Commands Inputed Length: 2 At:11/14/2023 09:14:54
+Trace: Execution Started With Action: echo Type:  At:11/14/2023 09:14:54
+Trace: Commands Inputed Length: 2 At:11/14/2023 09:15:01
+Trace: Execution Started With Action: echo Type: read[0] At:11/14/2023 09:15:01
+Trace: Commands Inputed Length: 2 At:11/14/2023 09:15:08
+Trace: Execution Started With Action: echo Type: *read[0] At:11/14/2023 09:15:08
+Trace: Commands Inputed Length: 1 At:11/14/2023 09:15:10
+Trace: Execution Set With Action: clear  At:11/14/2023 09:15:10
+Trace: Commands Inputed Length: 2 At:11/14/2023 09:15:16
+Trace: Execution Started With Action: echo Type:  At:11/14/2023 09:15:16
+Trace: Commands Inputed Length: 1 At:11/14/2023 09:15:19
+Trace: Execution Set With Action: ls  At:11/14/2023 09:15:19
+Trace: Commands Inputed Length: 2 At:11/14/2023 09:15:27
+Trace: Execution Started With Action: cat Type: file.txt At:11/14/2023 09:15:27
+Trace: Commands Inputed Length: 2 At:11/14/2023 09:15:32
+Trace: Execution Started With Action: read Type: file.txt At:11/14/2023 09:15:32
+Trace: Commands Inputed Length: 2 At:11/14/2023 09:15:35
+Trace: Execution Started With Action: echo Type:  At:11/14/2023 09:15:35
+Trace: Commands Inputed Length: 2 At:11/14/2023 09:35:34
+Trace: Execution Started With Action: cat Type: file.txt At:11/14/2023 09:35:34
+Trace: Commands Inputed Length: 1 At:11/14/2023 09:56:00
+Trace: Execution Set With Action: wait  At:11/14/2023 09:56:00
+Trace: Action Was not Recognized as a valid Action At:11/14/2023 09:56:00
+' 
+####;
+Relation=11/14/2023 9:56:00 PM;
+ID=1347;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution With Action: '938230498209348' Trace: 
+Trace: ClownShell Started At:11/14/2023 11:1:38
+Trace: Without Arguments At:11/14/2023 11:1:38
+Trace: ShellLoop Started MainLoop.ShellLoop At:11/14/2023 11:1:39
+Trace: LoopInput Started MainLoop.ShellLoop At:11/14/2023 11:1:39
+Trace: Commands Inputed Length: 1 At:11/14/2023 11:1:42
+Trace: Execution Set With Action: 938230498209348  At:11/14/2023 11:1:42
+Trace: Action Was not Recognized as a valid Action At:11/14/2023 11:1:42
+' 
+####;
+Relation=11/14/2023 11:01:42 PM;
+ID=1349;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.OverflowException: Value was either too large or too small for an Int64.
+   at System.Number.ParseInt64(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at Parser.CodeParser.<>c__DisplayClass28_0.<SetExecution>b__0() in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Parser\Parser\SetExecution_Action_Type_Parameters.cs:line 39
+   at ScriptRunner.Runner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\Runner.cs:line 14' 
+####;
+Relation=11/14/2023 11:01:51 PM;
+ID=1351;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt64(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at Parser.CodeParser.<>c__DisplayClass28_0.<SetExecution>b__0() in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Parser\Parser\SetExecution_Action_Type_Parameters.cs:line 39
+   at ScriptRunner.Runner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\Runner.cs:line 14' 
+####;
+Relation=11/14/2023 11:02:10 PM;
+ID=1353;
+Key=log;
+Value= 343melquiceded  At:11/14/2023 11:13:53
+Trace: The Parameter '343melquiceded' was not recognized as a valid number At:11/14/2023 11:13:53
+' 
+####;
+Relation=11/14/2023 11:13:53 PM;
+ID=1355;
+Key=log;
+Value= Parameters: fullNumae  At:11/15/2023 11:19:22
+Trace: Commands Inputed Length: 2 At:11/15/2023 11:19:30
+Trace: Execution Started With Action: echo Type: fullNumae At:11/15/2023 11:19:30
+Trace: Commands Inputed Length: 1 At:11/15/2023 11:19:43
+Trace: Execution Set With Action: echo  At:11/15/2023 11:19:43
+Trace: Action Was not Recognized as a valid Action At:11/15/2023 11:19:43
+' 
+####;
+Relation=11/15/2023 11:19:43 AM;
+ID=1357;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution With Action: 'vstac[0]' Trace: 
+Trace: ClownShell Started At:11/15/2023 12:0:37
+Trace: Without Arguments At:11/15/2023 12:0:37
+Trace: ShellLoop Started MainLoop.ShellLoop At:11/15/2023 12:0:38
+Trace: LoopInput Started MainLoop.ShellLoop At:11/15/2023 12:0:38
+Trace: Commands Inputed Length: 1 At:11/15/2023 12:2:56
+Trace: Execution Set With Action: vstac[0]  At:11/15/2023 12:2:56
+Trace: Action Was not Recognized as a valid Action At:11/15/2023 12:2:56
+' 
+####;
+Relation=11/15/2023 12:02:56 PM;
+ID=1359;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidParameter' 'I'M sorry but the path C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Release\bin does not exist!!!' 
+####;
+Relation=11/15/2023 12:03:09 PM;
+ID=1361;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution With Action: ';
+Relation=ls' Trace: 
+Trace: Commands Inputed Length: 1 At:11/15/2023 12:3:05
+Trace: Execution Set With Action: reset-path  At:11/15/2023 12:3:05
+Trace: Commands Inputed Length: 1 At:11/15/2023 12:3:06
+Trace: Execution Set With Action: clear  At:11/15/2023 12:3:06
+Trace: Commands Inputed Length: 1 At:11/15/2023 12:3:06
+Trace: Execution Set With Action: ls  At:11/15/2023 12:3:06
+Trace: Commands Inputed Length: 2 At:11/15/2023 12:3:09
+Trace: Execution Started With Action: cd Type: bin At:11/15/2023 12:3:09
+Trace: Commands Inputed Length: 1 At:11/15/2023 12:3:11
+Trace: Execution Set With Action: clear  At:11/15/2023 12:3:11
+Trace: Commands Inputed Length: 2 At:11/15/2023 12:3:13
+Trace: Execution Started With Action: cd Type: data At:11/15/2023 12:3:13
+Trace: Commands Inputed Length: 1 At:11/15/2023 12:3:15
+Trace: Execution Set With Action: ls  At:11/15/2023 12:3:15
+Trace: Commands Inputed Length: 2 At:11/15/2023 12:3:16
+Trace: Execution Started With Action: cd Type: qt At:11/15/2023 12:3:16
+Trace: Commands Inputed Length: 1 At:11/15/2023 12:3:16
+Trace: Execution Set With Action: ls  At:11/15/2023 12:3:16
+Trace: Commands Inputed Length: 2 At:11/15/2023 12:3:19
+Trace: Execution Started With Action: cd Type: logs At:11/15/2023 12:3:19
+Trace: Commands Inputed Length: 1 At:11/15/2023 12:3:19
+Trace: Execution Set With Action: ls  At:11/15/2023 12:3:19
+Trace: Commands Inputed Length: 1 At:11/15/2023 12:3:21
+Trace: Execution Set With Action: clear  At:11/15/2023 12:3:21
+Trace: Commands Inputed Length: 1 At:11/15/2023 12:3:21
+Trace: Execution Set With Action: ls  At:11/15/2023 12:3:21
+Trace: Commands Inputed Length: 2 At:11/15/2023 12:3:37
+Trace: Execution Started With Action: du Type: ErrorHandeler.log At:11/15/2023 12:3:37
+Trace: Commands Inputed Length: 2 At:11/15/2023 12:3:41
+Trace: Execution Started With Action: cat Type: ErrorHandeler.log At:11/15/2023 12:3:41
+Trace: Commands Inputed Length: 1 At:11/15/2023 12:4:27
+Trace: Execution Set With Action: ls  At:11/15/2023 12:4:27
+Trace: Commands Inputed Length: 2 At:11/15/2023 12:4:29
+Trace: Execution Started With Action: cd Type: .. At:11/15/2023 12:4:29
+Trace: Commands Inputed Length: 1 At:11/15/2023 12:4:30
+Trace: Execution Set With Action: clear  At:11/15/2023 12:4:30
+Trace: Commands Inputed Length: 1 At:11/15/2023 12:4:31
+Trace: Execution Set With Action: ls  At:11/15/2023 12:4:31
+Trace: Commands Inputed Length: 2 At:11/15/2023 12:4:33
+Trace: Execution Started With Action: cd Type: shell At:11/15/2023 12:4:33
+Trace: Commands Inputed Length: 1 At:11/15/2023 12:4:34
+Trace: Execution Set With Action: ls  At:11/15/2023 12:4:34
+Trace: Commands Inputed Length: 2 At:11/15/2023 12:4:44
+Trace: Execution Started With Action: cat Type: ClownShell.log At:11/15/2023 12:4:44
+Trace: Commands Inputed Length: 1 At:11/15/2023 12:5:24
+Trace: Execution Set With Action: ls  At:11/15/2023 12:5:24
+Trace: Commands Inputed Length: 2 At:11/15/2023 12:5:28
+Trace: Execution Started With Action: du Type: ClownShell.log At:11/15/2023 12:5:28
+Trace: Commands Inputed Length: 2 At:11/15/2023 12:5:45
+Trace: Execution Started With Action: cat Type: mel.pubkey At:11/15/2023 12:5:45
+Trace: Commands Inputed Length: 1 At:11/15/2023 12:6:21
+Trace: Execution Set With Action: clear  At:11/15/2023 12:6:21
+Trace: Commands Inputed Length: 1 At:11/15/2023 12:6:22
+Trace: Execution Set With Action: ls  At:11/15/2023 12:6:22
+Trace: Commands Inputed Length: 2 At:11/15/2023 12:6:29
+Trace: Execution Started With Action: cat Type: ClownShell.history At:11/15/2023 12:6:29
+Trace: Commands Inputed Length: 1 At:11/15/2023 12:7:16
+Trace: Execution Set With Action: clear  At:11/15/2023 12:7:16
+Trace: Commands Inputed Length: 1 At:11/15/2023 12:7:17
+Trace: Execution Set With Action: ls  At:11/15/2023 12:7:17
+Trace: Commands Inputed Length: 2 At:11/15/2023 12:7:18
+Trace: Execution Started With Action: cd Type: .. At:11/15/2023 12:7:18
+Trace: Commands Inputed Length: 1 At:11/15/2023 12:7:19
+Trace: Execution Set With Action: ls  At:11/15/2023 12:7:19
+Trace: Commands Inputed Length: 2 At:11/15/2023 12:7:25
+Trace: Execution Started With Action: cd Type: cache At:11/15/2023 12:7:25
+Trace: Commands Inputed Length: 1 At:11/15/2023 12:7:25
+Trace: Execution Set With Action: ls  At:11/15/2023 12:7:25
+Trace: Commands Inputed Length: 2 At:11/15/2023 12:7:29
+Trace: Execution Started With Action: cd Type: .. At:11/15/2023 12:7:29
+Trace: Commands Inputed Length: 1 At:11/15/2023 12:7:30
+Trace: Execution Set With Action: clear  At:11/15/2023 12:7:30
+Trace: Commands Inputed Length: 1 At:11/15/2023 12:7:30
+Trace: Execution Set With Action: ls  At:11/15/2023 12:7:30
+Trace: Commands Inputed Length: 2 At:11/15/2023 12:7:32
+Trace: Execution Started With Action: cd Type: db At:11/15/2023 12:7:32
+Trace: Commands Inputed Length: 1 At:11/15/2023 12:7:33
+Trace: Execution Set With Action: ;
+ID=1363;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Parser.CodeParser.<>c__DisplayClass39_0.<SetExecution>b__2() in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Parser\Parser\SetExecution_Action_Type_Parameters.cs:line 75
+   at ScriptRunner.Runner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\Runner.cs:line 14' 
+####;
+Relation=11/15/2023 3:36:32 PM;
+ID=1365;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Parser.CodeParser.<>c__DisplayClass39_0.<SetExecution>b__2() in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Parser\Parser\SetExecution_Action_Type_Parameters.cs:line 75
+   at ScriptRunner.Runner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\Runner.cs:line 14' 
+####;
+Relation=11/15/2023 3:36:58 PM;
+ID=1367;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Parser.CodeParser.<>c__DisplayClass39_0.<SetExecution>b__2() in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Parser\Parser\SetExecution_Action_Type_Parameters.cs:line 75
+   at ScriptRunner.Runner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\Runner.cs:line 14' 
+####;
+Relation=11/15/2023 3:38:23 PM;
+ID=1369;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=11/15/2023 3:44:47 PM;
+ID=1371;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Parser.CodeParser.<>c__DisplayClass39_0.<SetExecution>b__2() in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Parser\Parser\SetExecution_Action_Type_Parameters.cs:line 75
+   at ScriptRunner.Runner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\Runner.cs:line 14' 
+####;
+Relation=11/15/2023 3:49:38 PM;
+ID=1373;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Parser.CodeParser.<>c__DisplayClass39_0.<SetExecution>b__2() in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Parser\Parser\SetExecution_Action_Type_Parameters.cs:line 75
+   at ScriptRunner.Runner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\Runner.cs:line 14' 
+####;
+Relation=11/15/2023 3:50:17 PM;
+ID=1375;
+Key=log;
+Value=  At:11/15/2023 03:50:17
+Trace: Commands Inputed Length: 1 At:11/15/2023 03:51:19
+Trace: Execution Set With Action: var  At:11/15/2023 03:51:19
+Trace: Action Was not Recognized as a valid Action At:11/15/2023 03:51:19
+' 
+####;
+Relation=11/15/2023 3:51:19 PM;
+ID=1377;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Parser.CodeParser.<>c__DisplayClass39_0.<SetExecution>b__2() in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Parser\Parser\SetExecution_Action_Type_Parameters.cs:line 75
+   at ScriptRunner.Runner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\Runner.cs:line 14' 
+####;
+Relation=11/15/2023 3:51:32 PM;
+ID=1379;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Parser.CodeParser.<>c__DisplayClass39_0.<SetExecution>b__2() in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Parser\Parser\SetExecution_Action_Type_Parameters.cs:line 75
+   at ScriptRunner.Runner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\Runner.cs:line 14' 
+####;
+Relation=11/15/2023 3:52:24 PM;
+ID=1381;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Parser.CodeParser.<>c__DisplayClass39_0.<SetExecution>b__2() in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Parser\Parser\SetExecution_Action_Type_Parameters.cs:line 75
+   at ScriptRunner.Runner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\Runner.cs:line 14' 
+####;
+Relation=11/15/2023 3:52:30 PM;
+ID=1383;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Parser.CodeParser.<>c__DisplayClass39_0.<SetExecution>b__2() in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Parser\Parser\SetExecution_Action_Type_Parameters.cs:line 75
+   at ScriptRunner.Runner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\Runner.cs:line 14' 
+####;
+Relation=11/15/2023 3:52:49 PM;
+ID=1385;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Parser.CodeParser.<>c__DisplayClass39_0.<SetExecution>b__2() in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Parser\Parser\SetExecution_Action_Type_Parameters.cs:line 75
+   at ScriptRunner.Runner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\Runner.cs:line 14' 
+####;
+Relation=11/15/2023 3:53:33 PM;
+ID=1387;
+Key=log;
+Value= " 2345 3 5 3 "   At:11/15/2023 03:55:53
+Trace: Commands Inputed Length: 2 At:11/15/2023 03:55:58
+Trace: Execution Started With Action: echo Type: " 2345 3 5 3 "  At:11/15/2023 03:55:58
+Trace: Commands Inputed Length: 1 At:11/15/2023 03:56:27
+Trace: Execution Set With Action: exi  At:11/15/2023 03:56:27
+Trace: Action Was not Recognized as a valid Action At:11/15/2023 03:56:27
+' 
+####;
+Relation=11/15/2023 3:56:27 PM;
+ID=1389;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.Exception: Variable Already Set
+   at QuickTools.QData.VirtualStack.SetVariable(Variable variable)
+   at ScriptRunner.Runner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\Runner.cs:line 14' 
+####;
+Relation=11/15/2023 3:58:01 PM;
+ID=1391;
+Key=log;
+Value= Parameters: "Melquiceded Balbi Villanueva"   At:11/15/2023 04:1:30
+Trace: Action Was not Recognized as a valid Action At:11/15/2023 04:1:30
+' 
+####;
+Relation=11/15/2023 4:01:30 PM;
+ID=1393;
+Key=log;
+Value= Parameters: "new value added"   At:11/15/2023 05:58:48
+Trace: Action Was not Recognized as a valid Action At:11/15/2023 05:58:48
+' 
+####;
+Relation=11/15/2023 5:58:48 PM;
+ID=1395;
+Key=log;
+Value= Parameters: f  At:11/15/2023 06:0:10
+Trace: Action Was not Recognized as a valid Action At:11/15/2023 06:0:10
+' 
+####;
+Relation=11/15/2023 6:00:10 PM;
+ID=1397;
+Key=log;
+Value= mel  At:11/15/2023 06:1:24
+Trace: Commands Inputed Length: 2 At:11/15/2023 06:1:29
+Trace: Execution Started With Action: var Type: ^name At:11/15/2023 06:1:29
+Trace: Action Was not Recognized as a valid Action At:11/15/2023 06:1:29
+' 
+####;
+Relation=11/15/2023 6:01:29 PM;
+ID=1399;
+Key=log;
+Value= Parameters: melquiceded  At:11/15/2023 06:2:20
+Trace: Action Was not Recognized as a valid Action At:11/15/2023 06:2:20
+' 
+####;
+Relation=11/15/2023 6:02:20 PM;
+ID=1401;
+Key=log;
+Value= Parameters: nobody  At:11/15/2023 06:6:44
+Trace: Action Was not Recognized as a valid Action At:11/15/2023 06:6:44
+' 
+####;
+Relation=11/15/2023 6:06:44 PM;
+ID=1403;
+Key=log;
+Value= Parameters: last  At:11/15/2023 06:28:06
+Trace: Action Was not Recognized as a valid Action At:11/15/2023 06:28:06
+' 
+####;
+Relation=11/15/2023 6:28:06 PM;
+ID=1405;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Parser.CodeParser.<>c__DisplayClass39_0.<SetExecution>b__2() in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Parser\Parser\SetExecution_Action_Type_Parameters.cs:line 75
+   at ScriptRunner.Runner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\Runner.cs:line 14' 
+####;
+Relation=11/15/2023 6:43:06 PM;
+ID=1407;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Parser.CodeParser.<>c__DisplayClass39_0.<SetExecution>b__2() in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Parser\Parser\SetExecution_Action_Type_Parameters.cs:line 75
+   at ScriptRunner.Runner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\Runner.cs:line 14' 
+####;
+Relation=11/15/2023 11:41:28 PM;
+ID=1409;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Parser.CodeParser.<>c__DisplayClass39_0.<SetExecution>b__2() in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Parser\Parser\SetExecution_Action_Type_Parameters.cs:line 75
+   at ScriptRunner.Runner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\Runner.cs:line 14' 
+####;
+Relation=11/15/2023 11:49:09 PM;
+ID=1411;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Parser.CodeParser.<>c__DisplayClass39_0.<SetExecution>b__2() in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Parser\Parser\SetExecution_Action_Type_Parameters.cs:line 75
+   at ScriptRunner.Runner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\Runner.cs:line 14' 
+####;
+Relation=11/15/2023 11:50:20 PM;
+ID=1413;
+Key=log;
+Value= Parameters: "1 2 34 5 6 6 "   At:11/15/2023 11:53:15
+Trace: Action Was not Recognized as a valid Action At:11/15/2023 11:53:15
+' 
+####;
+Relation=11/15/2023 11:53:15 PM;
+ID=1415;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution With Action: '*n' Trace: 
+Trace: Commands Inputed Length: 9 At:11/15/2023 11:53:43
+Trace: Execution Started With Action: *n Type: = Parameters: "1 2 34 5 6 6 "   At:11/15/2023 11:53:43
+Trace: Assinging  Variables At:11/15/2023 11:53:43
+Trace: Commands Inputed Length: 1 At:11/15/2023 11:53:47
+Trace: Execution Set With Action: *n  At:11/15/2023 11:53:47
+Trace: Action Was not Recognized as a valid Action At:11/15/2023 11:53:47
+' 
+####;
+Relation=11/15/2023 11:53:47 PM;

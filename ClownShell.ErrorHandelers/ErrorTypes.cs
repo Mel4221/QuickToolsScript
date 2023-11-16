@@ -13,7 +13,8 @@ using System.Threading.Tasks;
             ExecutionError,
             NotImplemented,
             FATAL,
-            VariableAlreadySet
+            VariableAlreadySet,
+            InvalidOperator
         }
 
     }

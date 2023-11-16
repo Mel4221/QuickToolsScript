@@ -65,7 +65,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>W30qOa8VBddcpvoYc39u3T+Ho4MhXx5Ys776aebc2fM=</dsig:DigestValue>
+        <dsig:DigestValue>pXyljh8bMbLu1TpVW9GSjM8YRUdMxSFG2KkB9CVqxEQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -82,14 +82,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClownShell.Parser.dll" size="32256">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClownShell.Parser.dll" size="34816">
       <assemblyIdentity name="ClownShell.Parser" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>WFdoHh0riySkqkACdCsn0wnO50EI95acC+q5SVvX16A=</dsig:DigestValue>
+        <dsig:DigestValue>hvyTNiK2FEpdMxXvP6PBCHb+2SFqDZvFftCMCcJtels=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -137,7 +137,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>9eMgWDUafEZKYh/iBKJ/Sv6RHCBd0f8KooTYMJdN/IA=</dsig:DigestValue>
+        <dsig:DigestValue>zNPgSOj5qHjO2SiN0clNQlJFZTk6JGZDD+ONxlWqn7Q=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -4,7 +4,7 @@ using System.Text;
 namespace States
 {
 	public static class ShellTrace
-	{
+	{ 
 		private static StringBuilder Trace  = new StringBuilder();
 		public static int TraceMaxSize { get; set; } = 1024;
 		private static int Index = 0; 
