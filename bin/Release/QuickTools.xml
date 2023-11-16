@@ -2121,11 +2121,6 @@
             provides a diferent way to cache the data on a way that the data does get deleted right after if is not required
             </summary>
         </member>
-        <member name="P:QuickTools.QData.DataCacher.Path">
-            <summary>
-            contains the path to get to the cache
-            </summary>
-        </member>
         <member name="P:QuickTools.QData.DataCacher.CacheFile">
             <summary>
             contains the Cache file
@@ -2370,6 +2365,11 @@
             Defines if the variable is a function
             </summary>
         </member>
+        <member name="P:QuickTools.QData.Variable.IsEmpty">
+            <summary>
+            Identify that the current variable is empty
+            </summary>
+        </member>
         <member name="M:QuickTools.QData.Variable.ToString">
             <summary>
             Returns the string value of the Object
@@ -2422,6 +2422,12 @@
             <param name="variable"></param>
             <param name="value"></param>
             <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:QuickTools.QData.VirtualStack.Free(System.String)">
+            <summary>
+            Free the variable from  the virtual stack
+            </summary>
+            <param name="variable"></param>
         </member>
         <member name="M:QuickTools.QData.VirtualStack.Flush">
             <summary>
@@ -2928,25 +2934,19 @@
             </summary>
             <value>The value.</value>
         </member>
-        <member name="P:QuickTools.QData.QSettings.DefaultPath">
+        <member name="P:QuickTools.QData.QSettings.Settings.Group">
             <summary>
-            Gets or sets the default path.
-            </summary>
-            <value>The default path.</value>
-        </member>
-        <member name="F:QuickTools.QData.QSettings.Keys">
-            <summary>
-            This contains the list of keys in the settings file 
+            contains the group name of the setting to create a relationship between them
             </summary>
         </member>
-        <member name="F:QuickTools.QData.QSettings.Values">
-            <summary>
-            This Will contain the values from the settings file 
-            </summary>
-        </member>
-        <member name="F:QuickTools.QData.QSettings.SettingsList">
+        <member name="P:QuickTools.QData.QSettings.SettingsList">
             <summary>
             This will contains the list of settings
+            </summary>
+        </member>
+        <member name="P:QuickTools.QData.QSettings.SettingsDB">
+            <summary>
+            contains the mini db for the settings 
             </summary>
         </member>
         <member name="P:QuickTools.QData.QSettings.FileName">
@@ -2955,17 +2955,10 @@
             </summary>
             <value>The name of the file.</value>
         </member>
-        <member name="P:QuickTools.QData.QSettings.ElementName">
+        <member name="P:QuickTools.QData.QSettings.AllowDebugger">
             <summary>
-            Gets or sets the name of the element.
+            Allow to print to the console the current status of the internal MiniDB
             </summary>
-            <value>The name of the element.</value>
-        </member>
-        <member name="P:QuickTools.QData.QSettings.GroupName">
-            <summary>
-            Gets or sets the name of the group of tags in the settings 
-            </summary>
-            <value>The name of the group.</value>
         </member>
         <member name="M:QuickTools.QData.QSettings.Create">
             <summary>
@@ -2984,12 +2977,27 @@
             </summary>
             <param name="fileName">File name.</param>
         </member>
+        <member name="M:QuickTools.QData.QSettings.Exist(System.String)">
+            <summary>
+            retuns true if it find the given key setting
+            </summary>
+            <param name="setting"></param>
+            <returns></returns>
+        </member>
         <member name="M:QuickTools.QData.QSettings.AddSetting(System.String,System.Object)">
             <summary>
             Adds the setting with the given key and value 
             </summary>
             <param name="key">Key.</param>
             <param name="value">Value.</param>
+        </member>
+        <member name="M:QuickTools.QData.QSettings.AddSetting(System.String,System.Object,System.String)">
+            <summary>
+            Adds the setting with the given key and value  + a group
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <param name="group"></param>
         </member>
         <member name="M:QuickTools.QData.QSettings.GetSetting(System.String)">
             <summary>
@@ -3015,14 +3023,6 @@
             </summary>
             <param name="setting">Setting.</param>
             <param name="newValue">New value.</param>
-        </member>
-        <member name="M:QuickTools.QData.QSettings.UpdateSetting(System.String,System.Object,System.Boolean)">
-            <summary>
-            This version actually adds the setting if it does not find it 
-            </summary>
-            <param name="setting"></param>
-            <param name="newValue"></param>
-            <param name="addIfNotExiist"></param>
         </member>
         <member name="M:QuickTools.QData.QSettings.DeleteSettingsFile">
             <summary>
@@ -3050,25 +3050,7 @@
             Initializes a new instance of the <see cref="T:QuickTools.QSettings"/> class.
             </summary>
             <param name="fileName">File name.</param>
-            <param name="elementName">Element name.</param>
-        </member>
-        <member name="M:QuickTools.QData.QSettings.#ctor(System.String,System.String,System.String)">
-            <summary>
-            Initializes a new instance of the <see cref="T:QuickTools.QSettings"/> class.
-            The settings will have to be manually ajusted 
-            </summary>
-            <param name="fileName">File name.</param>
-            <param name="groupName">Group name.</param>
-            <param name="elementName">Element name.</param>
-        </member>
-        <member name="M:QuickTools.QData.QSettings.#ctor(System.String,System.String,System.String,System.String)">
-            <summary>
-            Initalize instance 
-            </summary>
-            <param name="fileName"></param>
-            <param name="groupName"></param>
-            <param name="elementName"></param>
-            <param name="defaultPath"></param>
+            <param name="groupName">Element name.</param>
         </member>
         <member name="T:QuickTools.QData.User">
             <summary>

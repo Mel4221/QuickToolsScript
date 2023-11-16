@@ -81,6 +81,8 @@
   <ItemGroup>
     <Reference Include="QuickTools">
       <HintPath>..\QuickTools\bin\Release\QuickTools.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -93,6 +95,7 @@
     <Compile Include="BackGroundFunctions\BackGroundJob.cs" />
     <Compile Include="ErrorHandeler\ErrorHandeler.cs" />
     <Compile Include="Helpers\Helper.cs" />
+    <Compile Include="Helpers\Helper_DirsCounter.cs" />
     <Compile Include="Init\MainMenu.cs" />
     <Compile Include="Init\Program.cs" />
     <Compile Include="Init\ShellLoop.cs" />
@@ -114,9 +117,9 @@
     <Compile Include="ScriptRunner\ScriptRunner_Fields.cs" />
     <Compile Include="Security\Credentials.cs" />
     <Compile Include="Security\User.cs" />
+    <Compile Include="Settings\ShellSettings.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
     <None Include="ClownShell.manifest" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">

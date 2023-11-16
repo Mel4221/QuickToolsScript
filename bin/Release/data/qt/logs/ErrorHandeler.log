@@ -95,6 +95,7 @@ Relation=10/31/2023 2:24:13 PM;
 ID=1019;
 Key=log;
 Value=####
+<<<<<<< HEAD
  There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( ls -l  )> 
  Exception: 
 System.IO.DirectoryNotFoundException: Could not find a part of the path '/home/mel/Documents/csharp/ClownShell/bin/Release/-l'.
@@ -124,3 +125,521 @@ Value=####
  There Was an error with the given type of error: 'NotValidAction' 'trojan ' 
 ####;
 Relation=11/16/2023 6:57:42 PM;
+=======
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( ls ~/Downloads  )> 
+ Exception: 
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Release\~\Downloads'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFiles(String path)
+   at QuickTools.QCore.Get.Ls(String path)
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 148' 
+####;
+Relation=10/31/2023 5:55:44 PM;
+ID=1021;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( rm VariableDB.xml  )> 
+ Exception: 
+System.IO.IOException: Access to the path 'C:\Users\Melquiceded\Desktop' is denied.
+   at System.IO.Directory.DeleteHelper(String fullPath, String userPath, Boolean recursive, Boolean throwOnTopLevelDirectoryNotFound, WIN32_FIND_DATA& data)
+   at System.IO.Directory.Delete(String fullPath, String userPath, Boolean recursive, Boolean checkHost)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass32_0.<SetExecution>b__15() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Type.cs:line 204
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 148' 
+####;
+Relation=10/31/2023 6:51:32 PM;
+ID=1023;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'print disk ' 
+####;
+Relation=10/31/2023 10:40:58 PM;
+ID=1025;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( ls disk  )> 
+ Exception: 
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Release\disk'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFiles(String path)
+   at QuickTools.QCore.Get.Ls(String path)
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=10/31/2023 10:41:01 PM;
+ID=1027;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( ls disk  )> 
+ Exception: 
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Release\disk'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFiles(String path)
+   at QuickTools.QCore.Get.Ls(String path)
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=10/31/2023 10:41:06 PM;
+ID=1029;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'print-disk ' 
+####;
+Relation=10/31/2023 10:41:13 PM;
+ID=1031;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'disk ' 
+####;
+Relation=10/31/2023 10:41:17 PM;
+ID=1033;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'disk? ' 
+####;
+Relation=10/31/2023 10:41:19 PM;
+ID=1035;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' '' 
+####;
+Relation=10/31/2023 10:52:04 PM;
+ID=1037;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'sls ' 
+####;
+Relation=10/31/2023 10:52:05 PM;
+ID=1039;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'touch ' 
+####;
+Relation=10/31/2023 10:54:04 PM;
+ID=1041;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( ls -ll  )> 
+ Exception: 
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Release\-ll'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFiles(String path)
+   at QuickTools.QCore.Get.Ls(String path)
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=10/31/2023 10:54:16 PM;
+ID=1043;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( ls -l  )> 
+ Exception: 
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Release\-l'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFiles(String path)
+   at QuickTools.QCore.Get.Ls(String path)
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=10/31/2023 10:54:18 PM;
+ID=1045;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( ls box  )> 
+ Exception: 
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Release\box'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFiles(String path)
+   at QuickTools.QCore.Get.Ls(String path)
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=10/31/2023 11:10:03 PM;
+ID=1047;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( ls box  )> 
+ Exception: 
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Release\box'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFiles(String path)
+   at QuickTools.QCore.Get.Ls(String path)
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=10/31/2023 11:10:08 PM;
+ID=1049;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( ls box  )> 
+ Exception: 
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Release\box'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFiles(String path)
+   at QuickTools.QCore.Get.Ls(String path)
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=10/31/2023 11:22:15 PM;
+ID=1051;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( ls box  )> 
+ Exception: 
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Release\box'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFiles(String path)
+   at QuickTools.QCore.Get.Ls(String path)
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=10/31/2023 11:23:43 PM;
+ID=1053;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( ls ~/Desktop/box  )> 
+ Exception: 
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Release\~\Desktop\box'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFiles(String path)
+   at QuickTools.QCore.Get.Ls(String path)
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=10/31/2023 11:23:50 PM;
+ID=1055;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'rmdir -\ ' 
+####;
+Relation=10/31/2023 11:24:07 PM;
+ID=1057;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( wait 120000  )> 
+ Exception: 
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at ClownShell.BackGroundFunctions.BackGroundJob.AddJob(Job job) in C:\Users\Melquiceded\Documents\csharp\ClownShell\BackGroundFunctions\BackGroundJob.cs:line 121
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code, Boolean runInBackGround) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 78' 
+####;
+Relation=10/31/2023 11:35:56 PM;
+ID=1059;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'job ' 
+####;
+Relation=10/31/2023 11:36:41 PM;
+ID=1061;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'search *.txt ' 
+####;
+Relation=10/31/2023 11:40:20 PM;
+ID=1063;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'search *.pdf ' 
+####;
+Relation=10/31/2023 11:40:29 PM;
+ID=1065;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( find -r *.pdf  )> 
+ Exception: 
+System.ArgumentException: Illegal characters in path.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFiles(String path)
+   at QuickTools.QIO.FilesMaper.Map()
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass28_0.<SetExecution>b__6() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Parameters.cs:line 260
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=10/31/2023 11:40:35 PM;
+ID=1067;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( search -r *.pdf  )> 
+ Exception: 
+System.ArgumentException: Illegal characters in path.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFiles(String path)
+   at QuickTools.QIO.FilesMaper.Map()
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass28_0.<SetExecution>b__6() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Parameters.cs:line 260
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=10/31/2023 11:40:50 PM;
+ID=1069;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( search -r index.html  )> 
+ Exception: 
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\Melquiceded\Documents\index.html'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFiles(String path)
+   at QuickTools.QIO.FilesMaper.Map()
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass28_0.<SetExecution>b__6() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Parameters.cs:line 260
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=10/31/2023 11:41:01 PM;
+ID=1071;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( ls ~/Downloads  )> 
+ Exception: 
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\Melquiceded\Documents\csharp\ClownShell\bin\Release\~\Downloads'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFiles(String path)
+   at QuickTools.QCore.Get.Ls(String path)
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/1/2023 8:41:10 AM;
+ID=1073;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' './qmx.exe ' 
+####;
+Relation=11/1/2023 10:24:49 AM;
+ID=1075;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( ./QMath.exe  )> 
+ Exception: 
+System.ComponentModel.Win32Exception (0x80004005): The system cannot find the file specified
+   at System.Diagnostics.Process.StartWithCreateProcess(ProcessStartInfo startInfo)
+   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/1/2023 10:27:08 AM;
+ID=1077;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( .\QMath.exe  )> 
+ Exception: 
+System.ComponentModel.Win32Exception (0x80004005): The system cannot find the file specified
+   at System.Diagnostics.Process.StartWithCreateProcess(ProcessStartInfo startInfo)
+   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/1/2023 10:27:34 AM;
+ID=1079;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( .  )> 
+ Exception: 
+System.ComponentModel.Win32Exception (0x80004005): The system cannot find the file specified
+   at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass33_0.<SetExecution>b__0() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExecution_Action.cs:line 76
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/1/2023 10:38:19 AM;
+ID=1081;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( ./rufus.exe  )> 
+ Exception: 
+System.ComponentModel.Win32Exception (0x80004005): The requested operation requires elevation
+   at System.Diagnostics.Process.StartWithCreateProcess(ProcessStartInfo startInfo)
+   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass33_0.<SetExecution>b__0() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExecution_Action.cs:line 76
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/1/2023 12:42:38 PM;
+ID=1083;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( ./rufus.exe  )> 
+ Exception: 
+System.ComponentModel.Win32Exception (0x80004005): The requested operation requires elevation
+   at System.Diagnostics.Process.StartWithCreateProcess(ProcessStartInfo startInfo)
+   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass33_0.<SetExecution>b__0() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExecution_Action.cs:line 76
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/1/2023 12:42:47 PM;
+ID=1085;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'rufus.com ' 
+####;
+Relation=11/1/2023 12:43:22 PM;
+ID=1087;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( ./rufus.com  )> 
+ Exception: 
+System.ComponentModel.Win32Exception (0x80004005): The system cannot find the file specified
+   at System.Diagnostics.Process.StartWithCreateProcess(ProcessStartInfo startInfo)
+   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass33_0.<SetExecution>b__0() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExecution_Action.cs:line 76
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/1/2023 12:43:37 PM;
+ID=1089;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'cat 'You.lnk Zoom.lnk' ' 
+####;
+Relation=11/1/2023 12:51:45 PM;
+ID=1091;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( ls *  )> 
+ Exception: 
+System.ArgumentException: Illegal characters in path.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFiles(String path)
+   at QuickTools.QCore.Get.Ls(String path)
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/1/2023 12:53:52 PM;
+ID=1093;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'lear ' 
+####;
+Relation=11/1/2023 12:54:16 PM;
+ID=1095;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'cls ' 
+####;
+Relation=11/1/2023 12:54:24 PM;
+ID=1097;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'csl ' 
+####;
+Relation=11/1/2023 12:54:26 PM;
+ID=1099;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'cls ' 
+####;
+Relation=11/1/2023 12:54:27 PM;
+ID=1101;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'cls ' 
+####;
+Relation=11/1/2023 12:54:29 PM;
+ID=1103;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' '@() ' 
+####;
+Relation=11/1/2023 12:56:13 PM;
+ID=1105;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' '@() ' 
+####;
+Relation=11/1/2023 12:56:16 PM;
+ID=1107;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'rmdir *time ' 
+####;
+Relation=11/1/2023 1:27:57 PM;
+ID=1109;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'rmdir *time ' 
+####;
+Relation=11/1/2023 1:28:08 PM;
+ID=1111;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( echo working  )> 
+ Exception: 
+System.Exception: Exception of type 'System.Exception' was thrown.
+   at ClownShell.Parser.CodeParser.<>c.<SetExecution>b__32_0() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExcecution_Action_Type.cs:line 102
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/1/2023 1:51:38 PM;
+ID=1113;
+Key=log;
+Value= 2 ' 
+####;
+Relation=11/1/2023 2:03:11 PM;
+ID=1115;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( singup  )> 
+ Exception: 
+System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.IO.Directory.InternalCreateDirectoryHelper(String path, Boolean checkHost)
+   at QuickTools.QCore.Get.DataPath(String newDirectory)
+   at ClownShell.Security.Credentials.SingUp() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Security\Credentials.cs:line 35
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/1/2023 2:25:21 PM;
+ID=1117;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( login  )> 
+ Exception: 
+System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.IO.Directory.InternalCreateDirectoryHelper(String path, Boolean checkHost)
+   at QuickTools.QCore.Get.DataPath(String newDirectory)
+   at ClownShell.Security.Credentials.Login() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Security\Credentials.cs:line 77
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/1/2023 2:26:52 PM;
+ID=1119;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( input  )> 
+ Exception: 
+System.ArgumentException: Empty path name is not legal.
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at QuickTools.QIO.Writer.Write(String file, Object data)
+   at QuickTools.QData.MiniDB.RefreshDB()
+   at QuickTools.QData.QSettings.Refresh()
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass33_0.<SetExecution>b__15() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExecution_Action.cs:line 163
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/1/2023 3:55:05 PM;
+ID=1121;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( input  )> 
+ Exception: 
+System.ArgumentException: Empty path name is not legal.
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at QuickTools.QIO.Writer.Write(String file, Object data)
+   at QuickTools.QData.MiniDB.RefreshDB()
+   at QuickTools.QData.QSettings.Refresh()
+   at ClownShell.Parser.CodeParser.<>c__DisplayClass33_0.<SetExecution>b__15() in C:\Users\Melquiceded\Documents\csharp\ClownShell\Parser\CodeParser_SetExecution_Action.cs:line 163
+   at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 144' 
+####;
+Relation=11/1/2023 4:06:26 PM;
+ID=1123;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'shutdonw ' 
+####;
+Relation=11/1/2023 5:55:07 PM;
+>>>>>>> 18521e1025376166d4747093e30b9d8192b9cd3d

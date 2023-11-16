@@ -30,12 +30,18 @@ using ClownShell.ErrorHandler;
 using System.IO;
 using System;
 using System.Collections.Generic;
+using System.Net;
+using QuickTools.QData;
+using ClownShell.Settings;
+
 namespace ClownShell.Parser
 {
     public partial class CodeParser
     {
 
         
+      
+   
         public CodeResult CheckFile(string file)
         {
             string content;
@@ -79,10 +85,26 @@ namespace ClownShell.Parser
                         case "selected-value":
                         case "selected":
                             type = $"@{ShellLoop.SelectedOject}";
-                            break;
+                            break; 
                         default:
                             
                             break;
+                    }
+                    if (type.Contains("*"))
+                    {
+                        if(type[0] == '*')
+                        {
+                            Variable v = VStack.GetVariable(type.Substring(1));
+                            switch (v.IsEmpty)
+                            {
+                                case true:
+                                    type = ""; 
+                                    break;
+                                case false:
+                                    type = v.Value;
+                                    break; 
+                            }
+                        }
                     }
                     this.SetExecution(action, type); 
                     break;
@@ -99,11 +121,33 @@ namespace ClownShell.Parser
                             break;
                             
                     }
+              
                     this.SetExecution(action, type,this.Code);
                     break; 
             }
         }
         
+        public static void Run(string[] code)
+        {
+            var error = new ErrorHandeler();
+            var parser = new CodeParser();
+            switch (code.Length)
+            {
+                case 0:
+                    
+                    error.DisplayError(ErrorHandeler.ErrorType.NotValidAction, code);
+                    break;
+                case 1:
+                    parser.Parse(CodeType.Action);
+                    break;
+                case 2:
+                    parser.Parse(CodeType.ActionWithType);
+                    break;
+                default:
+                    parser.Parse(CodeType.Complete);
+                    break;
+            }
+        }
         public void Start()
         {
              /*

@@ -38,6 +38,9 @@ using ClownShell.ErrorHandler;
 using System.Threading; 
 using System.IO;
 using System.Collections.Generic;
+using ClownShell.Settings;
+using ClownShell.Security;
+
 namespace ClownShell.Parser
 {
     public partial class CodeParser
@@ -80,12 +83,27 @@ namespace ClownShell.Parser
             {
 
                 case "var":
+                case "mem":
                     runner.Run(() => {
                         Get.Yellow($"{type} = {param[1]};");
                         //var y = ls;
                         //var x = input;
-                        CodeParser.VStack.SetVariable(type, param[1]); 
-                     
+                        CodeParser.VStack.SetVariable(type, param[1]);
+                    });
+                    break; 
+                case "shell":
+                    runner.Run(() => {
+                        using (MiniDB db = new MiniDB(ShellSettings.ShellVariablesDB))
+                        {
+                            db.Create();
+                            db.Load();
+                            if (db.SelectWhereKey(type).IsEmpty)
+                            {
+                                db.AddKey(type, param[1], ShellUser.Name);
+                                db.SaveChanges();
+                            }
+                           
+                        }
                     });
                     break;
              

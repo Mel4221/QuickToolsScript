@@ -107,7 +107,7 @@ namespace ClownShell.ScripRunner
                     CurrentScript = new Thread(() =>
                     {
                         code();
-                        Get.White("\n Task Completed Press any key to continue");
+                        //Get.White("\n Task Completed Press any key to continue");
 
                         //Thread.Sleep(100);
                         if (Loop.IsAlive)
@@ -119,13 +119,9 @@ namespace ClownShell.ScripRunner
                     {
                         Get.Title("Press Esc  to Cancel");
                         var key = Console.ReadKey();
+                        
                         if (key.KeyChar == 'Z' && key.Modifiers.HasFlag(ConsoleModifiers.Control) || key.Key.ToString() == "Escape") // key.Key.ToString() == "Escape")
                         {
-
-                            //if(this.RunCode != null)
-                            //{
-
-                            //}
                             if (CurrentScript.IsAlive)
                             {
                                 CurrentScript.Abort();

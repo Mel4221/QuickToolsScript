@@ -46,26 +46,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClownShell.exe" size="164352">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClownShell.exe" size="168960">
       <assemblyIdentity name="ClownShell" version="7.1.1.1" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>wInte6LIccdo3fuJ29KNPbmKjm8n99VIbwMU/f0BC1s=</dsig:DigestValue>
+        <dsig:DigestValue>FrgM8vXy+DPmvN6I8UqADTDukyxMNSjVY8tIK/cProI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="QuickTools.dll" size="225280">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="QuickTools.dll" size="223744">
       <assemblyIdentity name="QuickTools" version="3000.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>XSHPKX3VY829IImz3e2T6+pEFK0rOI1DhAmC1FXyAd4=</dsig:DigestValue>
+        <dsig:DigestValue>Ugzr/LE+KxAjwjNHsSLIekg6nMk5+2nkcYo4hMtgD7k=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -76,15 +76,6 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>HEpMKhZQtWhG3D/+M9FVZsb7EqLFLZzkzRGN0b1f59s=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="ClownShell.exe.config" size="76">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>P0WSjbYFfDmF/8MiPjpbPAHTzR6ldAlKfL6QUsn4JcM=</dsig:DigestValue>
     </hash>
   </file>
   <file name="setting.ico" size="67646">

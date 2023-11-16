@@ -35,7 +35,8 @@ using ClownShell.ErrorHandler;
 using ClownShell.ScripRunner;
 using ClownShell.Helpers;
 using ClownShell.BackGroundFunctions;
-using ClownShell.Security; 
+using ClownShell.Security;
+using System.Collections.Generic;
 
 namespace ClownShell.Parser
 {
@@ -59,18 +60,55 @@ namespace ClownShell.Parser
             ProcessStartInfo process;
 
             this.Target = Get.FixPath(ShellLoop.CurrentPath);
-            //if (Helper.IsExecutable(action)) 
-            //{
-            //    runner.Run(() => {
-            //        process = new ProcessStartInfo($"{this.Target}\\index.html");
-            //        process.CreateNoWindow = true;
-            //        process.UseShellExecute = false;
-            //        Process.Start(process);
-            //    }); 
-            //    return; 
-            //}
+            if (action[0] == '.' && action.Contains("/") || action.Contains("\\"))
+            {
+                runner.Run(() =>
+                {
+                    if (Get.IsWindow())
+                    {
+                        action = action.Substring(1).Replace("/", "").Replace("\\", "");
+                        process = new ProcessStartInfo();
+                        process.FileName = $"{ShellLoop.CurrentPath}{Get.Slash()}{action}";
+                        process.CreateNoWindow = false;
+                        process.UseShellExecute = false;
+                        Process.Start(process);
+                    }
+
+                });
+                return;
+            }
             switch (action)
             {
+                case "{":
+                    runner.Run(() => {
+                        List<string> lines = new List<string>();
+                        string line;
+                        while (true)
+                        {
+                            line = Get.Input().Text;
+                            if (line == "}")
+                            {
+                                break;
+                            }
+                            if(line != "")
+                            {
+                                lines.Add(line);
+                            }
+                        }
+                        lines.ForEach(item => {
+                            Get.Green($"Running: {item}");
+                            string[] code = IConvert.TextToArray(item);
+                            this.Code = code;
+                            this.Start();
+                        });
+                        Get.Wait();
+                    });
+                    break;
+                case "free-stack":
+                    runner.Run(() => {
+                        VStack.Flush(); 
+                    });
+                    break; 
                 case "whoami":
                     runner.Run(() => {
                         Get.Green(ShellUser.Name); 
@@ -121,9 +159,12 @@ namespace ClownShell.Parser
                             Get.Yellow("There are process running in the background");
                             this.Call("beep"); 
                             BackGroundJob.PrintRunningJobs();
-                            return; 
+                            return;
                         }
-                        Environment.Exit(0);
+                        else
+                        {
+                            ShellLoop.ExitLoop = true;
+                        }
                     });
                     return;
                 case "console-clear":
@@ -221,6 +262,7 @@ namespace ClownShell.Parser
                     });
                     break;
                 case "disks":
+                case "disk?":
                     runner.Run(() => { Get.PrintDisks(); });
                     break;
                 case "get-logs":
