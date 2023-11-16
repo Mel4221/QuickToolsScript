@@ -92,3 +92,35 @@ System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\User
    at ClownShell.ScripRunner.ScriptRunner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ScriptRunner\ScriptRunner.cs:line 148' 
 ####;
 Relation=10/31/2023 2:24:13 PM;
+ID=1019;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( ls -l  )> 
+ Exception: 
+System.IO.DirectoryNotFoundException: Could not find a part of the path '/home/mel/Documents/csharp/ClownShell/bin/Release/-l'.
+  at System.IO.Enumeration.FileSystemEnumerator`1[TResult].CreateDirectoryHandle (System.String path, System.Boolean ignoreNotFound) [0x00032] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerator`1[TResult]..ctor (System.String directory, System.IO.EnumerationOptions options) [0x00048] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerable`1+DelegateEnumerator[TResult]..ctor (System.IO.Enumeration.FileSystemEnumerable`1[TResult] enumerable) [0x00000] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerable`1[TResult]..ctor (System.String directory, System.IO.Enumeration.FileSystemEnumerable`1+FindTransform[TResult] transform, System.IO.EnumerationOptions options) [0x00042] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerableFactory.UserFiles (System.String directory, System.String expression, System.IO.EnumerationOptions options) [0x00014] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Directory.InternalEnumeratePaths (System.String path, System.String searchPattern, System.IO.SearchTarget searchTarget, System.IO.EnumerationOptions options) [0x0003c] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Directory.GetFiles (System.String path, System.String searchPattern, System.IO.EnumerationOptions enumerationOptions) [0x00000] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Directory.GetFiles (System.String path) [0x0000b] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at QuickTools.QIO.FilesMaper.GetFiles (System.String path) [0x00000] in <b43c250e43644f419a881bedb819c8b5>:0 
+  at QuickTools.QCore.Get.Ls (System.String path) [0x0000f] in <b43c250e43644f419a881bedb819c8b5>:0 
+  at ClownShell.Parser.CodeParser+<>c__DisplayClass32_0.<SetExecution>b__16 () [0x00068] in <818b1afabb9d4d1c877fdefba4a3d6cf>:0 
+  at ClownShell.ScripRunner.ScriptRunner.Run (System.Action code) [0x00081] in <818b1afabb9d4d1c877fdefba4a3d6cf>:0 ' 
+####;
+Relation=11/16/2023 6:52:36 PM;
+ID=1021;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'encrypt f f f ' 
+####;
+Relation=11/16/2023 6:57:36 PM;
+ID=1023;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'trojan ' 
+####;
+Relation=11/16/2023 6:57:42 PM;
