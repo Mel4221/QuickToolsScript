@@ -425,11 +425,12 @@ namespace ClownShell.Parser
                             Get.Red($"The {file} Was not found or does not exist");
                             return;
                         }
-
+                        /*
                         Get.Green();
                         Get.Write($"\n{ }\t");
                         Get.Yellow(); 
                         Get.Write($"{size}\n");
+                        */
                     });
                     break;
                 case "select":

@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{823A2180-8759-43E9-8CEB-0D736731BAB1}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Parser/CodeParser.cs">
+    <Files>
+      <File FileName="Parser/CodeParser_SetExcecution_Action_Type.cs" Line="428" Column="27" />
+      <File FileName="Parser/CodeParser.cs" Line="99" Column="14" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ClownShell" expanded="True">
+            <Node name="ClownShell" expanded="True">
+              <Node name="Parser" expanded="True">
+                <Node name="CodeParser.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.ClownShell PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

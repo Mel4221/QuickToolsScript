@@ -156,3 +156,23 @@ Value=####
  There Was an error with the given type of error: 'NotValidAction' 'clsize ' 
 ####;
 Relation=11/5/2023 9:11:59 PM;
+ID=1031;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'Code Executed: <( ls -l  )> 
+ Exception: 
+System.IO.DirectoryNotFoundException: Could not find a part of the path '/home/mel/Documents/csharp/ClownShell/bin/Release/-l'.
+  at System.IO.Enumeration.FileSystemEnumerator`1[TResult].CreateDirectoryHandle (System.String path, System.Boolean ignoreNotFound) [0x00032] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerator`1[TResult]..ctor (System.String directory, System.IO.EnumerationOptions options) [0x00048] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerable`1+DelegateEnumerator[TResult]..ctor (System.IO.Enumeration.FileSystemEnumerable`1[TResult] enumerable) [0x00000] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerable`1[TResult]..ctor (System.String directory, System.IO.Enumeration.FileSystemEnumerable`1+FindTransform[TResult] transform, System.IO.EnumerationOptions options) [0x00042] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerableFactory.UserFiles (System.String directory, System.String expression, System.IO.EnumerationOptions options) [0x00014] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Directory.InternalEnumeratePaths (System.String path, System.String searchPattern, System.IO.SearchTarget searchTarget, System.IO.EnumerationOptions options) [0x0003c] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Directory.GetFiles (System.String path, System.String searchPattern, System.IO.EnumerationOptions enumerationOptions) [0x00000] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Directory.GetFiles (System.String path) [0x0000b] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at QuickTools.QIO.FilesMaper.GetFiles (System.String path) [0x00000] in <1c2a3663f43943b2891fd740f27cf852>:0 
+  at QuickTools.QCore.Get.Ls (System.String path) [0x0000f] in <1c2a3663f43943b2891fd740f27cf852>:0 
+  at ClownShell.Parser.CodeParser+<>c__DisplayClass33_0.<SetExecution>b__18 () [0x00068] in <c11602bc5aea4ebf91d61bbc228157c7>:0 
+  at ClownShell.ScripRunner.ScriptRunner.Run (System.Action code) [0x00081] in <c11602bc5aea4ebf91d61bbc228157c7>:0 ' 
+####;
+Relation=11/16/2023 7:09:14 PM;
