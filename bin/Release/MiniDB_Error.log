@@ -30,3 +30,35 @@ System.FormatException: Input string was not in a correct format.
    at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
    at QuickTools.QData.MiniDB.Load();
 Relation=11/15/2023 3:36:32 PM;
+ID=1009;
+Key=log;
+Value=There was an error while loading the Database info:
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at QuickTools.QData.MiniDB.Load();
+Relation=11/16/2023 11:45:30 PM;
+ID=1011;
+Key=log;
+Value=There was an error while loading the Database info:
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at QuickTools.QData.MiniDB.Load();
+Relation=11/16/2023 11:45:30 PM;
+ID=1013;
+Key=log;
+Value=There was an error while loading the Database info:
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at QuickTools.QData.MiniDB.Load();
+Relation=11/16/2023 11:45:39 PM;
+ID=1015;
+Key=log;
+Value=There was an error while loading the Database info:
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at QuickTools.QData.MiniDB.Load();
+Relation=11/16/2023 11:45:39 PM;

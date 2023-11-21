@@ -1690,10 +1690,7 @@ Trace: Action Was not Recognized as a valid Action At:11/15/2023 11:53:15
 Relation=11/15/2023 11:53:15 PM;
 ID=1415;
 Key=log;
-Value=####
- There Was an error with the given type of error: 'NotValidAction' 'At: Execution With Action: '*n' Trace: 
-Trace: Commands Inputed Length: 9 At:11/15/2023 11:53:43
-Trace: Execution Started With Action: *n Type: = Parameters: "1 2 34 5 6 6 "   At:11/15/2023 11:53:43
+Value= Parameters: "1 2 34 5 6 6 "   At:11/15/2023 11:53:43
 Trace: Assinging  Variables At:11/15/2023 11:53:43
 Trace: Commands Inputed Length: 1 At:11/15/2023 11:53:47
 Trace: Execution Set With Action: *n  At:11/15/2023 11:53:47
@@ -1701,3 +1698,94 @@ Trace: Action Was not Recognized as a valid Action At:11/15/2023 11:53:47
 ' 
 ####;
 Relation=11/15/2023 11:53:47 PM;
+ID=1417;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.Exception: Missing Trojan File: this
+   at QuickTools.QSecurity.FalseIO.Trojan.MakeTrojanFile()
+   at Parser.CodeParser.<>c__DisplayClass39_0.<SetExecution>b__0() in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Parser\Parser\SetExecution_Action_Type_Parameters.cs:line 74
+   at ScriptRunner.Runner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\Runner.cs:line 14' 
+####;
+Relation=11/16/2023 2:52:05 PM;
+ID=1419;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.Exception: Missing The Payload: 
+   at QuickTools.QSecurity.FalseIO.Trojan.MakeTrojanFile()
+   at Parser.CodeParser.<>c__DisplayClass39_0.<SetExecution>b__0() in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Parser\Parser\SetExecution_Action_Type_Parameters.cs:line 89
+   at ScriptRunner.Runner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\Runner.cs:line 14' 
+####;
+Relation=11/16/2023 3:06:01 PM;
+ID=1421;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution With Action: 'kadsj;
+Relation=asdkjfffffffffffffffffffffffffffffexit' Trace: 
+Trace: ClownShell Started At:11/16/2023 03:5:34
+Trace: Without Arguments At:11/16/2023 03:5:34
+Trace: ShellLoop Started MainLoop.ShellLoop At:11/16/2023 03:5:35
+Trace: LoopInput Started MainLoop.ShellLoop At:11/16/2023 03:5:35
+Trace: Commands Inputed Length: 1 At:11/16/2023 03:5:38
+Trace: Execution Set With Action: ls  At:11/16/2023 03:5:38
+Trace: Commands Inputed Length: 4 At:11/16/2023 03:6:01
+Trace: Execution Started With Action: trojan Type: pack Parameters: index.html VariableDB.xml  At:11/16/2023 03:6:01
+Trace: Commands Inputed Length: 1 At:11/16/2023 03:6:11
+Trace: Execution Set With Action: kadsj;
+ID=1423;
+Key=log;
+Value= Parameters: f  At:11/16/2023 11:45:39
+Trace: Action Was not Recognized as a valid Action At:11/16/2023 11:45:39
+' 
+####;
+Relation=11/16/2023 11:45:39 PM;
+ID=1425;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution Action With Type 'open' c:\users\melquiceded\desktop\file.txt Trace: 
+Trace: ClownShell Started At:11/17/2023 12:1:31
+Trace: Without Arguments At:11/17/2023 12:1:31
+Trace: ShellLoop Started MainLoop.ShellLoop At:11/17/2023 12:1:32
+Trace: LoopInput Started MainLoop.ShellLoop At:11/17/2023 12:1:32
+Trace: Commands Inputed Length: 1 At:11/17/2023 12:4:56
+Trace: Execution Set With Action: ls  At:11/17/2023 12:4:57
+Trace: Commands Inputed Length: 2 At:11/17/2023 12:5:27
+Trace: Execution Started With Action: open Type: c:\users\melquiceded\desktop\file.txt At:11/17/2023 12:5:27
+Trace: Action Was not Recognized as a valid Action At:11/17/2023 12:5:27
+' 
+####;
+Relation=11/17/2023 12:05:27 AM;
+ID=1427;
+Key=log;
+Value= run(){  At:11/17/2023 11:32:59
+Trace: Action Was not Recognized as a valid Action At:11/17/2023 11:32:59
+' 
+####;
+Relation=11/17/2023 11:32:59 AM;
+ID=1429;
+Key=log;
+Value= {}  At:11/17/2023 11:34:23
+Trace: Action Was not Recognized as a valid Action At:11/17/2023 11:34:23
+' 
+####;
+Relation=11/17/2023 11:34:23 AM;
+ID=1431;
+Key=log;
+Value= {  At:11/17/2023 11:34:26
+Trace: Action Was not Recognized as a valid Action At:11/17/2023 11:34:26
+' 
+####;
+Relation=11/17/2023 11:34:26 AM;
+ID=1433;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution Action With Type and parameters 'lim(sqr(ln(e^1)/(2/4' * 2\3))) Trace: 
+Trace: ClownShell Started At:11/19/2023 01:9:34
+Trace: Without Arguments At:11/19/2023 01:9:34
+Trace: ShellLoop Started MainLoop.ShellLoop At:11/19/2023 01:9:34
+Trace: LoopInput Started MainLoop.ShellLoop At:11/19/2023 01:9:34
+Trace: Commands Inputed Length: 3 At:11/19/2023 01:12:58
+Trace: Execution Started With Action: lim(sqr(ln(e^1)/(2/4 Type: * Parameters: 2\3)))  At:11/19/2023 01:12:58
+Trace: Action Was not Recognized as a valid Action At:11/19/2023 01:12:58
+' 
+####;
+Relation=11/19/2023 1:12:58 PM;

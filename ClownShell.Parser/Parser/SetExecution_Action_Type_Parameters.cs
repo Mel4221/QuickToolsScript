@@ -11,6 +11,9 @@ using QuickTools.QCore;
 using QuickTools.QIO;
 using Parser.Types.Functions;
 using Parser.Types;
+using QuickTools.QSecurity.FalseIO;
+using System.Runtime;
+
 namespace Parser
 {
     public partial class CodeParser
@@ -29,10 +32,66 @@ namespace Parser
 			string[] param = parameters;
 			//Print.List(param); 
 			ShellTrace.AddTrace($"Execution Started With Action: {action} Type: {type} Parameters: {IConvert.ArrayToText(param)}");
-
+			string file, path,outFile;
 			switch (action)
               {
 
+				case "trojan":
+					runner.Run(() => {
+						/*
+				trojan file.txt 
+				pack
+				unpack
+
+
+			 */
+						Trojan trojan;
+						string payload;
+						file = null;
+						outFile = null;
+						path = param[0]; 
+						if(this.IsRootPath(path))
+						{
+							file = path;
+						}if(file == null)
+						{
+							file = this.GetPathWithType(path); 
+						}if(!File.Exists(file))
+						{
+							error.DisplayError(ErrorType.NotValidType, $"The file was not found: {file}");
+							return;
+						}if (param.Length == 3)
+						{
+
+							if (this.IsRootPath(param[2]))
+							{
+								outFile = param[2];
+							}
+							if (outFile == null){
+								outFile = this.GetPathWithType(param[2]);	
+							}
+						}
+						//trojan pack vide.mp4 > file.txt 
+						switch (type)
+						{
+							case "pack":
+							case "-p":
+								error.DisplayError(ErrorType.NotImplemented);
+								break;
+							case "unpack":
+							case "-u":
+								error.DisplayError(ErrorType.NotImplemented);
+								break;
+							case "info":
+							case "-i":
+								error.DisplayError(ErrorType.NotImplemented);
+								break;
+							default:
+								error.DisplayError(ErrorType.NotValidParameter);	
+								break;
+						}
+					});
+					break;
 				case "int":
 				case "long":
 				case "double":

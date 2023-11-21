@@ -82,14 +82,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClownShell.Parser.dll" size="34816">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClownShell.Parser.dll" size="35328">
       <assemblyIdentity name="ClownShell.Parser" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>hvyTNiK2FEpdMxXvP6PBCHb+2SFqDZvFftCMCcJtels=</dsig:DigestValue>
+        <dsig:DigestValue>UdOEGPKd6fHheZ5PEmlRrMUm4Qi8DtYInVqKulOkz5M=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
