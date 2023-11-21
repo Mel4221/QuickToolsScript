@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{823A2180-8759-43E9-8CEB-0D736731BAB1}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ClownShell.ScriptRunner/Runner.cs">
+    <Files>
+      <File FileName="ClownShell.Parser/Types/CodeType_RunAssingment.cs" Line="39" Column="12" />
+      <File FileName="ClownShell.Parser/Parser/SetExecution_Action_Type_Parameters.cs" Line="26" Column="15" />
+      <File FileName="ClownShell.ScriptRunner/Runner.cs" Line="2" Column="7" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ClownShell" expanded="True">
+            <Node name="ClownShell.ErrorHandelers" selected="True" />
+            <Node name="ClownShell.MainLoop" selected="True" />
+            <Node name="ClownShell.Parser" selected="True" />
+            <Node name="ClownShell.ScriptRunner" selected="True" />
+            <Node name="ClownShell.Security" selected="True" />
+            <Node name="ClownShell.Settings" selected="True" />
+            <Node name="ClownShell.State" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.ClownShell PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

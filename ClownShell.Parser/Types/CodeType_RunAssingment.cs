@@ -30,11 +30,12 @@ namespace Parser.Types
 				return;
 			}
 			if (b.IsEmpty && type == "=")
-			{/*
+			{
+              /*
 				by this time we already know that be is a variable
 				why not just to check if they have pointers 
 			  */
-				Shell.VStack.UpdateVariable(a.Name, parameter);
+				Shell.VStack.UpdateVariable(a.Name, this.Parameters[0]);
 				//Get.Ok();
 				return;
 			}if(!b.IsEmpty && type == "=")
@@ -42,12 +43,22 @@ namespace Parser.Types
 				Shell.VStack.UpdateVariable(a.Name,b.Value);
 				return;
 			}
-
-			switch(type)
+          
+            string aValue, bValue;
+            switch (type)
 			{
 				case "+=":
-					Shell.VStack.UpdateVariable($"{a.Name}",$"{a.Value}{b.Value}");
-					break;
+
+                    a = Shell.VStack.GetVariable(this.Action.Substring(1));
+                    b = Shell.VStack.GetVariable(this.Parameters[0].Substring(1));
+                    aValue = a.Value;
+                    bValue = b.Value; 
+                
+                    Shell.VStack.UpdateVariable(a.Name,aValue+bValue);
+                    Print.List(this.Parameters); 
+                    Get.Red($"A: {aValue} B: {bValue}");
+                    Get.Red(Shell.VStack.GetVariable(a.Name).ToString());
+                    break;
 				default:
 					error.DisplayError(ErrorType.InvalidOperator);
 					return;

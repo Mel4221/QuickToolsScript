@@ -1,0 +1,78 @@
+ID=1001;
+Key=log;
+Value=Shell Exited With a FATAL-ERROR More info in the logs file: 
+StartTrace
+ Trace: ClownShell Started At:11/20/2023 09:52:23
+Trace: Without Arguments At:11/20/2023 09:52:23
+Trace: ShellLoop Started MainLoop.ShellLoop At:11/20/2023 09:52:23
+Trace: LoopInput Started MainLoop.ShellLoop At:11/20/2023 09:52:23
+Trace: FATAL-ERROR Encountered System.NullReferenceException: Object reference not set to an instance of an object
+  at QuickTools.QData.MiniDB.AddKeyOnHot (System.Object key, System.Object value, System.Object relation) [0x00033] in <15c45947b98942528bccc1a8bb55294f>:0 
+  at MainLoop.ShellLoop.SaveHistory (System.String command) [0x00048] in /home/mel/Documents/csharp/ClownShell/ClownShell.MainLoop/ShellLoop_History.cs:34 
+  at MainLoop.ShellLoop.RunShellLoop () [0x00093] in /home/mel/Documents/csharp/ClownShell/ClownShell.MainLoop/ShellLoop.cs:47 
+  at MainLoop.ShellLoop.Start () [0x00010] in /home/mel/Documents/csharp/ClownShell/ClownShell.MainLoop/ShellLoop.cs:65 
+  at ClownShell.Init.Program.Main (System.String[] args) [0x00033] in /home/mel/Documents/csharp/ClownShell/Program.cs:35  At:11/20/2023 09:52:23
+ 
+EndTrace 
+StartExeption 
+System.NullReferenceException: Object reference not set to an instance of an object
+  at QuickTools.QData.MiniDB.AddKeyOnHot (System.Object key, System.Object value, System.Object relation) [0x00033] in <15c45947b98942528bccc1a8bb55294f>:0 
+  at MainLoop.ShellLoop.SaveHistory (System.String command) [0x00048] in /home/mel/Documents/csharp/ClownShell/ClownShell.MainLoop/ShellLoop_History.cs:34 
+  at MainLoop.ShellLoop.RunShellLoop () [0x00093] in /home/mel/Documents/csharp/ClownShell/ClownShell.MainLoop/ShellLoop.cs:47 
+  at MainLoop.ShellLoop.Start () [0x00010] in /home/mel/Documents/csharp/ClownShell/ClownShell.MainLoop/ShellLoop.cs:65 
+  at ClownShell.Init.Program.Main (System.String[] args) [0x00033] in /home/mel/Documents/csharp/ClownShell/Program.cs:35  
+EndExeption
+;
+Relation=11/20/2023 9:52:23 PM;
+ID=1003;
+Key=log;
+Value=Shell Exited With a FATAL-ERROR More info in the logs file: 
+StartTrace
+ Trace: ClownShell Started At:11/20/2023 09:57:26
+Trace: Without Arguments At:11/20/2023 09:57:26
+Trace: ShellLoop Started MainLoop.ShellLoop At:11/20/2023 09:57:26
+Trace: LoopInput Started MainLoop.ShellLoop At:11/20/2023 09:57:26
+Trace: FATAL-ERROR Encountered System.NullReferenceException: Object reference not set to an instance of an object
+  at QuickTools.QData.MiniDB.AddKeyOnHot (System.Object key, System.Object value, System.Object relation) [0x00033] in <15c45947b98942528bccc1a8bb55294f>:0 
+  at MainLoop.ShellLoop.SaveHistory (System.String command) [0x00048] in /home/mel/Documents/csharp/ClownShell/ClownShell.MainLoop/ShellLoop_History.cs:34 
+  at MainLoop.ShellLoop.RunShellLoop () [0x00093] in /home/mel/Documents/csharp/ClownShell/ClownShell.MainLoop/ShellLoop.cs:47 
+  at MainLoop.ShellLoop.Start () [0x00010] in /home/mel/Documents/csharp/ClownShell/ClownShell.MainLoop/ShellLoop.cs:65 
+  at ClownShell.Init.Program.Main (System.String[] args) [0x00033] in /home/mel/Documents/csharp/ClownShell/Program.cs:35  At:11/20/2023 09:57:26
+ 
+EndTrace 
+StartExeption 
+System.NullReferenceException: Object reference not set to an instance of an object
+  at QuickTools.QData.MiniDB.AddKeyOnHot (System.Object key, System.Object value, System.Object relation) [0x00033] in <15c45947b98942528bccc1a8bb55294f>:0 
+  at MainLoop.ShellLoop.SaveHistory (System.String command) [0x00048] in /home/mel/Documents/csharp/ClownShell/ClownShell.MainLoop/ShellLoop_History.cs:34 
+  at MainLoop.ShellLoop.RunShellLoop () [0x00093] in /home/mel/Documents/csharp/ClownShell/ClownShell.MainLoop/ShellLoop.cs:47 
+  at MainLoop.ShellLoop.Start () [0x00010] in /home/mel/Documents/csharp/ClownShell/ClownShell.MainLoop/ShellLoop.cs:65 
+  at ClownShell.Init.Program.Main (System.String[] args) [0x00033] in /home/mel/Documents/csharp/ClownShell/Program.cs:35  
+EndExeption
+;
+Relation=11/20/2023 9:57:26 PM;
+ID=1005;
+Key=log;
+Value=Shell Exited With a FATAL-ERROR More info in the logs file: 
+StartTrace
+ Trace: ClownShell Started At:11/20/2023 09:57:54
+Trace: Without Arguments At:11/20/2023 09:57:54
+Trace: ShellLoop Started MainLoop.ShellLoop At:11/20/2023 09:57:54
+Trace: LoopInput Started MainLoop.ShellLoop At:11/20/2023 09:57:54
+Trace: FATAL-ERROR Encountered System.NullReferenceException: Object reference not set to an instance of an object
+  at QuickTools.QData.MiniDB.AddKeyOnHot (System.Object key, System.Object value, System.Object relation) [0x00033] in <15c45947b98942528bccc1a8bb55294f>:0 
+  at MainLoop.ShellLoop.SaveHistory (System.String command) [0x00048] in /home/mel/Documents/csharp/ClownShell/ClownShell.MainLoop/ShellLoop_History.cs:34 
+  at MainLoop.ShellLoop.RunShellLoop () [0x00093] in /home/mel/Documents/csharp/ClownShell/ClownShell.MainLoop/ShellLoop.cs:47 
+  at MainLoop.ShellLoop.Start () [0x00010] in /home/mel/Documents/csharp/ClownShell/ClownShell.MainLoop/ShellLoop.cs:65 
+  at ClownShell.Init.Program.Main (System.String[] args) [0x00033] in /home/mel/Documents/csharp/ClownShell/Program.cs:35  At:11/20/2023 09:57:54
+ 
+EndTrace 
+StartExeption 
+System.NullReferenceException: Object reference not set to an instance of an object
+  at QuickTools.QData.MiniDB.AddKeyOnHot (System.Object key, System.Object value, System.Object relation) [0x00033] in <15c45947b98942528bccc1a8bb55294f>:0 
+  at MainLoop.ShellLoop.SaveHistory (System.String command) [0x00048] in /home/mel/Documents/csharp/ClownShell/ClownShell.MainLoop/ShellLoop_History.cs:34 
+  at MainLoop.ShellLoop.RunShellLoop () [0x00093] in /home/mel/Documents/csharp/ClownShell/ClownShell.MainLoop/ShellLoop.cs:47 
+  at MainLoop.ShellLoop.Start () [0x00010] in /home/mel/Documents/csharp/ClownShell/ClownShell.MainLoop/ShellLoop.cs:65 
+  at ClownShell.Init.Program.Main (System.String[] args) [0x00033] in /home/mel/Documents/csharp/ClownShell/Program.cs:35  
+EndExeption
+;
+Relation=11/20/2023 9:57:54 PM;

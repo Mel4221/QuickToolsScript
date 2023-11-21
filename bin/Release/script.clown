@@ -1,9 +1,1 @@
-echo "What is your name?"
-input = name
-echo "Welcome"
-echo *name
-echo "How may i help you"
-input = help
-echo "I don't think i can help you with that now maybe later"
-echo Bye
-sleep 3000
+echo "working from the terminal"
