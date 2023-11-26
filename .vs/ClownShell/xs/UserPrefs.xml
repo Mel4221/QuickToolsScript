@@ -1,21 +1,19 @@
 ﻿<Properties StartupConfiguration="{823A2180-8759-43E9-8CEB-0D736731BAB1}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ClownShell.ScriptRunner/Runner.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ClownShell.Parser/Parser/SetExecution_Action_Type_Parameters.cs">
     <Files>
-      <File FileName="ClownShell.Parser/Types/CodeType_RunAssingment.cs" Line="39" Column="12" />
-      <File FileName="ClownShell.Parser/Parser/SetExecution_Action_Type_Parameters.cs" Line="26" Column="15" />
-      <File FileName="ClownShell.ScriptRunner/Runner.cs" Line="2" Column="7" />
+      <File FileName="ClownShell.Parser/Types/CodeType_RunAssingment.cs" Line="58" Column="47" />
+      <File FileName="ClownShell.Parser/Parser/SetExecution_Action_Type_Parameters.cs" Line="32" Column="32" />
+      <File FileName="ClownShell.ScriptRunner/Runner.cs" Line="9" Column="28" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ClownShell" expanded="True">
-            <Node name="ClownShell.ErrorHandelers" selected="True" />
-            <Node name="ClownShell.MainLoop" selected="True" />
-            <Node name="ClownShell.Parser" selected="True" />
-            <Node name="ClownShell.ScriptRunner" selected="True" />
-            <Node name="ClownShell.Security" selected="True" />
-            <Node name="ClownShell.Settings" selected="True" />
-            <Node name="ClownShell.State" selected="True" />
+            <Node name="ClownShell" selected="True" />
+            <Node name="ClownShell.Parser" expanded="True">
+              <Node name="Parser" expanded="True" />
+              <Node name="Types" expanded="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
