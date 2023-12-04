@@ -26,6 +26,9 @@ namespace Parser
 			ShellTrace.AddTrace($"Execution Started With Action: {action} Type: {type}");
 			switch (action)
             {
+				case "install":
+					error.DisplayError(ErrorType.NotImplemented);
+					break;
                 case "fuck":
 					runner.Run(() =>
 					{
