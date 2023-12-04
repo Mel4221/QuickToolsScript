@@ -28,11 +28,15 @@ namespace Parser
 			
 			ErrorHandeler error = new ErrorHandeler();
 			Runner runner = new Runner();
-			ProcessStartInfo process;
+			//ProcessStartInfo process;
 			string[] param = parameters;
 			//Print.List(param); 
 			ShellTrace.AddTrace($"Execution Started With Action: {action} Type: {type} Parameters: {IConvert.ArrayToText(param)}");
-			string file, path,outFile;
+			//string file, path,outFile;
+
+            Get.Green($"{this.Action} {this.Type} {IConvert.ArrayToText(this.Parameters)}");
+            Get.Blue($"{action} {type} {IConvert.ArrayToText(param)}");
+
 			switch (action)
               {
 
@@ -44,9 +48,11 @@ namespace Parser
 				unpack
 
 
-			 */
-						Trojan trojan;
-						string payload;
+			        */
+
+						//Trojan trojan;
+						//string payload;
+                        /*
 						file = null;
 						outFile = null;
 						path = param[0]; 
@@ -71,6 +77,7 @@ namespace Parser
 								outFile = this.GetPathWithType(param[2]);	
 							}
 						}
+
 						//trojan pack vide.mp4 > file.txt 
 						switch (type)
 						{
@@ -89,7 +96,7 @@ namespace Parser
 							default:
 								error.DisplayError(ErrorType.NotValidParameter);	
 								break;
-						}
+						}*/
 					});
 					break;
 				case "int":
@@ -214,7 +221,7 @@ namespace Parser
 					//echo *name 
 					//free name
 					
-					Get.Blue($"{this.Action.Substring(1)} {CodeTypes.IsVariable(this.Action.Substring(1))}");
+					//Get.Blue($"{this.Action.Substring(1)} {CodeTypes.IsVariable(this.Action.Substring(1))}");
 					if(CodeTypes.IsVariable(this.Action.Substring(1)))
 					{
 						CodeTypes types = new CodeTypes(this.Action, this.Type, this.Parameters);
