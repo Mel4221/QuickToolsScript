@@ -1789,3 +1789,116 @@ Trace: Action Was not Recognized as a valid Action At:11/19/2023 01:12:58
 ' 
 ####;
 Relation=11/19/2023 1:12:58 PM;
+ID=1435;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution Action With Type 'run' rufus.exe Trace: 
+Trace: ClownShell Started At:11/26/2023 03:54:24
+Trace: Without Arguments At:11/26/2023 03:54:24
+Trace: ShellLoop Started MainLoop.ShellLoop At:11/26/2023 03:54:24
+Trace: LoopInput Started MainLoop.ShellLoop At:11/26/2023 03:54:24
+Trace: Commands Inputed Length: 1 At:11/26/2023 06:34:03
+Trace: Execution Set With Action: ls  At:11/26/2023 06:34:03
+Trace: Commands Inputed Length: 2 At:11/26/2023 06:34:11
+Trace: Execution Started With Action: run Type: rufus.exe At:11/26/2023 06:34:11
+Trace: Action Was not Recognized as a valid Action At:11/26/2023 06:34:11
+' 
+####;
+Relation=11/26/2023 6:34:11 PM;
+ID=1437;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution Action With Type 'exe' rufus.exe Trace: 
+Trace: Commands Inputed Length: 1 At:11/26/2023 06:34:14
+Trace: Execution Set With Action: clear  At:11/26/2023 06:34:14
+Trace: Commands Inputed Length: 2 At:11/26/2023 06:34:18
+Trace: Execution Started With Action: exe Type: rufus.exe At:11/26/2023 06:34:18
+Trace: Action Was not Recognized as a valid Action At:11/26/2023 06:34:18
+' 
+####;
+Relation=11/26/2023 6:34:18 PM;
+ID=1439;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution With Action: 'rufus.com' Trace: 
+Trace: Commands Inputed Length: 1 At:11/26/2023 06:34:47
+Trace: Execution Set With Action: ./rufus.exe  At:11/26/2023 06:34:47
+Trace: Commands Inputed Length: 1 At:11/26/2023 06:34:56
+Trace: Execution Set With Action: rufus.com  At:11/26/2023 06:34:56
+Trace: Action Was not Recognized as a valid Action At:11/26/2023 06:34:56
+' 
+####;
+Relation=11/26/2023 6:34:57 PM;
+ID=1441;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.ComponentModel.Win32Exception (0x80004005): The specified executable is not a valid application for this OS platform.
+   at System.Diagnostics.Process.StartWithCreateProcess(ProcessStartInfo startInfo)
+   at Parser.CodeParser.<>c__DisplayClass12_0.<RunProcess>b__0() in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Parser\Parser\CodeParser_Methods.cs:line 75
+   at ScriptRunner.Runner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\Runner.cs:line 14' 
+####;
+Relation=11/26/2023 6:35:50 PM;
+ID=1443;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution With Action: 'caclear' Trace: 
+Trace: Commands Inputed Length: 1 At:11/26/2023 06:35:02
+Trace: Execution Set With Action: clear  At:11/26/2023 06:35:02
+Trace: Commands Inputed Length: 1 At:11/26/2023 06:35:21
+Trace: Execution Set With Action: ls  At:11/26/2023 06:35:21
+Trace: Commands Inputed Length: 1 At:11/26/2023 06:35:50
+Trace: Execution Set With Action: ./hi.clown  At:11/26/2023 06:35:50
+Trace: Commands Inputed Length: 1 At:11/26/2023 06:38:30
+Trace: Execution Set With Action: caclear  At:11/26/2023 06:38:30
+Trace: Action Was not Recognized as a valid Action At:11/26/2023 06:38:30
+' 
+####;
+Relation=11/26/2023 6:38:30 PM;
+ID=1445;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution With Action: 'cls' Trace: 
+Trace: Commands Inputed Length: 1 At:11/26/2023 06:38:32
+Trace: Execution Set With Action: clear  At:11/26/2023 06:38:32
+Trace: Commands Inputed Length: 1 At:11/26/2023 06:38:33
+Trace: Execution Set With Action: ls  At:11/26/2023 06:38:33
+Trace: Commands Inputed Length: 2 At:11/26/2023 06:39:30
+Trace: Execution Started With Action: cat Type: file.txt At:11/26/2023 06:39:30
+Trace: Commands Inputed Length: 1 At:11/26/2023 06:39:38
+Trace: Execution Set With Action: clear  At:11/26/2023 06:39:38
+Trace: Commands Inputed Length: 1 At:11/26/2023 06:41:00
+Trace: Execution Set With Action: ls  At:11/26/2023 06:41:00
+Trace: Commands Inputed Length: 2 At:11/26/2023 06:41:06
+Trace: Execution Started With Action: cat Type: file.txt At:11/26/2023 06:41:06
+Trace: Commands Inputed Length: 1 At:11/26/2023 06:41:54
+Trace: Execution Set With Action: cls  At:11/26/2023 06:41:54
+Trace: Action Was not Recognized as a valid Action At:11/26/2023 06:41:54
+' 
+####;
+Relation=11/26/2023 6:41:54 PM;
+ID=1447;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution With Action: 'cleawr' Trace: 
+Trace: Commands Inputed Length: 1 At:11/26/2023 06:41:56
+Trace: Execution Set With Action: cleawr  At:11/26/2023 06:41:56
+Trace: Action Was not Recognized as a valid Action At:11/26/2023 06:41:56
+' 
+####;
+Relation=11/26/2023 6:41:56 PM;
+ID=1449;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution With Action: 'cl3clear' Trace: 
+Trace: Commands Inputed Length: 1 At:11/26/2023 06:42:00
+Trace: Execution Set With Action: cl3clear  At:11/26/2023 06:42:00
+Trace: Action Was not Recognized as a valid Action At:11/26/2023 06:42:00
+' 
+####;
+Relation=11/26/2023 6:42:00 PM;
+ID=1451;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'VariableAlreadySet' 'Variable already Set at input = 'name'' 
+####;
+Relation=11/26/2023 6:46:16 PM;
