@@ -1,0 +1,17 @@
+ID=1001;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidParameter' 'Invalid Parameter: Trace: ClownShell Started At:12/04/2023 11:17:45
+Trace: Without Arguments At:12/04/2023 11:17:45
+Trace: ShellLoop Started MainLoop.ShellLoop At:12/04/2023 11:17:46
+Trace: LoopInput Started MainLoop.ShellLoop At:12/04/2023 11:17:46
+Trace: Commands Inputed Length: 4 At:12/04/2023 11:17:50
+Trace: Execution Started With Action: int Type: x Parameters: = 2  At:12/04/2023 11:17:50
+Trace: Commands Inputed Length: 2 At:12/04/2023 11:17:56
+Trace: Execution Started With Action: free Type: x At:12/04/2023 11:17:56
+Trace: Commands Inputed Length: 4 At:12/04/2023 11:17:59
+Trace: Execution Started With Action: int Type: x Parameters: = mel  At:12/04/2023 11:17:59
+Trace: The Parameter 'mel' was not recognized as a valid number At:12/04/2023 11:17:59
+' 
+####;
+Relation=12/4/2023 11:17:59 AM;

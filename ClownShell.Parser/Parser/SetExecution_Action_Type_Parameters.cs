@@ -37,11 +37,17 @@ namespace Parser
             Get.Green($"{this.Action} {this.Type} {IConvert.ArrayToText(this.Parameters)}");
             Get.Blue($"{action} {type} {IConvert.ArrayToText(param)}");
 
+
+
 			switch (action)
               {
-
+				case "install":
+					error.DisplayError(ErrorType.NotImplemented);
+					break;
 				case "trojan":
 					runner.Run(() => {
+						error.DisplayError(ErrorType.NotImplemented);
+
 						/*
 				trojan file.txt 
 				pack
@@ -52,7 +58,7 @@ namespace Parser
 
 						//Trojan trojan;
 						//string payload;
-                        /*
+						/*
 						file = null;
 						outFile = null;
 						path = param[0]; 
