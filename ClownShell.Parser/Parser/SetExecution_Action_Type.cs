@@ -116,8 +116,12 @@ namespace Parser
 
 					});
 					break;
-				case "echo":
 				case "write":
+					runner.Run(() => {
+						Console.Write(type);
+					});
+					break;
+				case "echo":
 				case "print":
 				case "log":
 					runner.Run(() => {

@@ -1,17 +1,115 @@
 ID=1001;
 Key=log;
-Value=####
- There Was an error with the given type of error: 'NotValidParameter' 'Invalid Parameter: Trace: ClownShell Started At:12/04/2023 11:17:45
-Trace: Without Arguments At:12/04/2023 11:17:45
-Trace: ShellLoop Started MainLoop.ShellLoop At:12/04/2023 11:17:46
-Trace: LoopInput Started MainLoop.ShellLoop At:12/04/2023 11:17:46
-Trace: Commands Inputed Length: 4 At:12/04/2023 11:17:50
-Trace: Execution Started With Action: int Type: x Parameters: = 2  At:12/04/2023 11:17:50
-Trace: Commands Inputed Length: 2 At:12/04/2023 11:17:56
-Trace: Execution Started With Action: free Type: x At:12/04/2023 11:17:56
-Trace: Commands Inputed Length: 4 At:12/04/2023 11:17:59
-Trace: Execution Started With Action: int Type: x Parameters: = mel  At:12/04/2023 11:17:59
+Value= mel  At:12/04/2023 11:17:59
 Trace: The Parameter 'mel' was not recognized as a valid number At:12/04/2023 11:17:59
 ' 
 ####;
 Relation=12/4/2023 11:17:59 AM;
+ID=1003;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution With Action: 'aprender-a-mirar-la-salud-60.pdfclear' Trace: 
+Trace: ClownShell Started At:12/06/2023 11:24:23
+Trace: Without Arguments At:12/06/2023 11:24:23
+Trace: ShellLoop Started MainLoop.ShellLoop At:12/06/2023 11:24:23
+Trace: LoopInput Started MainLoop.ShellLoop At:12/06/2023 11:24:23
+Trace: Commands Inputed Length: 1 At:12/06/2023 11:24:50
+Trace: Execution Set With Action: ls  At:12/06/2023 11:24:50
+Trace: Commands Inputed Length: 2 At:12/06/2023 11:25:02
+Trace: Execution Started With Action: cat Type: aprender-a-mirar-la-salud-60.pdf At:12/06/2023 11:25:02
+Trace: Commands Inputed Length: 1 At:12/06/2023 11:27:21
+Trace: Execution Set With Action: aprender-a-mirar-la-salud-60.pdfclear  At:12/06/2023 11:27:21
+Trace: Action Was not Recognized as a valid Action At:12/06/2023 11:27:21
+' 
+####;
+Relation=12/6/2023 11:27:21 AM;
+ID=1005;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution With Action: 'claer' Trace: 
+Trace: Commands Inputed Length: 1 At:12/06/2023 11:27:23
+Trace: Execution Set With Action: claer  At:12/06/2023 11:27:23
+Trace: Action Was not Recognized as a valid Action At:12/06/2023 11:27:23
+' 
+####;
+Relation=12/6/2023 11:27:23 AM;
+ID=1007;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution With Action: 'c' Trace: 
+Trace: Commands Inputed Length: 1 At:12/06/2023 11:27:24
+Trace: Execution Set With Action: c  At:12/06/2023 11:27:24
+Trace: Action Was not Recognized as a valid Action At:12/06/2023 11:27:24
+' 
+####;
+Relation=12/6/2023 11:27:24 AM;
+ID=1009;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotImplemented' 'The code is recongnized but sadly there are only 2 wasy to run a program and is either by providing the entired path or  by being in the same directory on the shell and running the program' 
+####;
+Relation=12/6/2023 11:27:54 AM;
+ID=1011;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.ArgumentException: Illegal characters in path.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFiles(String path)
+   at QuickTools.QCore.Get.Ls(String path)
+   at ScriptRunner.Runner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\Runner.cs:line 14' 
+####;
+Relation=12/6/2023 11:28:13 AM;
+ID=1013;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.ComponentModel.Win32Exception (0x80004005): The system cannot find the file specified
+   at System.Diagnostics.Process.StartWithCreateProcess(ProcessStartInfo startInfo)
+   at Parser.CodeParser.<>c__DisplayClass40_0.<SetExecution>b__28() in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Parser\Parser\SetExecution_Action_Type.cs:line 625
+   at ScriptRunner.Runner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\Runner.cs:line 14' 
+####;
+Relation=12/6/2023 11:28:55 AM;
+ID=1015;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Parser.CodeParser.<>c__DisplayClass39_0.<SetExecution>b__6() in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Parser\Parser\SetExecution_Action_Type_Parameters.cs:line 196
+   at ScriptRunner.Runner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\Runner.cs:line 14' 
+####;
+Relation=12/7/2023 7:45:22 PM;
+ID=1017;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=12/7/2023 7:46:51 PM;
+ID=1019;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidType' 'File or Directory 'Avatar.El.Camino.Del.Agua.2022.1080p-dual-lat.mp4' was not found!!!' 
+####;
+Relation=12/7/2023 7:51:51 PM;
+ID=1021;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=12/7/2023 7:54:56 PM;
+ID=1023;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidType' 'File or Directory 'AirplanesModels' was not found!!!' 
+####;
+Relation=12/7/2023 8:00:53 PM;
+ID=1025;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=12/7/2023 8:02:21 PM;
+ID=1027;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=12/7/2023 8:04:46 PM;

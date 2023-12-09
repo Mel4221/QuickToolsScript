@@ -187,6 +187,70 @@ namespace Parser
 						});
 					});
 					break;
+				case "rm":
+					runner.Run(() =>
+					{
+						//rm -r *
+						FilesMaper maper;
+						List<Error> errors = new List<Error>(); 
+						string[] files;
+						string[] dirs; 
+						if (type == "-r")
+						{
+							if(param[0][0] == '*')
+							{
+								maper = new FilesMaper(Shell.CurrentPath);
+								maper.AllowDebugger = true; 
+								maper.Map(); 
+								files = maper.Files.ToArray();
+								dirs = maper.Directories.ToArray();
+
+								
+							 
+								for(int file = files.Length; file  > 0; file--)
+								{
+									if(File.Exists(files[file - 1]))
+									{
+										try
+										{
+											File.SetAttributes(files[file-1], FileAttributes.Archive); 
+											File.Delete(files[file - 1]);
+											Get.Red($"FILE DELETED: {files[file - 1]}");
+										}catch(Exception ex)
+										{
+											errors.Add(new Error()
+											{
+												Type = $"FailToDeleteFile: {files[file -1]}",
+												Message = ex.Message
+											});
+										}
+									}
+								}
+									
+								for (int dir = dirs.Length; dir  > 0; dir--)
+									{
+										if (Directory.Exists(dirs[dir - 1]))
+										{
+											try
+											{
+											DirectoryInfo info = new DirectoryInfo(dirs[dir-1]);
+											info.Delete(true);
+											//	Directory.Delete(dirs[dir - 1]);
+												Get.Blue($"DIR DELETED: {dirs[dir - 1]}");
+											}catch(Exception ex)
+											{
+												errors.Add(new Error() { 
+													Type = $"FailToDeleteDirectory: {dirs[dir-1]}",
+													Message = ex.Message
+												});
+											}
+										}
+									}
+									foreach (Error err in errors) Get.Yellow(err.ToString());
+							}
+						}
+					});
+					break;
 				case "echo":
 					//Get.Wait($"{this.IsRootPath(type)} {this.IsRootPath(param[1])}");
 					runner.Run(() => {
