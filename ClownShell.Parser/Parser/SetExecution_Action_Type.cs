@@ -26,6 +26,7 @@ namespace Parser
 			ShellTrace.AddTrace($"Execution Started With Action: {action} Type: {type}");
 			switch (action)
             {
+
 				case "install":
 					error.DisplayError(ErrorType.NotImplemented);
 					break;
@@ -634,7 +635,7 @@ namespace Parser
 					runner.Run(() => {
 						Process cmd = new Process();
 
-						cmd.StartInfo.FileName = $"{Get.Path}editors/vim/vim.exe";//"cmd.exe";
+						cmd.StartInfo.FileName = $"editors/vim/vim.exe";//"cmd.exe";
 																				  //cmd.StartInfo.Arguments;
 																				  //cmd.StartInfo.RedirectStandardInput = true;
 						cmd.StartInfo.RedirectStandardOutput = false;  // true;
@@ -650,7 +651,7 @@ namespace Parser
 					runner.Run(() => {
 						Process cmd = new Process();
 
-						cmd.StartInfo.FileName = $"{Get.Path}editors/nano/nano.exe";//"cmd.exe";
+						cmd.StartInfo.FileName = $"editors/nano/nano.exe";//"cmd.exe";
 																					//cmd.StartInfo.Arguments;
 																					//cmd.StartInfo.RedirectStandardInput = true;
 						cmd.StartInfo.RedirectStandardOutput = false;  // true;
@@ -666,7 +667,7 @@ namespace Parser
 					runner.Run(() => {
 						Process cmd = new Process();
 
-						cmd.StartInfo.FileName = $"{Get.Path}editors/vim/xxd.exe";//"cmd.exe";
+						cmd.StartInfo.FileName = $"editors/vim/xxd.exe";//"cmd.exe";
 																				  //cmd.StartInfo.Arguments;
 																				  //cmd.StartInfo.RedirectStandardInput = true;
 						cmd.StartInfo.RedirectStandardOutput = false;  // true;
@@ -686,7 +687,7 @@ namespace Parser
 						if (Get.IsWindow())
 						{
 							cmd.StartInfo.FileName = "notepad";
-							cmd.StartInfo.Arguments =type;
+							cmd.StartInfo.Arguments = type;
 
 						}
 						if (!Get.IsWindow())

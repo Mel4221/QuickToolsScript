@@ -316,6 +316,50 @@ namespace Parser
 						//Console.WriteLine(cmd.StandardOutput.ReadToEnd());
 					});
 					break;
+				case "vim":
+					runner.Run(() => {
+						Process cmd = new Process();
+
+						cmd.StartInfo.FileName = "editors/vim/vim.exe";//"cmd.exe";
+															  //cmd.StartInfo.Arguments;
+															  //cmd.StartInfo.RedirectStandardInput = true;
+						cmd.StartInfo.RedirectStandardOutput = false;  // true;
+						cmd.StartInfo.CreateNoWindow = false;
+						cmd.StartInfo.UseShellExecute = false;
+						//cmd.StartInfo.Arguments = "ping www.google.com"; //Helper.ResolvePath(this).Target;
+
+						cmd.Start();
+						cmd.WaitForExit();
+						/* execute "dir" */
+
+						//cmd.StandardInput.WriteLine(this.SubTarget);
+						//cmd.StandardInput.Flush();
+						//cmd.StandardInput.Close();
+						//Console.WriteLine(cmd.StandardOutput.ReadToEnd());
+					});
+					break;
+				case "nano":
+					runner.Run(() => {
+						Process cmd = new Process();
+
+						cmd.StartInfo.FileName = "editors/nano/nano.exe";//"cmd.exe";
+																	   //cmd.StartInfo.Arguments;
+																	   //cmd.StartInfo.RedirectStandardInput = true;
+						cmd.StartInfo.RedirectStandardOutput = false;  // true;
+						cmd.StartInfo.CreateNoWindow = false;
+						cmd.StartInfo.UseShellExecute = false;
+						//cmd.StartInfo.Arguments = "ping www.google.com"; //Helper.ResolvePath(this).Target;
+
+						cmd.Start();
+						cmd.WaitForExit();
+						/* execute "dir" */
+
+						//cmd.StandardInput.WriteLine(this.SubTarget);
+						//cmd.StandardInput.Flush();
+						//cmd.StandardInput.Close();
+						//Console.WriteLine(cmd.StandardOutput.ReadToEnd());
+					});
+					break;
 				case "powershell":
 					runner.Run(() => {
 						Process cmd = new Process();

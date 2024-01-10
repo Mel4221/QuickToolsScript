@@ -42,13 +42,45 @@ namespace Parser
             Get.Blue($"{action} {type} {IConvert.ArrayToText(param)}");
 
 
-			string fileArg, path; 
+			string fileArg, path;
 			switch (action)
-              {
+			{
 
+				case "cp":
+					runner.Run(() => 
+					{
+						//cp folder/*.txt  e:/f/l/s/
+						//cp ~/Desktop/f.c ~/Documents/file.c
+						//_____________________________
+
+						//cp	 folder/   box/
+						//action type      param[0]
+						//______________________________
+
+						//cp     c:/f/a/f.txt  e:/d/4/4/4//f.txt
+						//cp     file.txt	../file.txt
+						//action type		param[0]
+						//______________________________
+						string source, destination;
+						source = type;
+						destination = param[0]; 
+						if(this.IsRootPath(source) && this.IsRootPath(destination)
+							&& Directory.Exists(source))
+						{
+							Make.Directory(destination);
+							FilesMaper map = new FilesMaper(source);
+							map.AllowDebugger = true; 
+							map.Map();
+							
+							return; 
+						}
+
+					});
+					break;
 				case "shread":
 				case "fdelete":
-					runner.Run(() => {
+					runner.Run(() => 
+					{
 						//fdelete -f file.txt 
 						//fdelete -r path/
 						//action type param[0]
@@ -63,6 +95,14 @@ namespace Parser
 								break;
 							case "-r":
 									path = param[0];
+
+									if(!this.IsRootPath(path)) 
+									{
+										if(Directory.Exists(this.GetPathWithType(path)))
+										{
+											path = this.GetPathWithType(path);
+										}
+									}
 									 
 									if(!Directory.Exists(path))
 									{
@@ -80,6 +120,7 @@ namespace Parser
 									Directory.Delete(directory);
 									GC.Collect();
 									});
+									Directory.Delete(path);
 								break;
 						}
 					});
