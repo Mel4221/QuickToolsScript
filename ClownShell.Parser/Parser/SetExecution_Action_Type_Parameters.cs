@@ -38,10 +38,102 @@ namespace Parser
             Get.Blue($"{action} {type} {IConvert.ArrayToText(param)}");
 
 
-
+            string path; 
 			switch (action)
               {
-				case "install":
+                case "ls":
+                case "list-files":
+                    runner.Run(() => {
+                        path = param[0]; 
+                        /*
+                        if (this.IsRootPath(path))
+                        {
+                            Get.Ls(type,null);
+                            return;
+                        }
+        */
+                        if (type == "-l")
+                        {
+                            Get.Ls(path, null);
+                            return;
+                        }
+
+
+                        if (type == ".")
+                        {
+                            Get.Ls(Shell.CurrentPath);
+                            return;
+                        }
+
+                        if (Directory.Exists(this.GetPathWithType(type)))
+                        {
+                            Get.Ls(this.GetPathWithType(type));
+                            return;
+                        }
+                        if (Helper.HasSpecialFolder(type) != null)
+                        {
+                            Get.Ls(Helper.HasSpecialFolder(type));
+                            return;
+                        }
+                        if (type.Contains(".") && type.Length >= 2)
+                        {
+                            //path = ShellLoop.CurrentPath[ShellLoop.CurrentPath.Length-1]==Get.Slash()[0] ? $"{ShellLoop.CurrentPath}{type}" : $"{ShellLoop.CurrentPath}{Get.Slash()}{type}";
+                            Get.Ls(this.GetPathWithType(type));
+                            return;
+                        }
+                        else
+                        {
+                            Get.Ls(type);
+                        }
+
+
+                        //Get.Yellow($"{this.Target}     ClearTarget: {this.SubTarget} Type: {type}");
+                        //Get.Blue(Path.GetDirectoryName(this.Target));
+                        // Get.Yellow(ShellLoop.RelativePath);
+                        // Get.Wait(type);
+                        //this.SubTarget = type; 
+                        //CodeParser helper = Helper.ResolvePath(this);
+                        //this.Target = helper.Target;
+                        //this.SubTarget = helper.SubTarget;
+                        //Get.Cyan($"Target: {this.Target} SubTarget: {this.SubTarget}");
+
+                        //if(type == "-l")
+                        //{
+                        //    Get.Ls(helper.Target, "");
+                        //    return; 
+                        //}
+                        //if (type.Contains('*'))
+                        //{
+                        //    //Get.Wait($"{this.Target.Substring(0,this.Target.LastIndexOf("*"))} {type.Substring(1)}");
+                        //    // Get.Wait(type);  //Get.FileExention(type)
+                        //    //Get.Wait(this.Target.Substring(this.Target.LastIndexOf(Get.Slash())));
+                        //    //this get all the files that has this given type 
+                        //    Get.Ls(this.Target,this.SubTarget,true);
+                        //    return;
+                        //}
+                        //else
+                        //{
+                        //    if (Directory.Exists(this.Target))
+                        //    {
+                        //        Get.Ls(this.Target);
+                        //        return;
+                        //    }
+
+                        //}
+                    });
+                    break;
+                case "status":
+                case "porcent":
+                    runner.Run(() => {
+                        if (!Get.IsNumber(type) || !Get.IsNumber(parameters[0]))
+                            {
+                                error.DisplayError(ErrorType.NotValidParameter);
+                                 return;
+                            }
+                            Get.Green(Get.Status(type, parameters[0]));
+                    });
+                    break;
+                case "install":
 					error.DisplayError(ErrorType.NotImplemented);
 					break;
 				case "trojan":

@@ -29,10 +29,3 @@ C:/Users/Melquiceded/Documents/csharp/ClownShell/ClownShell.Dependencies/ClownSh
 /home/mel/Documents/csharp/ClownShell/ClownShell.Parser/obj/Release/ClownShell.Parser.csproj.CopyComplete
 /home/mel/Documents/csharp/ClownShell/ClownShell.Parser/obj/Release/ClownShell.Parser.dll
 /home/mel/Documents/csharp/ClownShell/ClownShell.Parser/obj/Release/ClownShell.Parser.pdb
-C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Dependencies\ClownShell.Parser.dll
-C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Dependencies\ClownShell.Parser.pdb
-C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Parser\obj\Release\ClownShell.Parser.csproj.AssemblyReference.cache
-C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Parser\obj\Release\ClownShell.Parser.csproj.CoreCompileInputs.cache
-C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Parser\obj\Release\ClownShell.Parser.csproj.CopyComplete
-C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Parser\obj\Release\ClownShell.Parser.dll
-C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Parser\obj\Release\ClownShell.Parser.pdb

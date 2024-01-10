@@ -22,10 +22,16 @@ namespace Parser
             Runner runner = new Runner();
 			ProcessStartInfo process;
 			string file, path;
-			bool isBackGroundAction;
+			//bool isBackGroundAction;
 			ShellTrace.AddTrace($"Execution Started With Action: {action} Type: {type}");
 			switch (action)
             {
+
+                case "status":
+                    runner.Run(() => { 
+
+                    });
+                    break;
 				case "install":
 					error.DisplayError(ErrorType.NotImplemented);
 					break;

@@ -15,10 +15,4 @@ C:/Users/Melquiceded/Documents/csharp/ClownShell/ClownShell.ErrorHandelers/obj/R
 /home/mel/Documents/csharp/ClownShell/ClownShell.ErrorHandelers/obj/Release/ClownShell.ErrorHandelers.csproj.CopyComplete
 /home/mel/Documents/csharp/ClownShell/ClownShell.ErrorHandelers/obj/Release/ClownShell.ErrorHandelers.dll
 /home/mel/Documents/csharp/ClownShell/ClownShell.ErrorHandelers/obj/Release/ClownShell.ErrorHandelers.pdb
-C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Dependencies\ClownShell.ErrorHandelers.dll
-C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Dependencies\ClownShell.ErrorHandelers.pdb
-C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ErrorHandelers\obj\Release\ClownShell.ErrorHandelers.csproj.AssemblyReference.cache
-C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ErrorHandelers\obj\Release\ClownShell.ErrorHandelers.csproj.CoreCompileInputs.cache
-C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ErrorHandelers\obj\Release\ClownShell.ErrorHandelers.csproj.CopyComplete
-C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ErrorHandelers\obj\Release\ClownShell.ErrorHandelers.dll
-C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ErrorHandelers\obj\Release\ClownShell.ErrorHandelers.pdb
+/home/mel/Documents/csharp/ClownShell/ClownShell.ErrorHandelers/obj/Release/ClownShell.ErrorHandelers.csproj.AssemblyReference.cache

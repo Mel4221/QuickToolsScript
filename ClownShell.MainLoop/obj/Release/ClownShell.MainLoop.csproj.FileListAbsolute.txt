@@ -24,10 +24,3 @@ C:/Users/Melquiceded/Documents/csharp/ClownShell/ClownShell.MainLoop/obj/Release
 /home/mel/Documents/csharp/ClownShell/ClownShell.MainLoop/obj/Release/ClownShell.MainLoop.csproj.CopyComplete
 /home/mel/Documents/csharp/ClownShell/ClownShell.MainLoop/obj/Release/ClownShell.MainLoop.dll
 /home/mel/Documents/csharp/ClownShell/ClownShell.MainLoop/obj/Release/ClownShell.MainLoop.pdb
-C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Dependencies\ClownShell.MainLoop.dll
-C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Dependencies\ClownShell.MainLoop.pdb
-C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.MainLoop\obj\Release\ClownShell.MainLoop.csproj.AssemblyReference.cache
-C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.MainLoop\obj\Release\ClownShell.MainLoop.csproj.CoreCompileInputs.cache
-C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.MainLoop\obj\Release\ClownShell.MainLoop.csproj.CopyComplete
-C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.MainLoop\obj\Release\ClownShell.MainLoop.dll
-C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.MainLoop\obj\Release\ClownShell.MainLoop.pdb

@@ -1,0 +1,5 @@
+echo "Welcome to the ClownShell"
+echo "Type your Name"
+input > name
+echo Welcome
+echo $name

@@ -113,3 +113,333 @@ Value=####
  There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
 ####;
 Relation=12/7/2023 8:04:46 PM;
+ID=1029;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution Action With Type 'login' mel Trace: 
+Trace: ClownShell Started At:12/20/2023 09:36:43
+Trace: Without Arguments At:12/20/2023 09:36:43
+Trace: ShellLoop Started MainLoop.ShellLoop At:12/20/2023 09:36:43
+Trace: LoopInput Started MainLoop.ShellLoop At:12/20/2023 09:36:43
+Trace: Commands Inputed Length: 1 At:12/20/2023 09:36:45
+Trace: Execution Set With Action: clear  At:12/20/2023 09:36:45
+Trace: Commands Inputed Length: 1 At:12/20/2023 09:36:45
+Trace: Execution Set With Action: ls  At:12/20/2023 09:36:45
+Trace: Commands Inputed Length: 2 At:12/20/2023 09:36:53
+Trace: Execution Started With Action: login Type: mel At:12/20/2023 09:36:53
+Trace: Action Was not Recognized as a valid Action At:12/20/2023 09:36:53
+' 
+####;
+Relation=12/20/2023 9:36:53 PM;
+ID=1031;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.IO.DirectoryNotFoundException: Could not find a part of the path '/home/Downloads'.
+  at System.IO.Enumeration.FileSystemEnumerator`1[TResult].CreateDirectoryHandle (System.String path, System.Boolean ignoreNotFound) [0x00032] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerator`1[TResult]..ctor (System.String directory, System.IO.EnumerationOptions options) [0x00048] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerable`1+DelegateEnumerator[TResult]..ctor (System.IO.Enumeration.FileSystemEnumerable`1[TResult] enumerable) [0x00000] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerable`1[TResult]..ctor (System.String directory, System.IO.Enumeration.FileSystemEnumerable`1+FindTransform[TResult] transform, System.IO.EnumerationOptions options) [0x00042] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerableFactory.UserFiles (System.String directory, System.String expression, System.IO.EnumerationOptions options) [0x00014] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Directory.InternalEnumeratePaths (System.String path, System.String searchPattern, System.IO.SearchTarget searchTarget, System.IO.EnumerationOptions options) [0x0003c] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Directory.GetFiles (System.String path, System.String searchPattern, System.IO.EnumerationOptions enumerationOptions) [0x00000] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Directory.GetFiles (System.String path) [0x0000b] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at QuickTools.QIO.FilesMaper.GetFiles (System.String path) [0x00000] in <ec97c6b1154241518c26d10cc1b21e90>:0 
+  at QuickTools.QCore.Get.Ls (System.String path) [0x0000f] in <ec97c6b1154241518c26d10cc1b21e90>:0 
+  at Parser.CodeParser+<>c.<SetExecution>b__41_17 () [0x00005] in <95e4400a517d4f399d8544605206980e>:0 
+  at ScriptRunner.Runner.Run (System.Action code) [0x00000] in <d8173a9d3581451abf63c7859baeb20a>:0 ' 
+####;
+Relation=12/20/2023 9:38:06 PM;
+ID=1033;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.IO.DirectoryNotFoundException: Could not find a part of the path '/home/Downloads'.
+  at System.IO.Enumeration.FileSystemEnumerator`1[TResult].CreateDirectoryHandle (System.String path, System.Boolean ignoreNotFound) [0x00032] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerator`1[TResult]..ctor (System.String directory, System.IO.EnumerationOptions options) [0x00048] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerable`1+DelegateEnumerator[TResult]..ctor (System.IO.Enumeration.FileSystemEnumerable`1[TResult] enumerable) [0x00000] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerable`1[TResult]..ctor (System.String directory, System.IO.Enumeration.FileSystemEnumerable`1+FindTransform[TResult] transform, System.IO.EnumerationOptions options) [0x00042] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerableFactory.UserFiles (System.String directory, System.String expression, System.IO.EnumerationOptions options) [0x00014] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Directory.InternalEnumeratePaths (System.String path, System.String searchPattern, System.IO.SearchTarget searchTarget, System.IO.EnumerationOptions options) [0x0003c] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Directory.GetFiles (System.String path, System.String searchPattern, System.IO.EnumerationOptions enumerationOptions) [0x00000] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Directory.GetFiles (System.String path) [0x0000b] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at QuickTools.QIO.FilesMaper.GetFiles (System.String path) [0x00000] in <ec97c6b1154241518c26d10cc1b21e90>:0 
+  at QuickTools.QCore.Get.Ls (System.String path) [0x0000f] in <ec97c6b1154241518c26d10cc1b21e90>:0 
+  at Parser.CodeParser+<>c.<SetExecution>b__41_17 () [0x00005] in <95e4400a517d4f399d8544605206980e>:0 
+  at ScriptRunner.Runner.Run (System.Action code) [0x00000] in <d8173a9d3581451abf63c7859baeb20a>:0 ' 
+####;
+Relation=12/20/2023 9:38:07 PM;
+ID=1035;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.IO.DirectoryNotFoundException: Could not find a part of the path '/home/Downloads'.
+  at System.IO.Enumeration.FileSystemEnumerator`1[TResult].CreateDirectoryHandle (System.String path, System.Boolean ignoreNotFound) [0x00032] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerator`1[TResult]..ctor (System.String directory, System.IO.EnumerationOptions options) [0x00048] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerable`1+DelegateEnumerator[TResult]..ctor (System.IO.Enumeration.FileSystemEnumerable`1[TResult] enumerable) [0x00000] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerable`1[TResult]..ctor (System.String directory, System.IO.Enumeration.FileSystemEnumerable`1+FindTransform[TResult] transform, System.IO.EnumerationOptions options) [0x00042] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerableFactory.UserFiles (System.String directory, System.String expression, System.IO.EnumerationOptions options) [0x00014] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Directory.InternalEnumeratePaths (System.String path, System.String searchPattern, System.IO.SearchTarget searchTarget, System.IO.EnumerationOptions options) [0x0003c] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Directory.GetFiles (System.String path, System.String searchPattern, System.IO.EnumerationOptions enumerationOptions) [0x00000] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Directory.GetFiles (System.String path) [0x0000b] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at QuickTools.QIO.FilesMaper.GetFiles (System.String path) [0x00000] in <ec97c6b1154241518c26d10cc1b21e90>:0 
+  at QuickTools.QCore.Get.Ls (System.String path) [0x0000f] in <ec97c6b1154241518c26d10cc1b21e90>:0 
+  at Parser.CodeParser+<>c.<SetExecution>b__41_17 () [0x00005] in <95e4400a517d4f399d8544605206980e>:0 
+  at ScriptRunner.Runner.Run (System.Action code) [0x00000] in <d8173a9d3581451abf63c7859baeb20a>:0 ' 
+####;
+Relation=12/20/2023 9:38:24 PM;
+ID=1037;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidParameter' 'I'M sorry but the path /home/Downloads/~/ does not exist!!!' 
+####;
+Relation=12/20/2023 9:38:28 PM;
+ID=1039;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidParameter' 'I'M sorry but the path /home/Downloads/~ does not exist!!!' 
+####;
+Relation=12/20/2023 9:38:30 PM;
+ID=1041;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidParameter' 'I'M sorry but the path //home does not exist!!!' 
+####;
+Relation=12/20/2023 9:38:39 PM;
+ID=1043;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidParameter' 'I'M sorry but the path //home does not exist!!!' 
+####;
+Relation=12/20/2023 9:38:43 PM;
+ID=1045;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution Action With Type 'cdcd' Downloads Trace: 
+Trace: Commands Inputed Length: 1 At:12/20/2023 09:36:55
+Trace: Execution Set With Action: clear  At:12/20/2023 09:36:55
+Trace: Commands Inputed Length: 1 At:12/20/2023 09:36:57
+Trace: Execution Set With Action: login  At:12/20/2023 09:36:57
+Trace: Commands Inputed Length: 1 At:12/20/2023 09:37:45
+Trace: Execution Set With Action: ls  At:12/20/2023 09:37:45
+Trace: Commands Inputed Length: 1 At:12/20/2023 09:37:46
+Trace: Execution Set With Action: clear  At:12/20/2023 09:37:46
+Trace: Commands Inputed Length: 2 At:12/20/2023 09:37:48
+Trace: Execution Started With Action: cd Type: .. At:12/20/2023 09:37:48
+Trace: Commands Inputed Length: 1 At:12/20/2023 09:37:49
+Trace: Execution Set With Action: ls  At:12/20/2023 09:37:49
+Trace: Commands Inputed Length: 2 At:12/20/2023 09:37:53
+Trace: Execution Started With Action: cd Type: Documents At:12/20/2023 09:37:53
+Trace: Commands Inputed Length: 1 At:12/20/2023 09:37:54
+Trace: Execution Set With Action: ls  At:12/20/2023 09:37:54
+Trace: Commands Inputed Length: 2 At:12/20/2023 09:38:05
+Trace: Execution Started With Action: cd Type: ~/Downloads At:12/20/2023 09:38:05
+Trace: Commands Inputed Length: 1 At:12/20/2023 09:38:06
+Trace: Execution Set With Action: ls  At:12/20/2023 09:38:06
+Trace: Commands Inputed Length: 1 At:12/20/2023 09:38:07
+Trace: Execution Set With Action: ls  At:12/20/2023 09:38:07
+Trace: Commands Inputed Length: 1 At:12/20/2023 09:38:24
+Trace: Execution Set With Action: ls  At:12/20/2023 09:38:24
+Trace: Commands Inputed Length: 2 At:12/20/2023 09:38:28
+Trace: Execution Started With Action: cd Type: ~/ At:12/20/2023 09:38:28
+Trace: Commands Inputed Length: 2 At:12/20/2023 09:38:30
+Trace: Execution Started With Action: cd Type: ~ At:12/20/2023 09:38:30
+Trace: Commands Inputed Length: 2 At:12/20/2023 09:38:35
+Trace: Execution Started With Action: cd Type: / At:12/20/2023 09:38:35
+Trace: Commands Inputed Length: 1 At:12/20/2023 09:38:37
+Trace: Execution Set With Action: clear  At:12/20/2023 09:38:37
+Trace: Commands Inputed Length: 2 At:12/20/2023 09:38:39
+Trace: Execution Started With Action: cd Type: home At:12/20/2023 09:38:39
+Trace: Commands Inputed Length: 1 At:12/20/2023 09:38:40
+Trace: Execution Set With Action: ls  At:12/20/2023 09:38:40
+Trace: Commands Inputed Length: 2 At:12/20/2023 09:38:43
+Trace: Execution Started With Action: cd Type: home At:12/20/2023 09:38:43
+Trace: Commands Inputed Length: 2 At:12/20/2023 09:38:47
+Trace: Execution Started With Action: cd Type: home/ At:12/20/2023 09:38:47
+Trace: Commands Inputed Length: 1 At:12/20/2023 09:38:49
+Trace: Execution Set With Action: ls  At:12/20/2023 09:38:49
+Trace: Commands Inputed Length: 2 At:12/20/2023 09:38:51
+Trace: Execution Started With Action: cd Type: mel/ At:12/20/2023 09:38:51
+Trace: Commands Inputed Length: 1 At:12/20/2023 09:38:51
+Trace: Execution Set With Action: ls  At:12/20/2023 09:38:51
+Trace: Commands Inputed Length: 2 At:12/20/2023 09:38:59
+Trace: Execution Started With Action: cdcd Type: Downloads At:12/20/2023 09:38:59
+Trace: Action Was not Recognized as a valid Action At:12/20/2023 09:38:59
+' 
+####;
+Relation=12/20/2023 9:38:59 PM;
+ID=1047;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution With Action: 'l' Trace: 
+Trace: ClownShell Started At:1/09/2024 01:30:36
+Trace: Without Arguments At:1/09/2024 01:30:36
+Trace: ShellLoop Started MainLoop.ShellLoop At:1/09/2024 01:30:36
+Trace: LoopInput Started MainLoop.ShellLoop At:1/09/2024 01:30:36
+Trace: Commands Inputed Length: 1 At:1/09/2024 01:30:38
+Trace: Execution Set With Action: ls  At:1/09/2024 01:30:38
+Trace: Commands Inputed Length: 2 At:1/09/2024 01:30:39
+Trace: Execution Started With Action: cd Type: .. At:1/09/2024 01:30:39
+Trace: Commands Inputed Length: 1 At:1/09/2024 01:30:40
+Trace: Execution Set With Action: ls  At:1/09/2024 01:30:40
+Trace: Commands Inputed Length: 2 At:1/09/2024 01:30:44
+Trace: Execution Started With Action: cd Type: Documents At:1/09/2024 01:30:44
+Trace: Commands Inputed Length: 1 At:1/09/2024 01:30:44
+Trace: Execution Set With Action: ls  At:1/09/2024 01:30:44
+Trace: Commands Inputed Length: 2 At:1/09/2024 01:30:53
+Trace: Execution Started With Action: cd Type: mami At:1/09/2024 01:30:53
+Trace: Commands Inputed Length: 1 At:1/09/2024 01:30:53
+Trace: Execution Set With Action: l  At:1/09/2024 01:30:53
+Trace: Action Was not Recognized as a valid Action At:1/09/2024 01:30:53
+' 
+####;
+Relation=1/9/2024 1:30:53 AM;
+ID=1049;
+Key=log;
+Value= Cannot find the specified file
+  at System.Diagnostics.Process.StartWithCreateProcess (System.Diagnostics.ProcessStartInfo startInfo) [0x0029f] in <a8a996a78a804d888710c9e2575d78c8>:0 
+  at System.Diagnostics.Process.Start () [0x0003a] in <a8a996a78a804d888710c9e2575d78c8>:0 
+  at (wrapper remoting-invoke-with-check) System.Diagnostics.Process.Start()
+  at Parser.CodeParser+<>c__DisplayClass40_0.<SetExecution>b__29 () [0x00054] in <95e4400a517d4f399d8544605206980e>:0 
+  at ScriptRunner.Runner.Run (System.Action code) [0x00000] in <d8173a9d3581451abf63c7859baeb20a>:0 ' 
+####;
+Relation=1/9/2024 1:32:25 AM;
+ID=1051;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.IO.DirectoryNotFoundException: Could not find a part of the path '/home/mel/csharp/clownshell/bin/release'.
+  at System.IO.Enumeration.FileSystemEnumerator`1[TResult].CreateDirectoryHandle (System.String path, System.Boolean ignoreNotFound) [0x00032] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerator`1[TResult]..ctor (System.String directory, System.IO.EnumerationOptions options) [0x00048] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerable`1+DelegateEnumerator[TResult]..ctor (System.IO.Enumeration.FileSystemEnumerable`1[TResult] enumerable) [0x00000] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerable`1[TResult]..ctor (System.String directory, System.IO.Enumeration.FileSystemEnumerable`1+FindTransform[TResult] transform, System.IO.EnumerationOptions options) [0x00042] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerableFactory.UserFiles (System.String directory, System.String expression, System.IO.EnumerationOptions options) [0x00014] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Directory.InternalEnumeratePaths (System.String path, System.String searchPattern, System.IO.SearchTarget searchTarget, System.IO.EnumerationOptions options) [0x0003c] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Directory.GetFiles (System.String path, System.String searchPattern, System.IO.EnumerationOptions enumerationOptions) [0x00000] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Directory.GetFiles (System.String path) [0x0000b] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at QuickTools.QIO.FilesMaper.GetFiles (System.String path) [0x00000] in <ec97c6b1154241518c26d10cc1b21e90>:0 
+  at QuickTools.QCore.Get.Ls (System.String path) [0x0000f] in <ec97c6b1154241518c26d10cc1b21e90>:0 
+  at Parser.CodeParser+<>c.<SetExecution>b__41_17 () [0x00005] in <95e4400a517d4f399d8544605206980e>:0 
+  at ScriptRunner.Runner.Run (System.Action code) [0x00000] in <d8173a9d3581451abf63c7859baeb20a>:0 ' 
+####;
+Relation=1/9/2024 1:33:09 AM;
+ID=1053;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.IO.DirectoryNotFoundException: Could not find a part of the path '/home/mel/csharp/clownshell/bin/release'.
+  at System.IO.Enumeration.FileSystemEnumerator`1[TResult].CreateDirectoryHandle (System.String path, System.Boolean ignoreNotFound) [0x00032] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerator`1[TResult]..ctor (System.String directory, System.IO.EnumerationOptions options) [0x00048] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerable`1+DelegateEnumerator[TResult]..ctor (System.IO.Enumeration.FileSystemEnumerable`1[TResult] enumerable) [0x00000] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerable`1[TResult]..ctor (System.String directory, System.IO.Enumeration.FileSystemEnumerable`1+FindTransform[TResult] transform, System.IO.EnumerationOptions options) [0x00042] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerableFactory.UserFiles (System.String directory, System.String expression, System.IO.EnumerationOptions options) [0x00014] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Directory.InternalEnumeratePaths (System.String path, System.String searchPattern, System.IO.SearchTarget searchTarget, System.IO.EnumerationOptions options) [0x0003c] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Directory.GetFiles (System.String path, System.String searchPattern, System.IO.EnumerationOptions enumerationOptions) [0x00000] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Directory.GetFiles (System.String path) [0x0000b] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at QuickTools.QIO.FilesMaper.GetFiles (System.String path) [0x00000] in <ec97c6b1154241518c26d10cc1b21e90>:0 
+  at QuickTools.QCore.Get.Ls (System.String path) [0x0000f] in <ec97c6b1154241518c26d10cc1b21e90>:0 
+  at Parser.CodeParser+<>c.<SetExecution>b__41_17 () [0x00005] in <95e4400a517d4f399d8544605206980e>:0 
+  at ScriptRunner.Runner.Run (System.Action code) [0x00000] in <d8173a9d3581451abf63c7859baeb20a>:0 ' 
+####;
+Relation=1/9/2024 1:33:14 AM;
+ID=1055;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution Action With Type and parameters 'read' > name Trace: 
+Trace: ClownShell Started At:1/10/2024 11:48:13
+Trace: With Arguments Length: 1 At:1/10/2024 11:48:13
+Trace: Checking Arguments At:1/10/2024 11:48:13
+Trace: Did not match any Supported Path Crateries At:1/10/2024 11:48:13
+Trace: Execution Set With Action: script.clown  At:1/10/2024 11:48:13
+Trace: Execution Started With Action: echo Type: "Welcome to the ClownShell"  At:1/10/2024 11:48:13
+Trace: Execution Started With Action: echo Type: "Type your Name"  At:1/10/2024 11:48:13
+Trace: Execution Started With Action: read Type: > Parameters: name  At:1/10/2024 11:48:13
+Trace: Action Was not Recognized as a valid Action At:1/10/2024 11:48:13
+' 
+####;
+Relation=1/10/2024 11:48:13 AM;
+ID=1057;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.IndexOutOfRangeException: Index was outside the bounds of the array.
+  at Parser.CodeParser+<>c__DisplayClass39_0.<SetExecution>b__7 () [0x00058] in <95e4400a517d4f399d8544605206980e>:0 
+  at ScriptRunner.Runner.Run (System.Action code) [0x00000] in <d8173a9d3581451abf63c7859baeb20a>:0 ' 
+####;
+Relation=1/10/2024 11:53:26 AM;
+ID=1059;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution Action With Type and parameters 'ls' /media/mel/BLACK -l Trace: 
+Trace: ClownShell Started At:1/10/2024 12:1:17
+Trace: With Arguments Length: 3 At:1/10/2024 12:1:17
+Trace: Checking Arguments At:1/10/2024 12:1:17
+Trace: Did not match any Supported Path Crateries At:1/10/2024 12:1:17
+Trace: Execution Started With Action: ls Type: /media/mel/BLACK Parameters: -l  At:1/10/2024 12:1:17
+Trace: Action Was not Recognized as a valid Action At:1/10/2024 12:1:17
+' 
+####;
+Relation=1/10/2024 12:01:17 PM;
+ID=1061;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution Action With Type and parameters 'ls' /media/mel/BLACK -l Trace: 
+Trace: ClownShell Started At:1/10/2024 12:1:23
+Trace: With Arguments Length: 3 At:1/10/2024 12:1:23
+Trace: Checking Arguments At:1/10/2024 12:1:23
+Trace: Did not match any Supported Path Crateries At:1/10/2024 12:1:23
+Trace: Execution Started With Action: ls Type: /media/mel/BLACK Parameters: -l  At:1/10/2024 12:1:23
+Trace: Action Was not Recognized as a valid Action At:1/10/2024 12:1:23
+' 
+####;
+Relation=1/10/2024 12:01:23 PM;
+ID=1063;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution Action With Type and parameters 'ls' -l /media/mel/BLACK Trace: 
+Trace: ClownShell Started At:1/10/2024 12:1:43
+Trace: With Arguments Length: 3 At:1/10/2024 12:1:43
+Trace: Checking Arguments At:1/10/2024 12:1:43
+Trace: Did not match any Supported Path Crateries At:1/10/2024 12:1:43
+Trace: Execution Started With Action: ls Type: -l Parameters: /media/mel/BLACK  At:1/10/2024 12:1:43
+Trace: Action Was not Recognized as a valid Action At:1/10/2024 12:1:43
+' 
+####;
+Relation=1/10/2024 12:01:43 PM;
+ID=1065;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution With Action: '/home/mel/Documents/csharp/ClownShell/bin/Release/ClownShell.exe' Trace: 
+Trace: ClownShell Started At:1/10/2024 12:13:12
+Trace: With Arguments Length: 1 At:1/10/2024 12:13:12
+Trace: Checking Arguments At:1/10/2024 12:13:12
+Trace: Did not match any Supported Path Crateries At:1/10/2024 12:13:12
+Trace: Execution Set With Action: /home/mel/Documents/csharp/ClownShell/bin/Release/ClownShell.exe  At:1/10/2024 12:13:12
+Trace: Action Was not Recognized as a valid Action At:1/10/2024 12:13:12
+' 
+####;
+Relation=1/10/2024 12:13:12 PM;
+ID=1067;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidParameter' 'I'M sorry but the path //media does not exist!!!' 
+####;
+Relation=1/10/2024 12:14:06 PM;
+ID=1069;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidParameter' 'I'M sorry but the path /media/mel/BLACK//Movies2 does not exist!!!' 
+####;
+Relation=1/10/2024 12:16:21 PM;
+ID=1071;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidParameter' 'I'M sorry but the path /media/mel/BLACK//Movies2/ does not exist!!!' 
+####;
+Relation=1/10/2024 12:16:35 PM;
+ID=1073;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidParameter' 'I'M sorry but the path /media/mel/BLACK/Movies2/ does not exist!!!' 
+####;
+Relation=1/10/2024 12:19:55 PM;
+ID=1075;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidParameter' 'I'M sorry but the path /media/mel/BLACK/Movies2/ does not exist!!!' 
+####;
+Relation=1/10/2024 12:20:01 PM;
