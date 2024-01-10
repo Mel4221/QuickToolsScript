@@ -27,11 +27,14 @@ namespace Parser
 			switch (action)
             {
 
+<<<<<<< HEAD
                 case "status":
                     runner.Run(() => { 
 
                     });
                     break;
+=======
+>>>>>>> bb5d32b1d913ce6e91deed6fddcc01f141952ba8
 				case "install":
 					error.DisplayError(ErrorType.NotImplemented);
 					break;
@@ -264,6 +267,7 @@ namespace Parser
 				case "rm":
 				case "remove":
 				case "delete":
+				case "rmdir":
 					file = type;
 					runner.Run(() =>
 					{
@@ -285,7 +289,13 @@ namespace Parser
 							Get.Red(file);
 							return;
 						}
-
+						if(Directory.Exists(this.GetPathWithType(type)))
+						{
+							GC.Collect();
+							GC.WaitForPendingFinalizers();
+							Directory.Delete(type);
+							return;
+						}
 						if (Directory.Exists(type))
 						{
 							GC.Collect();
@@ -388,7 +398,7 @@ namespace Parser
 						int number;
 						if (Get.IsNumber(type))
 						{
-
+							Get.Yellow($"Sleepying... [{type}ms]");
 							number = int.Parse(type);
 							Thread.Sleep(number);
 							return;
@@ -585,6 +595,15 @@ namespace Parser
 				case "get-hash":
 				case "hash":
 					runner.Run(() => {
+						Get.Yellow($"Target: {Helper.HasSpecialFolder(type)}");
+						if(File.Exists(Helper.HasSpecialFolder(type)))
+						{
+							type = Helper.HasSpecialFolder(type);
+						}
+						if(File.Exists(this.GetPathWithType(type)))
+						{
+							type = this.GetPathWithType(type);
+						}
 						if (File.Exists(type))
 						{
 							byte[] bytes = Binary.Reader(type);
@@ -624,7 +643,7 @@ namespace Parser
 					runner.Run(() => {
 						Process cmd = new Process();
 
-						cmd.StartInfo.FileName = $"{Get.Path}editors/vim/vim.exe";//"cmd.exe";
+						cmd.StartInfo.FileName = $"editors/vim/vim.exe";//"cmd.exe";
 																				  //cmd.StartInfo.Arguments;
 																				  //cmd.StartInfo.RedirectStandardInput = true;
 						cmd.StartInfo.RedirectStandardOutput = false;  // true;
@@ -640,7 +659,7 @@ namespace Parser
 					runner.Run(() => {
 						Process cmd = new Process();
 
-						cmd.StartInfo.FileName = $"{Get.Path}editors/nano/nano.exe";//"cmd.exe";
+						cmd.StartInfo.FileName = $"editors/nano/nano.exe";//"cmd.exe";
 																					//cmd.StartInfo.Arguments;
 																					//cmd.StartInfo.RedirectStandardInput = true;
 						cmd.StartInfo.RedirectStandardOutput = false;  // true;
@@ -656,7 +675,7 @@ namespace Parser
 					runner.Run(() => {
 						Process cmd = new Process();
 
-						cmd.StartInfo.FileName = $"{Get.Path}editors/vim/xxd.exe";//"cmd.exe";
+						cmd.StartInfo.FileName = $"editors/vim/xxd.exe";//"cmd.exe";
 																				  //cmd.StartInfo.Arguments;
 																				  //cmd.StartInfo.RedirectStandardInput = true;
 						cmd.StartInfo.RedirectStandardOutput = false;  // true;
@@ -676,7 +695,7 @@ namespace Parser
 						if (Get.IsWindow())
 						{
 							cmd.StartInfo.FileName = "notepad";
-							cmd.StartInfo.Arguments =type;
+							cmd.StartInfo.Arguments = type;
 
 						}
 						if (!Get.IsWindow())

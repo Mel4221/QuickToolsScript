@@ -82,14 +82,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClownShell.Parser.dll" size="36352">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClownShell.Parser.dll" size="44032">
       <assemblyIdentity name="ClownShell.Parser" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>7H1i1HpNPIBC9nYr7LfrX/U+L0U7UqlXV6HgT2/vJfc=</dsig:DigestValue>
+        <dsig:DigestValue>ybvQ2iIVLE8dPOy+IoNOgQQ0JfaygaeuvKZsFOug0LA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -137,19 +137,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>NJkG8Rdpa0MkTYRsbexFZoKfsFE/m8XJk9AS9+D8fRw=</dsig:DigestValue>
+        <dsig:DigestValue>ypth/c0rpN9YVnAFOIPMWYnIRvhwGw0ladtb1Fo0mHY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="QuickTools.dll" size="162816">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="QuickTools.dll" size="164352">
       <assemblyIdentity name="QuickTools" version="4000.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>1DveNufSu3PxJLb/Zx6s40NNbvFDZhB0Lo/eyTPsePU=</dsig:DigestValue>
+        <dsig:DigestValue>JLpJwDbkRBRUoX8tMD2FpbGHsD5z2ulyJMf8Z6PqEJ0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

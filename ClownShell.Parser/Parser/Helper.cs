@@ -237,7 +237,7 @@ namespace Parser
 			if (path[0] == '~')
 			{
 				path = Get.FixPath(path);
-				string file, subFolder, specialCase;
+				string file, subFolder;
 				file = null;
 				subFolder = null;
 				if (path.Contains("."))
