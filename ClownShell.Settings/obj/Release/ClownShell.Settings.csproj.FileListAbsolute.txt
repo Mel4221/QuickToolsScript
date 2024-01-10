@@ -2,13 +2,6 @@ C:/Users/Melquiceded/Documents/csharp/ClownShell/ClownShell.Settings/bin/Release
 C:/Users/Melquiceded/Documents/csharp/ClownShell/ClownShell.Settings/bin/Release/ClownShell.Settings.pdb
 C:/Users/Melquiceded/Documents/csharp/ClownShell/ClownShell.Settings/bin/Release/QuickTools.dll
 C:/Users/Melquiceded/Documents/csharp/ClownShell/ClownShell.Settings/bin/Release/QuickTools.xml
-C:/Users/Melquiceded/Documents/csharp/ClownShell/ClownShell.Dependencies/ClownShell.Settings.dll
-C:/Users/Melquiceded/Documents/csharp/ClownShell/ClownShell.Dependencies/ClownShell.Settings.pdb
-C:/Users/Melquiceded/Documents/csharp/ClownShell/ClownShell.Settings/obj/Release/ClownShell.Settings.csproj.AssemblyReference.cache
-C:/Users/Melquiceded/Documents/csharp/ClownShell/ClownShell.Settings/obj/Release/ClownShell.Settings.csproj.CoreCompileInputs.cache
-C:/Users/Melquiceded/Documents/csharp/ClownShell/ClownShell.Settings/obj/Release/ClownShell.Settings.csproj.CopyComplete
-C:/Users/Melquiceded/Documents/csharp/ClownShell/ClownShell.Settings/obj/Release/ClownShell.Settings.dll
-C:/Users/Melquiceded/Documents/csharp/ClownShell/ClownShell.Settings/obj/Release/ClownShell.Settings.pdb
 /home/mel/Documents/csharp/ClownShell/ClownShell.Dependencies/ClownShell.Settings.dll
 /home/mel/Documents/csharp/ClownShell/ClownShell.Dependencies/ClownShell.Settings.pdb
 /home/mel/Documents/csharp/ClownShell/ClownShell.Settings/obj/Release/ClownShell.Settings.csproj.CoreCompileInputs.cache

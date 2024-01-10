@@ -258,6 +258,7 @@ namespace Parser
 				case "rm":
 				case "remove":
 				case "delete":
+				case "rmdir":
 					file = type;
 					runner.Run(() =>
 					{
@@ -279,7 +280,13 @@ namespace Parser
 							Get.Red(file);
 							return;
 						}
-
+						if(Directory.Exists(this.GetPathWithType(type)))
+						{
+							GC.Collect();
+							GC.WaitForPendingFinalizers();
+							Directory.Delete(type);
+							return;
+						}
 						if (Directory.Exists(type))
 						{
 							GC.Collect();
@@ -382,7 +389,7 @@ namespace Parser
 						int number;
 						if (Get.IsNumber(type))
 						{
-
+							Get.Yellow($"Sleepying... [{type}ms]");
 							number = int.Parse(type);
 							Thread.Sleep(number);
 							return;
@@ -579,6 +586,15 @@ namespace Parser
 				case "get-hash":
 				case "hash":
 					runner.Run(() => {
+						Get.Yellow($"Target: {Helper.HasSpecialFolder(type)}");
+						if(File.Exists(Helper.HasSpecialFolder(type)))
+						{
+							type = Helper.HasSpecialFolder(type);
+						}
+						if(File.Exists(this.GetPathWithType(type)))
+						{
+							type = this.GetPathWithType(type);
+						}
 						if (File.Exists(type))
 						{
 							byte[] bytes = Binary.Reader(type);

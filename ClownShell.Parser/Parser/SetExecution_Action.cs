@@ -55,6 +55,7 @@ namespace Parser
 				case "print-stack-size":
 				case "print-vstack-size":
 				case "stack-size":
+				case "vstack":
 				case "stack":
 					runner.Run(() => { Get.Yellow(Shell.VStack.VirtualStackSize());});
 					break;

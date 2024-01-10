@@ -13,6 +13,10 @@ using Parser.Types.Functions;
 using Parser.Types;
 using QuickTools.QSecurity.FalseIO;
 using System.Runtime;
+using QuickTools.QMath;
+using System.Reflection;
+using System.Linq;
+using System.Text;
 
 namespace Parser
 {
@@ -38,11 +42,343 @@ namespace Parser
             Get.Blue($"{action} {type} {IConvert.ArrayToText(param)}");
 
 
-
+			string fileArg, path; 
 			switch (action)
               {
+
+				case "shread":
+				case "fdelete":
+					runner.Run(() => {
+						//fdelete -f file.txt 
+						//fdelete -r path/
+						//action type param[0]
+						FileShreder shreader;
+						 
+						switch(type)
+						{
+							case "-f":
+									shreader = new FileShreder(param);
+									shreader.AllowDebugger = true;
+									shreader.Shread();
+								break;
+							case "-r":
+									path = param[0];
+									 
+									if(!Directory.Exists(path))
+									{
+										Get.Red($"The Directory Does not exist {path}");
+										return;
+									}
+									FilesMaper maper = new FilesMaper(path);
+									maper.AllowDebugger = true;
+									maper.Map();
+									shreader = new FileShreder(maper.Files.ToArray());
+									shreader.AllowDebugger = true;
+									shreader.Shread();
+
+									maper.Directories.ForEach((directory) => {
+									Directory.Delete(directory);
+									GC.Collect();
+									});
+								break;
+						}
+					});
+					break;
+				case "math":
+				case "cal":
+					runner.Run(() => {
+						QMath math = new QMath();
+						string[] args = new string[param.Length+1];
+						int len, l;
+						len = param.Length;
+						l =0;
+						for(int ar = 0; ar < param.Length; ar++) 
+						{
+							if(ar == 0)
+							{
+								args[0] = type;
+							}
+							if(ar != 0)
+							{
+							 args[ar] = param[l];
+								l++;
+							}
+						}
+
+						string input = IConvert.ArrayToText(args);
+						math.Parse(input);// action type param[0] 
+					});
+					break;
+				case "minidb":
+
+					//Action Type param[0]
+					runner.Run(() =>
+					{
+					string db;
+					switch (type)
+					{
+						case "init":
+						case "start":
+							Shell.MiniDB = new MiniDB();
+							Get.Ok();
+							break;
+						case "unload":
+							Shell.MiniDB.Dispose();
+							Get.Ok();
+							break;
+						case "load":
+							if (File.Exists(this.GetPathWithType(param[0])))
+							{
+								param[0] = this.GetPathWithType(param[0]);
+								Get.White($"PATH: {param[0]}");
+							}
+							Shell.MiniDB = new MiniDB();
+							Shell.MiniDB.AllowDebuger = true;
+							bool loaded = Shell.MiniDB.Load(param[0]);
+							if (loaded) Get.Ok();
+							if (!loaded) Get.Red("FAILED TO LOAD");
+
+
+							break;
+						case "create":
+							Shell.MiniDB = new MiniDB();
+							db = Get.FileExention(param[0]) == "db" ? param[0] : param[0]+".db";
+							Shell.MiniDB.Create(db);
+							Get.White($"{db} CREATED SUCESSFULLY!!!");
+							break;
+						case "drop":
+							Shell.MiniDB = new MiniDB();
+							db = Get.FileExention(param[0]) == "db" ? param[0] : param[0]+".db";
+							Shell.MiniDB.Drop(db);
+							Get.White($"{db} DELETED SUCESSFULLY!!!");
+							break;
+						case "addHot":
+						case "addOnHot":
+							try
+							{
+								Shell.MiniDB.AddKeyOnHot(param[0], param[1], param[2]);
+								Get.White($"ADDED ON HOT: {Shell.MiniDB.DataBase[Shell.MiniDB.DataBase.Count -1].ToString()}");
+							}
+							catch (IndexOutOfRangeException ex)
+							{
+								error.DisplayError(ErrorType.ExecutionError, $"minidb only expect 3 Parameters: [Key] [Value] [Relation] \n So your code should look like this: \n[ minidb add keyName keyValue keyRelation ] \n{ex.Message}");
+								return;
+							}
+							catch (NullReferenceException ex)
+							{
+								error.DisplayError(ErrorType.ExecutionError, $"minidb not started or not loaded\n{ex.Message}");
+								return;
+							}
+							catch (Exception ex)
+							{
+								error.DisplayError(ErrorType.ExecutionError, $"There was an error not identified more info: \n{ex}");
+								return;
+							}
+							break;
+						case "add":
+							try
+							{
+								Shell.MiniDB.AddKey(param[0], param[1], param[2]);
+								Get.White($"ADDED: {Shell.MiniDB.DataBase[Shell.MiniDB.DataBase.Count -1].ToString()}");
+							}
+							catch (IndexOutOfRangeException ex)
+							{
+								error.DisplayError(ErrorType.ExecutionError, $"minidb only expect 3 Parameters: [Key] [Value] [Relation] \n So your code should look like this: \n[ minidb add keyName keyValue keyRelation ] \n{ex.Message}");
+								return;
+							} catch (NullReferenceException ex)
+							{
+								error.DisplayError(ErrorType.ExecutionError, $"minidb not started or not loaded\n{ex.Message}");
+								return;
+							}
+							catch (Exception ex)
+							{
+								error.DisplayError(ErrorType.ExecutionError, $"There was an error not identified more info: \n{ex}");
+								return;
+							}
+							break;
+						case "remove":
+							switch (param[0])
+							{
+								case "where-key=":
+									Shell.MiniDB.RemoveAllByKey(param[1]);
+									Get.Red($"DELETED WHERE KEY = {param[1]}");
+									break;
+								case "where-id=":
+									Shell.MiniDB.RemoveAllbyId(int.Parse(param[1]));
+									Get.Red($"DELETED WHERE ID = {param[1]}");
+
+									break;
+								case "where-relation=":
+									Shell.MiniDB.RemoveAllByRelation(param[1]);
+									Get.Red($"DELETED WHERE RELATION = {param[1]}");
+									break;
+							}
+							break;
+						case "update":
+							switch (param[0])
+							{
+								case "where-key=":
+									for (int item = 0; item < Shell.MiniDB.DataBase.Count; item++)
+									{
+										if (Shell.MiniDB.DataBase[item].Key == param[1])
+										{
+											if (param[2] != "?")
+											{
+												Shell.MiniDB.DataBase[item].Key = param[2];
+												Get.Yellow($"UPDATED KEY = {param[2]}");
+											}
+											if (param[3] != "?")
+											{
+												Shell.MiniDB.DataBase[item].Value = param[3];
+												Get.Yellow($"UPDATED VALUE = {param[3]}");
+											}
+											if (param[4] != "?")
+											{
+												Shell.MiniDB.DataBase[item].Relation = param[4];
+												Get.Yellow($"UPDATED RELATION = {param[4]}");
+											}
+											Get.Yellow($"UPDATED WHERE KEY = {param[1]}");
+										}
+									}
+									break;
+								case "where-id=":
+									for (int item = 0; item < Shell.MiniDB.DataBase.Count; item++)
+									{
+										if (Shell.MiniDB.DataBase[item].Id == int.Parse(param[1]))
+										{
+											if (param[2] != "?")
+											{
+												Shell.MiniDB.DataBase[item].Key = param[2];
+												Get.Yellow($"UPDATED KEY = {param[2]}");
+
+											}
+											if (param[3] != "?")
+											{
+												Shell.MiniDB.DataBase[item].Value = param[3];
+												Get.Yellow($"UPDATED VALUE = {param[3]}");
+
+											}
+											if (param[4] != "?")
+											{
+												Shell.MiniDB.DataBase[item].Relation = param[4];
+												Get.Yellow($"UPDATED RELATION = {param[4]}");
+											}
+											Get.Yellow($"UPDATED WHERE ID = {param[1]}");
+
+
+										}
+									}
+									break;
+								case "where-relation=":
+									for (int item = 0; item < Shell.MiniDB.DataBase.Count; item++)
+									{
+										if (Shell.MiniDB.DataBase[item].Relation == param[3])
+										{
+											if (param[1] != "?")
+											{
+												Shell.MiniDB.DataBase[item].Key = param[1];
+												Get.Yellow($"UPDATED KEY = {param[1]}");
+
+											}
+											if (param[2] != "?")
+											{
+												Shell.MiniDB.DataBase[item].Value = param[2];
+												Get.Yellow($"UPDATED VALUE = {param[2]}");
+
+											}
+											if (param[3] != "?")
+											{
+												Shell.MiniDB.DataBase[item].Relation = param[3];
+												Get.Yellow($"UPDATED RELATION = {param[3]}");
+
+											}
+											Get.Yellow($"UPDATED WHERE RELATION = {param[0]}");
+										}
+									}
+									break;
+							}
+							break;
+						case "select":
+							string format = null;
+							
+							switch (param[0])
+							{
+								case "where-key=":
+									switch (param.Length)
+									{
+										case 2:
+ 											Shell.MiniDB.SelecAlltWhereKey(param[1]).ForEach(item => Get.White(item.ToString()));
+											Get.Green($"SELECTED WHERE KEY = {param[1]}");
+											break;
+										case 3:
+											Shell.MiniDB.SelecAlltWhereKey(param[1]).ForEach(item => Get.White(item.ToString(param[2])));
+											Get.Green($"SELECTED WHERE KEY = {param[1]}");
+											break;
+										case 5:
+											StringBuilder buffer = new StringBuilder();
+											Shell.MiniDB.SelecAlltWhereKey(param[1]).ForEach((item) => {
+
+												Get.White(item.ToString(param[2]));
+												buffer.Append(item.ToString(param[2])+"\n");
+											});
+											fileArg = param[4];
+											if (!this.IsRootPath(fileArg))
+											{
+												fileArg = this.GetPathWithType(fileArg);
+											}
+											Writer.Write(fileArg, buffer.ToString());
+											Get.Green($"SELECTED WHERE KEY = {param[1]}");
+											break;
+									}
+									break;
+								case "where-id=":
+									switch (param.Length)
+									{
+										case 2:
+												Get.Yellow(Shell.MiniDB.SelectWhereId(int.Parse(param[1])).ToString());
+												Get.Green($"SELECTED WHERE KEY = {param[1]}");
+												break;
+											case 3:
+												Shell.MiniDB.SelecAlltWhereKey(param[1]).ForEach(item => Get.White(item.ToString(param[2])));
+												Get.Green($"SELECTED WHERE KEY = {param[1]}");
+												break;
+											case 5:
+												StringBuilder buffer = new StringBuilder();
+												Shell.MiniDB.SelecAlltWhereKey(param[1]).ForEach((item) => {
+
+													Get.White(item.ToString(param[2]));
+													buffer.Append(item.ToString(param[2])+"\n");
+												});
+												fileArg = param[4];
+												if (!this.IsRootPath(fileArg))
+												{
+													fileArg = this.GetPathWithType(fileArg);
+												}
+												Writer.Write(fileArg, buffer.ToString());
+												Get.Green($"SELECTED WHERE KEY = {param[1]}");
+												break;
+										}
+										break;
+										case "where-value":
+											break;
+									}
+								break;
+							case "save":
+							case "save-changes":
+							case "saveChanges":
+								Shell.MiniDB.SaveChanges();
+								break;
+							default:
+								error.DisplayError(ErrorType.NotValidType, $"Not Valid type error at: {action} '{type}'");
+								break;
+						}
+					}); 
+						break;
 				case "install":
-					error.DisplayError(ErrorType.NotImplemented);
+					runner.Run(() =>
+					{
+						error.DisplayError(ErrorType.NotImplemented);
+					}); 
 					break;
 				case "trojan":
 					runner.Run(() => {

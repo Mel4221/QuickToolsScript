@@ -15,13 +15,6 @@ C:/Users/Melquiceded/Documents/csharp/ClownShell/ClownShell.ScriptRunner/bin/Rel
 C:/Users/Melquiceded/Documents/csharp/ClownShell/ClownShell.ScriptRunner/bin/Release/QuickTools.dll
 C:/Users/Melquiceded/Documents/csharp/ClownShell/ClownShell.ScriptRunner/bin/Release/ClownShell.Settings.pdb
 C:/Users/Melquiceded/Documents/csharp/ClownShell/ClownShell.ScriptRunner/bin/Release/QuickTools.xml
-C:/Users/Melquiceded/Documents/csharp/ClownShell/ClownShell.ScriptRunner/obj/Release/ClownShell.ScriptRunner.csproj.AssemblyReference.cache
-C:/Users/Melquiceded/Documents/csharp/ClownShell/ClownShell.ScriptRunner/obj/Release/ClownShell.ScriptRunner.csproj.CoreCompileInputs.cache
-C:/Users/Melquiceded/Documents/csharp/ClownShell/ClownShell.Dependencies/ClownShell.ScriptRunner.dll
-C:/Users/Melquiceded/Documents/csharp/ClownShell/ClownShell.Dependencies/ClownShell.ScriptRunner.pdb
-C:/Users/Melquiceded/Documents/csharp/ClownShell/ClownShell.ScriptRunner/obj/Release/ClownShell.ScriptRunner.csproj.CopyComplete
-C:/Users/Melquiceded/Documents/csharp/ClownShell/ClownShell.ScriptRunner/obj/Release/ClownShell.ScriptRunner.dll
-C:/Users/Melquiceded/Documents/csharp/ClownShell/ClownShell.ScriptRunner/obj/Release/ClownShell.ScriptRunner.pdb
 /home/mel/Documents/csharp/ClownShell/ClownShell.ScriptRunner/obj/Release/ClownShell.ScriptRunner.csproj.CoreCompileInputs.cache
 /home/mel/Documents/csharp/ClownShell/ClownShell.ScriptRunner/obj/Release/ClownShell.ScriptRunner.csproj.AssemblyReference.cache
 /home/mel/Documents/csharp/ClownShell/ClownShell.Dependencies/ClownShell.ScriptRunner.dll
@@ -29,10 +22,10 @@ C:/Users/Melquiceded/Documents/csharp/ClownShell/ClownShell.ScriptRunner/obj/Rel
 /home/mel/Documents/csharp/ClownShell/ClownShell.ScriptRunner/obj/Release/ClownShell.ScriptRunner.csproj.CopyComplete
 /home/mel/Documents/csharp/ClownShell/ClownShell.ScriptRunner/obj/Release/ClownShell.ScriptRunner.dll
 /home/mel/Documents/csharp/ClownShell/ClownShell.ScriptRunner/obj/Release/ClownShell.ScriptRunner.pdb
-C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Dependencies\ClownShell.ScriptRunner.dll
-C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Dependencies\ClownShell.ScriptRunner.pdb
 C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\obj\Release\ClownShell.ScriptRunner.csproj.AssemblyReference.cache
 C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\obj\Release\ClownShell.ScriptRunner.csproj.CoreCompileInputs.cache
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Dependencies\ClownShell.ScriptRunner.dll
+C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Dependencies\ClownShell.ScriptRunner.pdb
 C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\obj\Release\ClownShell.ScriptRunner.csproj.CopyComplete
 C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\obj\Release\ClownShell.ScriptRunner.dll
 C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\obj\Release\ClownShell.ScriptRunner.pdb
