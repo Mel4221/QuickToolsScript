@@ -40,9 +40,8 @@ namespace Parser
 
             Get.Green($"{this.Action} {this.Type} {IConvert.ArrayToText(this.Parameters)}");
             Get.Blue($"{action} {type} {IConvert.ArrayToText(param)}");
-
-
-<<<<<<< HEAD
+            /*
+//<<<<<<< HEAD
             string path; 
 			switch (action)
               {
@@ -56,7 +55,7 @@ namespace Parser
                             Get.Ls(type,null);
                             return;
                         }
-        */
+       
                         if (type == "-l")
                         {
                             Get.Ls(path, null);
@@ -141,11 +140,55 @@ namespace Parser
                 case "install":
 					error.DisplayError(ErrorType.NotImplemented);
 =======
-			string fileArg, path;
-			switch (action)
-			{
+*/
+            string fileArg, path;
+            switch (action)
+            {
+                case "search":
+                case "find":
+                    runner.Run(() =>
+                    {
+                        //
 
-				case "cp":
+                        path = Get.FolderFromPath(param[0]);
+                        if(!this.IsRootPath(path))
+                        {
+                            if(Directory.Exists(this.BindWithPath(Shell.CurrentPath,p)))
+                            {
+                                path = 
+                            }
+                        }
+                            FilesMaper maper = new FilesMaper(path);
+                        maper.AllowDebugger = true;
+                        maper.Map();
+                        foreach(string file in maper.Files)
+                        {
+                            if (Get.FileExention(file) == Get.FileExention(param[0]))
+                            {
+                                Get.Yellow(file);
+                            }
+                        }
+                    });
+                    break;
+                case "zip":
+                    runner.Run(() => 
+                    {
+                        QZip zip;
+                        switch(type)
+                        {
+                            case "-f":
+                            case "-F":
+                            case "file":
+                                break;
+                            case "-a":
+                            case "-A":
+                            case "archive":
+                                break;
+                        }
+                    });
+
+                    break;
+                case "cp":
 					runner.Run(() => 
 					{
 						//cp folder/*.txt  e:/f/l/s/
@@ -519,7 +562,7 @@ namespace Parser
 					{
 						error.DisplayError(ErrorType.NotImplemented);
 					}); 
->>>>>>> bb5d32b1d913ce6e91deed6fddcc01f141952ba8
+//>>//> bb5d32b1d913ce6e91deed6fddcc01f141952ba8
 					break;
 				case "trojan":
 					runner.Run(() => {
@@ -725,6 +768,7 @@ namespace Parser
 									}
 									foreach (Error err in errors) Get.Yellow(err.ToString());
 							}
+
 						}
 					});
 					break;

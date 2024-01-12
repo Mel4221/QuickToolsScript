@@ -8,4 +8,3 @@ C:/Users/Melquiceded/Documents/csharp/ClownShell/ClownShell.Settings/bin/Release
 /home/mel/Documents/csharp/ClownShell/ClownShell.Settings/obj/Release/ClownShell.Settings.csproj.CopyComplete
 /home/mel/Documents/csharp/ClownShell/ClownShell.Settings/obj/Release/ClownShell.Settings.dll
 /home/mel/Documents/csharp/ClownShell/ClownShell.Settings/obj/Release/ClownShell.Settings.pdb
-/home/mel/Documents/csharp/ClownShell/ClownShell.Settings/obj/Release/ClownShell.Settings.csproj.AssemblyReference.cache

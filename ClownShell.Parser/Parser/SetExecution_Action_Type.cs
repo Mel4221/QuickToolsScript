@@ -27,14 +27,13 @@ namespace Parser
 			switch (action)
             {
 
-<<<<<<< HEAD
+//<<<<<<< HEAD
                 case "status":
                     runner.Run(() => { 
 
                     });
                     break;
-=======
->>>>>>> bb5d32b1d913ce6e91deed6fddcc01f141952ba8
+//=======>>>>>>> bb5d32b1d913ce6e91deed6fddcc01f141952ba8
 				case "install":
 					error.DisplayError(ErrorType.NotImplemented);
 					break;

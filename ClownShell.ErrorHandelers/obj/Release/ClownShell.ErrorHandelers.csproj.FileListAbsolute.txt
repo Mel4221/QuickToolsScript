@@ -8,4 +8,3 @@ C:/Users/Melquiceded/Documents/csharp/ClownShell/ClownShell.ErrorHandelers/bin/R
 /home/mel/Documents/csharp/ClownShell/ClownShell.ErrorHandelers/obj/Release/ClownShell.ErrorHandelers.csproj.CopyComplete
 /home/mel/Documents/csharp/ClownShell/ClownShell.ErrorHandelers/obj/Release/ClownShell.ErrorHandelers.dll
 /home/mel/Documents/csharp/ClownShell/ClownShell.ErrorHandelers/obj/Release/ClownShell.ErrorHandelers.pdb
-/home/mel/Documents/csharp/ClownShell/ClownShell.ErrorHandelers/obj/Release/ClownShell.ErrorHandelers.csproj.AssemblyReference.cache
