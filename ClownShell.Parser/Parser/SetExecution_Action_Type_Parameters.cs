@@ -144,6 +144,26 @@ namespace Parser
             string fileArg, path;
             switch (action)
             {
+                case "zero-file":
+                    runner.Run(() => {
+                        //zero-file file.zero 10
+                        string file = type;
+                        if(Helper.HasSpecialFolder(file)!="")
+                        {
+                            file = Helper.HasSpecialFolder(file);
+                        }
+                        if (!this.IsRootPath(file))
+                        {
+                            file = this.GetPathWithType(type); 
+                        }
+                        if(!Get.IsNumber(param[0]))
+                        {
+                             error.DisplayError(ErrorType.NotValidParameter, $"Number Expected at: {action} {type} '{param[0]}'");
+                             return;
+                        }
+                        Binary.CreateZeroFile(file, int.Parse(param[0]));
+                    });
+                    break;
                 case "search":
                 case "find":
                     runner.Run(() =>
@@ -153,10 +173,12 @@ namespace Parser
                         path = Get.FolderFromPath(param[0]);
                         if(!this.IsRootPath(path))
                         {
+                            /*
                             if(Directory.Exists(this.BindWithPath(Shell.CurrentPath,p)))
                             {
-                                path = 
+                               // path = 
                             }
+                            */
                         }
                             FilesMaper maper = new FilesMaper(path);
                         maper.AllowDebugger = true;
