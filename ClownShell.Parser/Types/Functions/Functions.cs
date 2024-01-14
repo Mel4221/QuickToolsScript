@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace Parser.Types.Functions
 {
+    /// <summary>
+    /// Contains the definition of what a function should look like
+    /// </summary>
 	public class Functions
 	{
 		public static bool IsFunction (string code)

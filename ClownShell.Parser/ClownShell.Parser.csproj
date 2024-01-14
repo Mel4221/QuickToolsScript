@@ -85,6 +85,7 @@
     <Compile Include="Types\CodeType_RunAssingment.cs" />
     <Compile Include="Types\Functions\Functions.cs" />
     <Compile Include="Types\TypesHandeler_Fields_Constructors.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

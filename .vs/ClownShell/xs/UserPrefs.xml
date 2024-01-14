@@ -1,14 +1,22 @@
 ﻿<Properties StartupConfiguration="{823A2180-8759-43E9-8CEB-0D736731BAB1}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ClownShell.ScriptRunner/Runner.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ClownShell.Parser/Parser/SetExecution_Action.cs">
     <Files>
-      <File FileName="ClownShell.Parser/Parser/SetExecution_Action_Type_Parameters.cs" Line="163" Column="26" />
-      <File FileName="ClownShell.ScriptRunner/Runner.cs" Line="5" Column="2" />
+      <File FileName="ClownShell.Settings/Settings.cs" Line="104" Column="68" />
+      <File FileName="ClownShell.State/ShellStrace.cs" Line="1" Column="1" />
+      <File FileName="ClownShell.State/Shell.cs" Line="1" Column="1" />
+      <File FileName="ClownShell.Parser/Parser/SetExecution_Action.cs" Line="38" Column="29" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ClownShell" expanded="True">
-            <Node name="ClownShell" selected="True" />
+            <Node name="ClownShell.Parser" expanded="True">
+              <Node name="Parser" expanded="True">
+                <Node name="SetExecution_Action.cs" selected="True" />
+              </Node>
+            </Node>
+            <Node name="ClownShell.Settings" expanded="True" />
+            <Node name="ClownShell.State" expanded="True" />
           </Node>
         </State>
       </Pad>

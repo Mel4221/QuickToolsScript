@@ -1,18 +1,53 @@
 ﻿using System;
+using System.IO;
 using QuickTools.QCore;
 using QuickTools.QData;
+using Settings;
 namespace States
 {
+    /// <summary>
+    /// Contains The Shell current status such as current path and basic information
+    /// about the shell current operations 
+    /// </summary>
    public static class Shell
    {
+        /// <summary>
+        /// Contains the Shell name
+        /// </summary>
 		public const string Name = "ClownShell";
-		public static string SesionID = IRandom.RandomText(64);
+        /// <summary>
+        /// Contains a randome id for the current session of the shell 
+        /// </summary>
+		public static string SessionID = IRandom.RandomText(64);
+        /// <summary>
+        /// Will be used to display a title along side the Shell name
+        /// </summary>
 		public static string Title = null;
-		public static string CurrentPath { get; set; } = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+        /// <summary>
+        /// Gets or sets the current path of the shell
+        /// </summary>
+        /// <value>The current path.</value>
+        public static string CurrentPath { get; set; } = ShellSettings.ShellDefaultStartPath;
+        /// <summary>
+        /// Gets or sets a value indicating whether this <see cref="T:States.Shell"/> exit request.
+        /// </summary>
+        /// <value><c>true</c> if exit request; otherwise, <c>false</c>.</value>
 		public static bool ExitRequest { get; set; } = false;
+        /// <summary>
+        /// Gets or sets the selected object.
+        /// </summary>
+        /// <value>The selected object.</value>
 		public static string SelectedObject { get; set; } = "none";
+        /// <summary>
+        /// Gets or set the Virtual Stack of the shell
+        /// </summary>
+        /// <value>The VS tack.</value>
 		public static VirtualStack VStack { get; set; } = new VirtualStack();
-		public static MiniDB MiniDB { get; set; }	
+        /// <summary>
+        /// Contains the default MiniDB
+        /// </summary>
+        /// <value>The mini db.</value>
+		public static MiniDB MiniDB { get; set; } = new MiniDB(); 
 
 	}
 }

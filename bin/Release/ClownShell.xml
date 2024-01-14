@@ -4,5 +4,10 @@
         <name>ClownShell</name>
     </assembly>
     <members>
+        <member name="F:ClownShell.Init.Program.Name">
+            <summary>
+            The name.
+            </summary>
+        </member>
     </members>
 </doc>

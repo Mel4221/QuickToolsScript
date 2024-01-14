@@ -47,7 +47,6 @@ Value=####
    at Parser.CodeParser.<>c__DisplayClass39_0.<SetExecution>b__0() in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Parser\Parser\SetExecution_Action_Type_Parameters.cs:line 71
    at ScriptRunner.Runner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\Runner.cs:line 14' 
 ####;
-<<<<<<< HEAD
 Relation=12/7/2023 7:45:22 PM;
 ID=1017;
 Key=log;
@@ -415,6 +414,593 @@ Value=####
  There Was an error with the given type of error: 'NotValidParameter' 'I'M sorry but the path /media/mel/BLACK/Movies2/ does not exist!!!' 
 ####;
 Relation=1/10/2024 12:20:01 PM;
-=======
-Relation=1/10/2024 2:45:14 AM;
->>>>>>> bb5d32b1d913ce6e91deed6fddcc01f141952ba8
+ID=1069;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:44 PM;
+ID=1071;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:44 PM;
+ID=1073;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:44 PM;
+ID=1075;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:44 PM;
+ID=1077;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:44 PM;
+ID=1079;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:44 PM;
+ID=1081;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:44 PM;
+ID=1083;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:44 PM;
+ID=1085;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:44 PM;
+ID=1087;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:44 PM;
+ID=1089;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:44 PM;
+ID=1091;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:44 PM;
+ID=1093;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:44 PM;
+ID=1095;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:44 PM;
+ID=1097;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:44 PM;
+ID=1099;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:44 PM;
+ID=1101;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:45 PM;
+ID=1103;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:45 PM;
+ID=1105;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:45 PM;
+ID=1107;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:45 PM;
+ID=1109;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:45 PM;
+ID=1111;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:45 PM;
+ID=1113;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:45 PM;
+ID=1115;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:45 PM;
+ID=1117;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:45 PM;
+ID=1119;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:45 PM;
+ID=1121;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:45 PM;
+ID=1123;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:45 PM;
+ID=1125;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:45 PM;
+ID=1127;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:45 PM;
+ID=1129;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:46 PM;
+ID=1131;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:46 PM;
+ID=1133;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:46 PM;
+ID=1135;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:46 PM;
+ID=1137;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:46 PM;
+ID=1139;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:46 PM;
+ID=1141;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:46 PM;
+ID=1143;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:46 PM;
+ID=1145;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:46 PM;
+ID=1147;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:46 PM;
+ID=1149;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:47 PM;
+ID=1151;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:47 PM;
+ID=1153;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:47 PM;
+ID=1155;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:47 PM;
+ID=1157;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:47 PM;
+ID=1159;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:47 PM;
+ID=1161;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:47 PM;
+ID=1163;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:47 PM;
+ID=1165;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:47 PM;
+ID=1167;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:48 PM;
+ID=1169;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:48 PM;
+ID=1171;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:48 PM;
+ID=1173;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:48 PM;
+ID=1175;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:48 PM;
+ID=1177;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:48 PM;
+ID=1179;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:49 PM;
+ID=1181;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:49 PM;
+ID=1183;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:49 PM;
+ID=1185;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:49 PM;
+ID=1187;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:49 PM;
+ID=1189;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:49 PM;
+ID=1191;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:50 PM;
+ID=1193;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:50 PM;
+ID=1195;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:50 PM;
+ID=1197;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:50 PM;
+ID=1199;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:50 PM;
+ID=1201;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:51 PM;
+ID=1203;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:51 PM;
+ID=1205;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:51 PM;
+ID=1207;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:51 PM;
+ID=1209;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:51 PM;
+ID=1211;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:52 PM;
+ID=1213;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:52 PM;
+ID=1215;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:52 PM;
+ID=1217;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:52 PM;
+ID=1219;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:53 PM;
+ID=1221;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:53 PM;
+ID=1223;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:53 PM;
+ID=1225;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:53 PM;
+ID=1227;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:54 PM;
+ID=1229;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:54 PM;
+ID=1231;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:54 PM;
+ID=1233;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:55 PM;
+ID=1235;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:55 PM;
+ID=1237;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:55 PM;
+ID=1239;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:55 PM;
+ID=1241;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:56 PM;
+ID=1243;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:56 PM;
+ID=1245;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:56 PM;
+ID=1247;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:57 PM;
+ID=1249;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:57 PM;
+ID=1251;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:58 PM;
+ID=1253;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:58 PM;
+ID=1255;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:58 PM;
+ID=1257;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:59 PM;
+ID=1259;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+Relation=1/13/2024 3:50:59 PM;
+ID=1261;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution With Action: 'path' Trace: 
+Trace: ClownShell Started At:1/14/2024 03:56:55
+Trace: Without Arguments At:1/14/2024 03:56:55
+Trace: ShellLoop Started MainLoop.ShellLoop At:1/14/2024 03:56:55
+Trace: LoopInput Started MainLoop.ShellLoop At:1/14/2024 03:56:55
+Trace: Commands Inputed Length: 1 At:1/14/2024 03:57:08
+Trace: Execution Set With Action: path  At:1/14/2024 03:57:08
+Trace: Action Was not Recognized as a valid Action At:1/14/2024 03:57:08
+' 
+####;
+Relation=1/14/2024 3:57:08 AM;

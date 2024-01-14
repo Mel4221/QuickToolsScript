@@ -144,6 +144,31 @@ namespace Parser
             string fileArg, path;
             switch (action)
             {
+                case "path":
+                    runner.Run(() => {
+                        path = param[0];
+                        if(Directory.Exists(path))
+                        {
+                            ShellTrace.AddTrace($"Shell  Currentpath set to [{path}]");
+                            Shell.CurrentPath = path;
+                            Get.Yellow($"Current Path set to [{path}]");
+                            return;
+                        }
+                        path = Helper.HasSpecialFolder(path);
+                        if (path != "")
+                        {
+                            if(Directory.Exists(path))
+                            {
+                                ShellTrace.AddTrace($"Shell  Currentpath set to [{path}]");
+                                Shell.CurrentPath = path;
+                                return;
+                            }
+
+                        }
+                        Get.Red($"The given path was not a valid Path: {path}");
+
+                    });
+                    break;
                 case "zero-file":
                     runner.Run(() => {
                         //zero-file file.zero 10
@@ -273,17 +298,26 @@ namespace Parser
 										Get.Red($"The Directory Does not exist {path}");
 										return;
 									}
-									FilesMaper maper = new FilesMaper(path);
+                                    FilesMaper maper = new FilesMaper();
+                                    maper.Path = path;
 									maper.AllowDebugger = true;
 									maper.Map();
-									shreader = new FileShreder(maper.Files.ToArray());
-									shreader.AllowDebugger = true;
-									shreader.Shread();
+                                    if (maper.Files.Count > 0)
+                                    {
+                                        shreader = new FileShreder();
+                                        shreader.Files = maper.Files.ToArray();
+                                        shreader.AllowDebugger = true;
+                                        shreader.Shread();
+                                    }
 
-									maper.Directories.ForEach((directory) => {
-									Directory.Delete(directory);
-									GC.Collect();
-									});
+                                    for(int dir = maper.Directories.Count; dir > 0; dir --)
+                                    {
+                                        GC.Collect();
+                                        Directory.Delete(maper.Directories[dir]);
+                                    }
+                                //  maper.Directories.ForEach((directory) => {
+                                        GC.Collect();
+								//	});
 									Directory.Delete(path);
 								break;
 						}

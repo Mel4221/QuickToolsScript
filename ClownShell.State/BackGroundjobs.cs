@@ -5,22 +5,57 @@ using System.Threading;
 using QuickTools.QIO;
 using Settings;
 
+
 namespace States
 {
-
+    /// <summary>
+    /// Defienes all the properties for a background Job.
+    /// </summary>
 	public class Job
 		{
+            /// <summary>
+            /// Gets or sets the BackGround thread to execute the given Job.
+            /// </summary>
+            /// <value>The BT hread.</value>
 			public Thread BThread { get; set; }
+            /// <summary>
+            /// Gets or sets the name for the Job
+            /// </summary>
+            /// <value>The name.</value>
 			public string Name { get; set; } = string.Empty;
+            /// <summary>
+            /// Gets or sets the identifier for the Job
+            /// </summary>
+            /// <value>The identifier.</value>
 			public int ID { get; set; } = 0;
+            /// <summary>
+            /// Gets or sets the job action.
+            /// </summary>
+            /// <value>The job action.</value>
 			public Action JobAction { get; set; }
+            /// <summary>
+            /// Gets or sets a value indicating whether this <see cref="T:States.Job"/> allow to be killed.
+            /// </summary>
+            /// <value><c>true</c> if allow to be killed; otherwise, <c>false</c>.</value>
 			public bool AllowToBeKilled { get; set; } = true;
+            /// <summary>
+            /// Gets or sets the text status.
+            /// </summary>
+            /// <value>The text status.</value>
 			public string TextStatus { get; set; } = string.Empty;
+            /// <summary>
+            /// Gets or sets the status for the Job.
+            /// </summary>
+            /// <value>The status.</value>
 			public double Status { get; set; } = 0;
+            /// <summary>
+            /// Provides extra information for the Job.
+            /// </summary>
 			public string Info = string.Empty;
-
-
-
+            /// <summary>
+            /// Returns a <see cref="T:System.String"/> that represents the current <see cref="T:States.Job"/>.
+            /// </summary>
+            /// <returns>A <see cref="T:System.String"/> that represents the current <see cref="T:States.Job"/>.</returns>
 			public override string ToString()
 			{
 				return $"ID: [{this.ID}] Job Name: [{this.Name}] Status: [{this.Status}] Job Info: [{this.Info}] AlowToBeKilled: [{this.AllowToBeKilled}]";
@@ -67,9 +102,15 @@ namespace States
 					Thread.Sleep(MonitorThreadSpeed);
 				}
 			}
-
+            /// <summary>
+            /// Retourns the backgrounds Jobs in execution
+            /// </summary>
+            /// <returns>The count.</returns>
 			public static int JobsCount() => Jobs.Count;
-			public static void PrintRunningJobs()
+			/// <summary>
+            /// Prints the running jobs.
+            /// </summary>
+            public static void PrintRunningJobs()
 			{
 				if (Jobs.Count == 0)
 				{
@@ -103,6 +144,11 @@ namespace States
 					Get.Write($"[{job.BThread.IsAlive}]\n");
 				}
 			}
+            /// <summary>
+            /// Gets the job info.
+            /// </summary>
+            /// <returns>The job info.</returns>
+            /// <param name="id">Identifier.</param>
 			public static string GetJobInfo(int id)
 			{
 				if (id > Jobs.Count || id < 0)
@@ -115,6 +161,10 @@ namespace States
 				}
 
 			}
+            /// <summary>
+            /// Adds the job.
+            /// </summary>
+            /// <param name="job">Job.</param>
 			public static void AddJob(Job job)
 			{
 
@@ -133,6 +183,10 @@ namespace States
 				Indexer++;
 				Get.White($"BackGroundJob Added ID:[{Indexer}]");
 			}
+            /// <summary>
+            /// Run the specified id.
+            /// </summary>
+            /// <param name="id">Identifier.</param>
 			public static void Run(int id)
 			{
 				if (Jobs != null)
@@ -148,7 +202,9 @@ namespace States
 					}
 				}
 			}
-
+            /// <summary>
+            /// Kills all the backgrounds Jobs
+            /// </summary>
 			public static void KillAll()
 			{
 				if (Jobs != null)
@@ -177,6 +233,10 @@ namespace States
 					Indexer = 0;
 				}
 			}
+            /// <summary>
+            /// Kill the specified Job by its ID
+            /// </summary>
+            /// <param name="id">Identifier.</param>
 			public static void Kill(int id)
 			{
 				if (Jobs != null)
@@ -213,7 +273,10 @@ namespace States
 
 				}
 			}
-
+            /// <summary>
+            /// Trys to Pause the specified Background Job it may not be stoped in all the cases
+            /// </summary>
+            /// <param name="id">Identifier.</param>
 			public static void Pause(int id)
 			{
 				if (Jobs != null)

@@ -35,6 +35,12 @@ namespace Parser
 			}
             switch (action)
             {
+                case "reset-settings":
+                    ShellSettings.ResetToDefault();
+                    break;
+                case "qt-data?":
+                    Get.Yellow(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
+                    break;
 				case "collect":
 				case "gc":
 					GC.Collect();

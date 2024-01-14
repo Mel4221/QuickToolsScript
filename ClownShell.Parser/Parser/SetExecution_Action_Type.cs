@@ -27,6 +27,7 @@ namespace Parser
 			switch (action)
             {
 
+                
 //<<<<<<< HEAD
                 case "status":
                     runner.Run(() => { 
@@ -284,7 +285,7 @@ namespace Parser
 							//  Get.Yellow(this.Target);
 							GC.Collect();
 							GC.WaitForPendingFinalizers();
-							//File.Delete(file); 
+							File.Delete(file); 
 							Get.Red(file);
 							return;
 						}
