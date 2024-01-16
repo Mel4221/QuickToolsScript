@@ -43,6 +43,7 @@ namespace MainLoop
 				ShellTrace.AddTrace("Did not match any Supported Path Crateries");
 				this.parser = new CodeParser(this.Arguments);
 				this.parser.Start();
+                //Shell.ExitRequest = true; //Disabled because there was a better way 
 				return;
 			}
 		}

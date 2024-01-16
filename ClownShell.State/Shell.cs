@@ -1,6 +1,4 @@
-﻿using System;
-using System.IO;
-using QuickTools.QCore;
+﻿using QuickTools.QCore;
 using QuickTools.QData;
 using Settings;
 namespace States
@@ -22,7 +20,12 @@ namespace States
         /// <summary>
         /// Will be used to display a title along side the Shell name
         /// </summary>
-		public static string Title = null;
+		public static string Title { get; set; } = null;
+        /// <summary>
+        /// Gets or sets the message.
+        /// </summary>
+        /// <value>The message.</value>
+        public static string Message { get; set; } = null;
         /// <summary>
         /// Gets or sets the current path of the shell
         /// </summary>
@@ -49,5 +52,15 @@ namespace States
         /// <value>The mini db.</value>
 		public static MiniDB MiniDB { get; set; } = new MiniDB(); 
 
-	}
+
+        /// <summary>
+        /// Exit this Shell.
+        /// </summary>
+        public static void Exit()
+        {
+            BackGroundJob.KillAll();
+            Shell.ExitRequest = true;
+        }
+
+    }
 }

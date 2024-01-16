@@ -372,7 +372,7 @@ namespace Parser
 								Get.White($"PATH: {param[0]}");
 							}
 							Shell.MiniDB = new MiniDB();
-							Shell.MiniDB.AllowDebuger = true;
+							Shell.MiniDB.AllowDebugger = true;
 							bool loaded = Shell.MiniDB.Load(param[0]);
 							if (loaded) Get.Ok();
 							if (!loaded) Get.Red("FAILED TO LOAD");

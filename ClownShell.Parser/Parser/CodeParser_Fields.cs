@@ -38,5 +38,11 @@ namespace Parser
         /// </summary>
         /// <value><c>true</c> if is function opened; otherwise, <c>false</c>.</value>
         public bool IsFunctionOpened    { get; set; } = false;
+
+        /// <summary>
+        /// Gets or sets a value indicating whether this <see cref="T:Parser.CodeParser"/> has error flags.
+        /// </summary>
+        /// <value><c>true</c> if has error flags; otherwise, <c>false</c>.</value>
+        public bool HasErrorFlags { get; set; } = false;
     }
 }

@@ -9,6 +9,7 @@ namespace MainLoop
 		public MiniDB GetHistory()
 		{
 			this.db = new MiniDB(HistoryFile, true);
+            //this.db.AllowDebuger = true;
 			this.db.Load();
 			return this.db;
 		}

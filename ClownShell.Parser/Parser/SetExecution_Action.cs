@@ -30,13 +30,31 @@ namespace Parser
 				return;
 			}if(Get.FileExention(action) == "clown")
 			{
-				this.ParseFromFile(action); 
-				return;
+			    if(!this.IsRootPath(action))
+                {   
+                    if (File.Exists(this.GetPathWithType(action)))
+                    {
+                       // this.ParseFromFile(action);
+                    }
+                }
+                return;
 			}
             switch (action)
             {
+                case "sync-settings":
+                    runner.Run(() => {
+                        ShellSettings.SyncSettings();
+                    });
+                    break;
                 case "reset-settings":
+                    runner.Run(() => {
                     ShellSettings.ResetToDefault();
+                    });
+                    break;
+                case "load-settings":
+                    runner.Run(() => {
+                    ShellSettings.LoadSettings();
+                    });
                     break;
                 case "qt-data?":
                     Get.Yellow(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
@@ -74,14 +92,15 @@ namespace Parser
                     break;
                 case "exit":
                     runner.Run(() => {
-						
-                        if(BackGroundJob.HasJobs)
+                        Get.Blue(BackGroundJob.HasUserJobs()); 
+                        if(BackGroundJob.HasUserJobs())
                         {
                             BackGroundJob.PrintRunningJobs();
                             Get.Alert($"There are jobs running kill them all first or wait them to finish");
                             return;
                         }
-						Shell.ExitRequest = true; 
+                        Shell.Exit();
+						//Shell.ExitRequest = true; 
                     });
                     break;
 				case "{":
