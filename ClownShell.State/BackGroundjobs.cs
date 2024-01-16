@@ -90,14 +90,14 @@ namespace States
             /// <value><c>true</c> if has jobs; otherwise, <c>false</c>.</value>
         public static bool HasUserJobs()
         {
-            foreach(Job job in Jobs)
+            for(int job = 0;  job < BackGroundJob.Jobs.Count; job++)
             {
-                if(job.IsInternalJob == false)
+                if(BackGroundJob.Jobs[job].IsInternalJob == false)
                 {
                     return true; 
                 }
             }
-                return false; 
+            return false;
         }
         /// <summary>
         /// Gets or sets the monitor thread speed.
@@ -209,11 +209,13 @@ namespace States
 					AllowToBeKilled = job.AllowToBeKilled,
 					TextStatus = job.TextStatus,
 					Status = job.Status,
-					Info = job.Info
+					Info = job.Info,
+                    IsInternalJob = job.IsInternalJob
+
 				});
 				Log.Event(BackGroundJobLogFileName, $"Job Added {Jobs[Indexer].ToString()}");
 				Indexer++;
-				Get.White($"BackGroundJob Added ID:[{Indexer}]");
+            if (!job.IsInternalJob) Get.White($"BackGroundJob Added ID:[{Indexer}]");
 			}
             /// <summary>
             /// Run the specified id.

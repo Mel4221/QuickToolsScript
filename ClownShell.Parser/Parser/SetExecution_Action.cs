@@ -92,7 +92,7 @@ namespace Parser
                     break;
                 case "exit":
                     runner.Run(() => {
-                        Get.Blue(BackGroundJob.HasUserJobs()); 
+                        //Get.Blue(BackGroundJob.HasUserJobs()); 
                         if(BackGroundJob.HasUserJobs())
                         {
                             BackGroundJob.PrintRunningJobs();
