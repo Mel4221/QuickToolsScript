@@ -1,17 +1,18 @@
 ﻿<Properties StartupConfiguration="{823A2180-8759-43E9-8CEB-0D736731BAB1}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ClownShell.State/BackGroundjobs.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ClownShell.Settings/Settings.cs">
     <Files>
-      <File FileName="ClownShell.Parser/Parser/SetExecution_Action.cs" Line="95" Column="64" />
+      <File FileName="Program.cs" Line="40" Column="36" />
+      <File FileName="ClownShell.MainLoop/ShellLoop.cs" Line="50" Column="4" />
+      <File FileName="ClownShell.Parser/Parser/SetExecution_Action.cs" Line="191" Column="25" />
+      <File FileName="ClownShell.State/BackGroundjobs.cs" Line="131" Column="10" />
       <File FileName="ClownShell.Settings/Settings.cs" Line="88" Column="30" />
-      <File FileName="ClownShell.State/BackGroundjobs.cs" Line="93" Column="13" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ClownShell" expanded="True">
-            <Node name="ClownShell.Settings" expanded="True" />
-            <Node name="ClownShell.State" expanded="True">
-              <Node name="BackGroundjobs.cs" selected="True" />
+            <Node name="ClownShell.Settings" expanded="True">
+              <Node name="Settings.cs" selected="True" />
             </Node>
           </Node>
         </State>

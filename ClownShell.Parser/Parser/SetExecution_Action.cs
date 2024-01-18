@@ -290,6 +290,7 @@ namespace Parser
 								break;
 							default:
 								process = new ProcessStartInfo("shutdown", "0");
+                               
 								process.CreateNoWindow = true;
 								process.UseShellExecute = false;
 								Process.Start(process);

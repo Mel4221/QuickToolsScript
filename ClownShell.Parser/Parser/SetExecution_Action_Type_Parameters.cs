@@ -220,16 +220,33 @@ namespace Parser
                 case "zip":
                     runner.Run(() => 
                     {
+
                         QZip zip;
+                        string file; 
+                        //zip -f file.txt
                         switch(type)
                         {
                             case "-f":
                             case "-F":
                             case "file":
+                                zip = new QZip();
+                                zip.AllowDebugger = true; 
+                                file = param[0];
+                                if (!File.Exists(file)) throw new FileNotFoundException($"File not found at: {file}");
+                                zip.Compress(file);
                                 break;
                             case "-a":
                             case "-A":
                             case "archive":
+                                zip = new QZip();
+                                path = param[0];
+                                if (!Directory.Exists(path)) throw new DirectoryNotFoundException($"Directory not found at: {path}");
+                                FilesMaper maper = new FilesMaper(path);
+                                maper.AllowDebugger = true;
+                                zip.AllowDebugger = true; 
+                                maper.Map();
+                                string[] files = maper.Files.ToArray();
+                                zip.Zip(path, files);
                                 break;
                         }
                     });
@@ -253,14 +270,12 @@ namespace Parser
 						string source, destination;
 						source = type;
 						destination = param[0]; 
-						if(this.IsRootPath(source) && this.IsRootPath(destination)
-							&& Directory.Exists(source))
+						if(File.Exists(source)&&this.IsRootPath(source) && this.IsRootPath(destination))
 						{
-							Make.Directory(destination);
-							FilesMaper map = new FilesMaper(source);
-							map.AllowDebugger = true; 
-							map.Map();
-							
+                            FilesTransferer transfer = new FilesTransferer();
+                            transfer.AllowDebugger = true;
+                            transfer.WaitToAcknolegeTransfer = false; 
+                            transfer.TransferFile(source, destination);
 							return; 
 						}
 
