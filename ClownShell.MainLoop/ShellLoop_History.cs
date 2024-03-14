@@ -19,6 +19,7 @@ namespace MainLoop
 			{
 				case "history":
 				case "exit":
+           case "clear-history":
 					return true;
 				default:
 					return false;
@@ -28,8 +29,10 @@ namespace MainLoop
 		{
 			if (this.IsShellCommand(command)) return;// if is a shell command don't save it
 			if (this.AllowToSaveHistory == false) return;// if is not allowed to show history return
-			db = new MiniDB(HistoryFile);
-			db.AllowRepeatedKeys = true;
+            db = new MiniDB();
+            db.DBName = HistoryFile;
+            db.AllowRepeatedKeys = true;
+            db.AllowDebugger = false; 
 			db.Create();
 			db.Load();
 			db.AddKeyOnHot("command", command, DateTime.Now.ToLongDateString());

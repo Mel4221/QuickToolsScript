@@ -67,7 +67,11 @@
                 /// <value>The last path.</value>
                 public static string LastPath { get; set; } = "";
                
-                public static long ShellSettingsFileHash { get; set; }
+            /// <summary>
+            /// Gets or sets the shell settings file hash.
+            /// </summary>
+            /// <value>The shell settings file hash.</value>
+                public static double ShellSettingsFileHash { get; set; }
                 
                 //private static Thread SettingsWatcher;
 
@@ -83,7 +87,8 @@
                     Job job = new Job()
                     {
                         Name = "SettingsWatcher",
-                        Info = @"Checks the settings to make sure that they are always on sync with the ClownShell.settings file.",
+                        Info = @"Checks the settings to make sure that they are 
+                        always on sync with the ClownShell.settings file.",
                         ID = 0001,
                         IsInternalJob = true,
                         JobAction = () => 
@@ -138,7 +143,6 @@
             /// </summary>
             public static void StartSettingsManager()
             {
-
                 SettingsManager = new MiniDB();
                 SettingsManager.DBName = ShellSettingsFile;
                 LoadSettings();
@@ -149,8 +153,8 @@
             /// </summary>
             public static void SyncSettings()
                 {
-                    Shell.Title = $"Settings Synced: {DateTime.Now}";
-                    Get.Beep();
+                    Shell.Title = $"Settings Sync: {DateTime.Now}";
+                    //Get.Beep();
                     if(File.Exists(ShellSettingsFile))
                     {
                         if(Get.HashCodeFromFile(ShellSettingsFile) != ShellSettingsFileHash)
@@ -196,7 +200,7 @@
 
                 //SettingsManager.AllowDebugger = true;
                 SettingsManager.Create();
-                    SettingsManager.SaveChanges();
+                SettingsManager.SaveChanges();
                         
                     
                 }   
@@ -216,6 +220,7 @@
                         ResetToDefault();
                         return;
                     }
+                    
                     ShellSettingsFileHash = Get.HashCodeFromFile(ShellSettingsFile);
                     ShellDefaultStartPath = SettingsManager.SelectWhereKey("ShellDefaultStartPath").Value;
                     ShellVariablesDB = SettingsManager.SelectWhereKey("ShellVariablesDB").Value;
@@ -224,6 +229,7 @@
                     ShellSettingsFile = SettingsManager.SelectWhereKey("ShellSettingsFile").Value;
                     SettingsSyncRate = int.Parse(SettingsManager.SelectWhereKey("SettingsSyncRate").Value);
                     LastPath = SettingsManager.SelectWhereKey("LastPath").Value; 
+                
                 }
 
                 /// <summary>

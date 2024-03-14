@@ -271,7 +271,7 @@ namespace Parser
 						source = type;
 						destination = param[0]; 
 						if(File.Exists(source)&&this.IsRootPath(source) && this.IsRootPath(destination))
-						{
+						{   
                             FilesTransferer transfer = new FilesTransferer();
                             transfer.AllowDebugger = true;
                             transfer.WaitToAcknolegeTransfer = false; 
@@ -289,15 +289,18 @@ namespace Parser
 						//fdelete -r path/
 						//action type param[0]
 						FileShreder shreader;
-						 
+                        ShellTrace.AddTrace("Shreading file initilize");
 						switch(type)
 						{
-							case "-f":
+							case "-f":               
+ 
+                                ShellTrace.AddTrace($"Shreadding File Comfirmed");
 									shreader = new FileShreder(param);
 									shreader.AllowDebugger = true;
 									shreader.Shread();
 								break;
 							case "-r":
+
 									path = param[0];
 
 									if(!this.IsRootPath(path)) 
@@ -310,7 +313,7 @@ namespace Parser
 									 
 									if(!Directory.Exists(path))
 									{
-										Get.Red($"The Directory Does not exist {path}");
+										Get.Red($"The Directory Does not exist or was not found {path}");
 										return;
 									}
                                     FilesMaper maper = new FilesMaper();
@@ -325,16 +328,24 @@ namespace Parser
                                         shreader.Shread();
                                     }
 
-                                    for(int dir = maper.Directories.Count; dir > 0; dir --)
+          
+                                    for(int dir = maper.Directories.Count - 1; dir > 0; dir --)
                                     {
                                         GC.Collect();
+                                    try
+                                    {
                                         Directory.Delete(maper.Directories[dir]);
                                     }
+                                    catch { Get.Red($"Fail To Delete: {maper.Directories[dir]}"); }
+                                }
                                 //  maper.Directories.ForEach((directory) => {
-                                        GC.Collect();
+                                        //GC.Collect();
 								//	});
-									Directory.Delete(path);
-								break;
+                                    if(Directory.Exists(path))
+                                    {
+                                        Directory.Delete(path);
+                                    }
+                                break;
 						}
 					});
 					break;
@@ -720,8 +731,25 @@ namespace Parser
 					break;
 				case "list":
 				case "array":
-				//[] = {};
-					break;
+                    // [] = {};
+                    runner.Run(() => {
+                        //list --files files = { file.txt , file.exe , Program.exe , file.xml , file.mp4 }
+                        if(param[0] != "=")
+                        {
+                            error.DisplayError(ErrorType.InvalidOperator,$"{action} {type} '{param[0]}'");
+                            return;
+                        }
+                        if (type == "--Files" ||
+                            type == "--files" || 
+                            type == "files" || 
+                            type == "-F" ||
+                            type == "-f")
+                        {
+                            Get.Yellow($"Checking Files...");
+                            //fil
+                        }
+                    });
+                    break;
 				case "shell-path":
 					runner.Run(() => {
 						Shell.CurrentPath = param[0];

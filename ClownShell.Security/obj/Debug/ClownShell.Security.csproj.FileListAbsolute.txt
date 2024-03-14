@@ -19,3 +19,5 @@ C:/Users/Melquiceded/Documents/csharp/ClownShell/ClownShell.Security/obj/Debug/C
 /home/mel/Documents/csharp/ClownShell/ClownShell.Security/obj/Debug/ClownShell.Security.csproj.CopyComplete
 /home/mel/Documents/csharp/ClownShell/ClownShell.Security/obj/Debug/ClownShell.Security.dll
 /home/mel/Documents/csharp/ClownShell/ClownShell.Security/obj/Debug/ClownShell.Security.pdb
+/home/mel/Documents/csharp/ClownShell/ClownShell.Security/bin/Debug/ClownShell.State.dll
+/home/mel/Documents/csharp/ClownShell/ClownShell.Security/bin/Debug/ClownShell.State.pdb

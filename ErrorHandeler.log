@@ -24,11 +24,25 @@ Relation=1/16/2024 3:15:52 AM;
 ID=1004;
 Key=log;
 Value=####
- There Was an error with the given type of error: 'ExecutionError' 'System.InvalidOperationException: Collection was modified; enumeration operation may not execute.
+ There Was an error with the given type of error: 'ExecutionError' 'System.InvalidOperationException: Collection was modified;
+Relation= enumeration operation may not execute.
   at System.Collections.Generic.List`1[T].ForEach (System.Action`1[T] action) [0x00046] in <d636f104d58046fd9b195699bcb1a744>:0 
   at States.BackGroundJob.KillAll () [0x0000c] in <48a415cdb0dc4b6298304b1e4ec1529c>:0 
   at States.Shell.Exit () [0x00000] in <48a415cdb0dc4b6298304b1e4ec1529c>:0 
   at Parser.CodeParser+<>c.<SetExecution>b__59_7 () [0x00017] in <7355abae65644273a6b97276b7828d59>:0 
   at ScriptRunner.Runner.Run (System.Action code) [0x00000] in <7d39a6fdbe514416910ea638cf89f2b8>:0 ' 
 ####;
-Relation=1/16/2024 3:16:01 AM;
+ID=1005;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution Action With Type 'exit' f Trace: 
+Trace: ClownShell Started At:1/17/2024 10:47:09
+Trace: Load Settings and Start Settings Watcher... At:1/17/2024 10:47:09
+Trace: With Arguments Length: 2 At:1/17/2024 10:47:09
+Trace: Checking Arguments At:1/17/2024 10:47:09
+Trace: Did not match any Supported Path Crateries At:1/17/2024 10:47:09
+Trace: Execution Started With Action: exit Type: f At:1/17/2024 10:47:09
+Trace: Action Was not Recognized as a valid Action At:1/17/2024 10:47:09
+' 
+####;
+Relation=1/17/2024 10:47:09 PM;

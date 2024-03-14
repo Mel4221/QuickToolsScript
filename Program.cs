@@ -29,7 +29,7 @@ namespace ClownShell
 				{
                     ShellTrace.AddTrace($"Load Settings and Start Settings Watcher...");
                     //ShellTrace.AddTrace($"Auto Loading Settings Disabled!!!");
-                    ShellSettings.StartSettingsManager();
+                    //ShellSettings.StartSettingsManager();
 
                     Get.Title(Program.Name);
                     ShellLoop shell;

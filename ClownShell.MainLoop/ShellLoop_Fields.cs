@@ -10,8 +10,8 @@ namespace MainLoop
 		public string HistoryFile = ShellSettings.ShellHistoryFileName;
 		public bool AllowToSaveHistory { get; set; } = true;
 		private MiniDB db;
-		private string[] Arguments { get; set; } = new string[0];
+        private string[] Arguments { get; set; } = new string[] { };
 
 
-	}
+    }
 }

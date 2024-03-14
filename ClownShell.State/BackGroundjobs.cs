@@ -243,18 +243,22 @@ namespace States
 			{
 				if (Jobs != null)
 				{
-					Jobs.ForEach((item) => {
+                try
+                {
 
-						if (!item.AllowToBeKilled)
-						{
-							throw new Exception("Item Not Allwed To be Killed");
-						}
-						if (item.BThread.IsAlive)
-						{
-							Log.Event(BackGroundJobLogFileName, $"KILL-ALL-REQUEST {item.ToString()}");
+                    Jobs.ForEach((item) =>
+                    {
 
-							try
-							{
+                        if (!item.AllowToBeKilled)
+                        {
+                            throw new Exception("Item Not Allwed To be Killed");
+                        }
+                        if (item.BThread.IsAlive)
+                        {
+                            Log.Event(BackGroundJobLogFileName, $"KILL-ALL-REQUEST {item.ToString()}");
+
+                            try
+                            {
                                 try
                                 {
 
@@ -266,15 +270,21 @@ namespace States
 
                                 }
                             }
-							catch
-							{
+                            catch
+                            {
 
-							}
-						}
-					});
-					Jobs.Clear();
-					Indexer = 0;
-				}
+                            }
+                        }
+                    });
+                    Jobs.Clear();
+                    Indexer = 0;
+                }
+                catch
+                {
+
+                }
+            
+            }
 			}
             /// <summary>
             /// Kill the specified Job by its ID

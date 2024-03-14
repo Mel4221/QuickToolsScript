@@ -15,3 +15,5 @@ C:/Users/Melquiceded/Documents/csharp/ClownShell/ClownShell.Settings/obj/Debug/C
 /home/mel/Documents/csharp/ClownShell/ClownShell.Settings/obj/Debug/ClownShell.Settings.csproj.CopyComplete
 /home/mel/Documents/csharp/ClownShell/ClownShell.Settings/obj/Debug/ClownShell.Settings.dll
 /home/mel/Documents/csharp/ClownShell/ClownShell.Settings/obj/Debug/ClownShell.Settings.pdb
+/home/mel/Documents/csharp/ClownShell/ClownShell.Settings/bin/Debug/ClownShell.State.dll
+/home/mel/Documents/csharp/ClownShell/ClownShell.Settings/bin/Debug/ClownShell.State.pdb
