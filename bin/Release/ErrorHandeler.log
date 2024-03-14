@@ -48,3 +48,17 @@ Value=####
    at ScriptRunner.Runner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\Runner.cs:line 14' 
 ####;
 Relation=1/10/2024 2:45:14 AM;
+ID=1009;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution With Action: 'off' Trace: 
+Trace: ClownShell Started At:2/28/2024 04:57:04
+Trace: Without Arguments At:2/28/2024 04:57:04
+Trace: ShellLoop Started MainLoop.ShellLoop At:2/28/2024 04:57:04
+Trace: LoopInput Started MainLoop.ShellLoop At:2/28/2024 04:57:04
+Trace: Commands Inputed Length: 1 At:2/28/2024 04:57:05
+Trace: Execution Set With Action: off  At:2/28/2024 04:57:05
+Trace: Action Was not Recognized as a valid Action At:2/28/2024 04:57:05
+' 
+####;
+Relation=2/28/2024 4:57:05 PM;
