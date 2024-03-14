@@ -30,11 +30,47 @@ namespace Parser
 				return;
 			}if(Get.FileExention(action) == "clown")
 			{
-				this.ParseFromFile(action); 
-				return;
+			    if(!this.IsRootPath(action))
+                {   
+                    if (File.Exists(this.GetPathWithType(action)))
+                    {
+                       // this.ParseFromFile(action);
+                    }
+                }
+                return;
 			}
             switch (action)
             {
+                case "clear-temps":
+                case "clear-temp":
+                case "clean-temps":
+                case "clean-temp":
+                    runner.Run(() => {
+                        string tempPath = Get.DataPath("temp");
+                        FilesMaper maper = new FilesMaper(tempPath);
+                        maper.AllowDebugger = true; 
+                        maper.Map();
+                        maper.Files.ForEach(file => File.Delete(file)); 
+                    }); 
+                    break;
+                case "sync-settings":
+                    runner.Run(() => {
+                        ShellSettings.SyncSettings();
+                    });
+                    break;
+                case "reset-settings":
+                    runner.Run(() => {
+                    ShellSettings.ResetToDefault();
+                    });
+                    break;
+                case "load-settings":
+                    runner.Run(() => {
+                    ShellSettings.LoadSettings();
+                    });
+                    break;
+                case "qt-data?":
+                    Get.Yellow(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
+                    break;
 				case "collect":
 				case "gc":
 					GC.Collect();
@@ -68,14 +104,15 @@ namespace Parser
                     break;
                 case "exit":
                     runner.Run(() => {
-						
-                        if(BackGroundJob.HasJobs)
+                        //Get.Blue(BackGroundJob.HasUserJobs()); 
+                        if(BackGroundJob.HasUserJobs())
                         {
                             BackGroundJob.PrintRunningJobs();
                             Get.Alert($"There are jobs running kill them all first or wait them to finish");
                             return;
                         }
-						Shell.ExitRequest = true; 
+                        Shell.Exit();
+						//Shell.ExitRequest = true; 
                     });
                     break;
 				case "{":
@@ -140,6 +177,7 @@ namespace Parser
 					});
 					break;
 				case "hold":
+                case "halt":
 					runner.RunningCodeInfo = "This function just creates a hold in a thread as Thread.Sleep(1000)";
 					runner.RunningBackGroundCodeName = "Thread Hold";
 					runner.Run(() => {
@@ -224,6 +262,23 @@ namespace Parser
 						Shell.SelectedObject = null;
 					});
 					break;
+                case "clear-history":
+                    runner.Run(() => {
+
+                        if (File.Exists(ShellSettings.ShellHistoryFileName))
+                        {
+                            bool result = new MiniDB(ShellSettings.ShellHistoryFileName).Drop();
+                            if (result) Get.Ok();
+                            if (!result) Get.Red("Failed to clear history");
+                            return;
+                        }
+                        else
+                        {
+                            Get.Yellow($"The history file looks like it don't even exist");
+                            return; 
+                        }
+                    });
+                    break;
 				case "history":
 					runner.Run(() => {
 
@@ -265,6 +320,7 @@ namespace Parser
 								break;
 							default:
 								process = new ProcessStartInfo("shutdown", "0");
+                               
 								process.CreateNoWindow = true;
 								process.UseShellExecute = false;
 								Process.Start(process);
@@ -384,7 +440,8 @@ namespace Parser
 					break;
 				default:
 					Variable v = Shell.VStack.GetVariable(action);
-					if(!v.IsEmpty){
+					if(!v.IsEmpty)
+                    {
 						Get.White(v.Value);
 						return;
 					}

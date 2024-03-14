@@ -5,36 +5,105 @@ using System.Threading;
 using QuickTools.QIO;
 using Settings;
 
+
 namespace States
 {
-
+    /// <summary>
+    /// Defienes all the properties for a background Job.
+    /// </summary>
 	public class Job
 		{
+            /// <summary>
+            /// Gets or sets the BackGround thread to execute the given Job.
+            /// </summary>
+            /// <value>The BT hread.</value>
 			public Thread BThread { get; set; }
+            /// <summary>
+            /// Gets or sets the name for the Job
+            /// </summary>
+            /// <value>The name.</value>
 			public string Name { get; set; } = string.Empty;
+            /// <summary>
+            /// Gets or sets the identifier for the Job
+            /// </summary>
+            /// <value>The identifier.</value>
 			public int ID { get; set; } = 0;
+            /// <summary>
+            /// Gets or sets the job action.
+            /// </summary>
+            /// <value>The job action.</value>
 			public Action JobAction { get; set; }
+            /// <summary>
+            /// Gets or sets a value indicating whether this <see cref="T:States.Job"/> allow to be killed.
+            /// </summary>
+            /// <value><c>true</c> if allow to be killed; otherwise, <c>false</c>.</value>
 			public bool AllowToBeKilled { get; set; } = true;
+            /// <summary>
+            /// Gets or sets the text status.
+            /// </summary>
+            /// <value>The text status.</value>
 			public string TextStatus { get; set; } = string.Empty;
+            /// <summary>
+            /// Gets or sets the status for the Job.
+            /// </summary>
+            /// <value>The status.</value>
 			public double Status { get; set; } = 0;
+            /// <summary>
+            /// Provides extra information for the Job.
+            /// </summary>
 			public string Info = string.Empty;
-
-
-
-			public override string ToString()
+        /// <summary>
+        /// Gets or sets a value indicating whether this <see cref="T:States.Job"/> is internal job.
+        /// </summary>
+        /// <value><c>true</c> if is internal job; otherwise, <c>false</c>.</value>
+        public bool IsInternalJob { get; set; } = false; 
+        /// <summary>
+        /// Returns a <see cref="T:System.String"/> that represents the current <see cref="T:States.Job"/>.
+        /// </summary>
+        /// <returns>A <see cref="T:System.String"/> that represents the current <see cref="T:States.Job"/>.</returns>
+        public override string ToString()
 			{
 				return $"ID: [{this.ID}] Job Name: [{this.Name}] Status: [{this.Status}] Job Info: [{this.Info}] AlowToBeKilled: [{this.AllowToBeKilled}]";
 			}
 		}
+        /// <summary>
+        /// Back ground job.
+        /// </summary>
 		public static class BackGroundJob
 		{
-			public static string BackGroundJobLogFileName { get; set; } = ShellSettings.LogsFile;
-			public static bool MonitorStarted { get; set; }
+            /// <summary>
+            /// Gets or sets the name of the back ground job log file.
+            /// </summary>
+            /// <value>The name of the back ground job log file.</value>
+			public static string BackGroundJobLogFileName { get; set; }  = ShellSettings.LogsFile;
+			/// <summary>
+            /// Gets or sets a value indicating whether this <see cref="T:States.BackGroundJob"/> monitor started.
+            /// </summary>
+            /// <value><c>true</c> if monitor started; otherwise, <c>false</c>.</value>
+            public static bool MonitorStarted { get; set; }
 			private static Thread MonitorThread { get; set; }
 			private static int Indexer { get; set; } = 0;
-			private static List<Job> Jobs { get; set; } = new List<Job>();
-			public static bool HasJobs { get; set; } = false;
-			public static int MonitorThreadSpeed { get; set; } = 500;
+            static List<Job> Jobs { get; set; } = new List<Job>();
+			/// <summary>
+            /// Gets or sets a value indicating whether this <see cref="T:States.BackGroundJob"/> has jobs.
+            /// </summary>
+            /// <value><c>true</c> if has jobs; otherwise, <c>false</c>.</value>
+        public static bool HasUserJobs()
+        {
+            for(int job = 0;  job < BackGroundJob.Jobs.Count; job++)
+            {
+                if(BackGroundJob.Jobs[job].IsInternalJob == false)
+                {
+                    return true; 
+                }
+            }
+            return false;
+        }
+        /// <summary>
+        /// Gets or sets the monitor thread speed.
+        /// </summary>
+        /// <value>The monitor thread speed.</value>
+        public static int MonitorThreadSpeed { get; set; } = 500;
 
 
 			private static void RemoveTerminatedJobs()
@@ -51,25 +120,25 @@ namespace States
 			}
 			private static void WatchJobs()
 			{
-				while (true)
+				while (Jobs.Count > 0)
 				{
 					RemoveTerminatedJobs();
-					switch (Jobs.Count)
-					{
-						case 0:
-							Indexer = 0;
-							HasJobs = false;
-							break;
-						default:
-							HasJobs = true;
-							break;
-					}
+                    //HasJobs = Jobs.Count == 0 ? false : true;
 					Thread.Sleep(MonitorThreadSpeed);
-				}
-			}
+                   // HasJobs = Jobs.Count == 0 ? false : true;
+                }
+                //HasJobs = Jobs.Count == 0 ? false : true;
+            }
 
-			public static int JobsCount() => Jobs.Count;
-			public static void PrintRunningJobs()
+        /// <summary>
+        /// Retourns the backgrounds Jobs in execution
+        /// </summary>
+        /// <returns>The count.</returns>
+        public static int JobsCount() => Jobs.Count;
+			/// <summary>
+            /// Prints the running jobs.
+            /// </summary>
+            public static void PrintRunningJobs()
 			{
 				if (Jobs.Count == 0)
 				{
@@ -86,7 +155,9 @@ namespace States
 				Get.Red();
 				Get.Write($"[Killable] ");
 				Get.Yellow();
-				Get.Write($"[IsAlive]\n");
+				Get.Write($"[IsAlive] ");
+                Get.Blue();
+                Get.Write($"[IsInternal]\n");
 				foreach (Job job in Jobs)
 				{
 
@@ -100,9 +171,16 @@ namespace States
 					Get.Red();
 					Get.Write($"[{job.AllowToBeKilled}] ");
 					Get.Yellow();
-					Get.Write($"[{job.BThread.IsAlive}]\n");
+					Get.Write($"[{job.BThread.IsAlive}] ");
+                    Get.Blue();
+                    Get.Write($"[{job.IsInternalJob}]\n");
 				}
 			}
+            /// <summary>
+            /// Gets the job info.
+            /// </summary>
+            /// <returns>The job info.</returns>
+            /// <param name="id">Identifier.</param>
 			public static string GetJobInfo(int id)
 			{
 				if (id > Jobs.Count || id < 0)
@@ -115,6 +193,10 @@ namespace States
 				}
 
 			}
+            /// <summary>
+            /// Adds the job.
+            /// </summary>
+            /// <param name="job">Job.</param>
 			public static void AddJob(Job job)
 			{
 
@@ -122,17 +204,23 @@ namespace States
 				Jobs.Add(new Job()
 				{
 					Name = job.Name,
-					ID = Indexer,
+					ID = job.ID == 0? Indexer:job.ID,
 					JobAction = job.JobAction,
 					AllowToBeKilled = job.AllowToBeKilled,
 					TextStatus = job.TextStatus,
 					Status = job.Status,
-					Info = job.Info
+					Info = job.Info,
+                    IsInternalJob = job.IsInternalJob
+
 				});
 				Log.Event(BackGroundJobLogFileName, $"Job Added {Jobs[Indexer].ToString()}");
 				Indexer++;
-				Get.White($"BackGroundJob Added ID:[{Indexer}]");
+            if (!job.IsInternalJob) Get.White($"BackGroundJob Added ID:[{Indexer}]");
 			}
+            /// <summary>
+            /// Run the specified id.
+            /// </summary>
+            /// <param name="id">Identifier.</param>
 			public static void Run(int id)
 			{
 				if (Jobs != null)
@@ -148,35 +236,60 @@ namespace States
 					}
 				}
 			}
-
+            /// <summary>
+            /// Kills all the backgrounds Jobs
+            /// </summary>
 			public static void KillAll()
 			{
 				if (Jobs != null)
 				{
-					Jobs.ForEach((item) => {
+                try
+                {
 
-						if (!item.AllowToBeKilled)
-						{
-							throw new Exception("Item Not Allwed To be Killed");
-						}
-						if (item.BThread.IsAlive)
-						{
-							Log.Event(BackGroundJobLogFileName, $"KILL-ALL-REQUEST {item.ToString()}");
+                    Jobs.ForEach((item) =>
+                    {
 
-							try
-							{
-								item.BThread.Abort();
-							}
-							catch
-							{
+                        if (!item.AllowToBeKilled)
+                        {
+                            throw new Exception("Item Not Allwed To be Killed");
+                        }
+                        if (item.BThread.IsAlive)
+                        {
+                            Log.Event(BackGroundJobLogFileName, $"KILL-ALL-REQUEST {item.ToString()}");
 
-							}
-						}
-					});
-					Jobs.Clear();
-					Indexer = 0;
-				}
+                            try
+                            {
+                                try
+                                {
+
+                                    item.BThread.Abort();
+                                    RemoveTerminatedJobs();
+                                }
+                                catch
+                                {
+
+                                }
+                            }
+                            catch
+                            {
+
+                            }
+                        }
+                    });
+                    Jobs.Clear();
+                    Indexer = 0;
+                }
+                catch
+                {
+
+                }
+            
+            }
 			}
+            /// <summary>
+            /// Kill the specified Job by its ID
+            /// </summary>
+            /// <param name="id">Identifier.</param>
 			public static void Kill(int id)
 			{
 				if (Jobs != null)
@@ -213,7 +326,10 @@ namespace States
 
 				}
 			}
-
+            /// <summary>
+            /// Trys to Pause the specified Background Job it may not be stoped in all the cases
+            /// </summary>
+            /// <param name="id">Identifier.</param>
 			public static void Pause(int id)
 			{
 				if (Jobs != null)
@@ -268,6 +384,7 @@ namespace States
 
 				if (Jobs != null)
 				{
+                    //WatchJobs();
 					Jobs.ForEach((item) => {
 						if (item.JobAction != null)
 						{

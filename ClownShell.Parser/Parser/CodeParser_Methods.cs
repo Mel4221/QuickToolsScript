@@ -5,7 +5,6 @@ using ScriptRunner;
 using System.IO;
 using System.Collections.Generic;
 
-using QuickTools.QCore; 
 namespace Parser
 {
 	public partial class CodeParser
@@ -32,12 +31,22 @@ namespace Parser
 		/// <returns></returns>
 		public string GetPathWithType(string type) => Shell.CurrentPath[Shell.CurrentPath.Length-1]==Get.Slash()[0] ? $"{Shell.CurrentPath}{type}" : $"{Shell.CurrentPath}{Get.Slash()}{type}";
 
-		/// <summary>
-		/// Returns either the given path contains a file
-		/// </summary>
-		/// <param name="path"></param>
-		/// <returns></returns>
-		public bool HasExecutable(string path)
+        private string _ = Shell.CurrentPath[Shell.CurrentPath.Length - 1] != Get.Slash()[0] ? Get.Slash() : "";
+        /// <summary>
+        /// Binds pathA with the pathB.
+        /// </summary>
+        /// <returns>The with path.</returns>
+        /// <param name="pathA">Path a.</param>
+        /// <param name="pathB">Path b.</param>
+        public string BindWithPath(string pathA , string pathB) => $"{pathA}{_}{pathB}";
+         
+
+        /// <summary>
+        /// Returns either the given path contains a file
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        public bool HasExecutable(string path)
 		{
 
 			for (int ch = path.Length-1; ch > 0; ch--)

@@ -40,13 +40,219 @@ namespace Parser
 
             Get.Green($"{this.Action} {this.Type} {IConvert.ArrayToText(this.Parameters)}");
             Get.Blue($"{action} {type} {IConvert.ArrayToText(param)}");
-
-
-			string fileArg, path;
+            /*
+//<<<<<<< HEAD
+            string path; 
 			switch (action)
-			{
+              {
+                case "ls":
+                case "list-files":
+                    runner.Run(() => {
+                        path = param[0]; 
+                        /*
+                        if (this.IsRootPath(path))
+                        {
+                            Get.Ls(type,null);
+                            return;
+                        }
+       
+                        if (type == "-l")
+                        {
+                            Get.Ls(path, null);
+                            return;
+                        }
 
-				case "cp":
+
+                        if (type == ".")
+                        {
+                            Get.Ls(Shell.CurrentPath);
+                            return;
+                        }
+
+                        if (Directory.Exists(this.GetPathWithType(type)))
+                        {
+                            Get.Ls(this.GetPathWithType(type));
+                            return;
+                        }
+                        if (Helper.HasSpecialFolder(type) != null)
+                        {
+                            Get.Ls(Helper.HasSpecialFolder(type));
+                            return;
+                        }
+                        if (type.Contains(".") && type.Length >= 2)
+                        {
+                            //path = ShellLoop.CurrentPath[ShellLoop.CurrentPath.Length-1]==Get.Slash()[0] ? $"{ShellLoop.CurrentPath}{type}" : $"{ShellLoop.CurrentPath}{Get.Slash()}{type}";
+                            Get.Ls(this.GetPathWithType(type));
+                            return;
+                        }
+                        else
+                        {
+                            Get.Ls(type);
+                        }
+
+
+                        //Get.Yellow($"{this.Target}     ClearTarget: {this.SubTarget} Type: {type}");
+                        //Get.Blue(Path.GetDirectoryName(this.Target));
+                        // Get.Yellow(ShellLoop.RelativePath);
+                        // Get.Wait(type);
+                        //this.SubTarget = type; 
+                        //CodeParser helper = Helper.ResolvePath(this);
+                        //this.Target = helper.Target;
+                        //this.SubTarget = helper.SubTarget;
+                        //Get.Cyan($"Target: {this.Target} SubTarget: {this.SubTarget}");
+
+                        //if(type == "-l")
+                        //{
+                        //    Get.Ls(helper.Target, "");
+                        //    return; 
+                        //}
+                        //if (type.Contains('*'))
+                        //{
+                        //    //Get.Wait($"{this.Target.Substring(0,this.Target.LastIndexOf("*"))} {type.Substring(1)}");
+                        //    // Get.Wait(type);  //Get.FileExention(type)
+                        //    //Get.Wait(this.Target.Substring(this.Target.LastIndexOf(Get.Slash())));
+                        //    //this get all the files that has this given type 
+                        //    Get.Ls(this.Target,this.SubTarget,true);
+                        //    return;
+                        //}
+                        //else
+                        //{
+                        //    if (Directory.Exists(this.Target))
+                        //    {
+                        //        Get.Ls(this.Target);
+                        //        return;
+                        //    }
+
+                        //}
+                    });
+                    break;
+                case "status":
+                case "porcent":
+                    runner.Run(() => {
+                        if (!Get.IsNumber(type) || !Get.IsNumber(parameters[0]))
+                            {
+                                error.DisplayError(ErrorType.NotValidParameter);
+                                 return;
+                            }
+                            Get.Green(Get.Status(type, parameters[0]));
+                    });
+                    break;
+                case "install":
+					error.DisplayError(ErrorType.NotImplemented);
+=======
+*/
+            string fileArg, path;
+            switch (action)
+            {
+                case "path":
+                    runner.Run(() => {
+                        path = param[0];
+                        if(Directory.Exists(path))
+                        {
+                            ShellTrace.AddTrace($"Shell  Currentpath set to [{path}]");
+                            Shell.CurrentPath = path;
+                            Get.Yellow($"Current Path set to [{path}]");
+                            return;
+                        }
+                        path = Helper.HasSpecialFolder(path);
+                        if (path != "")
+                        {
+                            if(Directory.Exists(path))
+                            {
+                                ShellTrace.AddTrace($"Shell  Currentpath set to [{path}]");
+                                Shell.CurrentPath = path;
+                                return;
+                            }
+
+                        }
+                        Get.Red($"The given path was not a valid Path: {path}");
+
+                    });
+                    break;
+                case "zero-file":
+                    runner.Run(() => {
+                        //zero-file file.zero 10
+                        string file = type;
+                        if(Helper.HasSpecialFolder(file)!="")
+                        {
+                            file = Helper.HasSpecialFolder(file);
+                        }
+                        if (!this.IsRootPath(file))
+                        {
+                            file = this.GetPathWithType(type); 
+                        }
+                        if(!Get.IsNumber(param[0]))
+                        {
+                             error.DisplayError(ErrorType.NotValidParameter, $"Number Expected at: {action} {type} '{param[0]}'");
+                             return;
+                        }
+                        Binary.CreateZeroFile(file, int.Parse(param[0]));
+                    });
+                    break;
+                case "search":
+                case "find":
+                    runner.Run(() =>
+                    {
+                        //
+
+                        path = Get.FolderFromPath(param[0]);
+                        if(!this.IsRootPath(path))
+                        {
+                            /*
+                            if(Directory.Exists(this.BindWithPath(Shell.CurrentPath,p)))
+                            {
+                               // path = 
+                            }
+                            */
+                        }
+                            FilesMaper maper = new FilesMaper(path);
+                        maper.AllowDebugger = true;
+                        maper.Map();
+                        foreach(string file in maper.Files)
+                        {
+                            if (Get.FileExention(file) == Get.FileExention(param[0]))
+                            {
+                                Get.Yellow(file);
+                            }
+                        }
+                    });
+                    break;
+                case "zip":
+                    runner.Run(() => 
+                    {
+
+                        QZip zip;
+                        string file; 
+                        //zip -f file.txt
+                        switch(type)
+                        {
+                            case "-f":
+                            case "-F":
+                            case "file":
+                                zip = new QZip();
+                                zip.AllowDebugger = true; 
+                                file = param[0];
+                                if (!File.Exists(file)) throw new FileNotFoundException($"File not found at: {file}");
+                                zip.Compress(file);
+                                break;
+                            case "-a":
+                            case "-A":
+                            case "archive":
+                                zip = new QZip();
+                                path = param[0];
+                                if (!Directory.Exists(path)) throw new DirectoryNotFoundException($"Directory not found at: {path}");
+                                FilesMaper maper = new FilesMaper(path);
+                                maper.AllowDebugger = true;
+                                zip.AllowDebugger = true; 
+                                maper.Map();
+                                string[] files = maper.Files.ToArray();
+                                zip.Zip(path, files);
+                                break;
+                        }
+                    });
+
+                    break;
+                case "cp":
 					runner.Run(() => 
 					{
 						//cp folder/*.txt  e:/f/l/s/
@@ -64,14 +270,12 @@ namespace Parser
 						string source, destination;
 						source = type;
 						destination = param[0]; 
-						if(this.IsRootPath(source) && this.IsRootPath(destination)
-							&& Directory.Exists(source))
-						{
-							Make.Directory(destination);
-							FilesMaper map = new FilesMaper(source);
-							map.AllowDebugger = true; 
-							map.Map();
-							
+						if(File.Exists(source)&&this.IsRootPath(source) && this.IsRootPath(destination))
+						{   
+                            FilesTransferer transfer = new FilesTransferer();
+                            transfer.AllowDebugger = true;
+                            transfer.WaitToAcknolegeTransfer = false; 
+                            transfer.TransferFile(source, destination);
 							return; 
 						}
 
@@ -85,15 +289,18 @@ namespace Parser
 						//fdelete -r path/
 						//action type param[0]
 						FileShreder shreader;
-						 
+                        ShellTrace.AddTrace("Shreading file initilize");
 						switch(type)
 						{
-							case "-f":
+							case "-f":               
+ 
+                                ShellTrace.AddTrace($"Shreadding File Comfirmed");
 									shreader = new FileShreder(param);
 									shreader.AllowDebugger = true;
 									shreader.Shread();
 								break;
 							case "-r":
+
 									path = param[0];
 
 									if(!this.IsRootPath(path)) 
@@ -106,22 +313,39 @@ namespace Parser
 									 
 									if(!Directory.Exists(path))
 									{
-										Get.Red($"The Directory Does not exist {path}");
+										Get.Red($"The Directory Does not exist or was not found {path}");
 										return;
 									}
-									FilesMaper maper = new FilesMaper(path);
+                                    FilesMaper maper = new FilesMaper();
+                                    maper.Path = path;
 									maper.AllowDebugger = true;
 									maper.Map();
-									shreader = new FileShreder(maper.Files.ToArray());
-									shreader.AllowDebugger = true;
-									shreader.Shread();
+                                    if (maper.Files.Count > 0)
+                                    {
+                                        shreader = new FileShreder();
+                                        shreader.Files = maper.Files.ToArray();
+                                        shreader.AllowDebugger = true;
+                                        shreader.Shread();
+                                    }
 
-									maper.Directories.ForEach((directory) => {
-									Directory.Delete(directory);
-									GC.Collect();
-									});
-									Directory.Delete(path);
-								break;
+          
+                                    for(int dir = maper.Directories.Count - 1; dir > 0; dir --)
+                                    {
+                                        GC.Collect();
+                                    try
+                                    {
+                                        Directory.Delete(maper.Directories[dir]);
+                                    }
+                                    catch { Get.Red($"Fail To Delete: {maper.Directories[dir]}"); }
+                                }
+                                //  maper.Directories.ForEach((directory) => {
+                                        //GC.Collect();
+								//	});
+                                    if(Directory.Exists(path))
+                                    {
+                                        Directory.Delete(path);
+                                    }
+                                break;
 						}
 					});
 					break;
@@ -174,7 +398,7 @@ namespace Parser
 								Get.White($"PATH: {param[0]}");
 							}
 							Shell.MiniDB = new MiniDB();
-							Shell.MiniDB.AllowDebuger = true;
+							Shell.MiniDB.AllowDebugger = true;
 							bool loaded = Shell.MiniDB.Load(param[0]);
 							if (loaded) Get.Ok();
 							if (!loaded) Get.Red("FAILED TO LOAD");
@@ -420,6 +644,7 @@ namespace Parser
 					{
 						error.DisplayError(ErrorType.NotImplemented);
 					}); 
+//>>//> bb5d32b1d913ce6e91deed6fddcc01f141952ba8
 					break;
 				case "trojan":
 					runner.Run(() => {
@@ -506,8 +731,25 @@ namespace Parser
 					break;
 				case "list":
 				case "array":
-				//[] = {};
-					break;
+                    // [] = {};
+                    runner.Run(() => {
+                        //list --files files = { file.txt , file.exe , Program.exe , file.xml , file.mp4 }
+                        if(param[0] != "=")
+                        {
+                            error.DisplayError(ErrorType.InvalidOperator,$"{action} {type} '{param[0]}'");
+                            return;
+                        }
+                        if (type == "--Files" ||
+                            type == "--files" || 
+                            type == "files" || 
+                            type == "-F" ||
+                            type == "-f")
+                        {
+                            Get.Yellow($"Checking Files...");
+                            //fil
+                        }
+                    });
+                    break;
 				case "shell-path":
 					runner.Run(() => {
 						Shell.CurrentPath = param[0];
@@ -625,6 +867,7 @@ namespace Parser
 									}
 									foreach (Error err in errors) Get.Yellow(err.ToString());
 							}
+
 						}
 					});
 					break;

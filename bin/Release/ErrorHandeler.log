@@ -1,6 +1,6 @@
-ID=1001;
-Key=log;
-Value=####
+QKEYID=7522;
+ID=0;
+KEY=####
  There Was an error with the given type of error: 'NotValidAction' 'At: Execution With Action: 'vim' Trace: 
 Trace: ClownShell Started At:1/10/2024 12:56:59
 Trace: Without Arguments At:1/10/2024 12:56:59
@@ -11,19 +11,19 @@ Trace: Execution Set With Action: vim  At:1/10/2024 12:57:00
 Trace: Action Was not Recognized as a valid Action At:1/10/2024 12:57:00
 ' 
 ####;
-Relation=1/10/2024 12:57:01 AM;
-ID=1003;
-Key=log;
-Value=####
+VALUE=1/10/2024 12:57:01 AM;
+RELATION=1003;
+ID=0;
+KEY=####
  There Was an error with the given type of error: 'ExecutionError' 'System.ComponentModel.Win32Exception (0x80004005): The system cannot find the file specified
    at System.Diagnostics.Process.StartWithCreateProcess(ProcessStartInfo startInfo)
    at Parser.CodeParser.<>c.<SetExecution>b__41_26() in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Parser\Parser\SetExecution_Action.cs:line 331
    at ScriptRunner.Runner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\Runner.cs:line 14' 
 ####;
-Relation=1/10/2024 12:59:40 AM;
-ID=1005;
-Key=log;
-Value=####
+VALUE=1/10/2024 12:59:40 AM;
+RELATION=1005;
+ID=0;
+KEY=####
  There Was an error with the given type of error: 'NotValidAction' 'At: Execution With Action: 'resetpath' Trace: 
 Trace: ClownShell Started At:1/10/2024 12:59:37
 Trace: Without Arguments At:1/10/2024 12:59:37
@@ -36,10 +36,10 @@ Trace: Execution Set With Action: resetpath  At:1/10/2024 01:0:13
 Trace: Action Was not Recognized as a valid Action At:1/10/2024 01:0:13
 ' 
 ####;
-Relation=1/10/2024 1:00:13 AM;
-ID=1007;
-Key=log;
-Value=####
+VALUE=1/10/2024 1:00:13 AM;
+RELATION=1007;
+ID=0;
+KEY=####
  There Was an error with the given type of error: 'ExecutionError' 'System.IO.DirectoryNotFoundException: Could not find a part of the path 'e:\'.
    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
    at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj, Boolean checkHost)
@@ -47,6 +47,7 @@ Value=####
    at Parser.CodeParser.<>c__DisplayClass39_0.<SetExecution>b__0() in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.Parser\Parser\SetExecution_Action_Type_Parameters.cs:line 71
    at ScriptRunner.Runner.Run(Action code) in C:\Users\Melquiceded\Documents\csharp\ClownShell\ClownShell.ScriptRunner\Runner.cs:line 14' 
 ####;
+<<<<<<< HEAD
 Relation=1/10/2024 2:45:14 AM;
 ID=1009;
 Key=log;
@@ -62,3 +63,1142 @@ Trace: Action Was not Recognized as a valid Action At:2/28/2024 04:57:05
 ' 
 ####;
 Relation=2/28/2024 4:57:05 PM;
+=======
+VALUE=12/7/2023 7:45:22 PM;
+RELATION=1017;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=12/7/2023 7:46:51 PM;
+RELATION=1019;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'NotValidType' 'File or Directory 'Avatar.El.Camino.Del.Agua.2022.1080p-dual-lat.mp4' was not found!!!' 
+####;
+VALUE=12/7/2023 7:51:51 PM;
+RELATION=1021;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=12/7/2023 7:54:56 PM;
+RELATION=1023;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'NotValidType' 'File or Directory 'AirplanesModels' was not found!!!' 
+####;
+VALUE=12/7/2023 8:00:53 PM;
+RELATION=1025;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=12/7/2023 8:02:21 PM;
+RELATION=1027;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=12/7/2023 8:04:46 PM;
+RELATION=1029;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution Action With Type 'login' mel Trace: 
+Trace: ClownShell Started At:12/20/2023 09:36:43
+Trace: Without Arguments At:12/20/2023 09:36:43
+Trace: ShellLoop Started MainLoop.ShellLoop At:12/20/2023 09:36:43
+Trace: LoopInput Started MainLoop.ShellLoop At:12/20/2023 09:36:43
+Trace: Commands Inputed Length: 1 At:12/20/2023 09:36:45
+Trace: Execution Set With Action: clear  At:12/20/2023 09:36:45
+Trace: Commands Inputed Length: 1 At:12/20/2023 09:36:45
+Trace: Execution Set With Action: ls  At:12/20/2023 09:36:45
+Trace: Commands Inputed Length: 2 At:12/20/2023 09:36:53
+Trace: Execution Started With Action: login Type: mel At:12/20/2023 09:36:53
+Trace: Action Was not Recognized as a valid Action At:12/20/2023 09:36:53
+' 
+####;
+VALUE=12/20/2023 9:36:53 PM;
+RELATION=1031;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.IO.DirectoryNotFoundException: Could not find a part of the path '/home/Downloads'.
+  at System.IO.Enumeration.FileSystemEnumerator`1[TResult].CreateDirectoryHandle (System.String path, System.Boolean ignoreNotFound) [0x00032] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerator`1[TResult]..ctor (System.String directory, System.IO.EnumerationOptions options) [0x00048] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerable`1+DelegateEnumerator[TResult]..ctor (System.IO.Enumeration.FileSystemEnumerable`1[TResult] enumerable) [0x00000] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerable`1[TResult]..ctor (System.String directory, System.IO.Enumeration.FileSystemEnumerable`1+FindTransform[TResult] transform, System.IO.EnumerationOptions options) [0x00042] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerableFactory.UserFiles (System.String directory, System.String expression, System.IO.EnumerationOptions options) [0x00014] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Directory.InternalEnumeratePaths (System.String path, System.String searchPattern, System.IO.SearchTarget searchTarget, System.IO.EnumerationOptions options) [0x0003c] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Directory.GetFiles (System.String path, System.String searchPattern, System.IO.EnumerationOptions enumerationOptions) [0x00000] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Directory.GetFiles (System.String path) [0x0000b] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at QuickTools.QIO.FilesMaper.GetFiles (System.String path) [0x00000] in <ec97c6b1154241518c26d10cc1b21e90>:0 
+  at QuickTools.QCore.Get.Ls (System.String path) [0x0000f] in <ec97c6b1154241518c26d10cc1b21e90>:0 
+  at Parser.CodeParser+<>c.<SetExecution>b__41_17 () [0x00005] in <95e4400a517d4f399d8544605206980e>:0 
+  at ScriptRunner.Runner.Run (System.Action code) [0x00000] in <d8173a9d3581451abf63c7859baeb20a>:0 ' 
+####;
+VALUE=12/20/2023 9:38:06 PM;
+RELATION=1033;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.IO.DirectoryNotFoundException: Could not find a part of the path '/home/Downloads'.
+  at System.IO.Enumeration.FileSystemEnumerator`1[TResult].CreateDirectoryHandle (System.String path, System.Boolean ignoreNotFound) [0x00032] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerator`1[TResult]..ctor (System.String directory, System.IO.EnumerationOptions options) [0x00048] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerable`1+DelegateEnumerator[TResult]..ctor (System.IO.Enumeration.FileSystemEnumerable`1[TResult] enumerable) [0x00000] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerable`1[TResult]..ctor (System.String directory, System.IO.Enumeration.FileSystemEnumerable`1+FindTransform[TResult] transform, System.IO.EnumerationOptions options) [0x00042] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerableFactory.UserFiles (System.String directory, System.String expression, System.IO.EnumerationOptions options) [0x00014] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Directory.InternalEnumeratePaths (System.String path, System.String searchPattern, System.IO.SearchTarget searchTarget, System.IO.EnumerationOptions options) [0x0003c] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Directory.GetFiles (System.String path, System.String searchPattern, System.IO.EnumerationOptions enumerationOptions) [0x00000] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Directory.GetFiles (System.String path) [0x0000b] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at QuickTools.QIO.FilesMaper.GetFiles (System.String path) [0x00000] in <ec97c6b1154241518c26d10cc1b21e90>:0 
+  at QuickTools.QCore.Get.Ls (System.String path) [0x0000f] in <ec97c6b1154241518c26d10cc1b21e90>:0 
+  at Parser.CodeParser+<>c.<SetExecution>b__41_17 () [0x00005] in <95e4400a517d4f399d8544605206980e>:0 
+  at ScriptRunner.Runner.Run (System.Action code) [0x00000] in <d8173a9d3581451abf63c7859baeb20a>:0 ' 
+####;
+VALUE=12/20/2023 9:38:07 PM;
+RELATION=1035;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.IO.DirectoryNotFoundException: Could not find a part of the path '/home/Downloads'.
+  at System.IO.Enumeration.FileSystemEnumerator`1[TResult].CreateDirectoryHandle (System.String path, System.Boolean ignoreNotFound) [0x00032] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerator`1[TResult]..ctor (System.String directory, System.IO.EnumerationOptions options) [0x00048] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerable`1+DelegateEnumerator[TResult]..ctor (System.IO.Enumeration.FileSystemEnumerable`1[TResult] enumerable) [0x00000] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerable`1[TResult]..ctor (System.String directory, System.IO.Enumeration.FileSystemEnumerable`1+FindTransform[TResult] transform, System.IO.EnumerationOptions options) [0x00042] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerableFactory.UserFiles (System.String directory, System.String expression, System.IO.EnumerationOptions options) [0x00014] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Directory.InternalEnumeratePaths (System.String path, System.String searchPattern, System.IO.SearchTarget searchTarget, System.IO.EnumerationOptions options) [0x0003c] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Directory.GetFiles (System.String path, System.String searchPattern, System.IO.EnumerationOptions enumerationOptions) [0x00000] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Directory.GetFiles (System.String path) [0x0000b] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at QuickTools.QIO.FilesMaper.GetFiles (System.String path) [0x00000] in <ec97c6b1154241518c26d10cc1b21e90>:0 
+  at QuickTools.QCore.Get.Ls (System.String path) [0x0000f] in <ec97c6b1154241518c26d10cc1b21e90>:0 
+  at Parser.CodeParser+<>c.<SetExecution>b__41_17 () [0x00005] in <95e4400a517d4f399d8544605206980e>:0 
+  at ScriptRunner.Runner.Run (System.Action code) [0x00000] in <d8173a9d3581451abf63c7859baeb20a>:0 ' 
+####;
+VALUE=12/20/2023 9:38:24 PM;
+RELATION=1037;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'NotValidParameter' 'I'M sorry but the path /home/Downloads/~/ does not exist!!!' 
+####;
+VALUE=12/20/2023 9:38:28 PM;
+RELATION=1039;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'NotValidParameter' 'I'M sorry but the path /home/Downloads/~ does not exist!!!' 
+####;
+VALUE=12/20/2023 9:38:30 PM;
+RELATION=1041;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'NotValidParameter' 'I'M sorry but the path //home does not exist!!!' 
+####;
+VALUE=12/20/2023 9:38:39 PM;
+RELATION=1043;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'NotValidParameter' 'I'M sorry but the path //home does not exist!!!' 
+####;
+VALUE=12/20/2023 9:38:43 PM;
+RELATION=1045;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution Action With Type 'cdcd' Downloads Trace: 
+Trace: Commands Inputed Length: 1 At:12/20/2023 09:36:55
+Trace: Execution Set With Action: clear  At:12/20/2023 09:36:55
+Trace: Commands Inputed Length: 1 At:12/20/2023 09:36:57
+Trace: Execution Set With Action: login  At:12/20/2023 09:36:57
+Trace: Commands Inputed Length: 1 At:12/20/2023 09:37:45
+Trace: Execution Set With Action: ls  At:12/20/2023 09:37:45
+Trace: Commands Inputed Length: 1 At:12/20/2023 09:37:46
+Trace: Execution Set With Action: clear  At:12/20/2023 09:37:46
+Trace: Commands Inputed Length: 2 At:12/20/2023 09:37:48
+Trace: Execution Started With Action: cd Type: .. At:12/20/2023 09:37:48
+Trace: Commands Inputed Length: 1 At:12/20/2023 09:37:49
+Trace: Execution Set With Action: ls  At:12/20/2023 09:37:49
+Trace: Commands Inputed Length: 2 At:12/20/2023 09:37:53
+Trace: Execution Started With Action: cd Type: Documents At:12/20/2023 09:37:53
+Trace: Commands Inputed Length: 1 At:12/20/2023 09:37:54
+Trace: Execution Set With Action: ls  At:12/20/2023 09:37:54
+Trace: Commands Inputed Length: 2 At:12/20/2023 09:38:05
+Trace: Execution Started With Action: cd Type: ~/Downloads At:12/20/2023 09:38:05
+Trace: Commands Inputed Length: 1 At:12/20/2023 09:38:06
+Trace: Execution Set With Action: ls  At:12/20/2023 09:38:06
+Trace: Commands Inputed Length: 1 At:12/20/2023 09:38:07
+Trace: Execution Set With Action: ls  At:12/20/2023 09:38:07
+Trace: Commands Inputed Length: 1 At:12/20/2023 09:38:24
+Trace: Execution Set With Action: ls  At:12/20/2023 09:38:24
+Trace: Commands Inputed Length: 2 At:12/20/2023 09:38:28
+Trace: Execution Started With Action: cd Type: ~/ At:12/20/2023 09:38:28
+Trace: Commands Inputed Length: 2 At:12/20/2023 09:38:30
+Trace: Execution Started With Action: cd Type: ~ At:12/20/2023 09:38:30
+Trace: Commands Inputed Length: 2 At:12/20/2023 09:38:35
+Trace: Execution Started With Action: cd Type: / At:12/20/2023 09:38:35
+Trace: Commands Inputed Length: 1 At:12/20/2023 09:38:37
+Trace: Execution Set With Action: clear  At:12/20/2023 09:38:37
+Trace: Commands Inputed Length: 2 At:12/20/2023 09:38:39
+Trace: Execution Started With Action: cd Type: home At:12/20/2023 09:38:39
+Trace: Commands Inputed Length: 1 At:12/20/2023 09:38:40
+Trace: Execution Set With Action: ls  At:12/20/2023 09:38:40
+Trace: Commands Inputed Length: 2 At:12/20/2023 09:38:43
+Trace: Execution Started With Action: cd Type: home At:12/20/2023 09:38:43
+Trace: Commands Inputed Length: 2 At:12/20/2023 09:38:47
+Trace: Execution Started With Action: cd Type: home/ At:12/20/2023 09:38:47
+Trace: Commands Inputed Length: 1 At:12/20/2023 09:38:49
+Trace: Execution Set With Action: ls  At:12/20/2023 09:38:49
+Trace: Commands Inputed Length: 2 At:12/20/2023 09:38:51
+Trace: Execution Started With Action: cd Type: mel/ At:12/20/2023 09:38:51
+Trace: Commands Inputed Length: 1 At:12/20/2023 09:38:51
+Trace: Execution Set With Action: ls  At:12/20/2023 09:38:51
+Trace: Commands Inputed Length: 2 At:12/20/2023 09:38:59
+Trace: Execution Started With Action: cdcd Type: Downloads At:12/20/2023 09:38:59
+Trace: Action Was not Recognized as a valid Action At:12/20/2023 09:38:59
+' 
+####;
+VALUE=12/20/2023 9:38:59 PM;
+RELATION=1047;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution With Action: 'l' Trace: 
+Trace: ClownShell Started At:1/09/2024 01:30:36
+Trace: Without Arguments At:1/09/2024 01:30:36
+Trace: ShellLoop Started MainLoop.ShellLoop At:1/09/2024 01:30:36
+Trace: LoopInput Started MainLoop.ShellLoop At:1/09/2024 01:30:36
+Trace: Commands Inputed Length: 1 At:1/09/2024 01:30:38
+Trace: Execution Set With Action: ls  At:1/09/2024 01:30:38
+Trace: Commands Inputed Length: 2 At:1/09/2024 01:30:39
+Trace: Execution Started With Action: cd Type: .. At:1/09/2024 01:30:39
+Trace: Commands Inputed Length: 1 At:1/09/2024 01:30:40
+Trace: Execution Set With Action: ls  At:1/09/2024 01:30:40
+Trace: Commands Inputed Length: 2 At:1/09/2024 01:30:44
+Trace: Execution Started With Action: cd Type: Documents At:1/09/2024 01:30:44
+Trace: Commands Inputed Length: 1 At:1/09/2024 01:30:44
+Trace: Execution Set With Action: ls  At:1/09/2024 01:30:44
+Trace: Commands Inputed Length: 2 At:1/09/2024 01:30:53
+Trace: Execution Started With Action: cd Type: mami At:1/09/2024 01:30:53
+Trace: Commands Inputed Length: 1 At:1/09/2024 01:30:53
+Trace: Execution Set With Action: l  At:1/09/2024 01:30:53
+Trace: Action Was not Recognized as a valid Action At:1/09/2024 01:30:53
+' 
+####;
+VALUE=1/9/2024 1:30:53 AM;
+RELATION=1049;
+ID=0;
+KEY= Cannot find the specified file
+  at System.Diagnostics.Process.StartWithCreateProcess (System.Diagnostics.ProcessStartInfo startInfo) [0x0029f] in <a8a996a78a804d888710c9e2575d78c8>:0 
+  at System.Diagnostics.Process.Start () [0x0003a] in <a8a996a78a804d888710c9e2575d78c8>:0 
+  at (wrapper remoting-invoke-with-check) System.Diagnostics.Process.Start()
+  at Parser.CodeParser+<>c__DisplayClass40_0.<SetExecution>b__29 () [0x00054] in <95e4400a517d4f399d8544605206980e>:0 
+  at ScriptRunner.Runner.Run (System.Action code) [0x00000] in <d8173a9d3581451abf63c7859baeb20a>:0 ' 
+####;
+VALUE=1/9/2024 1:32:25 AM;
+RELATION=1051;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.IO.DirectoryNotFoundException: Could not find a part of the path '/home/mel/csharp/clownshell/bin/release'.
+  at System.IO.Enumeration.FileSystemEnumerator`1[TResult].CreateDirectoryHandle (System.String path, System.Boolean ignoreNotFound) [0x00032] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerator`1[TResult]..ctor (System.String directory, System.IO.EnumerationOptions options) [0x00048] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerable`1+DelegateEnumerator[TResult]..ctor (System.IO.Enumeration.FileSystemEnumerable`1[TResult] enumerable) [0x00000] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerable`1[TResult]..ctor (System.String directory, System.IO.Enumeration.FileSystemEnumerable`1+FindTransform[TResult] transform, System.IO.EnumerationOptions options) [0x00042] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerableFactory.UserFiles (System.String directory, System.String expression, System.IO.EnumerationOptions options) [0x00014] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Directory.InternalEnumeratePaths (System.String path, System.String searchPattern, System.IO.SearchTarget searchTarget, System.IO.EnumerationOptions options) [0x0003c] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Directory.GetFiles (System.String path, System.String searchPattern, System.IO.EnumerationOptions enumerationOptions) [0x00000] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Directory.GetFiles (System.String path) [0x0000b] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at QuickTools.QIO.FilesMaper.GetFiles (System.String path) [0x00000] in <ec97c6b1154241518c26d10cc1b21e90>:0 
+  at QuickTools.QCore.Get.Ls (System.String path) [0x0000f] in <ec97c6b1154241518c26d10cc1b21e90>:0 
+  at Parser.CodeParser+<>c.<SetExecution>b__41_17 () [0x00005] in <95e4400a517d4f399d8544605206980e>:0 
+  at ScriptRunner.Runner.Run (System.Action code) [0x00000] in <d8173a9d3581451abf63c7859baeb20a>:0 ' 
+####;
+VALUE=1/9/2024 1:33:09 AM;
+RELATION=1053;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.IO.DirectoryNotFoundException: Could not find a part of the path '/home/mel/csharp/clownshell/bin/release'.
+  at System.IO.Enumeration.FileSystemEnumerator`1[TResult].CreateDirectoryHandle (System.String path, System.Boolean ignoreNotFound) [0x00032] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerator`1[TResult]..ctor (System.String directory, System.IO.EnumerationOptions options) [0x00048] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerable`1+DelegateEnumerator[TResult]..ctor (System.IO.Enumeration.FileSystemEnumerable`1[TResult] enumerable) [0x00000] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerable`1[TResult]..ctor (System.String directory, System.IO.Enumeration.FileSystemEnumerable`1+FindTransform[TResult] transform, System.IO.EnumerationOptions options) [0x00042] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Enumeration.FileSystemEnumerableFactory.UserFiles (System.String directory, System.String expression, System.IO.EnumerationOptions options) [0x00014] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Directory.InternalEnumeratePaths (System.String path, System.String searchPattern, System.IO.SearchTarget searchTarget, System.IO.EnumerationOptions options) [0x0003c] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Directory.GetFiles (System.String path, System.String searchPattern, System.IO.EnumerationOptions enumerationOptions) [0x00000] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Directory.GetFiles (System.String path) [0x0000b] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at QuickTools.QIO.FilesMaper.GetFiles (System.String path) [0x00000] in <ec97c6b1154241518c26d10cc1b21e90>:0 
+  at QuickTools.QCore.Get.Ls (System.String path) [0x0000f] in <ec97c6b1154241518c26d10cc1b21e90>:0 
+  at Parser.CodeParser+<>c.<SetExecution>b__41_17 () [0x00005] in <95e4400a517d4f399d8544605206980e>:0 
+  at ScriptRunner.Runner.Run (System.Action code) [0x00000] in <d8173a9d3581451abf63c7859baeb20a>:0 ' 
+####;
+VALUE=1/9/2024 1:33:14 AM;
+RELATION=1055;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution Action With Type and parameters 'read' > name Trace: 
+Trace: ClownShell Started At:1/10/2024 11:48:13
+Trace: With Arguments Length: 1 At:1/10/2024 11:48:13
+Trace: Checking Arguments At:1/10/2024 11:48:13
+Trace: Did not match any Supported Path Crateries At:1/10/2024 11:48:13
+Trace: Execution Set With Action: script.clown  At:1/10/2024 11:48:13
+Trace: Execution Started With Action: echo Type: "Welcome to the ClownShell"  At:1/10/2024 11:48:13
+Trace: Execution Started With Action: echo Type: "Type your Name"  At:1/10/2024 11:48:13
+Trace: Execution Started With Action: read Type: > Parameters: name  At:1/10/2024 11:48:13
+Trace: Action Was not Recognized as a valid Action At:1/10/2024 11:48:13
+' 
+####;
+VALUE=1/10/2024 11:48:13 AM;
+RELATION=1057;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.IndexOutOfRangeException: Index was outside the bounds of the array.
+  at Parser.CodeParser+<>c__DisplayClass39_0.<SetExecution>b__7 () [0x00058] in <95e4400a517d4f399d8544605206980e>:0 
+  at ScriptRunner.Runner.Run (System.Action code) [0x00000] in <d8173a9d3581451abf63c7859baeb20a>:0 ' 
+####;
+VALUE=1/10/2024 11:53:26 AM;
+RELATION=1059;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution Action With Type and parameters 'ls' /media/mel/BLACK -l Trace: 
+Trace: ClownShell Started At:1/10/2024 12:1:17
+Trace: With Arguments Length: 3 At:1/10/2024 12:1:17
+Trace: Checking Arguments At:1/10/2024 12:1:17
+Trace: Did not match any Supported Path Crateries At:1/10/2024 12:1:17
+Trace: Execution Started With Action: ls Type: /media/mel/BLACK Parameters: -l  At:1/10/2024 12:1:17
+Trace: Action Was not Recognized as a valid Action At:1/10/2024 12:1:17
+' 
+####;
+VALUE=1/10/2024 12:01:17 PM;
+RELATION=1061;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution Action With Type and parameters 'ls' /media/mel/BLACK -l Trace: 
+Trace: ClownShell Started At:1/10/2024 12:1:23
+Trace: With Arguments Length: 3 At:1/10/2024 12:1:23
+Trace: Checking Arguments At:1/10/2024 12:1:23
+Trace: Did not match any Supported Path Crateries At:1/10/2024 12:1:23
+Trace: Execution Started With Action: ls Type: /media/mel/BLACK Parameters: -l  At:1/10/2024 12:1:23
+Trace: Action Was not Recognized as a valid Action At:1/10/2024 12:1:23
+' 
+####;
+VALUE=1/10/2024 12:01:23 PM;
+RELATION=1063;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution Action With Type and parameters 'ls' -l /media/mel/BLACK Trace: 
+Trace: ClownShell Started At:1/10/2024 12:1:43
+Trace: With Arguments Length: 3 At:1/10/2024 12:1:43
+Trace: Checking Arguments At:1/10/2024 12:1:43
+Trace: Did not match any Supported Path Crateries At:1/10/2024 12:1:43
+Trace: Execution Started With Action: ls Type: -l Parameters: /media/mel/BLACK  At:1/10/2024 12:1:43
+Trace: Action Was not Recognized as a valid Action At:1/10/2024 12:1:43
+' 
+####;
+VALUE=1/10/2024 12:01:43 PM;
+RELATION=1065;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution With Action: '/home/mel/Documents/csharp/ClownShell/bin/Release/ClownShell.exe' Trace: 
+Trace: ClownShell Started At:1/10/2024 12:13:12
+Trace: With Arguments Length: 1 At:1/10/2024 12:13:12
+Trace: Checking Arguments At:1/10/2024 12:13:12
+Trace: Did not match any Supported Path Crateries At:1/10/2024 12:13:12
+Trace: Execution Set With Action: /home/mel/Documents/csharp/ClownShell/bin/Release/ClownShell.exe  At:1/10/2024 12:13:12
+Trace: Action Was not Recognized as a valid Action At:1/10/2024 12:13:12
+' 
+####;
+VALUE=1/10/2024 12:13:12 PM;
+RELATION=1067;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'NotValidParameter' 'I'M sorry but the path //media does not exist!!!' 
+####;
+VALUE=1/10/2024 12:14:06 PM;
+RELATION=1069;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'NotValidParameter' 'I'M sorry but the path /media/mel/BLACK//Movies2 does not exist!!!' 
+####;
+VALUE=1/10/2024 12:16:21 PM;
+RELATION=1071;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'NotValidParameter' 'I'M sorry but the path /media/mel/BLACK//Movies2/ does not exist!!!' 
+####;
+VALUE=1/10/2024 12:16:35 PM;
+RELATION=1073;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'NotValidParameter' 'I'M sorry but the path /media/mel/BLACK/Movies2/ does not exist!!!' 
+####;
+VALUE=1/10/2024 12:19:55 PM;
+RELATION=1075;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'NotValidParameter' 'I'M sorry but the path /media/mel/BLACK/Movies2/ does not exist!!!' 
+####;
+VALUE=1/10/2024 12:20:01 PM;
+RELATION=1069;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:44 PM;
+RELATION=1071;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:44 PM;
+RELATION=1073;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:44 PM;
+RELATION=1075;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:44 PM;
+RELATION=1077;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:44 PM;
+RELATION=1079;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:44 PM;
+RELATION=1081;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:44 PM;
+RELATION=1083;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:44 PM;
+RELATION=1085;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:44 PM;
+RELATION=1087;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:44 PM;
+RELATION=1089;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:44 PM;
+RELATION=1091;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:44 PM;
+RELATION=1093;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:44 PM;
+RELATION=1095;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:44 PM;
+RELATION=1097;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:44 PM;
+RELATION=1099;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:44 PM;
+RELATION=1101;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:45 PM;
+RELATION=1103;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:45 PM;
+RELATION=1105;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:45 PM;
+RELATION=1107;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:45 PM;
+RELATION=1109;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:45 PM;
+RELATION=1111;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:45 PM;
+RELATION=1113;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:45 PM;
+RELATION=1115;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:45 PM;
+RELATION=1117;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:45 PM;
+RELATION=1119;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:45 PM;
+RELATION=1121;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:45 PM;
+RELATION=1123;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:45 PM;
+RELATION=1125;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:45 PM;
+RELATION=1127;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:45 PM;
+RELATION=1129;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:46 PM;
+RELATION=1131;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:46 PM;
+RELATION=1133;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:46 PM;
+RELATION=1135;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:46 PM;
+RELATION=1137;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:46 PM;
+RELATION=1139;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:46 PM;
+RELATION=1141;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:46 PM;
+RELATION=1143;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:46 PM;
+RELATION=1145;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:46 PM;
+RELATION=1147;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:46 PM;
+RELATION=1149;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:47 PM;
+RELATION=1151;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:47 PM;
+RELATION=1153;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:47 PM;
+RELATION=1155;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:47 PM;
+RELATION=1157;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:47 PM;
+RELATION=1159;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:47 PM;
+RELATION=1161;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:47 PM;
+RELATION=1163;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:47 PM;
+RELATION=1165;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:47 PM;
+RELATION=1167;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:48 PM;
+RELATION=1169;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:48 PM;
+RELATION=1171;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:48 PM;
+RELATION=1173;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:48 PM;
+RELATION=1175;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:48 PM;
+RELATION=1177;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:48 PM;
+RELATION=1179;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:49 PM;
+RELATION=1181;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:49 PM;
+RELATION=1183;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:49 PM;
+RELATION=1185;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:49 PM;
+RELATION=1187;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:49 PM;
+RELATION=1189;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:49 PM;
+RELATION=1191;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:50 PM;
+RELATION=1193;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:50 PM;
+RELATION=1195;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:50 PM;
+RELATION=1197;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:50 PM;
+RELATION=1199;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:50 PM;
+RELATION=1201;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:51 PM;
+RELATION=1203;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:51 PM;
+RELATION=1205;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:51 PM;
+RELATION=1207;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:51 PM;
+RELATION=1209;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:51 PM;
+RELATION=1211;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:52 PM;
+RELATION=1213;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:52 PM;
+RELATION=1215;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:52 PM;
+RELATION=1217;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:52 PM;
+RELATION=1219;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:53 PM;
+RELATION=1221;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:53 PM;
+RELATION=1223;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:53 PM;
+RELATION=1225;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:53 PM;
+RELATION=1227;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:54 PM;
+RELATION=1229;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:54 PM;
+RELATION=1231;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:54 PM;
+RELATION=1233;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:55 PM;
+RELATION=1235;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:55 PM;
+RELATION=1237;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:55 PM;
+RELATION=1239;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:55 PM;
+RELATION=1241;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:56 PM;
+RELATION=1243;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:56 PM;
+RELATION=1245;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:56 PM;
+RELATION=1247;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:57 PM;
+RELATION=1249;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:57 PM;
+RELATION=1251;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:58 PM;
+RELATION=1253;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:58 PM;
+RELATION=1255;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:58 PM;
+RELATION=1257;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:59 PM;
+RELATION=1259;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/13/2024 3:50:59 PM;
+RELATION=1261;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'NotValidAction' 'At: Execution With Action: 'path' Trace: 
+Trace: ClownShell Started At:1/14/2024 03:56:55
+Trace: Without Arguments At:1/14/2024 03:56:55
+Trace: ShellLoop Started MainLoop.ShellLoop At:1/14/2024 03:56:55
+Trace: LoopInput Started MainLoop.ShellLoop At:1/14/2024 03:56:55
+Trace: Commands Inputed Length: 1 At:1/14/2024 03:57:08
+Trace: Execution Set With Action: path  At:1/14/2024 03:57:08
+Trace: Action Was not Recognized as a valid Action At:1/14/2024 03:57:08
+' 
+####;
+VALUE=1/14/2024 3:57:08 AM;
+RELATION=1132;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/16/2024 12:06:03 AM;
+RELATION=1133;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/16/2024 12:06:03 AM;
+RELATION=1134;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/16/2024 12:06:03 AM;
+RELATION=1135;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/16/2024 12:06:03 AM;
+RELATION=1136;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/16/2024 12:06:04 AM;
+RELATION=1137;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/16/2024 12:06:04 AM;
+RELATION=1138;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/16/2024 12:06:04 AM;
+RELATION=1139;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/16/2024 12:06:04 AM;
+RELATION=1140;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/16/2024 12:06:04 AM;
+RELATION=1141;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/16/2024 12:06:04 AM;
+RELATION=1142;
+ID=0;
+KEY=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+VALUE=1/16/2024 12:06:04 AM;
+RELATION=1143;
+ID=1143;
+KEY=log;
+VALUE=####
+ There Was an error with the given type of error: 'ExecutionError' 'System.IO.IOException: Directory not empty
+  at System.IO.FileSystem.RemoveDirectoryInternal (System.IO.DirectoryInfo directory, System.Boolean recursive, System.Boolean throwOnTopLevelDirectoryNotFound) [0x00114] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.FileSystem.RemoveDirectory (System.String fullPath, System.Boolean recursive) [0x0000c] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at System.IO.Directory.Delete (System.String path) [0x00006] in <d636f104d58046fd9b195699bcb1a744>:0 
+  at Parser.CodeParser+<>c__DisplayClass58_0.<SetExecution>b__21 () [0x000b3] in <babcb3b89a434a55b67741623dbe6d39>:0 
+  at ScriptRunner.Runner.Run (System.Action code) [0x00000] in <c9b4fe59d01c4838810f5e4c8485e84d>:0 ' 
+####;
+RELATION=3/13/2024 11:07:21 PM;
+ID=1144;
+KEY=log;
+VALUE=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+RELATION=3/14/2024 1:22:01 AM;
+ID=1145;
+KEY=log;
+VALUE=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+RELATION=3/14/2024 1:22:04 AM;
+ID=1146;
+KEY=log;
+VALUE=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+RELATION=3/14/2024 1:22:06 AM;
+ID=1147;
+KEY=log;
+VALUE=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+RELATION=3/14/2024 1:22:08 AM;
+ID=1148;
+KEY=log;
+VALUE=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+RELATION=3/14/2024 1:22:10 AM;
+ID=1149;
+KEY=log;
+VALUE=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+RELATION=3/14/2024 1:22:12 AM;
+ID=1150;
+KEY=log;
+VALUE=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+RELATION=3/14/2024 1:22:14 AM;
+ID=1151;
+KEY=log;
+VALUE=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+RELATION=3/14/2024 1:22:16 AM;
+ID=1152;
+KEY=log;
+VALUE=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+RELATION=3/14/2024 1:22:19 AM;
+ID=1153;
+KEY=log;
+VALUE=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+RELATION=3/14/2024 1:22:21 AM;
+ID=1154;
+KEY=log;
+VALUE=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+RELATION=3/14/2024 1:22:23 AM;
+ID=1155;
+KEY=log;
+VALUE=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+RELATION=3/14/2024 1:22:25 AM;
+ID=1156;
+KEY=log;
+VALUE=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+RELATION=3/14/2024 1:22:27 AM;
+ID=1157;
+KEY=log;
+VALUE=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+RELATION=3/14/2024 1:22:29 AM;
+ID=1158;
+KEY=log;
+VALUE=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+RELATION=3/14/2024 1:22:32 AM;
+ID=1159;
+KEY=log;
+VALUE=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+RELATION=3/14/2024 1:22:38 AM;
+ID=1160;
+KEY=log;
+VALUE=####
+ There Was an error with the given type of error: 'FATAL' 'FATAL-ERROR' 
+####;
+RELATION=3/14/2024 1:22:41 AM;
+>>>>>>> e1f76d548a79697f4698920deadec04d44c5a9df

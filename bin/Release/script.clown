@@ -1,0 +1,15 @@
+echo "Welcome to the ClownShell"
+echo "Type your Name"
+input > name
+echo Welcome
+echo $name
+loop
+(
+	echo working...
+	if $i = 1000
+	(
+		break
+	)
+	$i++
+	sleep 100
+)

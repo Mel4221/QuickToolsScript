@@ -1,0 +1,7 @@
+echo this bullshit 
+echo this bullshit 
+####
+ There Was an error with the given type of error: 'ExecutionError' 'System.IndexOutOfRangeException: Index was outside the bounds of the array.
+  at Parser.CodeParser+<>c__DisplayClass39_0.<SetExecution>b__7 () [0x00058] in <95e4400a517d4f399d8544605206980e>:0 
+  at ScriptRunner.Runner.Run (System.Action code) [0x00000] in <d8173a9d3581451abf63c7859baeb20a>:0 ' 
+####

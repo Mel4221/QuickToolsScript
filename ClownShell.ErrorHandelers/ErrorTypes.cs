@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-  namespace ErrorHandelers
+﻿  namespace ErrorHandelers
     {
         public enum ErrorType
         {
@@ -14,7 +9,10 @@ using System.Threading.Tasks;
             NotImplemented,
             FATAL,
             VariableAlreadySet,
-            InvalidOperator
+            InvalidOperator,
+            NotCloseCondition,
+            NotCloseLoop,
+            NotCloseFunction
         }
 
     }

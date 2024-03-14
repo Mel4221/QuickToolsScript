@@ -22,41 +22,53 @@ namespace Parser
             Runner runner = new Runner();
 			ProcessStartInfo process;
 			string file, path;
-			bool isBackGroundAction;
+			//bool isBackGroundAction;
 			ShellTrace.AddTrace($"Execution Started With Action: {action} Type: {type}");
 			switch (action)
             {
 
+                case "diff":
+                    runner.Run(() => {
+                    if (type == "dependencies" ||
+                       type == "-d")
+                    {
+                        path = Get.Path;
+                        FilesMaper maper = new FilesMaper(path);
+                        maper.Map();
+                        Func<string[]> f = () => {
+                            List<string> exeAndDll = new List<string>();
+                            maper.Files.ForEach((item) => {
+                                if (Get.FileExention(item) == "exe" ||
+                                   Get.FileExention(item) == "dll")
+                                {
+                                    exeAndDll.Add(item);
+                                }
+
+                            });
+
+                            return exeAndDll.ToArray();
+                        };
+
+                        string[] files = f();
+                        Print.List(files, true);
+                        maper.Directories.ForEach((dir) => Get.Blue($"{dir} DIR"));
+                            Get.Yellow($"Total Dependencies [{files.Length}]");
+                            return;
+                        }
+
+                    }); 
+                    break; 
+//<<<<<<< HEAD
+                case "status":
+                    runner.Run(() => { 
+
+                    });
+                    break;
+//=======>>>>>>> bb5d32b1d913ce6e91deed6fddcc01f141952ba8
 				case "install":
 					error.DisplayError(ErrorType.NotImplemented);
 					break;
-                case "fuck":
-					runner.Run(() =>
-					{
-						switch(type)
-						{
-							case "this":
-								Get.Pink("This What??? are your retarded???");
-								break;
-							case "them":
-								Get.Pink("Group of clowns!!!");
-								break;
-							case "me":
-								Get.Pink("Sorry but i don't like idiots");
-								break;
-							case "him":
-								Get.Pink("Yeah He is an Idiot");
-								break;
-							case "you":
-								Get.Pink("Thanks!!!");
-								break;
-							default:
-								Get.Pink("I got you bro. LOL");
-								break;
-						}
 
-					});
-                    break;
 				case "read":
 					runner.Run(() => {
 
@@ -277,7 +289,7 @@ namespace Parser
 							//  Get.Yellow(this.Target);
 							GC.Collect();
 							GC.WaitForPendingFinalizers();
-							//File.Delete(file); 
+							File.Delete(file); 
 							Get.Red(file);
 							return;
 						}
