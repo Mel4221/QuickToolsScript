@@ -269,17 +269,84 @@ namespace Parser
 						//______________________________
 						string source, destination;
 						source = type;
-						destination = param[0]; 
-						if(File.Exists(source)&&this.IsRootPath(source) && this.IsRootPath(destination))
-						{   
-                            FilesTransferer transfer = new FilesTransferer();
-                            transfer.AllowDebugger = true;
-                            transfer.WaitToAcknolegeTransfer = false; 
-                            transfer.TransferFile(source, destination);
-							return; 
-						}
+						destination = param[0];
+                        FilesTransferer transfer = new FilesTransferer();
 
-					});
+                        switch (param.Length)
+                        {
+                            case 3:
+                                switch (param[1])
+                                {
+                                    case "--read-write":
+                                    case "-rw":
+                                        int rw = 0;
+                                        try
+                                        {
+                                            rw = IConvert.ToDataSize(param[2]);
+                                        }
+                                        catch 
+                                        {
+                                            error.DisplayError(ErrorType.NotValidParameter, $"NOT VALID FORMAT FOR THE -rw flag EXPECTED B,KB,MB,GB {param[2]}");
+                                            return; 
+                                        }
+                                        if (File.Exists(source) && this.IsRootPath(source) && this.IsRootPath(destination))
+                                        {
+                                            transfer.AllowDebugger = true;
+                                            transfer.ChuckSize = rw;
+                                            //transfer.CheckFileIntegrity = true;
+                                            transfer.TransferFile(source, destination);
+                                            return;
+                                        }
+                                        else
+                                        {
+                                            error.DisplayError(ErrorType.NotImplemented, $"As a right now only ROOT PATH ALLOWD");
+                                            return;
+                                        }
+                                    default:
+                                        error.DisplayError(ErrorType.NotValidParameter, $"This does not look like a valid paramter: [{param[1]}]");
+                                        break;
+                                }
+                                break;
+                            case 2:
+                                switch (param[1])
+                                {
+                                    case "--check-integrity":
+                                    case "-c":
+                                        if (File.Exists(source) && this.IsRootPath(source) && this.IsRootPath(destination))
+                                        {
+                                            transfer.AllowDebugger = true;
+                                            transfer.CheckFileIntegrity = true;
+                                            transfer.TransferFile(source, destination);
+                                            return;
+                                        }
+                                        else
+                                        {
+                                            error.DisplayError(ErrorType.NotImplemented, $"As a right now only ROOT PATH ALLOWD");
+                                            return;
+                                        }
+                                    default:
+                                        error.DisplayError(ErrorType.NotValidParameter, $"The Parameter [{param[1]}] is not a valid parameter");
+                                        break;
+                                }
+                                break;
+                            default:
+                                if (File.Exists(source) && this.IsRootPath(source) && this.IsRootPath(destination))
+                                {
+                                    transfer.AllowDebugger = true;
+                                    //transfer.CheckFileIntegrity = true;
+                                    //transfer.WaitToAcknolegeTransfer = false; 
+                                    transfer.TransferFile(source, destination);
+                                    return;
+                                }
+                                else
+                                {
+                                    error.DisplayError(ErrorType.NotImplemented, $"As a right now only ROOT PATH ALLOWD");
+                                    return;
+                                }
+                                //break;
+                        }
+
+                    });
 					break;
 				case "shread":
 				case "fdelete":
