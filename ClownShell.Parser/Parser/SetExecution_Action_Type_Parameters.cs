@@ -144,6 +144,26 @@ namespace Parser
             string fileArg, path;
             switch (action)
             {
+                case "clown":
+                    runner.Run(() =>
+                    {
+                        switch (type)
+                        {
+                            case "install":
+                            case "-i":
+                                break;
+                            case "update":
+                            case "-up":
+                                break;
+                            case "uninstall":
+                            case "-un":
+                                break;
+                            default:
+                                error.DisplayError(ErrorType.NotValidParameter, $"'{type}' IS NOT A VALID PARAMETER FOR THE ACTION [{action}]");
+                                return;
+                        }
+                    });
+                    break;
                 case "path":
                     runner.Run(() => {
                         path = param[0];
