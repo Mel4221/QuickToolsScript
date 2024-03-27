@@ -1,6 +1,6 @@
 ﻿using QuickTools.QCore;
 using QuickTools.QData;
-using Settings;
+//using Settings;
 namespace States
 {
     /// <summary>
@@ -30,7 +30,7 @@ namespace States
         /// Gets or sets the current path of the shell
         /// </summary>
         /// <value>The current path.</value>
-        public static string CurrentPath { get; set; } = ShellSettings.ShellDefaultStartPath;
+        //public static string CurrentPath { get; set; } = ShellSettings.ShellDefaultStartPath;
         /// <summary>
         /// Gets or sets a value indicating whether this <see cref="T:States.Shell"/> exit request.
         /// </summary>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -39,14 +39,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\ClownShell.Dependencies\ClownShell.Security.dll</HintPath>
     </Reference>
-    <Reference Include="ClownShell.Settings, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ClownShell.Dependencies\ClownShell.Settings.dll</HintPath>
-    </Reference>
-    <Reference Include="ClownShell.State, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ClownShell.Dependencies\ClownShell.State.dll</HintPath>
-    </Reference>
     <Reference Include="QuickTools">
       <HintPath>..\..\QuickTools\bin\Release\QuickTools.dll</HintPath>
     </Reference>
@@ -58,6 +50,9 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="ClownShell.Static">
+      <HintPath>..\ClownShell.Dependencies\ClownShell.Static.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ShellLoop.cs" />

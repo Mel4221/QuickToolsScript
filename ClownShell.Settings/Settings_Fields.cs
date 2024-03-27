@@ -3,7 +3,7 @@ using System;
 using System.IO;
 using System.Threading;
 using QuickTools.QData;
-using States;
+//using States;
 namespace Settings
 {
     public static partial class ShellSettings

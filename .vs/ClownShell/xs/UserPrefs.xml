@@ -1,19 +1,16 @@
 ﻿<Properties StartupConfiguration="{823A2180-8759-43E9-8CEB-0D736731BAB1}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ClownShell.Security/Credentials.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ClownShell.Parser/Parser/SetExecution_Action.cs">
     <Files>
-      <File FileName="ClownShell.Parser/Parser/SetExecution_Action_Type.cs" Line="63" Column="25" />
-      <File FileName="ClownShell.Parser/Parser/SetExecution_Action_Type_Parameters.cs" Line="153" Column="39" />
-      <File FileName="ClownShell.Settings/Settings.cs" Line="34" Column="18" />
-      <File FileName="ClownShell.Settings/Settings_Fields.cs" Line="55" Column="3" />
-      <File FileName="../../../../../usr/lib/mono/msbuild/15.0/bin/Microsoft.Common.CurrentVersion.targets" Line="2215" Column="14" />
-      <File FileName="ClownShell.Security/Credentials.cs" Line="44" Column="34" />
+      <File FileName="ClownShell.Static/ClownShell.States/BackGroundjobs.cs" Line="9" Column="17" />
+      <File FileName="ClownShell.ScriptRunner/Runner.cs" Line="24" Column="32" />
+      <File FileName="ClownShell.Parser/Parser/SetExecution_Action.cs" Line="12" Column="7" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ClownShell" expanded="True">
-            <Node name="ClownShell.Security" expanded="True">
-              <Node name="Credentials.cs" selected="True" />
+            <Node name="ClownShell.Parser" expanded="True">
+              <Node name="References" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -21,6 +18,10 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <DisabledProjects>
+    <String>ClownShell.Settings/ClownShell.Settings.csproj</String>
+    <String>ClownShell.State/ClownShell.State.csproj</String>
+  </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

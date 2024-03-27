@@ -10,10 +10,9 @@ C:/Users/Melquiceded/Documents/csharp/ClownShell/ClownShell.State/obj/Release/Cl
 C:/Users/Melquiceded/Documents/csharp/ClownShell/ClownShell.State/obj/Release/ClownShell.State.dll
 C:/Users/Melquiceded/Documents/csharp/ClownShell/ClownShell.State/obj/Release/ClownShell.State.pdb
 >>>>>>> bb5d32b1d913ce6e91deed6fddcc01f141952ba8
-/home/mel/Documents/csharp/ClownShell/ClownShell.State/obj/Release/ClownShell.State.csproj.AssemblyReference.cache
 /home/mel/Documents/csharp/ClownShell/ClownShell.State/obj/Release/ClownShell.State.csproj.CoreCompileInputs.cache
+/home/mel/Documents/csharp/ClownShell/ClownShell.Dependencies/ClownShell.State.dll
 /home/mel/Documents/csharp/ClownShell/ClownShell.Dependencies/ClownShell.State.pdb
 /home/mel/Documents/csharp/ClownShell/ClownShell.State/obj/Release/ClownShell.State.csproj.CopyComplete
 /home/mel/Documents/csharp/ClownShell/ClownShell.State/obj/Release/ClownShell.State.dll
 /home/mel/Documents/csharp/ClownShell/ClownShell.State/obj/Release/ClownShell.State.pdb
-/home/mel/Documents/csharp/ClownShell/ClownShell.Dependencies/ClownShell.State.dll

@@ -15,9 +15,9 @@ C:/Users/Melquiceded/Documents/csharp/ClownShell/ClownShell.Security/obj/Release
 C:/Users/Melquiceded/Documents/csharp/ClownShell/ClownShell.Security/obj/Release/ClownShell.Security.pdb
 >>>>>>> bb5d32b1d913ce6e91deed6fddcc01f141952ba8
 /home/mel/Documents/csharp/ClownShell/ClownShell.Security/obj/Release/ClownShell.Security.csproj.CoreCompileInputs.cache
+/home/mel/Documents/csharp/ClownShell/ClownShell.Security/obj/Release/ClownShell.Security.csproj.AssemblyReference.cache
 /home/mel/Documents/csharp/ClownShell/ClownShell.Dependencies/ClownShell.Security.dll
 /home/mel/Documents/csharp/ClownShell/ClownShell.Dependencies/ClownShell.Security.pdb
-/home/mel/Documents/csharp/ClownShell/ClownShell.Security/obj/Release/ClownShell.Security.csproj.AssemblyReference.cache
 /home/mel/Documents/csharp/ClownShell/ClownShell.Security/obj/Release/ClownShell.Security.csproj.CopyComplete
 /home/mel/Documents/csharp/ClownShell/ClownShell.Security/obj/Release/ClownShell.Security.dll
 /home/mel/Documents/csharp/ClownShell/ClownShell.Security/obj/Release/ClownShell.Security.pdb
