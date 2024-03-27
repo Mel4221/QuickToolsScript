@@ -41,8 +41,8 @@ namespace Security
                     //Get.Green($"RandomKey: {random}");
                     Secure secure = new Secure();
                     password = Get.Password();
-                    pass = secure.CreatePassword(password);
-                    iv = secure.CreatePassword(user);
+                    pass = Secure.CreatePassword(password);
+                    iv = Secure.CreatePassword(user);
                     key = secure.Encrypt(random, pass, iv);
                     str = IConvert.BytesToString(key);
                     Writer.Write(userFile, str); 
@@ -82,8 +82,8 @@ namespace Security
                     pubkey = IConvert.StringToBytesArray(Reader.Read(userFile)); 
                     Secure secure = new Secure();
                     password = Get.Password();
-                    pass = secure.CreatePassword(password);
-                    iv = secure.CreatePassword(user); 
+                    pass = Secure.CreatePassword(password);
+                    iv = Secure.CreatePassword(user); 
                     try
                     {
 
@@ -100,7 +100,7 @@ namespace Security
                         {
                             throw new Exception(); 
                         }
-                        return; 
+                      //  return; 
                     }
                     catch
                     {
