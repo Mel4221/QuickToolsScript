@@ -10,10 +10,12 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ClownShell" expanded="True" selected="True">
+          <Node name="ClownShell" expanded="True">
             <Node name="ClownShell.MainLoop" expanded="True" />
             <Node name="ClownShell.Parser" expanded="True">
-              <Node name="Parser" expanded="True" />
+              <Node name="Parser" expanded="True">
+                <Node name="SetExecution_Action_Type.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
