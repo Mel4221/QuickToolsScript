@@ -43,14 +43,12 @@ C:/Users/Melquiceded/Documents/csharp/ClownShell/obj/Release/ClownShell.pdb
 /home/mel/Documents/csharp/ClownShell/bin/Release/ClownShell.Security.dll
 /home/mel/Documents/csharp/ClownShell/bin/Release/ClownShell.Static.dll
 /home/mel/Documents/csharp/ClownShell/bin/Release/QuickTools.dll
-/home/mel/Documents/csharp/ClownShell/bin/Release/ClownShell.State.dll
 /home/mel/Documents/csharp/ClownShell/bin/Release/ClownShell.ErrorHandelers.pdb
 /home/mel/Documents/csharp/ClownShell/bin/Release/ClownShell.MainLoop.pdb
 /home/mel/Documents/csharp/ClownShell/bin/Release/ClownShell.Parser.pdb
 /home/mel/Documents/csharp/ClownShell/bin/Release/ClownShell.ScriptRunner.pdb
 /home/mel/Documents/csharp/ClownShell/bin/Release/ClownShell.Security.pdb
 /home/mel/Documents/csharp/ClownShell/bin/Release/QuickTools.xml
-/home/mel/Documents/csharp/ClownShell/bin/Release/ClownShell.State.pdb
 /home/mel/Documents/csharp/ClownShell/obj/Release/ClownShell.csproj.AssemblyReference.cache
 /home/mel/Documents/csharp/ClownShell/obj/Release/ClownShell.csproj.CoreCompileInputs.cache
 /home/mel/Documents/csharp/ClownShell/obj/Release/ClownShell.csproj.CopyComplete
