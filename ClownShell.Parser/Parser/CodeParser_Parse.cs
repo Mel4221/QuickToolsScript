@@ -8,7 +8,6 @@ namespace Parser
     public partial class CodeParser
     {
 
-
         private void Parse(CodeType codeType)
         {
             string action, type;

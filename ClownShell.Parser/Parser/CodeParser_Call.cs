@@ -9,7 +9,22 @@ namespace Parser
 {
 public partial class CodeParser
 	{
-		private void Call(string action, string type, string[] param)
+        private void Call(string[] code)
+        {
+            switch(code.Length)
+            {
+                case 1:
+                    this.SetExecution(code[0]);
+                    break;
+                case 2:
+                    this.SetExecution(code[0], code[1]);
+                    break;
+                default:
+                    this.SetExecution(code[0],code[1],this.Code);
+                    break;
+            }
+        }
+        private void Call(string action, string type, string[] param)
 		{
 			ShellTrace.AddTrace($"{this} Direct Call to Executed Action: {action} Type: {type} Parameters: {IConvert.ArrayToText(param)}");
 			this.SetExecution(action, type, param);

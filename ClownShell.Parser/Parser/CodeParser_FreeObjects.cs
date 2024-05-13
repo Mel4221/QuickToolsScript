@@ -10,6 +10,7 @@ namespace Parser
 	public partial class CodeParser
 	{
 
+
 	    public void FreeObjects()
 		{
 			 for(int item = Shell.VStack.GetIndex()+1; item > 0; item--)

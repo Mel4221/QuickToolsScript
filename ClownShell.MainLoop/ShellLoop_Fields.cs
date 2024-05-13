@@ -11,7 +11,5 @@ namespace MainLoop
 		public bool AllowToSaveHistory { get; set; } = true;
 		private MiniDB db;
         private string[] Arguments { get; set; } = new string[] { };
-
-
     }
 }

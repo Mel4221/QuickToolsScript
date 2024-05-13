@@ -22,7 +22,7 @@ namespace MainLoop
 				Shell.CurrentPath = path;
 				ShellTrace.AddTrace("RootPath Detected");
 				this.RunShellLoop();
-				return; 
+				return;
 			}
 			//if the path is an special folder get the root path and set it as 
 			// the path

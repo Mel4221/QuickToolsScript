@@ -144,6 +144,33 @@ namespace Parser
             string fileArg, path;
             switch (action)
             {
+                case "@":
+                case "task":
+                    runner.Run(() => 
+                    {
+                        //@ sleep 5000
+                        //Print.List(this.Code);
+                        /*
+                         string[] code = new string[this.Code.Length - 1];
+                         int index = 0; 
+                         for(int item = 1; item < this.Code.Length; item++)
+                         {
+                             code[index] = this.Code[item];
+                             index++;
+                         }
+                         */
+                        //Print.List(param);
+                        //this.Call(code); 
+                        this.Call(type, param[0], param);
+                    },true);
+                    break;
+                case "current-shell-path":
+                case "wd":
+                case "pwd":
+                    runner.Run(() => {
+                        Shell.CurrentPath = param[0];
+                    });
+                    break;
                 case "clown":
                     runner.Run(() =>
                     {
@@ -306,7 +333,7 @@ namespace Parser
                                         }
                                         catch 
                                         {
-                                            error.DisplayError(ErrorType.NotValidParameter, $"NOT VALID FORMAT FOR THE -rw flag EXPECTED B,KB,MB,GB {param[2]}");
+                                            error.DisplayError(ErrorType.NotValidParameter, $"NOT VALID FORMAT FOR THE -rw flag EXPECTED B,KB,MB,GB {param[2]} \nEXAMPLES: 1024B,1024KB,1024MB,1GB");
                                             return; 
                                         }
                                         if (File.Exists(source) && this.IsRootPath(source) && this.IsRootPath(destination))
@@ -319,7 +346,7 @@ namespace Parser
                                         }
                                         else
                                         {
-                                            error.DisplayError(ErrorType.NotImplemented, $"As a right now only ROOT PATH ALLOWD");
+                                            error.DisplayError(ErrorType.NotImplemented, $"As a right now only ROOT PATH ALLOWED");
                                             return;
                                         }
                                     default:
@@ -353,7 +380,7 @@ namespace Parser
                                 if (File.Exists(source) && this.IsRootPath(source) && this.IsRootPath(destination))
                                 {
                                     transfer.AllowDebugger = true;
-                                    //transfer.CheckFileIntegrity = true;
+                                    transfer.CheckFileIntegrity = false;
                                     //transfer.WaitToAcknolegeTransfer = false; 
                                     transfer.TransferFile(source, destination);
                                     return;
@@ -651,7 +678,7 @@ namespace Parser
 							}
 							break;
 						case "select":
-							string format = null;
+							//string format = null;
 							
 							switch (param[0])
 							{
@@ -820,17 +847,18 @@ namespace Parser
 				case "array":
                     // [] = {};
                     runner.Run(() => {
+                        //$pwd = /home/m/l/m/f
                         //list --files files = { file.txt , file.exe , Program.exe , file.xml , file.mp4 }
-                        if(param[0] != "=")
+                        //list --files files = { $(pwd)file.txt , $(pwd)file.exe , $(pwd)Program.exe , $(pwd)file.xml , $(pwd)file.mp4 }
+                        if (param[0] != "=")
                         {
                             error.DisplayError(ErrorType.InvalidOperator,$"{action} {type} '{param[0]}'");
                             return;
                         }
                         if (type == "--Files" ||
-                            type == "--files" || 
-                            type == "files" || 
-                            type == "-F" ||
-                            type == "-f")
+                            type == "-F"||
+                            type == "f"
+                            )
                         {
                             Get.Yellow($"Checking Files...");
                             //fil

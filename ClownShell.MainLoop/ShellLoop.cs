@@ -39,17 +39,21 @@ namespace MainLoop
                 here is the main loop that holds everything
                 together  this loop is the one that 
                 ask for each comand and every time goes back
-                to stage one                
+                to stage one               
             */
+            //int round = 0; 
             while (!Shell.ExitRequest)
 			{
-
+              //  round++;
+                //Get.Cyan($"Round: {round}");
                 shell.CurrentPath = Shell.CurrentPath;
 				shell.Notifications = ShellUser.Name == null ? $"'{Environment.UserName}' Without Credentials" : ShellUser.Name;
 				////shell.TextSimbol = Shell.VStack.VirtualStackSize()=="0B" ? ">" : $"[{Shell.VStack.VirtualStackSize()}]>";
 			    ////shell.ProgramName = $"{Shell.Name} [{Shell.VStack.VirtualStackSize()}]";
 				string input = shell.StartInput();
+               // Get.Blue(input + " OK");
 				this.SaveHistory(input);
+                //Get.Green("History Saved!!!");
 				string[] commands = IConvert.TextToArray(input);
 				ShellTrace.AddTrace($"Commands Inputed Length: {commands.Length}");
                 parser = new CodeParser(commands);

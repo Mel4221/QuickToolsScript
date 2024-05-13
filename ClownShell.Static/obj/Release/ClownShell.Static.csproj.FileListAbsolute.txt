@@ -2,3 +2,4 @@
 /home/mel/Documents/csharp/ClownShell/ClownShell.Dependencies/ClownShell.Static.dll
 /home/mel/Documents/csharp/ClownShell/ClownShell.Static/obj/Release/ClownShell.Static.csproj.CopyComplete
 /home/mel/Documents/csharp/ClownShell/ClownShell.Static/obj/Release/ClownShell.Static.dll
+/home/mel/Documents/csharp/ClownShell/ClownShell.Static/obj/Release/ClownShell.Static.csproj.AssemblyReference.cache

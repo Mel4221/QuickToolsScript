@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ErrorHandelers;
+using MainLoop;
 using QuickTools.QCore;
 using QuickTools.QIO;
 using Settings;
-using ErrorHandelers;
-using MainLoop;
 using States;
-using System.Diagnostics;
 
 namespace ClownShell
 {
@@ -38,16 +38,16 @@ namespace ClownShell
                     {
         						ShellTrace.AddTrace("Without Arguments");
         						shell = new ShellLoop();
-                      shell.Start();
-                      Shell.Exit();
+                        shell.Start();
+                        Shell.Exit();
                         return 0;
                     }
                     else
                     {
         						ShellTrace.AddTrace($"With Arguments Length: {args.Length}");
         						shell = new ShellLoop(args);
-                      shell.Start();
-                      Shell.Exit();
+                        shell.Start();
+                        Shell.Exit();
                         return 0;
                     }
                 }
@@ -56,11 +56,11 @@ namespace ClownShell
                     ShellTrace.AddTrace($"FATAL-ERROR Encountered {ex}");
                     ErrorHandeler error = new ErrorHandeler();
                     error.DisplayError(ErrorType.FATAL, "FATAL-ERROR");
-                    Log.Event(ShellSettings.LogsFile, $"Shell Exited With a FATAL-ERROR More info in the logs file: \nStartTrace\n {ShellTrace.GetTrace()} \nEndTrace \nStartExeption \n{ex} \nEndExeption\n");
+                    Log.Event(ShellSettings.LogsFile, $"SHELL EXITED WITH A FATAL-ERROR MORE INFO IN THE LOGS FILE: \nStartTrace\n {ShellTrace.GetTrace()} \nEndTrace \nStartExeption \n{ex} \nEndExeption\n");
                     Get.White(ex);
-                    Get.Alert($"There was a FATAL ERROR MORE INFO IN this path: \n{ShellSettings.LogsFile}");
+                    Get.Alert($"THERE WAS A FATAL ERROR MORE INFO IN this path: \n{ShellSettings.LogsFile}");
                     Program.Main(new string[] { }); 
-					        //Environment.Exit(1);
+				         //Environment.Exit(1);
                     return 1;
                 }
             }

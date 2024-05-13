@@ -3,6 +3,17 @@ namespace Parser
 {
     public partial class CodeParser
     {
+
+        /// <summary>
+        /// Gets or sets the token for the current code parsing and execution
+        /// </summary>
+        /// <value>The token.</value>
+        public int Token { get; set; } = QuickTools.QCore.IRandom.RandomInt(10000, 99999);
+        /// <summary>
+        /// Gets or sets the current shell path.
+        /// </summary>
+        /// <value>The current shell path.</value>
+        public string CurrentShellPath { get; set; } = "NOT-DEFINED";
         /// <summary>
         /// Gets or sets the code from the CodeParser
         /// </summary>

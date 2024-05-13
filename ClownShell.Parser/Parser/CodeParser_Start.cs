@@ -14,7 +14,7 @@ namespace Parser
 		{
 			this.FixStringFormat();
 			ErrorHandeler error = new ErrorHandeler();
-			switch (this.Code.Length)
+            switch (this.Code.Length)
 			{
 				case 0:
 					error.DisplayError(ErrorType.NotValidAction, this.Code);

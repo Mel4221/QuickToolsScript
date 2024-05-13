@@ -20,7 +20,7 @@ namespace Parser
             
             ErrorHandeler error = new ErrorHandeler();
             Runner runner = new Runner();
-			ProcessStartInfo process;
+			//ProcessStartInfo process;
 			string file, path;
 			//bool isBackGroundAction;
 			ShellTrace.AddTrace($"Execution Started With Action: {action} Type: {type}");
@@ -29,10 +29,8 @@ namespace Parser
 
                 case "diff":
                     runner.Run(() => {
-                    if (type == "dependencies" ||
-                       type == "-d")
-                    {
-                        path = Get.Path;
+
+                        path = type;
                         FilesMaper maper = new FilesMaper(path);
                         maper.Map();
                         Func<string[]> f = () => {
@@ -54,7 +52,7 @@ namespace Parser
                         maper.Directories.ForEach((dir) => Get.Blue($"{dir} DIR"));
                             Get.Yellow($"Total Dependencies [{files.Length}]");
                             return;
-                        }
+
 
                     }); 
                     break; 
@@ -158,7 +156,7 @@ namespace Parser
 						this.Call("write", "/");
 						this.Call("title", "/");
 
-						this.Call("clear");
+						//this.Call("clear");
 						this.Call("sleep", type);
 						this.Call("write", "-");
 						this.Call("title", "-");
@@ -400,7 +398,7 @@ namespace Parser
 						int number;
 						if (Get.IsNumber(type))
 						{
-							Get.Yellow($"Sleepying... [{type}ms]");
+							//Get.Yellow($"Sleepying... [{type}ms]");
 							number = int.Parse(type);
 							Thread.Sleep(number);
 							return;

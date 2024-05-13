@@ -14,6 +14,7 @@ namespace Parser
 
 	     public void ParseFromFile(string action)
 		 {
+            Get.Cyan($"Reading...: {action}");
  			string file = action; 
 			//if c:/file.txt
 			if(!this.IsRootPath(file))
@@ -22,12 +23,12 @@ namespace Parser
 					if(File.Exists(this.GetPathWithType(file)))
 					{
 						file = this.GetPathWithType(file);
-					Get.Yellow(file); 
+					    Get.Yellow(file); 
 					}
 					if(Helper.HasSpecialFolder(file) != null) 
 					{
 						file = Helper.HasSpecialFolder(file);
-				    Get.Red(file);
+				        Get.Red(file);
 						if(!File.Exists(file))
 						{
 							Get.Red($"The File '{file}' was not found or does not exist!!!");
@@ -37,6 +38,7 @@ namespace Parser
 			}
 			if(File.Exists(file))
 			{
+                Get.Green($"Parsing...");
                 /*
                     public class user
                     user.name = melquiceded
@@ -69,8 +71,11 @@ namespace Parser
                         case true:
                             break;
                         case false:
-                            parser = new CodeParser(IConvert.TextToArray(cmd));
-                            parser.Start();
+                            if(cmd != "")
+                            {
+                                parser = new CodeParser(IConvert.TextToArray(cmd));
+                                parser.Start();
+                            }
                             break;
                     }
 

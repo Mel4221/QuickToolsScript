@@ -34,7 +34,7 @@ namespace Settings
         /// Gets or sets the logs file.
         /// </summary>
         /// <value>The logs file.</value>
-        public static string LogsFile { get; set; } = $"{Path}ClownShell.log";
+        public static string LogsFile { get; set; } = $"{Path}ClownShell";
 
         /// <summary>
         /// Gets or sets the shell settings file.

@@ -19,7 +19,8 @@ namespace MainLoop
 			{
 				case "history":
 				case "exit":
-           case "clear-history":
+                case "clear-history":
+                case "reboot":
 					return true;
 				default:
 					return false;
@@ -37,6 +38,7 @@ namespace MainLoop
 			db.Load();
 			db.AddKeyOnHot("command", command, DateTime.Now.ToLongDateString());
 			db.HotRefresh();
+            return;
 		}
 	}
 }
