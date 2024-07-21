@@ -21,7 +21,7 @@ namespace ClownShell
             /// The name.
             /// </summary>
             public const string Name = "ClownShell";
-            public static int Main(string[] args)
+            public static async Task<int> Main(string[] args)
             {
 				ShellTrace.AddTrace("ClownShell Started");
         

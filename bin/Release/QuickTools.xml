@@ -2292,6 +2292,13 @@
             Contains all the chars from Uppoercase ,lowercases and symbols 
             </summary>
         </member>
+        <member name="M:QuickTools.QCore.IRandom.Buffer(System.Byte[]@)">
+            <summary>
+            Creates a random buffer based on the length of the given buffer
+            </summary>
+            <returns>The buffer.</returns>
+            <param name="buffer">Buffer.</param>
+        </member>
         <member name="P:QuickTools.QCore.IRandom.RandomChar">
             <summary>
             Returns a Random char it could be anything from a letter , number or a symbol
@@ -2387,6 +2394,12 @@
             <param name="arrayLength">Array length.</param>
             <param name="minimumRange">Minimum range.</param>
             <param name="maximumRange">Maximum range.</param>
+        </member>
+        <member name="F:QuickTools.QCore.IRandom.InternalRandom">
+            <summary>
+            Contains the Random class as an member of Irandom to hold
+            the random integers needed for the randomizer
+            </summary>
         </member>
         <member name="M:QuickTools.QCore.IRandom.RandomInt(System.Int32,System.Int32)">
             <summary>
@@ -2678,6 +2691,21 @@
             The compress.
             </summary>
         </member>
+        <member name="M:QuickTools.QData.MiniDB.Parse(System.Collections.Generic.List{QuickTools.QData.DB})">
+            <summary>
+            Parse the specified Collection.
+            </summary>
+            <returns>The parse.</returns>
+            <param name="Collection">Collection.</param>
+        </member>
+        <member name="M:QuickTools.QData.MiniDB.Parse(System.String,System.Collections.Generic.List{QuickTools.QData.DB})">
+            <summary>
+            Parse the specified MiniDBFile and Collection.
+            </summary>
+            <returns>The parse.</returns>
+            <param name="MiniDBFile">Mini DBF ile.</param>
+            <param name="Collection">Collection.</param>
+        </member>
         <member name="M:QuickTools.QData.MiniDB.AddKey(System.Object,System.Object,System.Boolean)">
             <summary>
             Adds the key but mainly turns on or off the loaded which could help on speed up write time 
@@ -2909,6 +2937,13 @@
             Selects  where the key equals to the value given.
             </summary>
             <returns>The where key.</returns>
+            <param name="key">Value.</param>
+        </member>
+        <member name="M:QuickTools.QData.MiniDB.SelecAlltWhereValue(System.Object)">
+            <summary>
+            Selecs the allt where key.
+            </summary>
+            <returns>The allt where key.</returns>
             <param name="value">Value.</param>
         </member>
         <member name="M:QuickTools.QData.MiniDB.SelecAlltWhereKey(System.Object)">
@@ -2916,23 +2951,7 @@
             Selecs the allt where key.
             </summary>
             <returns>The allt where key.</returns>
-            <param name="value">Value.</param>
-        </member>
-        <member name="M:QuickTools.QData.MiniDB.SelectWhereKey(System.String,System.String)">
-            <summary>
-            Selects the where key.
-            </summary>
-            <returns>The where key.</returns>
-            <param name="dbName">Db name.</param>
-            <param name="value">Value.</param>
-        </member>
-        <member name="M:QuickTools.QData.MiniDB.SelectWhereValue(System.String,System.String)">
-            <summary>
-            Selects the where value.
-            </summary>
-            <returns>The where value.</returns>
-            <param name="dbName">Db name.</param>
-            <param name="value">Value.</param>
+            <param name="key">Value.</param>
         </member>
         <member name="M:QuickTools.QData.MiniDB.SelectWhereValue(System.String)">
             <summary>
@@ -3750,11 +3769,31 @@
             </summary>
             <value>The keys.</value>
         </member>
+        <member name="P:QuickTools.QData.QKeyManager.MinimumDelayTimeForResorsesToBeFree">
+            <summary>
+            defines the mimimum time to wait for resorses to be free
+            </summary>
+        </member>
+        <member name="P:QuickTools.QData.QKeyManager.MaximumDelayTimeForResorsesToBeFree">
+            <summary>
+            defines the maximum time to wait for resorses to be free
+            </summary>
+        </member>
         <member name="P:QuickTools.QData.QKeyManager.Errors">
             <summary>
             Gets or sets the errors.
             </summary>
             <value>The errors.</value>
+        </member>
+        <member name="P:QuickTools.QData.QKeyManager.FailToWriteCount">
+            <summary>
+            Contains the fail to write count
+            </summary>
+        </member>
+        <member name="P:QuickTools.QData.QKeyManager.FailToReadCount">
+            <summary>
+            Contains the fail to read counts
+            </summary>
         </member>
         <member name="P:QuickTools.QData.QKeyManager.AllowDebugger">
             <summary>
@@ -5191,6 +5230,18 @@
             Download manager.
             </summary>
         </member>
+        <member name="P:QuickTools.QNet.DownloadManager.CurrentTextStatus">
+            <summary>
+            Gets or sets the current text status.
+            </summary>
+            <value>The current text status.</value>
+        </member>
+        <member name="P:QuickTools.QNet.DownloadManager.CurrentIntStatus">
+            <summary>
+            Gets or sets the current int status.
+            </summary>
+            <value>The current int status.</value>
+        </member>
         <member name="M:QuickTools.QNet.DownloadManager.Download(System.String,System.String,System.Int32,System.Boolean)">
             <summary>
             Download the specified url, file, length and allowDebugger.
@@ -5234,12 +5285,6 @@
             Gets a value indicating whether this <see cref="T:QuickTools.DownloadManager"/> download completed.
             </summary>
             <value><c>true</c> if download completed; otherwise, <c>false</c>.</value>
-        </member>
-        <member name="P:QuickTools.QNet.DownloadManager.Status">
-            <summary>
-            Gets or sets the status.
-            </summary>
-            <value>The status.</value>
         </member>
         <member name="P:QuickTools.QNet.DownloadManager.Address">
             <summary>
@@ -5993,7 +6038,10 @@
         </member>
         <member name="T:QuickTools.QDevelop.BinBuilder">
             <summary>
-            Sources builder.
+            Sources builder is a class that contains an array of methods
+            that will create a source file which contains all the
+            information related with a package for it's later to be use 
+            as a database for other packages.
             </summary>
         </member>
         <member name="M:QuickTools.QDevelop.BinBuilder.Clear">
