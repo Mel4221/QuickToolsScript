@@ -1,0 +1,1 @@
+dotnet publish ClownShell.MainLoop/ClownShell.MainLoop.csproj -r $(cat platform) -o bin/Release/

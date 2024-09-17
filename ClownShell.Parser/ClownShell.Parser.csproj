@@ -1,87 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BBEFAA75-2684-4D73-BDAC-9FD004B2D4E4}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Parser</RootNamespace>
-    <AssemblyName>ClownShell.Parser</AssemblyName>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <Deterministic>true</Deterministic>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PublishAot>true</PublishAot>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>..\ClownShell.Dependencies\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="ClownShell.ErrorHandelers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ClownShell.Dependencies\ClownShell.ErrorHandelers.dll</HintPath>
-    </Reference>
-    <Reference Include="ClownShell.ScriptRunner, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ClownShell.Dependencies\ClownShell.ScriptRunner.dll</HintPath>
-    </Reference>
-    <Reference Include="ClownShell.Security, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ClownShell.Dependencies\ClownShell.Security.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
-    <Reference Include="ClownShell.Static">
-      <HintPath>..\ClownShell.Dependencies\ClownShell.Static.dll</HintPath>
-    </Reference>
-    <Reference Include="QuickTools">
-      <HintPath>..\..\QuickTools\bin\Release\QuickTools.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Parser\CodeParser_Call.cs" />
-    <Compile Include="Parser\CodeParser_CheckForVariables.cs" />
-    <Compile Include="Parser\CodeParser_FreeObjects.cs" />
-    <Compile Include="Parser\CodeParser_Constructor.cs" />
-    <Compile Include="Parser\CodeParser_Methods.cs" />
-    <Compile Include="Parser\CodeParser_Parse.cs" />
-    <Compile Include="Parser\CodeParser_Fields.cs" />
-    <Compile Include="Parser\CodeParser_ParseFromFile.cs" />
-    <Compile Include="Parser\CodeParser_RunExecutable.cs" />
-    <Compile Include="Parser\CodeParser_Start.cs" />
-    <Compile Include="Parser\CodeType.cs" />
-    <Compile Include="Parser\Helper_Dir_Counter.cs" />
-    <Compile Include="Parser\Helper.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Parser\SetExecution_Action_Type_Parameters.cs" />
-    <Compile Include="Parser\SetExecution_Action_Type.cs" />
-    <Compile Include="Parser\SetExecution_Action.cs" />
-    <Compile Include="Types\CodeType_Methods.cs" />
-    <Compile Include="Types\CodeType_RunAssingment.cs" />
-    <Compile Include="Types\Functions\Functions.cs" />
-    <Compile Include="Types\TypesHandeler_Fields_Constructors.cs" />
-    <Compile Include="GlobalSuppressions.cs" />
-  </ItemGroup>
-  <ItemGroup />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <ItemGroup>
+     <Reference Include="DllrefrenceFile">
+       <HintPath>../QuickTools/QuickTools.dll</HintPath>
+     </Reference>
+    </ItemGroup>
+      <ItemGroup>
+     <Reference Include="DllrefrenceFile">
+       <HintPath>../bin/Release/ClownShell.Static.dll</HintPath>
+     </Reference>
+    </ItemGroup>
 </Project>

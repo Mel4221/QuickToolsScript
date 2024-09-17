@@ -1,0 +1,1 @@
+dotnet publish ClownShell.Parser/ClownShell.Parser.csproj -r $(cat platform) -o bin/Release/
