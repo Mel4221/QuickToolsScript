@@ -10,15 +10,17 @@ namespace Parser
 	public partial class CodeParser
 	{
 
-
-	    public void FreeObjects()
+	    public async Task FreeObjects()
 		{
+            await Task.Run(() => 
+            { 
 			 for(int item = Shell.VStack.GetIndex()+1; item > 0; item--)
 			 {
 				Shell.VStack.Free($"cat{item}");
 				Shell.VStack.Free($"echo{item}");
 				Shell.VStack.Free($"read{item}");
 			 }
-		}
+            });
+        }
 	}
 }

@@ -9,7 +9,7 @@ namespace Parser
 {
 public partial class CodeParser
 	{
-        private void Call(string[] code)
+        private async Task Call(string[] code)
         {
             switch(code.Length)
             {

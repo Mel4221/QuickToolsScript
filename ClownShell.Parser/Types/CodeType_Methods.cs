@@ -9,6 +9,5 @@ namespace Parser.Types
 	public partial class CodeTypes
 	{
 			public static bool IsVariable(string variable) => Shell.VStack.GetVariable(variable).IsEmpty==false?true:false;
-			
 	}
 }

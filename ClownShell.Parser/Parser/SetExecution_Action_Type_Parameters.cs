@@ -17,6 +17,7 @@ using QuickTools.QMath;
 //using System.Reflection;
 //using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Parser
 {
@@ -27,7 +28,7 @@ namespace Parser
             The mechanisims that is in charge of transforming the - 
             Variable pointer into it's acual value has to be changed
          */
-        public void SetExecution(string action,string type, string[] parameters)
+        public async Task SetExecution(string action,string type, string[] parameters)
         {    
             
             ErrorHandeler error = new ErrorHandeler();

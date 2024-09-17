@@ -1,15 +1,21 @@
 ﻿<Properties StartupConfiguration="{823A2180-8759-43E9-8CEB-0D736731BAB1}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ClownShell.MainLoop/ShellLoop.cs">
     <Files>
-      <File FileName="ClownShell.Parser/Parser/SetExecution_Action_Type_Parameters.cs" Line="1048" Column="1" />
-      <File FileName="Program.cs" Line="24" Column="42" />
+      <File FileName="ClownShell.Parser/Parser/SetExecution_Action_Type.cs" Line="19" Column="26" />
+      <File FileName="ClownShell.Parser/Parser/SetExecution_Action_Type_Parameters.cs" Line="30" Column="12" />
+      <File FileName="../../../../../usr/lib/mono/msbuild/15.0/bin/Microsoft.Common.CurrentVersion.targets" Line="2215" Column="23" />
+      <File FileName="ClownShell.ScriptRunner/Runner.cs" Line="8" Column="6" />
+      <File FileName="ClownShell.Security/Credentials.cs" Line="32" Column="41" />
+      <File FileName="Program.cs" Line="16" Column="19" />
+      <File FileName="ClownShell.MainLoop/ShellLoop.cs" Line="79" Column="5" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ClownShell" expanded="True">
-            <Node name="ClownShell" expanded="True">
-              <Node name="Program.cs" selected="True" />
+            <Node name="ClownShell" expanded="True" />
+            <Node name="ClownShell.MainLoop" expanded="True">
+              <Node name="ShellLoop.cs" selected="True" />
             </Node>
           </Node>
         </State>

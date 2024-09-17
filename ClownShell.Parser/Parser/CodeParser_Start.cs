@@ -10,7 +10,7 @@ namespace Parser
 	public partial class CodeParser
 	{
 	
-		public void Start()
+		public async Task Start()
 		{
 			this.FixStringFormat();
 			ErrorHandeler error = new ErrorHandeler();

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using ErrorHandelers;
 using QuickTools.QCore;
 using States;
@@ -8,7 +9,7 @@ namespace Parser
     public partial class CodeParser
     {
 
-        private void Parse(CodeType codeType)
+        async Task Parse(CodeType codeType)
         {
             string action, type;
             string[] param;

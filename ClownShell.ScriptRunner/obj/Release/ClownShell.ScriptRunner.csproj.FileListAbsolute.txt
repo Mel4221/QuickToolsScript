@@ -28,7 +28,7 @@ C:/Users/Melquiceded/Documents/csharp/ClownShell/ClownShell.ScriptRunner/obj/Rel
 /home/mel/Documents/csharp/ClownShell/ClownShell.ScriptRunner/obj/Release/ClownShell.ScriptRunner.csproj.CoreCompileInputs.cache
 /home/mel/Documents/csharp/ClownShell/ClownShell.Dependencies/ClownShell.ScriptRunner.dll
 /home/mel/Documents/csharp/ClownShell/ClownShell.Dependencies/ClownShell.ScriptRunner.pdb
+/home/mel/Documents/csharp/ClownShell/ClownShell.ScriptRunner/obj/Release/ClownShell.ScriptRunner.csproj.AssemblyReference.cache
 /home/mel/Documents/csharp/ClownShell/ClownShell.ScriptRunner/obj/Release/ClownShell.ScriptRunner.csproj.CopyComplete
 /home/mel/Documents/csharp/ClownShell/ClownShell.ScriptRunner/obj/Release/ClownShell.ScriptRunner.dll
 /home/mel/Documents/csharp/ClownShell/ClownShell.ScriptRunner/obj/Release/ClownShell.ScriptRunner.pdb
-/home/mel/Documents/csharp/ClownShell/ClownShell.ScriptRunner/obj/Release/ClownShell.ScriptRunner.csproj.AssemblyReference.cache

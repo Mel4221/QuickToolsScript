@@ -10,13 +10,14 @@ using States;
 using QuickTools.QIO;
 using System.Diagnostics;
 using Settings;
-using Security; 
+using Security;
+using System.Threading.Tasks;
 
 namespace Parser
 {
     public partial class CodeParser
     {
-        public void SetExecution(string action)
+        public async Task SetExecution(string action)
         {
         
             ErrorHandeler error = new ErrorHandeler();

@@ -12,7 +12,7 @@ namespace Parser
 	public partial class CodeParser
 	{ 
 
-	     public void ParseFromFile(string action)
+	     public async Task ParseFromFile(string action)
 		 {
             Get.Cyan($"Reading...: {action}");
  			string file = action; 

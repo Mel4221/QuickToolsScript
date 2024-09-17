@@ -15,3 +15,6 @@ C:/Users/Melquiceded/Documents/csharp/ClownShell/ClownShell.ErrorHandelers/obj/D
 /home/mel/Documents/csharp/ClownShell/ClownShell.ErrorHandelers/obj/Debug/ClownShell.ErrorHandelers.csproj.CopyComplete
 /home/mel/Documents/csharp/ClownShell/ClownShell.ErrorHandelers/obj/Debug/ClownShell.ErrorHandelers.dll
 /home/mel/Documents/csharp/ClownShell/ClownShell.ErrorHandelers/obj/Debug/ClownShell.ErrorHandelers.pdb
+/home/mel/Documents/csharp/ClownShell/ClownShell.ErrorHandelers/bin/Debug/Newtonsoft.Json.dll
+/home/mel/Documents/csharp/ClownShell/ClownShell.ErrorHandelers/bin/Debug/Newtonsoft.Json.pdb
+/home/mel/Documents/csharp/ClownShell/ClownShell.ErrorHandelers/bin/Debug/Newtonsoft.Json.xml

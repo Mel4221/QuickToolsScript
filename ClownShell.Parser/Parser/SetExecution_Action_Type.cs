@@ -10,12 +10,13 @@ using States;
 using QuickTools.QIO;
 using QuickTools.QConsole;
 using QuickTools.QData;
+using System.Threading.Tasks;
 
 namespace Parser
 {
 	public partial class CodeParser
 	{
-		public void SetExecution(string action,string type)
+        public async Task SetExecution(string action,string type)
         {
             
             ErrorHandeler error = new ErrorHandeler();

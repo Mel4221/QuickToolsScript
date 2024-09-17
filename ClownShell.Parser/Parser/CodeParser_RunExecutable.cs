@@ -1,11 +1,12 @@
 ﻿using System.IO;
+using System.Threading.Tasks;
 using ErrorHandelers;
 
 namespace Parser
 {
 	public partial class CodeParser
 	{
-		public void RunExecutable(string file)
+		public async Task RunExecutable(string file)
 		{
 
 			ErrorHandeler error = new ErrorHandeler();
