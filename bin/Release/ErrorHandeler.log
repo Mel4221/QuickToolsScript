@@ -176,3 +176,21 @@ System.IO.DirectoryNotFoundException: Could not find a part of the path '/home/m
   at ClownShell.ScripRunner.ScriptRunner.Run (System.Action code) [0x00081] in <c11602bc5aea4ebf91d61bbc228157c7>:0 ' 
 ####;
 Relation=11/16/2023 7:09:14 PM;
+ID=1033;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'exe 2qmx.exe ' 
+####;
+Relation=6/19/2024 10:08:11 AM;
+ID=1035;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' '' 
+####;
+Relation=6/19/2024 10:08:23 AM;
+ID=1037;
+Key=log;
+Value=####
+ There Was an error with the given type of error: 'NotValidAction' 'EXIT ' 
+####;
+Relation=7/3/2024 2:31:54 PM;
